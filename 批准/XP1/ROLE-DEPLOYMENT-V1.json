@@ -1,0 +1,94 @@
+{
+  "schema": "XHS_XP1_ROLE_DEPLOYMENT_V1",
+  "project_id": "XHS-XP1",
+  "status": "READY",
+  "source_system_repository": "https://github.com/1464356758/xiaohongshuXT",
+  "source_role_fixed_commit": "4ac740011f230a11e2b39f0cd5e848ba470c0944",
+  "source_role_instruction_set_fingerprint": "5dbf7a25796c9acc0588247586a0394c33c64b92f789e5c1b6568f5aed86f981",
+  "deployment_repository": "https://github.com/1464356758/xiaohongshuXP1",
+  "deployment_transform": "Only repository binding, project label, and self-role path were changed for XP1 deployment; role duties/gates remain based on audited SYS-004 R1.",
+  "role_count": 16,
+  "roles": [
+    {
+      "role_id": "R01",
+      "file": "角色/01_R01_运营总监AI.txt",
+      "git_blob_sha": "630f462bc17ce6fca4329bb232f57d52b77bfcea"
+    },
+    {
+      "role_id": "R02",
+      "file": "角色/02_R02_热点侦察AI.txt",
+      "git_blob_sha": "687ba225e490275c19425574691600ba21ea2434"
+    },
+    {
+      "role_id": "R03",
+      "file": "角色/03_R03_市场与竞品研究AI.txt",
+      "git_blob_sha": "1442c74acfd75a9d0efbef373e7bf53e398b7b10"
+    },
+    {
+      "role_id": "R04",
+      "file": "角色/04_R04_商品事实研究AI.txt",
+      "git_blob_sha": "eeee91e530312327f1ba5e9575c4f532a4bfc5d5"
+    },
+    {
+      "role_id": "R05",
+      "file": "角色/05_R05_商品与SKU管理员AI.txt",
+      "git_blob_sha": "e14db2f278eea8733953a45c96b77081211625a5"
+    },
+    {
+      "role_id": "R06",
+      "file": "角色/06_R06_选题策划AI.txt",
+      "git_blob_sha": "5b08ad6e7f2b8a71ee5bf66dbe3d4c134f88f915"
+    },
+    {
+      "role_id": "R07",
+      "file": "角色/07_R07_文案脚本AI.txt",
+      "git_blob_sha": "fdab17ca8a90157a4623a7c37037acdcf7b6f3b5"
+    },
+    {
+      "role_id": "R08",
+      "file": "角色/08_R08_视觉总策划AI.txt",
+      "git_blob_sha": "c7b9fb24c557836712919429e7bd1923e4029707"
+    },
+    {
+      "role_id": "R09",
+      "file": "角色/09_R09_图片制作AI.txt",
+      "git_blob_sha": "6155326aae8830cb3c7121c7311150f0e228922a"
+    },
+    {
+      "role_id": "R10",
+      "file": "角色/10_R10_商品图片核验AI.txt",
+      "git_blob_sha": "f9cc0544ffcf338ee3d5de55d67250106e9434c9"
+    },
+    {
+      "role_id": "R11",
+      "file": "角色/11_R11_人物一致性审核AI.txt",
+      "git_blob_sha": "9f7e529de55975e7a1b3628ec9b3f3be559a5fa4"
+    },
+    {
+      "role_id": "R12",
+      "file": "角色/12_R12_图片终审AI.txt",
+      "git_blob_sha": "5bb971a51b3cbe586b57fed045c8792c36dd5c76"
+    },
+    {
+      "role_id": "R13",
+      "file": "角色/13_R13_内容真实性与平台合规审核AI.txt",
+      "git_blob_sha": "7dad3dedfa70314335073e831625b7ee2c0c3880"
+    },
+    {
+      "role_id": "R14",
+      "file": "角色/14_R14_发布与社群运营AI.txt",
+      "git_blob_sha": "e3d59374e05941de8f6b44abd8cef659d6f7e006"
+    },
+    {
+      "role_id": "R15",
+      "file": "角色/15_R15_数据分析与实验AI.txt",
+      "git_blob_sha": "54316b91ec06e10672ed1761c8f10e93017dd6e9"
+    },
+    {
+      "role_id": "R16",
+      "file": "角色/16_R16_账号策略与增长规划AI.txt",
+      "git_blob_sha": "e6f2d5995827cff06eef0e41c7341469688e6fcf"
+    }
+  ],
+  "use_rule": "Create 16 separate GPT chats once. Paste the corresponding full role file into each chat. All chats read/write the same XP1 repository and follow R01 formal handoffs."
+}
