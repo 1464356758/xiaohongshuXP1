@@ -19,9 +19,13 @@
   "module_lock": "批准/SYS-003/MODULE-LOCK-V1.json",
   "role_deployment": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
   "manual_live_approval": "批准/XP1/MANUAL-LIVE-APPROVAL-V1.json",
-  "mode": "普通聊天16角色人工交接工作流",
-  "runtime_enabled": true,
-  "runtime_mode": "LIVE",
+  "mode": "普通聊天16角色人工交接工作流｜当前CONTENT-TEST-001验收阶段",
+  "runtime_enabled": false,
+  "runtime_mode": "TEST_ONLY",
   "publish_authority": "USER_ONLY",
-  "read_rule": "每个角色先读数据库入口.json→当前进度.json→生产/数据库入口.json→生产/当前进度.json→自己的角色指令→R01正式task→显式active依赖。禁止扫描目录猜最新版。"
+  "read_rule": "每个角色先读数据库入口.json→当前进度.json→生产/数据库入口.json→生产/当前进度.json→自己的角色指令→R01正式task→显式active依赖。禁止扫描目录猜最新版。",
+  "role_instruction_audit_lock": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+  "content_test_task": "任务/CONTENT-TEST-001/V1/任务.json",
+  "content_test_pass": null,
+  "live_activation_rule": "只有SYS-003 MODULE LOCK + SYS-004 ROLE-INSTRUCTION-AUDIT-LOCK + CONTENT-TEST-001 PASS三证齐全，才允许切LIVE。"
 }
