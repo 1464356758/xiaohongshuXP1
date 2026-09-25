@@ -1,0 +1,32 @@
+{
+  "schema": "XHS_XP1_FORMAL_PRODUCTION_V1",
+  "project_id": "XHS-XP1",
+  "status": "FORMAL_PRODUCTION_READY",
+  "deployment_mode": "ORDINARY_CHAT_16_ROLE_MANUAL_HANDOFF",
+  "runtime_enabled": true,
+  "runtime_mode": "LIVE",
+  "human_in_the_loop": true,
+  "actual_publish_authority": "USER_ONLY",
+  "source_architecture_lock": "批准/SYS-003/MODULE-LOCK-V1.json",
+  "source_role_audit_lock": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+  "deployed_role_manifest": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
+  "deployment_verification": "批准/XP1/ROLE-DEPLOYMENT-VERIFICATION-V1.json",
+  "reset_rule": "XP1 is reset for direct formal production. Standalone CONTENT-TEST tasks and evidence are not part of the active project state.",
+  "first_run": {
+    "state": "READY",
+    "phase": "INTAKE",
+    "active_task_path": null,
+    "next_role": "R01",
+    "action": "R01 uses ROUTER_BOOTSTRAP to start first formal production lifecycle."
+  },
+  "non_waived_gates": [
+    "ACCOUNT_STRATEGY/VOICE/PERSONA initialization when missing",
+    "PRODUCT/SKU verification and locks",
+    "ASSET identity manifest",
+    "R10/R11/R12 independent image review",
+    "R13 truthfulness and compliance review",
+    "CONTENT LOCK",
+    "PUBLISH_COMPLIANCE_GATE",
+    "USER_ONLY actual publish"
+  ]
+}
