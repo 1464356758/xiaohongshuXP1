@@ -1,0 +1,31 @@
+{
+  "schema": "SYS-003_HANDOFF_TEMPLATE_V2",
+  "handoff_id": "HANDOFF-CONTENT-000-001",
+  "content_id": "CONTENT-000",
+  "task_id": "",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "from_role_id": "R01",
+  "to_role_ids": [],
+  "state": "READY",
+  "phase": "INTAKE",
+  "required_context_paths": {
+    "account_strategy": null,
+    "voice": null,
+    "product": null,
+    "sku": null,
+    "persona": null,
+    "content": null,
+    "compliance_snapshot": null,
+    "asset_manifest": null,
+    "r15_analysis": null
+  },
+  "input_paths": [],
+  "frozen_scope": [],
+  "unresolved_issues": [],
+  "expected_output_paths": [],
+  "user_action_required": false,
+  "user_action_reason": null,
+  "formal_routing_rule": "Only R01 creates official cross-role routing; role messages may recommend but cannot replace formal task/handoff."
+}
