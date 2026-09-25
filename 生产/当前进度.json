@@ -1,13 +1,20 @@
 {
   "schema": "XP1_PRODUCTION_CURRENT_PROGRESS_V1",
   "namespace": "生产",
-  "runtime_enabled": true,
-  "runtime_mode": "LIVE",
-  "runtime_enable_authority": "USER_EXPLICIT_MANUAL_DEPLOYMENT",
+  "runtime_enabled": false,
+  "runtime_mode": "TEST_ONLY",
+  "runtime_enable_authority": "AI系统总监 after three formal evidence gates",
   "runtime_activation": {
-    "architecture_lock_path": "批准/SYS-003/MODULE-LOCK-V1.json",
-    "role_deployment_path": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
-    "manual_live_approval_path": "批准/XP1/MANUAL-LIVE-APPROVAL-V1.json",
+    "module_lock_path": "批准/SYS-003/MODULE-LOCK-V1.json",
+    "role_instruction_audit_lock_path": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+    "content_test_001_pass_path": null,
+    "evidence_status": {
+      "module_lock_pass": true,
+      "role_instruction_audit_pass": true,
+      "content_test_001_pass": false
+    },
+    "mechanical_enable_rule": "All three evidence paths must exist and PASS/LOCKED before LIVE.",
+    "on_missing_or_fail": "BLOCKED_RUNTIME_DISABLED",
     "human_in_the_loop": true,
     "autonomous_publish": false,
     "publish_authority": "USER_ONLY"
@@ -122,5 +129,5 @@
       "on_trigger_if_not_ready": "BLOCKED_ROLE_NOT_READY"
     }
   },
-  "first_boot_note": "首次启动由R01 ROUTER_BOOTSTRAP创建协调task，并先完成ACCOUNT_STRATEGY、VOICE、PERSONA初始化，再进入首篇CONTENT。"
+  "first_boot_note": "当前先运行CONTENT-TEST-001。R01在READY/INTAKE且active_task_path=null时用ROUTER_BOOTSTRAP创建首个正式测试协调task；测试PASS前不得真实CONTENT/LIVE。"
 }
