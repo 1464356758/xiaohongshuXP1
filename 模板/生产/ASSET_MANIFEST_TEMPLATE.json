@@ -1,0 +1,48 @@
+{
+  "schema": "SYS-003_ASSET_MANIFEST_TEMPLATE_V3",
+  "asset_manifest_id": "ASSET-CONTENT-000",
+  "manifest_revision": 1,
+  "content_id": "CONTENT-000",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "provenance": {
+    "source_task_path": "",
+    "source_delivery_path": "",
+    "previous_manifest_path": null
+  },
+  "created_by_role_id": "R09",
+  "created_at": null,
+  "changed_pages": [],
+  "manifest_identity_status": "VALID|BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+  "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+  "pages": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-000-P1",
+      "asset_revision": 1,
+      "source_task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "fingerprint_type": "SHA256|GIT_BLOB_SHA_PLUS_SHA256|PLATFORM_IMMUTABLE_FILE_ID",
+      "fingerprint": "REQUIRED_NON_EMPTY_FOR_ACTIVE_ASSET",
+      "sha256": null,
+      "git_blob_sha": null,
+      "asset_ref": "",
+      "asset_transport": "USER_FILE|GITHUB",
+      "status": "ACTIVE|SUPERSEDED|MISSING|BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+      "persona_required": false,
+      "product_required": false
+    }
+  ],
+  "activation_gate": "每个ACTIVE页必须有非空可验证fingerprint+asset_ref，否则整个manifest不可激活。",
+  "revision_rules": [
+    "图片实际变化=>manifest_revision+1。",
+    "变化页asset_revision+1；未变化页身份完全保持。",
+    "旧manifest不可变。",
+    "Activated manifest must record manifest_fingerprint; unchanged manifest identity preserves it exactly."
+  ],
+  "manifest_fingerprint_type": "SHA256_CANONICAL_ACTIVE_ASSET_IDENTITIES",
+  "manifest_fingerprint": "REQUIRED_NON_EMPTY_FOR_ACTIVATED_MANIFEST",
+  "manifest_fingerprint_rule": "Compute automatically from canonical ordered tuples of ACTIVE page_id|asset_id|asset_revision|fingerprint. Any image identity change changes this fingerprint; user never computes it manually."
+}
