@@ -1,0 +1,259 @@
+{
+  "schema": "SYS-003_WORKFLOW_GRAPH_V5_FINAL",
+  "formal_router": "R01",
+  "formal_paths": {
+    "asset_identity_gate": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "audit_policy": "系统/建设审核协议V2.json",
+    "state_phase_table": "系统/生产架构/SYS-003/STATE_PHASE_TRANSITION_TABLE.json",
+    "content_lock_template": "模板/锁定/CONTENT_LOCK_TEMPLATE.json",
+    "compliance_snapshot_template": "模板/生产/COMPLIANCE_SNAPSHOT_TEMPLATE.json",
+    "publish_compliance_gate": "系统/生产架构/SYS-003/PUBLISH_COMPLIANCE_GATE.json",
+    "partial_revision_template": "模板/返修/PARTIAL_REVISION_TEMPLATE.json"
+  },
+  "runtime_gate": "真实CONTENT-*要求生产/当前进度.runtime_enabled=true；CONTENT-TEST-*仅可在TEST_ONLY。",
+  "stages": [
+    {
+      "id": "S0A_STRATEGY_SETUP",
+      "type": "CONDITIONAL",
+      "trigger": "strategy lock missing OR current R16 trigger PENDING",
+      "skip": "if valid strategy lock and no trigger",
+      "sequence": [
+        "R16_DRAFT",
+        "R01_APPROVE_OR_REJECT_STRATEGY",
+        "R01_CONSUME_TRIGGER"
+      ]
+    },
+    {
+      "id": "S0B_VOICE_SETUP",
+      "type": "CONDITIONAL",
+      "trigger": "voice lock missing/stale",
+      "skip": "if active VOICE LOCK valid",
+      "sequence": [
+        "R07_VOICE_DRAFT",
+        "R13_TRUTH_CHECK",
+        "R01_APPROVE_VOICE_LOCK"
+      ]
+    },
+    {
+      "id": "S0C_PERSONA_SETUP",
+      "type": "CONDITIONAL_SERIAL",
+      "trigger": "active_persona_lock_path == null OR user_requests_persona_change",
+      "skip": "if current PERSONA LOCK identity/anchor fingerprints valid",
+      "sequence": [
+        "R08_PERSONA_DRAFT",
+        "R11_INDEPENDENT_PERSONA_REVIEW",
+        "R01_APPROVE_NEW_PERSONA_LOCK"
+      ],
+      "rules": [
+        "SYNTHETIC_VISUAL_PERSONA => first_person_experience_eligible=false",
+        "any required anchor content/fingerprint change => new PERSONA LOCK version with supersedes"
+      ]
+    },
+    {
+      "id": "S1_DISCOVERY",
+      "type": "PARALLEL_BARRIER",
+      "roles": [
+        "R02",
+        "R03"
+      ],
+      "barrier": "ALL_REQUIRED_COMPLETE_WITH_EVIDENCE"
+    },
+    {
+      "id": "S2_PRODUCT_LOCK",
+      "type": "SERIAL",
+      "sequence": [
+        "R01_CANDIDATE_SET",
+        "R04_DEEP_RESEARCH",
+        "R01_FORMAL_PRODUCT_SELECT",
+        "R05_PRODUCT_SKU_DRAFT",
+        "R01_APPROVE_PRODUCT_SKU_LOCK"
+      ],
+      "rule": "formal product must be inside current R04 researched set"
+    },
+    {
+      "id": "S3_PLANNING",
+      "type": "SERIAL",
+      "sequence": [
+        "R06",
+        "R01_STAGE_APPROVAL"
+      ]
+    },
+    {
+      "id": "S4_COPY",
+      "type": "SERIAL",
+      "sequence": [
+        "R07",
+        "R01_ACTIVATE_FINAL_COPY_IDENTITY"
+      ],
+      "rules": [
+        "R07 must enforce active PERSONA experience eligibility",
+        "final copy path/revision/fingerprint required"
+      ]
+    },
+    {
+      "id": "S5_VISUAL_PLAN",
+      "type": "SERIAL",
+      "sequence": [
+        "R08"
+      ]
+    },
+    {
+      "id": "S6_IMAGE_BUILD",
+      "type": "SERIAL",
+      "sequence": [
+        "R09",
+        "ASSET_IDENTITY_GATE",
+        "R01_ACTIVATE_MANIFEST"
+      ]
+    },
+    {
+      "id": "S7_IMAGE_REVIEW",
+      "type": "PARALLEL_BARRIER",
+      "roles": [
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "barrier": "ALL_THREE_PASS_SAME_MANIFEST_WITH_ACTIVE_POINTERS"
+    },
+    {
+      "id": "S8A_COMPLIANCE_REFRESH",
+      "type": "CONDITIONAL_SERIAL",
+      "trigger": "no active snapshot OR stale/unverified OR required scope mismatch",
+      "sequence": [
+        "R01_REFRESH_TASK",
+        "R13_DRAFT_OR_REFRESH",
+        "R01_ACTIVATE_SNAPSHOT"
+      ]
+    },
+    {
+      "id": "S8B_COMPLIANCE_REVIEW",
+      "type": "SERIAL_HARD_GATE",
+      "role": "R13",
+      "precondition": "active snapshot VALID + time-valid + exact scope match + current image QA",
+      "output": "active_r13_review_path"
+    },
+    {
+      "id": "S9_FINAL_APPROVAL",
+      "type": "SERIAL_HARD_GATE",
+      "role": "R01",
+      "precondition": "CONTENT_LOCK mechanical checks all pass",
+      "output": "immutable CONTENT LOCK"
+    },
+    {
+      "id": "S10A_PUBLISH_PREP",
+      "type": "SERIAL_OUTPUT",
+      "sequence": [
+        "R14_PUBLISH_PACKAGE"
+      ],
+      "precondition": "current CONTENT LOCK",
+      "output_contract": {
+        "required_bindings": [
+          "current CONTENT LOCK path/id",
+          "final copy fingerprint",
+          "asset manifest path/id/revision/manifest_fingerprint"
+        ],
+        "rule": "R14 publish package must copy these immutable bindings exactly; package without them is invalid."
+      }
+    },
+    {
+      "id": "S10B_PUBLISH_COMPLIANCE",
+      "type": "SERIAL_HARD_GATE",
+      "sequence": [
+        "R01_CAPTURE_ACTUAL_PUBLISH_SCOPE",
+        "PUBLISH_COMPLIANCE_GATE"
+      ],
+      "precondition": "R14 publish package exists",
+      "output": "active_publish_compliance_gate_path"
+    },
+    {
+      "id": "S10C_PUBLISH_READY",
+      "type": "SERIAL_STATE_PHASE_GATE",
+      "role": "R01",
+      "precondition": "active PUBLISH_COMPLIANCE_GATE PASS + explicit non-expired publish_authorization_valid_until + exact package binding to current CONTENT LOCK"
+    },
+    {
+      "id": "S10D_USER_ACTUAL_PUBLISH",
+      "type": "EXTERNAL_USER_ACTION",
+      "precondition": "state=READY/PUBLISH_READY AND immediate actual_publish_recheck PASS; expired/stale authorization returns to PUBLISH_COMPLIANCE_CHECK"
+    },
+    {
+      "id": "S10E_RECEIPT",
+      "type": "SERIAL_OUTPUT",
+      "role": "R14",
+      "output": "PUBLISH_RECEIPT"
+    },
+    {
+      "id": "S10F_CONFIRM_PUBLISHED",
+      "type": "SERIAL_STATE_PHASE_GATE",
+      "role": "R01",
+      "precondition": "valid R14 receipt",
+      "post_actions": [
+        "Create idempotent PUBLISHED::{content_id} count event if absent",
+        "Increment R16 periodic counters exactly once for this content_id"
+      ]
+    },
+    {
+      "id": "S11_RAW_DATA",
+      "type": "MANUAL_TRIGGER_WINDOWS",
+      "role": "R14",
+      "windows": [
+        "24h",
+        "72h",
+        "7d"
+      ],
+      "status": [
+        "DUE",
+        "RECORDED",
+        "MISSED"
+      ]
+    },
+    {
+      "id": "S12_ANALYSIS",
+      "type": "SERIAL",
+      "sequence": [
+        "R15_ANALYZE",
+        "R01_CONFIRM_DATA_REVIEWED"
+      ]
+    },
+    {
+      "id": "S13_STRATEGY_TRIGGER",
+      "type": "CONDITIONAL",
+      "rule": "R16 periodic count uses only idempotent actual PUBLISHED::{content_id} events. CONTENT LOCK creation/re-lock never counts."
+    },
+    {
+      "id": "S14_NEXT",
+      "type": "R01_DECISION",
+      "options": [
+        "NEXT_TASK/NEXT_CONTENT",
+        "LOCKED/CLOSED"
+      ],
+      "new_content_rule": "NEXT_TASK/NEXT_CONTENT -> new content_id -> READY/INTAKE; clear content-scoped pointers while preserving valid account strategy/voice/persona."
+    }
+  ],
+  "hard_invariants": [
+    "runtime=false blocks real CONTENT production",
+    "state/phase transitions must exist in STATE_PHASE_TRANSITION_TABLE, including skip paths",
+    "PUBLISH_READY requires current PUBLISH_COMPLIANCE_GATE PASS",
+    "synthetic persona cannot own real-world product-use experiences",
+    "persona anchor identity changes require a new PERSONA LOCK",
+    "C1/C2 instruction readiness is checked only when the conditional role is triggered",
+    "A/B/C system audits must all PASS before module lock",
+    "R16 periodic count increments only after actual publication is confirmed",
+    "USER_ACTUAL_PUBLISH requires non-expired publish authorization recheck",
+    "R14 publish package must bind exact current CONTENT LOCK final copy and manifest fingerprints"
+  ],
+  "state_phase_contract": "系统/生产架构/SYS-003/STATE_PHASE_TRANSITION_TABLE.json is authoritative for every stage and skip transition.",
+  "conditional_role_runtime": {
+    "C1": {
+      "blocking_live": false,
+      "trigger_requires_instruction_ready": true,
+      "on_not_ready": "BLOCKED_ROLE_NOT_READY"
+    },
+    "C2": {
+      "blocking_live": false,
+      "trigger_requires_instruction_ready": true,
+      "on_not_ready": "BLOCKED_ROLE_NOT_READY"
+    }
+  }
+}
