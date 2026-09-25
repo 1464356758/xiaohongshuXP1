@@ -106,7 +106,7 @@ runtime_enabled = false
 runtime_mode = TEST_ONLY
 real_content_forbidden = true
 state = READY
-phase = STRATEGY_SETUP
+phase = INTAKE
 active_task_path = null
 ```
 
