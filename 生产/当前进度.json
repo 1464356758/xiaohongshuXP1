@@ -129,5 +129,14 @@
       "on_trigger_if_not_ready": "BLOCKED_ROLE_NOT_READY"
     }
   },
-  "first_boot_note": "当前先运行CONTENT-TEST-001。R01在READY/INTAKE且active_task_path=null时用ROUTER_BOOTSTRAP创建首个正式测试协调task；测试PASS前不得真实CONTENT/LIVE。"
+  "first_boot_note": "当前先运行CONTENT-TEST-001。R01在READY/INTAKE且active_task_path=null时用ROUTER_BOOTSTRAP创建首个正式测试协调task；测试PASS前不得真实CONTENT/LIVE。",
+  "content_test_001": {
+    "source_task_path": "任务/CONTENT-TEST-001/V1/任务.json",
+    "start_authorization_path": "批准/CONTENT-TEST-001/START-AUTHORIZATION-V1.json",
+    "r01_start_handoff_path": "任务/CONTENT-TEST-001/V1/R01启动交接.md",
+    "status": "AUTHORIZED_WAITING_ROUTER_BOOTSTRAP",
+    "total_cases": 24,
+    "completed_cases": 0,
+    "pass_path": null
+  }
 }
