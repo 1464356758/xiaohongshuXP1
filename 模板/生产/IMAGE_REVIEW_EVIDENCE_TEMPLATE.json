@@ -1,0 +1,35 @@
+{
+  "schema": "SYS-003_IMAGE_REVIEW_EVIDENCE_V2",
+  "content_id": "CONTENT-000",
+  "review_role_id": "R10|R11|R12",
+  "review_type": "PRODUCT_SKU|PERSONA|CROSS_PAGE_VISUAL",
+  "task_path": "",
+  "delivery_path": "",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "",
+  "asset_manifest_path": "",
+  "asset_manifest_id": "",
+  "manifest_revision": null,
+  "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+  "asset_identity_gate_result": "PASS|BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "",
+      "asset_revision": 1,
+      "fingerprint": "REQUIRED_NON_EMPTY",
+      "dependency_scope": "IN_SCOPE|NOT_APPLICABLE"
+    }
+  ],
+  "result": "PASS|FAIL|BLOCKED|STALE",
+  "completed_at": null,
+  "delivery_fingerprint_or_commit": "",
+  "hard_rules": [
+    "ASSET_IDENTITY_GATE必须对exact manifest PASS。",
+    "证据只对引用的asset revision/fingerprint有效。",
+    "任一in-scope资产变化即STALE。",
+    "R01只激活精确review路径，目录里存在PASS不算。"
+  ]
+}
