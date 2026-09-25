@@ -1,0 +1,28 @@
+{
+  "schema": "CONTENT_TEST_CASE_RECORD_V1",
+  "task_id": "CONTENT-TEST-001",
+  "test_case_id": "T01",
+  "initial_state": {
+    "state": "READY",
+    "phase": "INTAKE",
+    "active_task_path": null,
+    "runtime_enabled": false,
+    "runtime_mode": "TEST_ONLY"
+  },
+  "injected_fault": "Zero-state control plane: active_task_path=null with no pre-created R01 runtime task.",
+  "expected_result_or_route": "R01 uses ROUTER_BOOTSTRAP, creates the first coordination task plus the first workflow-required role task, performs only a legal state/phase transition, and does not create professional outputs.",
+  "actual_result": "PASS: R01 bootstrap created a formal coordination task and an R16 STRATEGY_SETUP task, with I01 selected as the only legal next transition.",
+  "blocking_layer": "R01 ROUTER_BOOTSTRAP + STATE_PHASE_TRANSITION_TABLE I01",
+  "evidence_paths": [
+    "测试/CONTENT-TEST-001/证据/T01-ROUTER-BOOTSTRAP-V1.json",
+    "生产/任务/CONTENT-TEST-001/V1/R01-COORD-T01.json",
+    "生产/任务/CONTENT-TEST-001/V1/R16-STRATEGY-INIT-TASK.json",
+    "生产/当前进度.json"
+  ],
+  "unexpected_side_effects": [],
+  "user_actions_required": [
+    "Copy/hand off 生产/任务/CONTENT-TEST-001/V1/R16-STRATEGY-INIT-TASK.json to R16 账号策略与增长规划AI."
+  ],
+  "PASS_FAIL": "PASS",
+  "recorded_at": "2026-09-26T00:59:00+08:00"
+}
