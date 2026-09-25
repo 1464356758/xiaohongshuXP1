@@ -1,14 +1,14 @@
 {
   "project_id": "XHS-XP1",
-  "system_version": "XP1-MANUAL-MULTIROLE-V1",
-  "stage": "INITIALIZATION",
-  "status": "READY_FOR_R01_BOOTSTRAP",
-  "current_task": null,
-  "task_path": null,
-  "current_input_revision": null,
-  "current_pipeline_step": "READY_INTAKE",
-  "runtime_enabled": true,
-  "runtime_mode": "LIVE",
+  "system_version": "XP1-MANUAL-MULTIROLE-V1-TESTONLY",
+  "stage": "SYSTEM_VALIDATION",
+  "status": "READY_FOR_CONTENT_TEST_001",
+  "current_task": "CONTENT-TEST-001",
+  "task_path": "任务/CONTENT-TEST-001/V1/任务.json",
+  "current_input_revision": 1,
+  "current_pipeline_step": "TEST_ONLY_READY_INTAKE",
+  "runtime_enabled": false,
+  "runtime_mode": "TEST_ONLY",
   "state": "READY",
   "phase": "INTAKE",
   "active_account_strategy_lock": null,
@@ -23,9 +23,9 @@
   "next_actions": [
     {
       "role": "R01 运营总监AI",
-      "action": "真实读取数据库入口/当前进度/生产入口/生产当前进度和本角色指令，执行ROUTER_BOOTSTRAP，创建首次初始化正式任务。"
+      "action": "读取CONTENT-TEST-001正式任务并按ROUTER_BOOTSTRAP创建首个正式测试协调task。"
     }
   ],
   "manual_handoff_mode": true,
-  "note": "用户创建16个独立GPT角色聊天后，只需按R01和各角色末尾的正式交接复制对话。首次先建立ACCOUNT_STRATEGY、VOICE、PERSONA，再进入CONTENT。"
+  "note": "16角色已部署。当前先跑CONTENT-TEST-001；测试PASS并建立第三份正式证据前不得切LIVE或启动真实CONTENT。"
 }
