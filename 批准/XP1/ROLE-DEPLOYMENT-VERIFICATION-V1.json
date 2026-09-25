@@ -1,7 +1,7 @@
 {
   "schema": "XHS_XP1_ROLE_DEPLOYMENT_VERIFICATION_V1",
   "project_id": "XHS-XP1",
-  "result": "PASS_FOR_TEST_ONLY_DEPLOYMENT",
+  "result": "PASS_FOR_FORMAL_PRODUCTION_DEPLOYMENT",
   "source_repository": "https://github.com/1464356758/xiaohongshuXT",
   "source_fixed_commit": "4ac740011f230a11e2b39f0cd5e848ba470c0944",
   "source_role_audit_lock": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
@@ -27,11 +27,11 @@
     "immutable_source_identity": true
   },
   "runtime": {
-    "runtime_enabled": false,
-    "runtime_mode": "TEST_ONLY",
-    "module_lock_pass": true,
-    "role_instruction_audit_pass": true,
-    "content_test_001_pass": false
+    "runtime_enabled": true,
+    "runtime_mode": "LIVE",
+    "module_lock_present": true,
+    "role_instruction_audit_lock_present": true,
+    "formal_production_approval": "批准/XP1/FORMAL-PRODUCTION-V1.json"
   },
-  "next_step": "Create the 16 GPT chats from 角色/01-16 and start R01. Run CONTENT-TEST-001 first. After PASS, switch the same chats to LIVE."
+  "next_step": "Create the 16 GPT chats from 角色/01-16 and start R01 formal production from READY/INTAKE."
 }
