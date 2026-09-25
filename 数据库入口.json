@@ -18,7 +18,6 @@
   "state_phase_table": "系统/生产架构/SYS-003/STATE_PHASE_TRANSITION_TABLE.json",
   "module_lock": "批准/SYS-003/MODULE-LOCK-V1.json",
   "role_deployment": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
-  "manual_live_approval": "批准/XP1/MANUAL-LIVE-APPROVAL-V1.json",
   "mode": "普通聊天16角色人工交接工作流｜当前CONTENT-TEST-001验收阶段",
   "runtime_enabled": false,
   "runtime_mode": "TEST_ONLY",
@@ -27,5 +26,5 @@
   "role_instruction_audit_lock": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
   "content_test_task": "任务/CONTENT-TEST-001/V1/任务.json",
   "content_test_pass": null,
-  "live_activation_rule": "只有SYS-003 MODULE LOCK + SYS-004 ROLE-INSTRUCTION-AUDIT-LOCK + CONTENT-TEST-001 PASS三证齐全，才允许切LIVE。"
+  "live_activation_rule": "Only after MODULE LOCK + ROLE-INSTRUCTION-AUDIT-LOCK + CONTENT-TEST-001 PASS may R01/system switch to LIVE."
 }
