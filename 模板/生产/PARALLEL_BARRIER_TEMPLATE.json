@@ -1,0 +1,37 @@
+{
+  "schema": "SYS-003_PARALLEL_BARRIER_TEMPLATE_V2",
+  "content_id": "CONTENT-000",
+  "stage": "IMAGE_REVIEW",
+  "parallel_group_id": "IMAGE-QA-G1",
+  "barrier_revision": 1,
+  "task_revision": 1,
+  "required_role_ids": [
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "required_dependency_revision": "",
+  "required_asset_manifest_id": null,
+  "required_manifest_revision": null,
+  "role_results": [
+    {
+      "role_id": "R10",
+      "task_path": "",
+      "delivery_path": "",
+      "result": "PENDING|PASS|FAIL|BLOCKED|STALE",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": "",
+      "asset_manifest_id": null,
+      "manifest_revision": null,
+      "evidence_valid": false
+    }
+  ],
+  "barrier_status": "OPEN|COMPLETE|FAIL|BLOCKED",
+  "complete_rule": "每个required role必须有唯一当前有效证据，task/delivery真实存在且版本/依赖一致；IMAGE-QA还必须同一current manifest。",
+  "activation_rule": "R01把激活的barrier精确路径写入active_image_qa_barrier_path；最终批准禁止扫描旧barrier。",
+  "revision_rule": "角色/依赖/manifest变化必须barrier_revision+1并有正式task revision。"
+}
