@@ -19,19 +19,19 @@
     "autonomous_publish": false,
     "publish_authority": "USER_ONLY"
   },
-  "content_id": null,
-  "task_id": null,
-  "task_version": null,
-  "input_revision": null,
+  "content_id": "CONTENT-TEST-001",
+  "task_id": "CONTENT-TEST-001-COORD-R01-T01",
+  "task_version": "V1",
+  "input_revision": 1,
   "revision_round": null,
-  "state": "READY",
-  "phase": "INTAKE",
+  "state": "BUILDING",
+  "phase": "STRATEGY_SETUP",
   "task_lifecycle_status": "ACTIVE",
   "state_owner": "R01",
   "phase_owner": "R01",
-  "active_task_path": null,
+  "active_task_path": "生产/任务/CONTENT-TEST-001/V1/R01-COORD-T01.json",
   "active_revision_path": null,
-  "delivery_path": null,
+  "delivery_path": "生产/产物/总监/CONTENT-TEST-001/V1/T01-交付.json",
   "active_account_strategy_lock_path": null,
   "active_voice_lock_path": null,
   "active_product_lock_path": null,
@@ -93,17 +93,17 @@
     "last_strategy_review_published_content_count": 0,
     "published_count_event_ledger": [],
     "trigger_event_id": "R16-INIT-001",
-    "trigger_status": "PENDING",
+    "trigger_status": "IN_PROGRESS",
     "trigger_reasons": [
       "INITIALIZATION"
     ],
     "trigger_created_at": "2026-09-26T00:00:00+08:00",
-    "trigger_task_path": null,
+    "trigger_task_path": "生产/任务/CONTENT-TEST-001/V1/R16-STRATEGY-INIT-TASK.json",
     "consumed_at": null,
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R01"
+    "R16"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
@@ -129,14 +129,14 @@
       "on_trigger_if_not_ready": "BLOCKED_ROLE_NOT_READY"
     }
   },
-  "first_boot_note": "当前先运行CONTENT-TEST-001。R01在READY/INTAKE且active_task_path=null时用ROUTER_BOOTSTRAP创建首个正式测试协调task；测试PASS前不得真实CONTENT/LIVE。",
+  "first_boot_note": "CONTENT-TEST-001 T01 ROUTER_BOOTSTRAP已完成；按I01进入STRATEGY_SETUP并已创建R16初始化策略正式任务。测试PASS前不得真实CONTENT/LIVE。",
   "content_test_001": {
     "source_task_path": "任务/CONTENT-TEST-001/V1/任务.json",
     "start_authorization_path": "批准/CONTENT-TEST-001/START-AUTHORIZATION-V1.json",
     "r01_start_handoff_path": "任务/CONTENT-TEST-001/V1/R01启动交接.md",
-    "status": "AUTHORIZED_WAITING_ROUTER_BOOTSTRAP",
+    "status": "IN_PROGRESS_T01_BOOTSTRAPPED",
     "total_cases": 24,
-    "completed_cases": 0,
+    "completed_cases": 1,
     "pass_path": null
   }
 }
