@@ -1,0 +1,126 @@
+{
+  "schema": "XP1_PRODUCTION_CURRENT_PROGRESS_V1",
+  "namespace": "生产",
+  "runtime_enabled": true,
+  "runtime_mode": "LIVE",
+  "runtime_enable_authority": "USER_EXPLICIT_MANUAL_DEPLOYMENT",
+  "runtime_activation": {
+    "architecture_lock_path": "批准/SYS-003/MODULE-LOCK-V1.json",
+    "role_deployment_path": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
+    "manual_live_approval_path": "批准/XP1/MANUAL-LIVE-APPROVAL-V1.json",
+    "human_in_the_loop": true,
+    "autonomous_publish": false,
+    "publish_authority": "USER_ONLY"
+  },
+  "content_id": null,
+  "task_id": null,
+  "task_version": null,
+  "input_revision": null,
+  "revision_round": null,
+  "state": "READY",
+  "phase": "INTAKE",
+  "task_lifecycle_status": "ACTIVE",
+  "state_owner": "R01",
+  "phase_owner": "R01",
+  "active_task_path": null,
+  "active_revision_path": null,
+  "delivery_path": null,
+  "active_account_strategy_lock_path": null,
+  "active_voice_lock_path": null,
+  "active_product_lock_path": null,
+  "active_sku_lock_path": null,
+  "active_persona_lock_path": null,
+  "active_content_lock_path": null,
+  "active_compliance_snapshot_path": null,
+  "active_compliance_scope_fingerprint": null,
+  "active_asset_manifest_path": null,
+  "active_asset_manifest_id": null,
+  "active_manifest_revision": null,
+  "active_image_qa_barrier_path": null,
+  "active_r10_review_path": null,
+  "active_r11_review_path": null,
+  "active_r12_review_path": null,
+  "active_r13_review_path": null,
+  "active_pre_publish_gate_path": null,
+  "active_copy_path": null,
+  "active_copy_revision": null,
+  "active_copy_fingerprint": null,
+  "parallel_group": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "task_revision": null,
+    "required_role_ids": [],
+    "required_dependency_revision": null,
+    "required_asset_manifest_id": null,
+    "required_manifest_revision": null,
+    "role_results": [],
+    "barrier_status": "OPEN"
+  },
+  "quality_gates": {
+    "product_sku_image_verify": {
+      "result": "NOT_STARTED",
+      "active_review_path": null
+    },
+    "persona_consistency": {
+      "result": "NOT_STARTED",
+      "active_review_path": null
+    },
+    "cross_page_visual": {
+      "result": "NOT_STARTED",
+      "active_review_path": null
+    },
+    "content_truthfulness_compliance": {
+      "result": "NOT_STARTED",
+      "active_review_path": null
+    }
+  },
+  "frozen_pages": [],
+  "open_revision_pages": [],
+  "invalidated_review_paths": [],
+  "unresolved_issues": [],
+  "latest_r14_raw_data_delivery_path": null,
+  "latest_r15_analysis_delivery_path": null,
+  "r16_lifecycle": {
+    "published_content_count_total": 0,
+    "published_content_count_since_last_strategy_review": 0,
+    "last_strategy_review_published_content_count": 0,
+    "published_count_event_ledger": [],
+    "trigger_event_id": "R16-INIT-001",
+    "trigger_status": "PENDING",
+    "trigger_reasons": [
+      "INITIALIZATION"
+    ],
+    "trigger_created_at": "2026-09-26T00:00:00+08:00",
+    "trigger_task_path": null,
+    "consumed_at": null,
+    "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
+  },
+  "next_role_ids": [
+    "R01"
+  ],
+  "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
+  "publish_compliance_gate": {
+    "result": "NOT_STARTED",
+    "evidence_path": null,
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "checked_at": null,
+    "publish_authorization_issued_at": null,
+    "publish_authorization_valid_until": null,
+    "authorization_status": "NOT_STARTED",
+    "actual_publish_recheck_required": true,
+    "publish_package_binding_valid": false
+  },
+  "conditional_role_readiness": {
+    "C1": {
+      "status": "NOT_CONFIGURED",
+      "on_trigger_if_not_ready": "BLOCKED_ROLE_NOT_READY"
+    },
+    "C2": {
+      "status": "NOT_CONFIGURED",
+      "on_trigger_if_not_ready": "BLOCKED_ROLE_NOT_READY"
+    }
+  },
+  "first_boot_note": "首次启动由R01 ROUTER_BOOTSTRAP创建协调task，并先完成ACCOUNT_STRATEGY、VOICE、PERSONA初始化，再进入首篇CONTENT。"
+}
