@@ -1,0 +1,37 @@
+{
+  "schema": "XHS_XP1_ROLE_DEPLOYMENT_VERIFICATION_V1",
+  "project_id": "XHS-XP1",
+  "result": "PASS_FOR_TEST_ONLY_DEPLOYMENT",
+  "source_repository": "https://github.com/1464356758/xiaohongshuXT",
+  "source_fixed_commit": "4ac740011f230a11e2b39f0cd5e848ba470c0944",
+  "source_role_audit_lock": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+  "audited_source_role_copy_check": {
+    "matched_roles": 16,
+    "total_roles": 16,
+    "result": "16/16 Git blob SHA exact match"
+  },
+  "xiaohongshu2_role_blob_overlap_check": {
+    "compared_old_role_files": 14,
+    "compared_xp1_role_files": 17,
+    "identical_blob_overlap_count": 0,
+    "result": "No XP1 role file is a byte-identical copy of a xiaohongshu2 role file."
+  },
+  "deployed_chat_roles": {
+    "path_pattern": "角色/01-16",
+    "origin": "Generated from the audited XT role files with XP1 repository/project/self-role-path binding changes only.",
+    "purpose": "These are the files the user pastes into 16 separate GPT chats."
+  },
+  "audited_reference_roles": {
+    "path_pattern": "系统/角色指令/SYS-004/",
+    "purpose": "Exact 16 audited source roles retained in XP1 so ROLE-INSTRUCTION-AUDIT-LOCK identity checks resolve locally.",
+    "immutable_source_identity": true
+  },
+  "runtime": {
+    "runtime_enabled": false,
+    "runtime_mode": "TEST_ONLY",
+    "module_lock_pass": true,
+    "role_instruction_audit_pass": true,
+    "content_test_001_pass": false
+  },
+  "next_step": "Create the 16 GPT chats from 角色/01-16 and start R01. Run CONTENT-TEST-001 first. After PASS, switch the same chats to LIVE."
+}
