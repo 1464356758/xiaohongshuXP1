@@ -1,0 +1,57 @@
+{
+  "schema": "SYS-003_VOICE_LOCK_TEMPLATE_V3",
+  "voice_lock_id": "VOICE-001",
+  "lock_version": "LOCK-V1",
+  "status": "DRAFT|LOCKED|SUPERSEDED",
+  "provenance": {
+    "source_task_path": "",
+    "task_version": "V1",
+    "input_revision": 1,
+    "source_delivery_path": "",
+    "supersedes": null
+  },
+  "account_strategy_lock_ref": "",
+  "persona_lock_ref": "",
+  "approved_by": "R01",
+  "approved_at": null,
+  "voice": {
+    "persona_voice_summary": "",
+    "sentence_length": "",
+    "rhythm": "",
+    "professional_level": "",
+    "emotional_intensity": "",
+    "title_habits": [],
+    "common_sentence_patterns": [],
+    "preferred_words": [],
+    "emoji_rules": [],
+    "first_person_experience_gate": {
+      "rule": "必须先检查active PERSONA LOCK.first_person_experience_eligible。若false，所有现实产品使用经历第一人称直接禁止；若true，仍需事实真实+experience_subject_ref指向该REAL_HUMAN_PUBLIC_SUBJECT+evidence_ref。",
+      "required_fields_when_eligible": [
+        "experience_subject_ref",
+        "evidence_ref"
+      ],
+      "on_ineligible": "FORBID_REAL_WORLD_FIRST_PERSON_EXPERIENCE",
+      "on_missing_or_mismatch": "REWRITE_AS_ATTRIBUTED_OR_GENERAL_OBSERVATION"
+    },
+    "allowed_non_experience_first_person": [
+      "审美偏好",
+      "搭配观点",
+      "内容选择偏好，例如‘我更喜欢这种低饱和搭配思路’"
+    ],
+    "forbidden_for_synthetic_persona": [
+      "我用了三天",
+      "我上脸8小时",
+      "我回购了",
+      "我空瓶了",
+      "我今天试了这个色",
+      "任何暗示虚拟人物发生现实产品使用/购买/时长结果的等价表达"
+    ],
+    "ad_like_words_to_avoid": [],
+    "ai_like_words_to_avoid": [],
+    "natural_variation_rule": "同一语言人格但不机械复制句式。"
+  },
+  "enforcement": [
+    "R07在第一人称经历前读取active PERSONA LOCK资格。",
+    "R13独立复核persona_subject_type/eligibility/subject/evidence refs。"
+  ]
+}
