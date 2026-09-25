@@ -58,7 +58,7 @@
     "content_id": null,
     "active_task_path": null,
     "state": "READY",
-    "phase": "STRATEGY_SETUP",
+    "phase": "INTAKE",
     "real_content_forbidden": true
   },
   "test_policy": {
