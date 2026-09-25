@@ -1,43 +1,36 @@
-# XHS-XP1｜小红书美妆AI多角色人工工作流
+# XHS-XP1｜小红书美妆AI多角色正式生产工作流
 
-这是一个与旧项目使用方式相同的“多个GPT聊天 + 人工复制交接”工作流，但底层规则和16个角色来自新版 `xiaohongshuXT` 审核体系，不使用旧 `xiaohongshu2` 角色或旧运行状态。
+这是一个“多个GPT聊天 + 人工复制交接”的正式生产系统。
 
-## 当前阶段
-16个角色已部署完成。
+底层规则和16个角色来自新版审核体系，不使用旧 xiaohongshu2 的角色或旧运行状态。
 
-当前不是LIVE，而是：
+## 当前状态
+- runtime_enabled = true
+- runtime_mode = LIVE
+- state = READY
+- phase = INTAKE
+- active_task_path = null
+- publish_authority = USER_ONLY
 
-`TEST_ONLY`
-
-必须先完成：
-
-`任务/CONTENT-TEST-001/V1/任务.json`
-
-并建立：
-
-`批准/CONTENT-TEST-001/PASS-V1.json`
-
-之后才允许切LIVE。
-
-## 你怎么用
+## 使用方法
 1. 打开 `角色/00_角色建立与初始化说明.md`
 2. 在GPT新项目里一次性建立16个独立角色聊天
 3. 每个聊天粘贴对应 `角色/01-16` 文件
 4. 从【R01 运营总监AI】开始
-5. 按每个角色最后的正式交接复制到指定角色
-6. 当前先跑CONTENT-TEST-001
-7. 测试PASS后继续使用同一批16个聊天进入真实CONTENT，不需要重建角色
+5. 只按R01和各角色的正式交接复制
+6. 系统一路完成账号初始化、研究、商品/SKU、策划、文案、视觉、图片、三审、合规、CONTENT LOCK和发布包
+7. 真实发布由用户本人完成
 
-## 当前状态
-`READY / INTAKE`
+## 首次启动
+由于当前ACCOUNT_STRATEGY / VOICE / PERSONA尚未建立，R01会先按状态机完成这些初始化，再进入首篇真实CONTENT。
 
-`runtime_enabled=false`
+## 正式入口
+- `项目匹配.json`
+- `数据库入口.json`
+- `当前进度.json`
+- `生产/数据库入口.json`
+- `生产/当前进度.json`
+- `启动说明.md`
+- `角色工作流.md`
 
-`runtime_mode=TEST_ONLY`
-
-## 三证
-1. SYS-003 MODULE LOCK：PASS
-2. SYS-004 ROLE-INSTRUCTION-AUDIT-LOCK：PASS
-3. CONTENT-TEST-001 PASS：未完成
-
-只有三证齐全才能LIVE。
+GitHub XP1 是跨角色唯一正式真源。
