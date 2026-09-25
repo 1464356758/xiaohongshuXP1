@@ -1,0 +1,72 @@
+{
+  "schema": "XHS_PROJECT_MATCH_V1",
+  "project_id": "XHS-XP1",
+  "project_name": "小红书GPT新项目压力测试工作区",
+  "project_repository": "https://github.com/1464356758/xiaohongshuXP1",
+  "branch": "main",
+  "mode": "TEST_ONLY",
+  "real_content_enabled": false,
+  "system_source": {
+    "repository": "https://github.com/1464356758/xiaohongshuXT",
+    "branch": "main",
+    "access": "READ_ONLY",
+    "architecture_lock_path": "批准/SYS-003/MODULE-LOCK-V1.json",
+    "architecture_fixed_commit": "5dfa8459a55942fe913971766bcb163b7a205f54",
+    "role_instruction_audit_lock_path": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+    "role_instruction_fixed_commit": "4ac740011f230a11e2b39f0cd5e848ba470c0944",
+    "role_instruction_set_fingerprint": "5dbf7a25796c9acc0588247586a0394c33c64b92f789e5c1b6568f5aed86f981",
+    "r01_role_path": "系统/角色指令/SYS-004/R01_运营总监AI.md",
+    "r01_role_git_blob_sha": "6b25f255b87d42d70046cbe22d55c23f2842b97c",
+    "current_test_task_path": "任务/CONTENT-TEST-001/V1/任务.json"
+  },
+  "workspace_binding": {
+    "repository": "https://github.com/1464356758/xiaohongshuXP1",
+    "access": "READ_WRITE",
+    "mutable_state_root": "生产/",
+    "task_root": "生产/任务/",
+    "revision_root": "生产/返修/",
+    "output_root": "生产/产物/",
+    "review_root": "生产/审核/",
+    "approval_root": "生产/批准/",
+    "asset_root": "生产/资产清单/",
+    "publish_root": "生产/发布包/",
+    "data_root": "生产/数据/",
+    "delivery_root": "生产/交付/",
+    "test_root": "测试/CONTENT-TEST-001/"
+  },
+  "binding_rules": [
+    "xiaohongshuXT仅作为锁定架构、角色指令与测试任务的只读规则源，禁止写入。",
+    "所有运行状态、正式测试task、模拟产物、审核证据、测试报告只写xiaohongshuXP1。",
+    "源角色指令中指向生产/相对路径的可变写入，执行时映射到xiaohongshuXP1同名相对路径。",
+    "源仓库中的LOCK、ROLE_REGISTRY、WORKFLOW_GRAPH、STATE_PHASE_TRANSITION_TABLE、Gate模板与角色指令不得复制后擅改。",
+    "本项目当前仅允许CONTENT-TEST-*；真实CONTENT、真实发布、真实投放、品牌联系全部禁止。",
+    "任何测试PASS不得直接把runtime切LIVE；必须先完成CONTENT-TEST-001正式PASS验收。"
+  ],
+  "startup_order": [
+    "读取本仓库 项目匹配.json",
+    "读取本仓库 角色指令/R01_运营总监AI_项目绑定版.md",
+    "从system_source读取SYS-003 MODULE LOCK",
+    "从system_source读取SYS-004 ROLE-INSTRUCTION-AUDIT-LOCK",
+    "从system_source固定提交读取R01正式角色指令并核对git_blob_sha",
+    "从system_source读取CONTENT-TEST-001正式任务",
+    "若本仓库生产/运行文件不存在，按项目绑定版R01执行WORKSPACE_BOOTSTRAP",
+    "只在TEST_ONLY下执行压力测试"
+  ],
+  "first_run_state": {
+    "runtime_enabled": false,
+    "runtime_mode": "TEST_ONLY",
+    "content_id": null,
+    "active_task_path": null,
+    "state": "READY",
+    "phase": "STRATEGY_SETUP",
+    "real_content_forbidden": true
+  },
+  "test_policy": {
+    "task_id": "CONTENT-TEST-001",
+    "source_task_path": "任务/CONTENT-TEST-001/V1/任务.json",
+    "execute_all_cases": true,
+    "no_real_world_side_effects": true,
+    "pass_requires": "全部规定case完成，P0=0，未关闭P1=0，并形成正式测试PASS证据"
+  },
+  "entry_role_path": "角色指令/R01_运营总监AI_项目绑定版.md"
+}
