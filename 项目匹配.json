@@ -5,7 +5,7 @@
   "repository": "https://github.com/1464356758/xiaohongshuXP1",
   "branch": "main",
   "timezone": "Asia/Shanghai",
-  "mode": "普通聊天16角色人工交接工作流",
+  "mode": "普通聊天16角色人工交接工作流｜当前TEST_ONLY验收阶段",
   "role_count": 16,
   "roles_dir": "角色",
   "role_setup_path": "角色/00_角色建立与初始化说明.md",
@@ -15,26 +15,24 @@
   "current_progress": "当前进度.json",
   "production_database_entry": "生产/数据库入口.json",
   "production_current_progress": "生产/当前进度.json",
-  "live_approval_path": "批准/XP1/MANUAL-LIVE-APPROVAL-V1.json",
   "role_deployment_path": "批准/XP1/ROLE-DEPLOYMENT-V1.json",
   "architecture_lock_path": "批准/SYS-003/MODULE-LOCK-V1.json",
-  "runtime_enabled": true,
-  "runtime_mode": "LIVE",
+  "runtime_enabled": false,
+  "runtime_mode": "TEST_ONLY",
   "publish_authority": "USER_ONLY",
   "first_run": {
     "state": "READY",
     "phase": "INTAKE",
     "active_task_path": null,
     "next_role": "R01",
-    "next_action": "R01 uses ROUTER_BOOTSTRAP to create the first formal coordination/task chain."
+    "next_action": "R01 uses ROUTER_BOOTSTRAP to create the first formal CONTENT-TEST-001 coordination task."
   },
   "user_operation": [
     "Create 16 separate GPT chats using 角色/01-16 files.",
     "Start from R01.",
-    "Copy R01's formal handoff to the named role.",
-    "Copy that role's delivery back to R01.",
-    "Repeat until CONTENT LOCK and publish authorization.",
-    "User personally publishes and returns real receipt/data."
+    "Run CONTENT-TEST-001 first by copying R01 handoffs to the named roles.",
+    "After CONTENT-TEST-001 PASS evidence exists, switch the same 16 chats to LIVE; no role recreation is needed.",
+    "For LIVE production, continue manual handoffs until CONTENT LOCK and publish authorization; user personally publishes."
   ],
   "source_provenance": {
     "source_repository": "https://github.com/1464356758/xiaohongshuXT",
@@ -43,11 +41,15 @@
     "source_role_fingerprint": "5dbf7a25796c9acc0588247586a0394c33c64b92f789e5c1b6568f5aed86f981"
   },
   "hard_rules": [
+    "Before CONTENT-TEST-001 PASS, real CONTENT and LIVE are forbidden.",
     "GitHub XP1 is the single formal runtime source.",
     "Specific products require PRODUCT and SKU locks before downstream production.",
     "Synthetic persona cannot claim real-world product-use experience.",
     "Image reviews bind exact active manifest/fingerprints.",
     "No CONTENT LOCK means no publish.",
     "Actual publishing is USER_ONLY."
-  ]
+  ],
+  "role_instruction_audit_lock_path": "批准/SYS-004/ROLE-INSTRUCTION-AUDIT-LOCK-V1.json",
+  "content_test_task_path": "任务/CONTENT-TEST-001/V1/任务.json",
+  "content_test_pass_path": null
 }
