@@ -1,0 +1,176 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PERSONA-SETUP-R08-V1",
+  "stage": "PERSONA_SETUP",
+  "role_id": "R08",
+  "work_mode": "PERSONA_SETUP_DRAFT",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PERSONA_SETUP",
+  "created_by": "R01",
+  "created_at": "2026-09-27T07:12:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": null,
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "first_person_opinion_eligible": true,
+    "persona_source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "persona_source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "persona_source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+    "模板/锁定/PERSONA_LOCK_TEMPLATE.json"
+  ],
+  "scope": [
+    "将用户已确认的PERSONA-001锚点源集合整理为首次正式PERSONA草案，不重新设计或替换人物身份",
+    "建立persona_subject_type=SYNTHETIC_VISUAL_PERSONA且first_person_experience_eligible=false",
+    "提炼identity_rule、face_shape、feature_proportions、recognition_features、skin_tone_range、must_keep、allowed_to_change、forbidden_identity_drift与page_rule",
+    "建立required anchors：front、angle_45、halfbody，并绑定实际GitHub图像身份fingerprint",
+    "将fullbody、three_view、detail作为辅助比例与识别证据写入草案扩展字段",
+    "明确当前衣服、蝴蝶结与当前半扎发型不是永久身份特征；披发、半扎、扎发、衣服、动作、场景允许变化",
+    "身体比例必须以FULL_BODY_PROPORTION_ANCHOR与BODY_THREE_VIEW_REFERENCE为长期参考，避免头身比、肩宽、腰胯、腿长、手脚尺度漂移",
+    "面颊小痣的位置、大小及与五官的相对关系必须作为核心识别特征锁定"
+  ],
+  "anchor_mapping": {
+    "front": {
+      "anchor_id": "PERSONA-001-FRONT",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "git_blob_sha": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "sha256": "28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "angle_45": {
+      "anchor_id": "PERSONA-001-45",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "git_blob_sha": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "sha256": "e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "halfbody": {
+      "anchor_id": "PERSONA-001-HALF",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "git_blob_sha": "ce0084c9923d4eaffd8fa23397e65b01001a1e95",
+      "sha256": "71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "auxiliary_fullbody": {
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "git_blob_sha": "c47d2970b552a9a27f036f8360ca3b577f2c28cc",
+      "sha256": "ee41506879b62c7ea69b4037f4623c38f4a053c6b79fd53cf3ce6bf328de3699"
+    },
+    "auxiliary_three_view": {
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "git_blob_sha": "d2db38ac82de24637c1d56cac642e61b8380d8b6",
+      "sha256": "d711314caa96ca57fb2b89408b2ee605e36cab1e0896a1dfdd4ee4e158f8b029"
+    },
+    "detail": {
+      "anchor_id": "PERSONA-001-DETAIL",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "git_blob_sha": "e69e643707e9c808a21252bb0ba8ba184c039f17",
+      "sha256": "5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    }
+  },
+  "frozen_scope": [
+    "六张用户确认锚点的字节身份与SOURCE-MANIFEST-V1",
+    "PERSONA-001为同一固定虚拟人物，不允许换脸",
+    "面颊小痣、核心脸型与五官相对比例、年龄观感、基础发色范围",
+    "自然身体比例与四肢长度关系",
+    "SYS-003锁定架构与runtime三证"
+  ],
+  "acceptance_criteria": [
+    "work_mode=PERSONA_SETUP_DRAFT且active_persona_lock_path=null为合法首次初始化",
+    "草案status=DRAFT，不得由R08批准LOCK或修改active_persona_lock_path",
+    "persona_subject_type=SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible=false且first_person_opinion_eligible=true",
+    "front/angle_45/halfbody三项required anchors均有非空machine-verifiable fingerprint并精确绑定本任务anchor_mapping",
+    "不得把当前服装、蝴蝶结、半扎发型误写成永久身份约束",
+    "必须把发型/服装/妆容/首饰/环境/表情/姿势列入允许变化范围，同时保持核心身份与身体比例",
+    "必须记录anchor_identity_status并生成persona_draft_fingerprint",
+    "review_mode_requested=PERSONA_SETUP_REVIEW且lock_authority=R01",
+    "写入后回读验证"
+  ],
+  "expected_output_paths": [
+    "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "生产/产物/PERSONA草案/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001-USER-SOURCE-V1|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PERSONA_SETUP|R08|V1|1|null|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001-USER-SOURCE-V1|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_hot_stale": "BLOCKED_HOT_STALE",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT",
+    "on_role_not_ready": "BLOCKED_ROLE_NOT_READY"
+  },
+  "rules": [
+    "R08只提交PERSONA草案与交付，不批准PERSONA LOCK。",
+    "完成后由R01创建R11 PERSONA_SETUP_REVIEW正式任务。",
+    "锚点路径存在不等于身份已锁定，必须使用实际fingerprint。",
+    "任何必要锚点内容变化都要求后续新PERSONA LOCK版本，不得静默替换。"
+  ]
+}
