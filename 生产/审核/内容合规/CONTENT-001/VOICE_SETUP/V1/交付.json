@@ -1,0 +1,45 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-VOICE-SETUP-R13-V1",
+  "role_id": "R13",
+  "review_mode": "VOICE_DRAFT_TRUTH_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "VOICE-001|V1|sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|VOICE_SETUP|R13|V1|1|null|VOICE-001|V1|sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-001/VOICE_SETUP/V1/R13-VOICE真实性审核任务.json",
+      "binding": "FORMAL_R13_TASK",
+      "git_blob_sha": "ea5d1a5ea263e5bc0ba0b7c387dec80a439551b5"
+    },
+    {
+      "path": "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+      "binding": "EXACT_VOICE_DRAFT",
+      "git_blob_sha": "2ac4c7acd23acb6d7540144381572b37f32743c0",
+      "voice_draft_fingerprint": "sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11"
+    },
+    {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "binding": "ACTIVE_ACCOUNT_STRATEGY_LOCK",
+      "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    }
+  ],
+  "output_paths": [
+    "生产/审核/内容合规/CONTENT-001/VOICE_SETUP/V1/R13-VOICE-DRAFT-TRUTH-REVIEW.json",
+    "生产/审核/内容合规/CONTENT-001/VOICE_SETUP/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/审核/内容合规/CONTENT-001/VOICE_SETUP/V1/R13-VOICE-DRAFT-TRUTH-REVIEW.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json"
+  ],
+  "completed_at": "2026-09-27T07:22:00+08:00",
+  "delivery_fingerprint_or_commit": "sha256:731d8a8f91018bfa378523b15fa9ccaf10d6f0e10398d8e4a3c960f36aea45d4",
+  "next_role_suggestion": "R01机械核验本R13 PASS后，在R01权限内决定是否建立并激活VOICE-001/LOCK-V1；R13不建立VOICE LOCK。"
+}
