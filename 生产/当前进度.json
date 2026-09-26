@@ -13,18 +13,18 @@
     "publish_authority": "USER_ONLY"
   },
   "content_id": "CONTENT-001",
-  "task_id": "CONTENT-001-STRATEGY-SETUP-R01-V1",
+  "task_id": "CONTENT-001-VOICE-SETUP-R07-V1",
   "task_version": "V1",
   "input_revision": 1,
   "revision_round": null,
-  "state": "PASS",
-  "phase": "STRATEGY_SETUP",
+  "state": "BUILDING",
+  "phase": "VOICE_SETUP",
   "task_lifecycle_status": "ACTIVE",
   "state_owner": "R01",
   "phase_owner": "R01",
-  "active_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R01-协调任务.json",
+  "active_task_path": "生产/任务/CONTENT-001/VOICE_SETUP/V1/R07-VOICE草案任务.json",
   "active_revision_path": null,
-  "delivery_path": "生产/产物/总监/CONTENT-001/STRATEGY_SETUP/V1/交付.json",
+  "delivery_path": null,
   "active_account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
   "active_voice_lock_path": null,
   "active_product_lock_path": null,
@@ -96,7 +96,7 @@
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R01"
+    "R07"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
