@@ -1,0 +1,117 @@
+{
+  "schema": "SYS-003_ACCOUNT_STRATEGY_LOCK_V3_FINAL",
+  "account_strategy_lock_id": "ACCOUNT-STRATEGY-001",
+  "lock_version": "LOCK-V1",
+  "status": "LOCKED",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "source_delivery_path": "生产/产物/账号策略草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "approved_by": "R01",
+  "approved_at": "2026-09-26T22:02:00+08:00",
+  "measurement": {
+    "default_window": "LAST_10_PUBLISHED_CONTENTS",
+    "ratio_interpretation": "ACCOUNT_WINDOW_NOT_SINGLE_POST",
+    "default_tolerance": 0.15
+  },
+  "fields": {
+    "positioning": "女性美妆消费决策与审美灵感型分享账号。以热门产品事实拆解、日常问题解决、妆容/美甲/护肤审美灵感为核心，统一女性博主视觉人格承载内容；前台表达不虚构本人亲测、使用时长、功效或不存在的商品事实。当前为冷启动初始化定位，后续由真实发布数据校准。",
+    "target_women_segments": [
+      "核心假设：18-34岁、关注通勤妆容、热门彩妆与日常变美效率的女性用户",
+      "次级假设：偏收藏型、需要选色/选款/搭配决策支持的女性用户",
+      "扩展假设：关注美甲与基础护肤审美、愿意为清晰对比和视觉参考停留的女性用户"
+    ],
+    "growth_stage": "INITIAL_COLD_START_0_PUBLISHED",
+    "content_pillars": [
+      {
+        "pillar": "美妆",
+        "target_ratio": 0.6,
+        "tolerance": 0.15
+      },
+      {
+        "pillar": "美甲",
+        "target_ratio": 0.2,
+        "tolerance": 0.15
+      },
+      {
+        "pillar": "护肤",
+        "target_ratio": 0.2,
+        "tolerance": 0.15
+      }
+    ],
+    "hot_content_ratio": {
+      "target": 0.6,
+      "tolerance": 0.15
+    },
+    "evergreen_content_ratio": {
+      "target": 0.4,
+      "tolerance": 0.15
+    },
+    "persona_face_ratio": {
+      "target": 0.4,
+      "tolerance": 0.15
+    },
+    "product_image_ratio": {
+      "target": 0.75,
+      "tolerance": 0.15
+    },
+    "visual_tone": [
+      "干净、轻通勤、女性日常审美，不做廉价模板感",
+      "产品包装、色号、名称和颜色关系优先准确，再谈视觉美化",
+      "人物与产品混排，PERSONA用于建立识别度但不要求每篇或每页露脸",
+      "静物、手拿、局部、信息卡与人物画面交替，避免连续内容构图同质化"
+    ],
+    "title_style": [
+      "问题或选择场景前置，先给用户一个明确进入理由",
+      "结论感强但不夸张，不靠绝对化、恐吓式或虚假冲突制造点击",
+      "优先使用用户会搜索或评论的产品名、色号、场景词，前提是事实已核验"
+    ],
+    "language_style": [
+      "短句、自然口语、像真实女性分享而不是广告说明书",
+      "允许明确编辑判断，但区分事实、观察归纳与主观建议",
+      "不写未发生的第一人称亲测、使用时长、疗效或购买经历",
+      "避免翻译腔、AI腔、过度术语化和机械免责声明堆叠"
+    ],
+    "commercial_content_ratio": {
+      "target": 0,
+      "tolerance": 0.1
+    },
+    "commercial_stage": "PRE_COMMERCIAL_INITIALIZATION",
+    "differentiation": [
+      "把热门产品讨论做成可直接决策的选择卡，而不是只复述参数",
+      "热点内容与长期可搜索的常青问题并行，避免账号被单一爆点绑架",
+      "统一PERSONA建立连续识别，同时允许纯产品内容，降低人物模板疲劳",
+      "事实核验、SKU准确性和视觉质量作为底层门槛，避免因名称/包装/色号错误损耗信任"
+    ],
+    "forbidden_drift": [
+      "不得虚构本人亲测、购买、使用时长、持妆时长、功效或疗效体验",
+      "不得使用未核验的品牌、产品、SKU、色号、包装版本或官方名称",
+      "不得为了追热点长期偏离女性美妆/美甲/护肤主轴",
+      "不得把单篇比例机械化为每篇强制露脸、强制产品图或固定版式",
+      "不得在没有真实数据与R01正式触发时随意重做定位",
+      "不得在冷启动阶段用高商业内容占比挤压账号信任建设"
+    ]
+  },
+  "review_triggers": [
+    "INITIALIZATION",
+    "EVERY_10_PUBLISHED_CONTENTS",
+    "POSITIONING_DRIFT",
+    "FOLLOWER_STAGE_CHANGE",
+    "COMMERCIALIZATION_START",
+    "R15_STRATEGY_FAILURE_SIGNAL"
+  ],
+  "rules": [
+    "R16只提草案；R01批准正式LOCK。",
+    "比例按measurement window评估，禁止机械约束单篇。",
+    "实质变化必须新版本，旧LOCK不可覆盖。"
+  ],
+  "source_integrity": {
+    "source_draft_path": "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "source_draft_blob_sha": "fa82e7588d3d6cb5e0325907fce71a3738549b56",
+    "source_dependency_revision": "R16-INIT-001",
+    "initialization_evidence_state": "NO_PUBLISHED_HISTORY_INITIALIZATION_BASELINE"
+  }
+}
