@@ -1,0 +1,161 @@
+{
+  "schema": "XP1_ACCOUNT_STRATEGY_DRAFT_V1",
+  "account_strategy_lock_id": "ACCOUNT-STRATEGY-001",
+  "lock_version": "LOCK-V1",
+  "status": "DRAFT",
+  "content_id": "CONTENT-001",
+  "role_id": "R16",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "R16-INIT-001",
+    "source_delivery_path": "生产/产物/账号策略草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "approval_authority": "R01",
+  "approved_by": null,
+  "approved_at": null,
+  "measurement": {
+    "default_window": "LAST_10_PUBLISHED_CONTENTS",
+    "ratio_interpretation": "ACCOUNT_WINDOW_NOT_SINGLE_POST",
+    "default_tolerance": 0.15,
+    "current_published_content_count_total": 0,
+    "current_published_content_count_since_last_strategy_review": 0,
+    "evidence_state": "NO_PUBLISHED_HISTORY_INITIALIZATION_BASELINE"
+  },
+  "fields": {
+    "positioning": "女性美妆消费决策与审美灵感型分享账号。以热门产品事实拆解、日常问题解决、妆容/美甲/护肤审美灵感为核心，统一女性博主视觉人格承载内容；前台表达不虚构本人亲测、使用时长、功效或不存在的商品事实。当前为冷启动初始化定位，后续由真实发布数据校准。",
+    "target_women_segments": [
+      "核心假设：18-34岁、关注通勤妆容、热门彩妆与日常变美效率的女性用户",
+      "次级假设：偏收藏型、需要选色/选款/搭配决策支持的女性用户",
+      "扩展假设：关注美甲与基础护肤审美、愿意为清晰对比和视觉参考停留的女性用户"
+    ],
+    "growth_stage": "INITIAL_COLD_START_0_PUBLISHED",
+    "content_pillars": [
+      {
+        "pillar": "美妆",
+        "target_ratio": 0.6,
+        "tolerance": 0.15
+      },
+      {
+        "pillar": "美甲",
+        "target_ratio": 0.2,
+        "tolerance": 0.15
+      },
+      {
+        "pillar": "护肤",
+        "target_ratio": 0.2,
+        "tolerance": 0.15
+      }
+    ],
+    "hot_content_ratio": {
+      "target": 0.6,
+      "tolerance": 0.15
+    },
+    "evergreen_content_ratio": {
+      "target": 0.4,
+      "tolerance": 0.15
+    },
+    "persona_face_ratio": {
+      "target": 0.4,
+      "tolerance": 0.15
+    },
+    "product_image_ratio": {
+      "target": 0.75,
+      "tolerance": 0.15
+    },
+    "visual_tone": [
+      "干净、轻通勤、女性日常审美，不做廉价模板感",
+      "产品包装、色号、名称和颜色关系优先准确，再谈视觉美化",
+      "人物与产品混排，PERSONA用于建立识别度但不要求每篇或每页露脸",
+      "静物、手拿、局部、信息卡与人物画面交替，避免连续内容构图同质化"
+    ],
+    "title_style": [
+      "问题或选择场景前置，先给用户一个明确进入理由",
+      "结论感强但不夸张，不靠绝对化、恐吓式或虚假冲突制造点击",
+      "优先使用用户会搜索或评论的产品名、色号、场景词，前提是事实已核验"
+    ],
+    "language_style": [
+      "短句、自然口语、像真实女性分享而不是广告说明书",
+      "允许明确编辑判断，但区分事实、观察归纳与主观建议",
+      "不写未发生的第一人称亲测、使用时长、疗效或购买经历",
+      "避免翻译腔、AI腔、过度术语化和机械免责声明堆叠"
+    ],
+    "commercial_content_ratio": {
+      "target": 0,
+      "tolerance": 0.1
+    },
+    "commercial_stage": "PRE_COMMERCIAL_INITIALIZATION",
+    "differentiation": [
+      "把热门产品讨论做成可直接决策的选择卡，而不是只复述参数",
+      "热点内容与长期可搜索的常青问题并行，避免账号被单一爆点绑架",
+      "统一PERSONA建立连续识别，同时允许纯产品内容，降低人物模板疲劳",
+      "事实核验、SKU准确性和视觉质量作为底层门槛，避免因名称/包装/色号错误损耗信任"
+    ],
+    "forbidden_drift": [
+      "不得虚构本人亲测、购买、使用时长、持妆时长、功效或疗效体验",
+      "不得使用未核验的品牌、产品、SKU、色号、包装版本或官方名称",
+      "不得为了追热点长期偏离女性美妆/美甲/护肤主轴",
+      "不得把单篇比例机械化为每篇强制露脸、强制产品图或固定版式",
+      "不得在没有真实数据与R01正式触发时随意重做定位",
+      "不得在冷启动阶段用高商业内容占比挤压账号信任建设"
+    ]
+  },
+  "strategy_basis": {
+    "trigger_event_id": "R16-INIT-001",
+    "trigger_reason": "INITIALIZATION",
+    "published_history_count": 0,
+    "r15_analysis_path": null,
+    "active_account_strategy_lock_path": null,
+    "evidence_refs": [
+      "生产/当前进度.json",
+      "批准/XP1/FORMAL-PRODUCTION-V1.json",
+      "模板/生产/ACCOUNT_STRATEGY_LOCK_TEMPLATE.json",
+      "系统/生产架构/SYS-003/R16_TRIGGER_LIFECYCLE.json",
+      "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json"
+    ],
+    "evidence_note": "当前没有已发布内容历史、R15分析或既有ACCOUNT_STRATEGY LOCK，因此所有比例均为初始化策略假设，不代表已验证的账号表现结论。"
+  },
+  "initialization_assumptions": [
+    "美妆为首要内容支柱，美甲与护肤用于扩展女性变美场景并降低题材单一化",
+    "冷启动优先热点获取初始触达，同时保留40%常青内容建立搜索与收藏资产",
+    "PERSONA出现率控制在账号窗口约40%，避免人物过密；产品图覆盖约75%，保证商品型内容的信息效率",
+    "商业内容初始目标为0，待R01正式触发COMMERCIALIZATION_START或FOLLOWER_STAGE_CHANGE后再评估"
+  ],
+  "validation_plan": [
+    "累计前10篇真实PUBLISHED内容后，用LAST_10_PUBLISHED_CONTENTS窗口检查三支柱、热点/常青、PERSONA/产品图比例与表现差异",
+    "由R15按真实曝光、阅读/播放、赞藏评分享、归因关注与粉丝净增识别主要有效变量",
+    "若出现POSITIONING_DRIFT、FOLLOWER_STAGE_CHANGE或R15_STRATEGY_FAILURE_SIGNAL，由R01创建新trigger后再进行策略复盘",
+    "任何比例调整必须绑定真实发布样本，不以CONTENT LOCK数量代替发布样本"
+  ],
+  "change_reason": "INITIALIZATION：当前无ACCOUNT_STRATEGY LOCK，需要先建立可被R01审批的首版账号策略基线。",
+  "impact_scope": [
+    "后续内容选题组合与账号窗口比例",
+    "视觉总策划中的PERSONA/产品画面占比参考",
+    "标题与语言风格基线",
+    "冷启动阶段商业内容边界",
+    "后续R15数据复盘的策略对照基线"
+  ],
+  "follow_up_recommendations": {
+    "voice_task_recommended": true,
+    "persona_task_recommended": true,
+    "reason": "账号策略已定义语言和视觉方向，但当前active_voice_lock_path与active_persona_lock_path均为null。建议由R01按锁定流程分别创建VOICE与PERSONA初始化任务；R16不自行创建或批准。"
+  },
+  "review_triggers": [
+    "INITIALIZATION",
+    "EVERY_10_PUBLISHED_CONTENTS",
+    "POSITIONING_DRIFT",
+    "FOLLOWER_STAGE_CHANGE",
+    "COMMERCIALIZATION_START",
+    "R15_STRATEGY_FAILURE_SIGNAL"
+  ],
+  "rules": [
+    "R16只提草案；R01批准正式LOCK。",
+    "比例按measurement window评估，禁止机械约束单篇。",
+    "实质变化必须新版本，旧LOCK不可覆盖。",
+    "当前trigger由R01消费/reset，R16不得修改trigger状态或published计数。"
+  ],
+  "generated_at": "2026-09-26T17:13:00+08:00"
+}
