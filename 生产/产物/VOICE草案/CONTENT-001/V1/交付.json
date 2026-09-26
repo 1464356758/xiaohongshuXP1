@@ -1,0 +1,57 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-VOICE-SETUP-R07-V1",
+  "role_id": "R07",
+  "work_mode": "VOICE_SETUP_DRAFT",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|VOICE_SETUP|R07|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-001/VOICE_SETUP/V1/R07-VOICE草案任务.json",
+      "binding": "FORMAL_TASK"
+    },
+    {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "binding": "ACTIVE_ACCOUNT_STRATEGY_LOCK",
+      "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    {
+      "path": "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+      "binding": "STRATEGY_SOURCE_DRAFT",
+      "git_blob_sha": "fa82e7588d3d6cb5e0325907fce71a3738549b56"
+    },
+    {
+      "path": "模板/生产/VOICE_LOCK_TEMPLATE.json",
+      "binding": "VOICE_TEMPLATE",
+      "git_blob_sha": "3102208a3c7836ab3d387bf22cfe224b6021d887"
+    }
+  ],
+  "output_paths": [
+    "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/交付.json"
+  ],
+  "voice_draft_path": "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+  "voice_draft_blob_sha": "2ac4c7acd23acb6d7540144381572b37f32743c0",
+  "voice_draft_fingerprint": "sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11",
+  "persona_binding_status": "PENDING_PERSONA",
+  "persona_lock_ref": null,
+  "first_person_experience_gate": "PENDING_PERSONA_TREATED_AS_INELIGIBLE",
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/当前进度.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "模板/生产/VOICE_LOCK_TEMPLATE.json",
+    "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json"
+  ],
+  "completed_at": "2026-09-26T23:38:00+08:00",
+  "delivery_fingerprint_or_commit": "sha256:ef05f114d555dd9f19a6ae9e0719df4b6830855cdf552644b213bdff18ae6f92",
+  "next_role_suggestion": "R01创建R13 / VOICE_DRAFT_TRUTH_REVIEW正式任务；R13 PASS后仍由R01决定是否建立VOICE LOCK。"
+}
