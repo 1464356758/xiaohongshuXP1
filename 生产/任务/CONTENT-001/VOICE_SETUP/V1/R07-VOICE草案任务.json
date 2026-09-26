@@ -1,0 +1,108 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-VOICE-SETUP-R07-V1",
+  "stage": "VOICE_SETUP",
+  "role_id": "R07",
+  "work_mode": "VOICE_SETUP_DRAFT",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "VOICE_SETUP",
+  "created_by": "R01",
+  "created_at": "2026-09-26T22:02:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": null,
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": null,
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": null,
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "persona_binding_status": "PENDING_PERSONA"
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "模板/生产/VOICE_LOCK_TEMPLATE.json"
+  ],
+  "scope": [
+    "按VOICE_SETUP_DRAFT模式建立VOICE-001首版草案",
+    "绑定当前ACCOUNT_STRATEGY LOCK",
+    "PERSONA尚未正式LOCK时采用PENDING_PERSONA保守真实性策略",
+    "定义标题习惯、句长节奏、专业度、情绪强度、常用词、emoji规则、广告腔/AI腔禁区与自然变化规则",
+    "现实产品第一人称经历一律禁止，直到后续正式PERSONA资格满足"
+  ],
+  "frozen_scope": [
+    "当前ACCOUNT_STRATEGY LOCK",
+    "SYS-003锁定架构",
+    "用户确认PERSONA源图只作为后续PERSONA_SETUP输入，本阶段不得越权批准PERSONA LOCK",
+    "runtime三证"
+  ],
+  "acceptance_criteria": [
+    "work_mode=VOICE_SETUP_DRAFT且active_voice_lock_path=null可合法初始化",
+    "草案status必须为DRAFT，不得写LOCKED",
+    "必须绑定当前ACCOUNT_STRATEGY LOCK path/id/version",
+    "persona_binding_status=PENDING_PERSONA且persona_lock_ref=null",
+    "必须明确first_person_experience_gate、allowed_non_experience_first_person、forbidden_for_synthetic_persona",
+    "必须提供voice_draft_fingerprint、review_required_by=R13、lock_authority=R01",
+    "交付字段与幂等键完整，写后回读验证"
+  ],
+  "expected_output_paths": [
+    "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|VOICE_SETUP|R07|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_hot_stale": "BLOCKED_HOT_STALE",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT",
+    "on_role_not_ready": "BLOCKED_ROLE_NOT_READY"
+  },
+  "rules": [
+    "R07只提交VOICE草案与交付，不批准VOICE LOCK。",
+    "完成后由R01建立R13 VOICE_DRAFT_TRUTH_REVIEW正式任务。",
+    "不得把用户确认的虚拟人物写成拥有现实产品使用经历。"
+  ]
+}
