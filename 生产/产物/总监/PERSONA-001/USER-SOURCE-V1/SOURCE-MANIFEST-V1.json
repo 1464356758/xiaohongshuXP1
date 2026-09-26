@@ -1,0 +1,107 @@
+{
+  "schema": "XP1_PERSONA_USER_SOURCE_MANIFEST_V1",
+  "persona_id": "PERSONA-001",
+  "source_set_id": "PERSONA-001-USER-SOURCE-V1",
+  "status": "USER_CONFIRMED_REFERENCE_SET",
+  "formal_persona_lock_status": "PENDING_PERSONA_SETUP",
+  "intended_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+  "confirmed_by": "USER",
+  "confirmed_at": "2026-09-26T18:34:00+08:00",
+  "repository": "https://github.com/1464356758/xiaohongshuXP1",
+  "branch": "main",
+  "source_files": [
+    {
+      "role": "REFERENCE_SEATED",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+      "original_filename": "1000157649.png",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "git_blob_sha": "ce0084c9923d4eaffd8fa23397e65b01001a1e95"
+    },
+    {
+      "role": "FULL_BODY_PROPORTION_ANCHOR",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "original_filename": "1000157758.png",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "ee41506879b62c7ea69b4037f4623c38f4a053c6b79fd53cf3ce6bf328de3699",
+      "git_blob_sha": "c47d2970b552a9a27f036f8360ca3b577f2c28cc"
+    },
+    {
+      "role": "PRIMARY_FACE_ANCHOR",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "original_filename": "1000157648.png",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "git_blob_sha": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04"
+    },
+    {
+      "role": "BODY_THREE_VIEW_REFERENCE",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "original_filename": "1000157757.png",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "d711314caa96ca57fb2b89408b2ee605e36cab1e0896a1dfdd4ee4e158f8b029",
+      "git_blob_sha": "d2db38ac82de24637c1d56cac642e61b8380d8b6"
+    },
+    {
+      "role": "FACE_45_DEGREE_ANCHOR",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "original_filename": "1000157647.png",
+      "width": 1152,
+      "height": 1536,
+      "sha256": "e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "git_blob_sha": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08"
+    },
+    {
+      "role": "DETAIL_REFERENCE_BOARD",
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+      "original_filename": "1000157756.png",
+      "width": 1229,
+      "height": 1536,
+      "sha256": "5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "git_blob_sha": "e69e643707e9c808a21252bb0ba8ba184c039f17"
+    }
+  ],
+  "identity_rules": {
+    "primary_face_reference": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "secondary_face_reference": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "body_proportion_reference": [
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png"
+    ],
+    "distinctive_mark": "面颊小痣的位置、大小与相对五官关系以PRIMARY_FACE_ANCHOR实际像素为准，不得漂移或消失。",
+    "keep_stable": [
+      "核心面部身份",
+      "脸型与五官相对比例",
+      "眼型与眼距",
+      "鼻唇结构",
+      "年龄观感",
+      "基础发色范围",
+      "面颊小痣",
+      "自然身体比例与四肢长度关系"
+    ],
+    "explicitly_variable": [
+      "服装",
+      "发型",
+      "披发",
+      "半扎发",
+      "扎发",
+      "刘海细节",
+      "动作",
+      "场景",
+      "拍摄角度",
+      "妆容强弱"
+    ],
+    "non_lock_rule": "当前衣服、蝴蝶结和当前半扎发型不是永久身份特征，不得把它们误当PERSONA固定条件。",
+    "body_rule": "后续全身或半身生成必须参考FULL_BODY_PROPORTION_ANCHOR与BODY_THREE_VIEW_REFERENCE，避免头身比、肩宽、腰胯、腿长、手脚尺度发生明显漂移。"
+  },
+  "workflow_binding": {
+    "current_active_persona_lock_path": null,
+    "rule": "本文件仅是用户确认的锚点源集合。正式PERSONA LOCK必须在锁定流程PERSONA_SETUP中由R08建立草案、R11独立审核、R01批准并绑定这些文件的身份指纹。",
+    "silent_replace_forbidden": true,
+    "anchor_change_requires_new_revision": true
+  }
+}
