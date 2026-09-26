@@ -1,0 +1,119 @@
+{
+  "schema": "XP1_R13_VOICE_DRAFT_TRUTH_REVIEW_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-VOICE-SETUP-R13-V1",
+  "role_id": "R13",
+  "review_mode": "VOICE_DRAFT_TRUTH_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "VOICE-001|V1|sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|VOICE_SETUP|R13|V1|1|null|VOICE-001|V1|sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-001/VOICE_SETUP/V1/R13-VOICE真实性审核任务.json",
+      "binding": "FORMAL_R13_TASK",
+      "git_blob_sha": "ea5d1a5ea263e5bc0ba0b7c387dec80a439551b5"
+    },
+    {
+      "path": "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+      "binding": "EXACT_VOICE_DRAFT",
+      "git_blob_sha": "2ac4c7acd23acb6d7540144381572b37f32743c0",
+      "voice_draft_fingerprint": "sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11"
+    },
+    {
+      "path": "生产/产物/VOICE草案/CONTENT-001/V1/交付.json",
+      "binding": "R07_SOURCE_DELIVERY",
+      "git_blob_sha": "68ba7d9bfd29ece1e98ff3695a78f835512380d2"
+    },
+    {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "binding": "ACTIVE_ACCOUNT_STRATEGY_LOCK",
+      "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    {
+      "path": "模板/生产/VOICE_LOCK_TEMPLATE.json",
+      "binding": "VOICE_TEMPLATE",
+      "git_blob_sha": "3102208a3c7836ab3d387bf22cfe224b6021d887"
+    }
+  ],
+  "review_findings": {
+    "exact_binding": {
+      "result": "PASS",
+      "notes": [
+        "voice_draft_path与任务绑定路径完全一致。",
+        "VOICE草案Git blob为2ac4c7acd23acb6d7540144381572b37f32743c0，与acceptance_criteria完全一致。",
+        "voice_draft_fingerprint为sha256:cdce3beefdcdd17438825581a26344abc615dde872f3a2f3e74c8c93b86a0d11，与正式任务绑定完全一致。",
+        "ACCOUNT_STRATEGY LOCK blob为a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2，与dependency_revision一致。"
+      ]
+    },
+    "voice_field_completeness": {
+      "result": "PASS",
+      "notes": [
+        "已包含人设语气、句长、节奏、专业度、情绪强度、标题习惯、常用句式、偏好词、emoji规则、第一人称门禁、非体验型第一人称、synthetic persona禁用表达、广告腔/AI腔规避、自然变化、事实与反馈表达规则及CTA风格。",
+        "字段足以约束后续R07文案风格与真实性边界。"
+      ]
+    },
+    "account_strategy_alignment": {
+      "result": "PASS",
+      "notes": [
+        "短句、自然口语、女性消费决策与审美分享方向与ACCOUNT_STRATEGY一致。",
+        "商品名/SKU/色号/包装必须来自正式证据，与策略LOCK的事实准确性要求一致。",
+        "编辑判断、聚合反馈、商品事实被明确区分，没有把资料或他人反馈伪装成本人体验。",
+        "不依靠绝对化标题和广告式口播，与PRE_COMMERCIAL_INITIALIZATION阶段一致。"
+      ]
+    },
+    "first_person_truth_boundary": {
+      "result": "PASS",
+      "persona_binding_status": "PENDING_PERSONA",
+      "persona_lock_ref": null,
+      "current_eligibility": "INELIGIBLE",
+      "notes": [
+        "当前PERSONA未LOCK，VOICE明确按first_person_experience_eligible=false处理。",
+        "现实产品使用、购买、回购、空瓶、持妆/使用时长、功效或结果型第一人称全部被禁止。",
+        "未来即使eligible=true，仍要求experience_subject_ref指向当前REAL_HUMAN_PUBLIC_SUBJECT且同时存在evidence_ref。",
+        "允许的第一人称仅限审美偏好、内容组织偏好和不暗示现实使用的编辑判断。"
+      ]
+    },
+    "synthetic_visual_persona_boundary": {
+      "result": "PASS",
+      "notes": [
+        "草案没有赋予SYNTHETIC_VISUAL_PERSONA现实购买、收货、试用、持续使用、回购、空瓶、功效结果或时长经历。",
+        "forbidden_for_synthetic_persona列出了典型禁句及等价表达兜底规则。"
+      ]
+    },
+    "ad_and_ai_tone_rules": {
+      "result": "PASS",
+      "notes": [
+        "已明确规避闭眼入、必买、封神、百分百适合、立刻见效等广告化或绝对化表达。",
+        "已明确规避说明书式、模板式和常见AI腔表达，同时保留自然变化规则。",
+        "fact_and_feedback_expression_rules明确：公开文案不机械塞后台来源说明，但不得绕过平台依法要求的标识或披露，因此不存在用去AI腔规则绕过法定/平台标识的口子。"
+      ]
+    }
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/当前进度.json",
+    "生产/任务/CONTENT-001/VOICE_SETUP/V1/R13-VOICE真实性审核任务.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/VOICE-001-DRAFT.json",
+    "生产/产物/VOICE草案/CONTENT-001/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "模板/生产/VOICE_LOCK_TEMPLATE.json"
+  ],
+  "scope_effect": {
+    "voice_draft_truth_review": "PASSED",
+    "voice_lock_created": false,
+    "active_voice_lock_path_modified": false,
+    "state_or_phase_modified": false,
+    "meaning": "本PASS仅表示绑定的VOICE-001 V1 DRAFT可交R01审批LOCK。"
+  },
+  "output_paths": [
+    "生产/审核/内容合规/CONTENT-001/VOICE_SETUP/V1/R13-VOICE-DRAFT-TRUTH-REVIEW.json",
+    "生产/审核/内容合规/CONTENT-001/VOICE_SETUP/V1/交付.json"
+  ],
+  "completed_at": "2026-09-27T07:22:00+08:00",
+  "delivery_fingerprint_or_commit": "sha256:731d8a8f91018bfa378523b15fa9ccaf10d6f0e10398d8e4a3c960f36aea45d4",
+  "next_role_suggestion": "R01机械核验本R13 PASS后，在R01权限内决定是否建立并激活VOICE-001/LOCK-V1；R13不建立VOICE LOCK。"
+}
