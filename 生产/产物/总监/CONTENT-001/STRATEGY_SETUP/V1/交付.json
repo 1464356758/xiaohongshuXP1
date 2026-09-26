@@ -1,0 +1,34 @@
+{
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-STRATEGY-SETUP-R01-V1",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "R16-INIT-001",
+  "idempotency_key": "CONTENT-001|STRATEGY_SETUP|R01|V1|1|null|R16-INIT-001",
+  "result": "PASS",
+  "input_bindings": {
+    "r16_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json",
+    "r16_delivery_path": "生产/产物/账号策略草案/CONTENT-001/V1/交付.json",
+    "r16_draft_path": "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "trigger_event_id": "R16-INIT-001",
+    "trigger_status_before": "IN_PROGRESS"
+  },
+  "output_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/任务/CONTENT-001/VOICE_SETUP/V1/R07-VOICE草案任务.json",
+    "生产/产物/总监/CONTENT-001/STRATEGY_SETUP/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "生产/产物/账号策略草案/CONTENT-001/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/任务/CONTENT-001/VOICE_SETUP/V1/R07-VOICE草案任务.json"
+  ],
+  "completed_at": "2026-09-26T22:02:00+08:00",
+  "delivery_fingerprint_or_commit": "1664d086bb4650b57c7e23933e733338f6688217",
+  "next_role_suggestion": "R07"
+}
