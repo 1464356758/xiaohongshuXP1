@@ -1,0 +1,108 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-STRATEGY-SETUP-R01-V1",
+  "stage": "STRATEGY_SETUP",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "STRATEGY_SETUP",
+  "created_by": "R01",
+  "created_at": "2026-09-26T16:53:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": null,
+    "voice_lock_path": null,
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": null,
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": null,
+    "first_person_experience_eligible": null,
+    "actual_publish_scope_fingerprint": null,
+    "r16_trigger_event_id": "R16-INIT-001",
+    "r16_trigger_reason": "INITIALIZATION"
+  },
+  "input_paths": [
+    "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json",
+    "生产/产物/账号策略草案/CONTENT-001/V1/ACCOUNT-STRATEGY-001-DRAFT.json",
+    "生产/产物/账号策略草案/CONTENT-001/V1/交付.json",
+    "模板/生产/ACCOUNT_STRATEGY_LOCK_TEMPLATE.json",
+    "系统/生产架构/SYS-003/R16_TRIGGER_LIFECYCLE.json"
+  ],
+  "scope": [
+    "接收并机械核验R16初始化策略草案与正式交付",
+    "按ACCOUNT_STRATEGY_LOCK模板批准或拒绝策略草案",
+    "若批准，建立新的不可变ACCOUNT_STRATEGY LOCK并激活active_account_strategy_lock_path",
+    "按R16_TRIGGER_LIFECYCLE将R16-INIT-001从IN_PROGRESS置CONSUMED",
+    "仅按STATE_PHASE_TRANSITION_TABLE执行STRATEGY_SETUP后续合法迁移并建立下一角色正式任务"
+  ],
+  "frozen_scope": [
+    "SYS-003锁定架构",
+    "SYS-004已锁定角色指令",
+    "runtime三证",
+    "R02-RR16专业角色权限边界"
+  ],
+  "acceptance_criteria": [
+    "R16交付role_id=R16、task_version=V1、input_revision=1、revision_round=null、dependency_revision=R16-INIT-001且幂等键完全匹配",
+    "策略草案满足ACCOUNT_STRATEGY_LOCK_TEMPLATE必填结构且未由R16自行批准LOCK",
+    "批准时新LOCK来源绑定R16任务与交付；拒绝时不得创建LOCK",
+    "R16-INIT-001只消费一次",
+    "写入后回读并验证主状态、active pointer、LOCK/交付与下一正式task的一致性"
+  ],
+  "expected_output_paths": [
+    "生产/产物/总监/CONTENT-001/STRATEGY_SETUP/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json"
+  ],
+  "dependency_revision": "R16-INIT-001",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|STRATEGY_SETUP|R01|V1|1|null|R16-INIT-001",
+  "routing": {
+    "on_success": [
+      "R07"
+    ],
+    "on_fail": [
+      "R16"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_hot_stale": "BLOCKED_HOT_STALE",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT",
+    "on_role_not_ready": "BLOCKED_ROLE_NOT_READY"
+  },
+  "rules": [
+    "ROUTER_BOOTSTRAP只创建控制面任务与指针，不替R16生成策略内容。",
+    "R01审批前不得激活ACCOUNT_STRATEGY LOCK。",
+    "若R16交付失败或阻塞，停留在当前合法STRATEGY_SETUP状态并最小化返修。"
+  ]
+}
