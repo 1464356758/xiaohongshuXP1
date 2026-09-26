@@ -17,15 +17,15 @@
   "task_version": "V1",
   "input_revision": 1,
   "revision_round": null,
-  "state": "BUILDING",
+  "state": "PASS",
   "phase": "STRATEGY_SETUP",
   "task_lifecycle_status": "ACTIVE",
   "state_owner": "R01",
   "phase_owner": "R01",
   "active_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R01-协调任务.json",
   "active_revision_path": null,
-  "delivery_path": null,
-  "active_account_strategy_lock_path": null,
+  "delivery_path": "生产/产物/总监/CONTENT-001/STRATEGY_SETUP/V1/交付.json",
+  "active_account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
   "active_voice_lock_path": null,
   "active_product_lock_path": null,
   "active_sku_lock_path": null,
@@ -86,17 +86,17 @@
     "last_strategy_review_published_content_count": 0,
     "published_count_event_ledger": [],
     "trigger_event_id": "R16-INIT-001",
-    "trigger_status": "IN_PROGRESS",
+    "trigger_status": "CONSUMED",
     "trigger_reasons": [
       "INITIALIZATION"
     ],
     "trigger_created_at": "2026-09-26T02:57:00+08:00",
     "trigger_task_path": "生产/任务/CONTENT-001/STRATEGY_SETUP/V1/R16-账号策略草案任务.json",
-    "consumed_at": null,
+    "consumed_at": "2026-09-26T22:02:00+08:00",
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R16"
+    "R01"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
