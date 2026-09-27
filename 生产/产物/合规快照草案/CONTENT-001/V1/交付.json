@@ -1,0 +1,74 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COMPLIANCE-REFRESH-R13-V1",
+  "role_id": "R13",
+  "review_mode": "COMPLIANCE_SNAPSHOT_DRAFT_OR_REFRESH",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key": "CONTENT-001|COMPLIANCE_REFRESH|R13|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-001/COMPLIANCE_REFRESH/V1/R13-合规快照刷新任务.json",
+      "binding": "FORMAL_R13_TASK",
+      "git_blob_sha": "46e42813ee612ccd15dddeaaf226a39b66ba9a1c"
+    },
+    {
+      "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+      "binding": "FROZEN_FINAL_COPY",
+      "git_blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+      "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+    },
+    {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "binding": "ACTIVE_ASSET_MANIFEST",
+      "git_blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+      "manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+    },
+    {
+      "path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "binding": "ACTIVE_IMAGE_QA_BARRIER",
+      "git_blob_sha": "596493d9367a181f826dbb87bd771930cfc4e3dc",
+      "status": "COMPLETE"
+    },
+    {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "binding": "ACTIVE_PERSONA_LOCK",
+      "git_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  ],
+  "output_paths": [
+    "生产/产物/合规快照草案/CONTENT-001/V1/COMPLIANCE-SNAPSHOT-DRAFT.json",
+    "生产/产物/合规快照草案/CONTENT-001/V1/交付.json"
+  ],
+  "compliance_snapshot_draft_path": "生产/产物/合规快照草案/CONTENT-001/V1/COMPLIANCE-SNAPSHOT-DRAFT.json",
+  "compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+  "check_results": {
+    "AI_label_requirement": "VERIFIED",
+    "commercial_disclosure_requirement": "NOT_APPLICABLE",
+    "prohibited_or_high_risk_claims": "VERIFIED",
+    "authenticity_rules": "VERIFIED"
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm",
+    "https://pgy.xiaohongshu.com/help/detail?id=1eda0a065dd894063c2e029a49e8f6a1&userType=4",
+    "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html",
+    "https://www.miit.gov.cn/threestrategy/zcgh/zcfg/art/2020/art_3b697f6533524bb0af6c79588bcc3875.html",
+    "https://pgy.xiaohongshu.com/help/detail?id=6495c527d1eedeeb48fb18b1f875650e&userType=4",
+    "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_5474cf75173c45d6a0379730fb4e8d97.html",
+    "生产/产物/合规快照草案/CONTENT-001/V1/COMPLIANCE-SNAPSHOT-DRAFT.json"
+  ],
+  "completed_at": "2026-09-27T21:56:00+08:00",
+  "delivery_fingerprint_or_commit": "sha256:84a9aff6c081b89dc097169ffc603f703ba11aa37348b65368283d3cbbb65946",
+  "delivery_fingerprint_algorithm": "SHA256(content_id|stage|role_id|task_version|input_revision|revision_round|scope_fingerprint|checked_at|result)",
+  "next_role_suggestion": "R01机械核验本DRAFT后决定是否建立并激活正式COMPLIANCE_SNAPSHOT；R13不得自行激活。"
+}
