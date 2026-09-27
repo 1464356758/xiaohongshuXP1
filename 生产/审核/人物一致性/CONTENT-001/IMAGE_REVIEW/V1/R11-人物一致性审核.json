@@ -1,0 +1,108 @@
+{
+  "schema": "XP1_R11_CONTENT_PERSONA_REVIEW_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-REVIEW-R11-V1",
+  "role_id": "R11",
+  "review_mode": "CONTENT_PERSONA_REVIEW",
+  "review_type": "PERSONA",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|IMAGE_REVIEW|R11|V1|1|null|MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "task_blob_sha": "54414e96d1e18885d810746d79f99433b31d21a5",
+    "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "asset_manifest_blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "parallel_group_id": "CONTENT-001-IMAGE-QA-G1"
+  },
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-001-P1",
+      "asset_revision": 1,
+      "asset_transport": "USER_FILE",
+      "immutable_attachment_id": "file_00000000ff6081fdae07c825f044d4a3",
+      "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0",
+      "persona_required": true,
+      "status": "PASS"
+    },
+    {
+      "page_id": "P3",
+      "asset_id": "CONTENT-001-P3",
+      "asset_revision": 1,
+      "asset_transport": "USER_FILE",
+      "immutable_attachment_id": "file_00000000587c81fd9418fab085a6d5e2",
+      "fingerprint": "sha256:c54415544721caaa3fc2088e0d237ced6d49921bdae57ffc3f3319ddba371849",
+      "persona_required": true,
+      "status": "PASS"
+    }
+  ],
+  "persona_reference": {
+    "persona_id": "PERSONA-001",
+    "lock_version": "LOCK-V1",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "anchor_identity_status": "VALID",
+    "required_identity_features": [
+      "核心脸型与额头-颧区-下颌-下巴轮廓关系",
+      "双眼大小、眼型、眼距及与眉鼻的相对比例",
+      "鼻梁、鼻头、鼻翼的紧凑结构",
+      "上下唇厚薄与唇宽关系",
+      "面颊小痣的固定位置、大小及与五官相对关系",
+      "年轻成年女性的年龄观感",
+      "深棕至暖深棕基础发色范围",
+      "自然身体比例"
+    ]
+  },
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "findings": [
+        "人物核心脸型、五官比例、年龄观感与PERSONA-001一致。",
+        "右侧面颊靠近颧骨的小痣可见，位置关系与锁定识别点一致。",
+        "基础发色处于深棕至暖深棕允许范围。",
+        "造型、妆容、首饰与场景变化均属于允许变化范围。"
+      ]
+    },
+    "P3": {
+      "result": "PASS",
+      "findings": [
+        "人物核心脸型、五官比例、年龄观感与PERSONA-001一致。",
+        "右侧面颊靠近颧骨的小痣可见，位置关系与锁定识别点一致。",
+        "基础发色处于深棕至暖深棕允许范围。",
+        "与P1交叉比对未见换脸或明显身份漂移。"
+      ]
+    }
+  },
+  "cross_page_findings": [
+    "P1与P3可判定为同一固定虚拟人物身份。",
+    "两页在脸型、眼鼻唇比例、面颊小痣、年龄观感和基础发色范围上保持一致。",
+    "服装、发型、妆容、首饰、动作、表情和场景的变化未越出PERSONA LOCK允许范围。",
+    "本轮页面以脸部/上半身为主，未观察到与PERSONA LOCK身体比例规则相冲突的可见异常。"
+  ],
+  "failed_scope": [],
+  "required_revision_pages": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "user_file://file_00000000ff6081fdae07c825f044d4a3",
+    "user_file://file_00000000587c81fd9418fab085a6d5e2"
+  ],
+  "output_paths": [
+    "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "completed_at": "2026-09-27T21:47:00+08:00",
+  "delivery_fingerprint_or_commit": null,
+  "next_role_suggestion": "R01",
+  "execution_note": "本文件将此前已完成的实际像素PASS审核正式落盘；本次未重新审核、未修改图片、未修改PERSONA LOCK、未修改state/phase/pointer。"
+}
