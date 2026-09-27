@@ -1,0 +1,47 @@
+{
+  "schema": "SYS-003_PARTIAL_REVISION_V1",
+  "content_id": "CONTENT-001",
+  "revision_id": "CONTENT-001-IMAGE-BUILD-R09-TRANSPORT-R1",
+  "stage": "IMAGE_BUILD",
+  "target_role_id": "R09",
+  "source_task_path": "生产/任务/CONTENT-001/IMAGE_BUILD/V1/R09-图片制作任务.json",
+  "source_task_id": "CONTENT-001-IMAGE-BUILD-R09-V1",
+  "source_task_version": "V1",
+  "new_task_version": "V2",
+  "revision_round": 1,
+  "input_revision": 2,
+  "reason": "Adopt approved USER_FILE image transport without changing visual/content scope.",
+  "protocol_path": "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md",
+  "protocol_blob_sha": "691ee443483bc129d7cf4595b17a001acbbf63e7",
+  "allowed_changes": [
+    "Change final image binary transport from mandatory GitHub PNG paths to USER_FILE.",
+    "Remove GitHub PNG/JPG binary paths from R09 expected_output_paths.",
+    "Require actual P1-P5 images to be returned to user as real image attachments/files.",
+    "Allow manifest pages to use asset_transport=USER_FILE with actual-byte SHA256 or platform immutable attachment/file ID.",
+    "If R09 cannot obtain verifiable identity from generated images, require user re-upload of those same generated files to R09 before PASS.",
+    "Keep GitHub ASSET MANIFEST and R09 delivery JSON as formal text/control-plane outputs."
+  ],
+  "frozen_scope": [
+    "R08 visual plan and R09 page build spec",
+    "active copy revision 1 and final copy fingerprint",
+    "P1-P5 page structure and public text meaning",
+    "PRODUCT-001 LOCK-V1",
+    "SKU-001-03 LOCK-V1 / 03 Crystal Ball / 水晶球",
+    "PERSONA-001 LOCK-V1",
+    "persona_required/product_required flags",
+    "Snow Ballet vs Swan Ballet isolation",
+    "03 vs 01/02 isolation",
+    "SYS-003 ASSET_IDENTITY_GATE",
+    "R01-only state/phase/pointer authority",
+    "R10/R11/R12 cannot start before R01 activates manifest"
+  ],
+  "forbidden_changes": [
+    "Do not modify SYS-003 files.",
+    "Do not alter copy, planning, visual plan, locks or page content.",
+    "Do not waive manifest_fingerprint or per-page verifiable identity.",
+    "Do not treat filename/path/chat text as asset identity."
+  ],
+  "expected_result": "R09 V2 uses USER_FILE image transport while remaining fully compatible with ASSET_IDENTITY_GATE.",
+  "created_by": "R01",
+  "created_at": "2026-09-27T12:28:00+08:00"
+}
