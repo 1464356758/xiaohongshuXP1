@@ -1,0 +1,146 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COMPLIANCE-REVIEW-R13-V1",
+  "stage": "COMPLIANCE_REVIEW",
+  "role_id": "R13",
+  "review_mode": "CONTENT_TRUTH_COMPLIANCE_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVIEWING",
+  "phase": "COMPLIANCE_REVIEW",
+  "created_by": "R01",
+  "created_at": "2026-09-27T22:03:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "final_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "final_copy_revision": 1,
+    "final_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "active_r10_review_path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "active_r11_review_path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "active_r12_review_path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "compliance_snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "compliance_snapshot_id": "COMPLIANCE-XHS-0001",
+    "compliance_snapshot_revision": 1,
+    "required_compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "compliance_valid_until": "2026-10-04T21:56:00+08:00",
+    "image_binary_transport": "USER_FILE",
+    "actual_pixels_required": true
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json"
+  ],
+  "required_user_files": [
+    {
+      "page_id": "P1",
+      "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0"
+    },
+    {
+      "page_id": "P2",
+      "fingerprint": "sha256:e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72"
+    },
+    {
+      "page_id": "P3",
+      "fingerprint": "sha256:c54415544721caaa3fc2088e0d237ced6d49921bdae57ffc3f3319ddba371849"
+    },
+    {
+      "page_id": "P4",
+      "fingerprint": "sha256:8ff01ba8723ce5a788761ae6e11be1941777b649ce287999b7dda2ee2da5a497"
+    },
+    {
+      "page_id": "P5",
+      "fingerprint": "sha256:c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389"
+    }
+  ],
+  "scope": [
+    "审核exact final copy + exact P1-P5 actual pixels + exact manifest的内容真实性与平台合规。",
+    "逐条分类公开claim：官方事实、可观察事实、编辑判断、聚合反馈、个人体验；每条必须有合法来源或明确保持为编辑建议。",
+    "核对Flower Knows / 花知晓、Snow Ballet、03 Crystal Ball / 水晶球、六个官方色名及包装/SKU表达与当前PRODUCT/SKU LOCK一致。",
+    "SYNTHETIC_VISUAL_PERSONA不得出现现实购买、使用、试色、回购、空瓶、持妆时长、实测效果等个人经历；任何等价暗示均FAIL。",
+    "检查P1-P5图中文字与final copy是否存在功效保证、医疗化、绝对化、无证据性能结论、虚构用户体验或将编辑建议冒充品牌官方教程。",
+    "审核必须绑定当前R10/R11/R12 PASS证据和COMPLETE barrier，不得用旧审核。",
+    "审核必须消费active COMPLIANCE-XHS-0001 revision 1，确认当前时间未过valid_until且scope fingerprint精确匹配。",
+    "AI标识要求属于当前适用发布义务。当前图片本身不强制写入‘AI生成’字样；若成品内容无其他硬伤，可将AI标识要求明确作为后续R14发布包/发布前PUBLISH_COMPLIANCE_GATE的必备发布条件，由平台AI标识功能或符合快照要求的可见声明完成。不得把该发布义务误判为必须返修P1-P5图片。",
+    "如果当前文案或图片本身存在必须修改的合规硬伤，则FAIL并给最小返修范围；不能用发布阶段标识去掩盖内容本身违规。",
+    "不修改图片、文案、LOCK、state/phase/pointer。"
+  ],
+  "frozen_scope": [
+    "final copy fingerprint sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "ASSET-CONTENT-001 revision 1 / manifest fingerprint sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "R10/R11/R12 current PASS evidence",
+    "COMPLIANCE-XHS-0001 revision 1 / scope fingerprint sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "ACCOUNT_STRATEGY/VOICE/PERSONA/PRODUCT/SKU current locks"
+  ],
+  "acceptance_criteria": [
+    "实际读取P1-P5当前USER_FILE像素，且五页identity与active manifest一致。",
+    "绑定exact final_copy fingerprint与exact manifest id/revision/fingerprint。",
+    "绑定R10/R11/R12 current evidence和COMPLETE IMAGE_QA barrier。",
+    "绑定status=VALID且时间有效、scope匹配的COMPLIANCE-XHS-0001 revision 1。",
+    "逐条检查final copy及图片公开文字的事实/编辑判断/个人体验边界。",
+    "不存在synthetic persona现实亲测/购买/回购/空瓶/时长体验。",
+    "不存在未证实医疗/疗效/保证性/绝对化或虚假性能claim。",
+    "不存在PRODUCT/SKU名称、色号、包装身份冲突。",
+    "若PASS，必须明确记录AI_label_publish_requirement=REQUIRED_AT_PUBLISH并交由R14/PUBLISH_COMPLIANCE_GATE执行，不得把图片内无‘AI生成’字样单独当作图片返修理由。",
+    "写后回读正式审核文件和交付。"
+  ],
+  "expected_output_paths": [
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/交付.json"
+  ],
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|COMPLIANCE_REVIEW|R13|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
