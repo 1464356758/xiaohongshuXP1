@@ -1,0 +1,62 @@
+{
+  "schema": "XP1_R04_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R04-V1",
+  "role_id": "R04",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "CANDIDATE_SET|CONTENT-001-CANDIDATE-SET-V1|765e1aa9bd065dae37059069ffa5c1fdc4556560|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|PRODUCT_LOCK|R04|V1|1|null|CANDIDATE_SET|CONTENT-001-CANDIDATE-SET-V1|765e1aa9bd065dae37059069ffa5c1fdc4556560|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "active_task_path": "生产/任务/CONTENT-001/PRODUCT_LOCK/V1/R04-商品事实研究任务.json",
+    "candidate_set_path": "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_blob_sha": "765e1aa9bd065dae37059069ffa5c1fdc4556560",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false
+  },
+  "output_paths": [
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/交付.json"
+  ],
+  "result_summary": {
+    "candidates_covered": 5,
+    "verified_eligible": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-04"
+    ],
+    "not_eligible": [
+      "CAND-03",
+      "CAND-05"
+    ],
+    "critical_findings": [
+      "CAND-01已核对Snow Ballet三盘文本身份：01 Music Box/八音盒、02 Romantic Waltz/圆舞曲、03 Crystal Ball/水晶球；后续仍须R05/R10绑定准确商品图，严防与Swan Ballet旧系列错图。",
+      "CAND-02正式英文产品线为Gloss Bomb Universal Lip Luminizer；中国2026-09活动报道的新三色为Hot Chocolit Fantasy/Pink Dragonfly/Rose Amber，但Fenty全球站当前New标签另指Cherry Amor/Diamond Milk/Caviar Crystalz，因此必须绑定中国市场活动scope。",
+      "CAND-03只有二次索引线索，无品牌一手正式商品身份，NOT_ELIGIBLE_FOR_SELECTION。",
+      "CAND-04正式英文产品为Cushion Satin Lip Cream，S01-S04身份可交叉确认；必须防旧N系列唇粉霜与新S系列缎光唇粉霜混图。",
+      "CAND-05的610跨产品线/地区存在命名碰撞，当前‘YSL 610哑光新版’不足以唯一定位SKU，NOT_ELIGIBLE_FOR_SELECTION_AS_CURRENTLY_NAMED。"
+    ]
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette",
+    "https://fentybeauty.com/products/gloss-bomb-universal-lip-luminizer-hot-chocolit-fantasy",
+    "https://fashion.sina.com.cn/b/nw/2026-09-17/1523/doc-iniscksf0365249.shtml",
+    "https://judydoll.com/products/cushion-satin-lip-cream",
+    "https://www.yslbeauty.com.tw/product/%E5%94%87%E8%86%8F/%E6%83%85%E6%8C%91%E8%A3%B8%E5%90%BB%E7%85%99%E9%9C%A7%E6%8C%81%E8%89%B2%E5%94%87%E8%90%83/WW-51595YSL.html",
+    "https://www.yslbeauty.com.tw/product/%E5%94%87%E9%83%A8/%E5%A5%A2%E8%8F%AF%E5%8D%B0%E8%A8%98%E9%8E%96%E5%BF%83%E5%85%89%E5%94%87%E9%87%89/WW-20677YSL.html"
+  ],
+  "completed_at": "2026-09-27T09:23:00+08:00",
+  "delivery_fingerprint_or_commit": "report_commit:16fe346f445940256ec332db62158fe3d14f5546",
+  "next_role_suggestion": "R01从R04标记为VERIFIED_ELIGIBLE的候选中做正式选择；如选择CAND-01/CAND-02/CAND-04，再由R01创建R05 PRODUCT/SKU DRAFT正式任务。CAND-03与CAND-05当前不得进入正式选择。"
+}
