@@ -1,0 +1,261 @@
+{
+  "schema": "SYS-003_COMPLIANCE_SNAPSHOT_V2",
+  "compliance_snapshot_id": "COMPLIANCE-XHS-0001",
+  "snapshot_revision": 1,
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COMPLIANCE-REFRESH-R13-V1",
+  "role_id": "R13",
+  "review_mode": "COMPLIANCE_SNAPSHOT_DRAFT_OR_REFRESH",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key": "CONTENT-001|COMPLIANCE_REFRESH|R13|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/COMPLIANCE_REFRESH/V1/R13-合规快照刷新任务.json",
+    "source_delivery_path": "生产/产物/合规快照草案/CONTENT-001/V1/交付.json",
+    "supersedes_snapshot_path": null,
+    "source_draft_path": "生产/产物/合规快照草案/CONTENT-001/V1/COMPLIANCE-SNAPSHOT-DRAFT.json",
+    "source_draft_blob_sha": "3feff740ded84879ea6dae3cc8345b718e5c377f"
+  },
+  "platform": "小红书",
+  "jurisdiction": "中国大陆",
+  "checked_at": "2026-09-27T21:56:00+08:00",
+  "valid_until": "2026-10-04T21:56:00+08:00",
+  "status": "VALID",
+  "compliance_scope": {
+    "content_mode": "ORGANIC_SHARE",
+    "commercial_status": "NON_COMMERCIAL",
+    "product_category": "BEAUTY",
+    "AI_modalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "claims_risk": "MEDIUM",
+    "account_type": "PERSONAL_CREATOR",
+    "canonical_scope_json": "{\"AI_modalities\":[\"TEXT\",\"IMAGE\"],\"account_type\":\"PERSONAL_CREATOR\",\"claims_risk\":\"MEDIUM\",\"commercial_status\":\"NON_COMMERCIAL\",\"content_mode\":\"ORGANIC_SHARE\",\"product_category\":\"BEAUTY\"}",
+    "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1"
+  },
+  "scope_bindings": {
+    "final_copy": {
+      "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+      "blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+      "copy_revision": 1,
+      "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+    },
+    "asset_manifest": {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+      "manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+    },
+    "image_qa_barrier": {
+      "path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "blob_sha": "596493d9367a181f826dbb87bd771930cfc4e3dc",
+      "status": "COMPLETE"
+    },
+    "r10": {
+      "path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+      "blob_sha": "212899595e95c43f680e165f971084e37a13bfc0",
+      "result": "PASS"
+    },
+    "r11": {
+      "path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+      "blob_sha": "d4dc53b430f112e9943bf05e841e793ed5331c19",
+      "result": "PASS"
+    },
+    "r12": {
+      "path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+      "blob_sha": "0283a72e63daa51ce733ad2bf0cbb658f92c03fe",
+      "result": "PASS"
+    },
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  },
+  "rule_sources": [
+    {
+      "source_id": "LAW-AIGC-LABEL-2025",
+      "title": "人工智能生成合成内容标识办法",
+      "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": "2025-09-01",
+      "supports": [
+        "AI生成合成内容覆盖文本、图片等",
+        "用户发布生成合成内容应主动声明并使用服务提供者提供的标识功能",
+        "不得恶意删除、篡改、伪造、隐匿生成合成内容标识"
+      ]
+    },
+    {
+      "source_id": "PLATFORM-XHS-COMMUNITY-COVENANT-2.0",
+      "title": "小红书社区公约2.0",
+      "url": "https://pgy.xiaohongshu.com/help/detail?id=1eda0a065dd894063c2e029a49e8f6a1&userType=4",
+      "source_type": "PLATFORM_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": "2026-07-31",
+      "supports": [
+        "AI辅助创作应主动标明",
+        "可在内容开头或结尾标注AI生成，或在图片简介、视频片头等处注明",
+        "素材与分享应真实",
+        "不得塑造虚假人设",
+        "不得虚构产品功效或伪造数据"
+      ]
+    },
+    {
+      "source_id": "LAW-INTERNET-ADS-2023",
+      "title": "互联网广告管理办法",
+      "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": "2023-05-01",
+      "supports": [
+        "适用于利用互联网媒介直接或间接推销商品或服务的商业广告活动",
+        "互联网广告应具有可识别性",
+        "知识介绍、体验分享、消费测评等形式推销商品或服务并附加购物链接等购买方式时应显著标明广告"
+      ]
+    },
+    {
+      "source_id": "LAW-COSMETICS-2021",
+      "title": "化妆品监督管理条例",
+      "url": "https://www.miit.gov.cn/threestrategy/zcgh/zcfg/art/2020/art_3b697f6533524bb0af6c79588bcc3875.html",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": "2021-01-01",
+      "supports": [
+        "化妆品广告内容应真实、合法",
+        "不得明示或暗示医疗作用",
+        "不得含有虚假或引人误解的内容，不得欺骗、误导消费者"
+      ]
+    },
+    {
+      "source_id": "PLATFORM-XHS-CONTENT-REVIEW-2026",
+      "title": "小红书蒲公英内容审核规范",
+      "url": "https://pgy.xiaohongshu.com/help/detail?id=6495c527d1eedeeb48fb18b1f875650e&userType=4",
+      "source_type": "PLATFORM_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": "2026-08-19",
+      "supports": [
+        "商业内容禁止不合理的功效保证与100%有效等保证性承诺",
+        "平台对功效夸大、医疗化表达、绝对化宣传设置审核风险边界",
+        "非特殊化妆品不得越权宣传特定特殊功效"
+      ]
+    },
+    {
+      "source_id": "LAW-ADVERTISING-CURRENT",
+      "title": "中华人民共和国广告法",
+      "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_5474cf75173c45d6a0379730fb4e8d97.html",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-27T21:56:00+08:00",
+      "effective_date": null,
+      "supports": [
+        "广告中商品性能、功能等表示应准确清楚明白",
+        "广告不得使用国家级、最高级、最佳等绝对化用语",
+        "虚构商品使用效果等情形可构成虚假广告",
+        "广告应具有可识别性"
+      ]
+    }
+  ],
+  "checks": {
+    "AI_label_requirement": {
+      "status": "VERIFIED",
+      "applicability": "APPLICABLE",
+      "requirement": "当前内容明确包含AI生成/合成的文本与图片，并使用SYNTHETIC_VISUAL_PERSONA。发布时必须主动声明AI参与，并不得删除、篡改、隐藏已有生成合成标识。若小红书发布页提供专门AI标识功能，应同时使用该平台功能。",
+      "platform_mechanism_evidence": "小红书官方《社区公约2.0》明确给出可执行的可见标注方式：在内容开头或结尾标注“AI生成”，或在图片简介、视频片头等处注明。当前为图文内容，至少需存在用户可明显感知的AI参与标识；发布前R13/R14还应复核当时客户端是否出现专门AI标识开关/声明入口。",
+      "publish_gate_recheck_required": true,
+      "source_ids": [
+        "LAW-AIGC-LABEL-2025",
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ]
+    },
+    "commercial_disclosure_requirement": {
+      "status": "NOT_APPLICABLE",
+      "applicability_basis": "当前冻结scope为ORGANIC_SHARE + NON_COMMERCIAL，当前文案未包含购买链接、返利/联盟、商单、赠品合作或其他商业关系声明，因而本快照不把该内容认定为互联网商业广告。",
+      "requirement": "当前scope无需额外商业合作披露或“广告”标识。若后续增加付费合作、赠品、佣金/联盟、购买链接或其他直接/间接推销机制，本项立即scope mismatch，必须刷新快照并重新判断广告可识别性与平台商业合作披露要求。",
+      "source_ids": [
+        "LAW-INTERNET-ADS-2023",
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ]
+    },
+    "prohibited_or_high_risk_claims": {
+      "status": "VERIFIED",
+      "rules": [
+        "不得把眼影等化妆品描述为具有医疗、治疗、治愈、消炎、抗炎等医疗作用。",
+        "不得作虚假或引人误解的产品性能、功效、适用人群、使用结果、时长结果或数据陈述。",
+        "不得使用“100%有效”“完全有效”“绝对无风险”“所有人都适用”等保证性承诺；若内容进入商业广告范围，还应严格避免广告法意义上的绝对化用语及虚构使用效果。",
+        "普通化妆品不得越权宣称仅特殊化妆品可依法主张的特定功效；当前产品为眼影，本内容应保持在颜色、搭配、审美和已核验商品事实范围。",
+        "显色、持妆、不飞粉、长时不脱妆、功效/性能比较等若作为事实性性能结论，必须有当前适用证据；没有证据只能写成明确的编辑搭配建议或删除。",
+        "不得把编辑建议包装成品牌官方教程，不得用未经核验的排名、销量、权威背书或竞品贬损来增强说服力。"
+      ],
+      "current_scope_note": "当前冻结文案核心为03水晶球的色彩结构、通勤搭配与选择建议，未依赖医疗或功效保证型claim；具体成品是否完全合规仍应由后续CONTENT_TRUTH_COMPLIANCE_REVIEW绑定exact copy+manifest逐条审核。",
+      "source_ids": [
+        "LAW-COSMETICS-2021",
+        "PLATFORM-XHS-CONTENT-REVIEW-2026",
+        "LAW-ADVERTISING-CURRENT"
+      ]
+    },
+    "authenticity_rules": {
+      "status": "VERIFIED",
+      "rules": [
+        "SYNTHETIC_VISUAL_PERSONA不得被写成现实产品使用主体。",
+        "禁止虚构‘我买了/我收到了/我用了/我试了/我回购了/我空瓶了/我用了X天/我带妆X小时/我实测不脱妆’及等价表达。",
+        "不得把聚合反馈、公开资料、品牌信息或编辑判断偷换成账号本人的现实经历。",
+        "可以使用不暗示现实使用的审美观点、搭配偏好、内容组织判断，但不得让用户合理理解为虚拟人物发生了现实购买、试用或效果经历。",
+        "商品名称、SKU、色号、包装及颜色事实必须继续绑定当前PRODUCT/SKU LOCK；人物视觉不得冒充真实消费者经历证据。",
+        "小红书官方社区规则要求素材与分享真实、不得塑造虚假人设；系统内部PERSONA LOCK进一步将first_person_experience_eligible固定为false。"
+      ],
+      "persona_binding": {
+        "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+        "first_person_experience_eligible": false,
+        "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json"
+      },
+      "source_ids": [
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ],
+      "internal_evidence_refs": [
+        "生产/批准/PERSONA-001/LOCK-V1.json",
+        "生产/批准/VOICE-001/LOCK-V1.json",
+        "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json"
+      ]
+    }
+  },
+  "all_required_checks_satisfied": true,
+  "activation_eligibility": "ELIGIBLE_FOR_R01_REVIEW_ONLY",
+  "activation_note": "本文件仅为R13合规快照草案。R01必须机械核验来源、时间、scope及检查状态后方可建立/激活正式COMPLIANCE_SNAPSHOT；R13未修改active_compliance_snapshot_path。",
+  "refresh_triggers": [
+    "valid_until reached",
+    "平台规则/UI变化",
+    "法律或强制性标准变化",
+    "commercial_status变化",
+    "content_mode变化",
+    "AI_modalities变化",
+    "account_type变化",
+    "claims_risk变化",
+    "R13发现冲突证据"
+  ],
+  "evidence_refs": [
+    "生产/当前进度.json",
+    "生产/任务/CONTENT-001/COMPLIANCE_REFRESH/V1/R13-合规快照刷新任务.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json"
+  ],
+  "activation": {
+    "authority": "R01",
+    "activated_at": "2026-09-27T22:02:00+08:00",
+    "activation_reason": "R13 refresh PASS; required sources present; required checks VERIFIED/NOT_APPLICABLE; checked_at/valid_until valid; concrete scope; scope_fingerprint verified.",
+    "source_draft_status": "DRAFT"
+  }
+}
