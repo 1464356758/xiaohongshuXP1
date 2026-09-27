@@ -1,0 +1,126 @@
+{
+  "schema": "SYS-003_IMAGE_REVIEW_EVIDENCE_V2",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-REVIEW-R12-V1",
+  "review_role_id": "R12",
+  "role_id": "R12",
+  "review_type": "CROSS_PAGE_VISUAL",
+  "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+  "delivery_path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/交付.json",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|IMAGE_REVIEW|R12|V1|1|null|MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+  "asset_manifest_id": "ASSET-CONTENT-001",
+  "manifest_revision": 1,
+  "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+  "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+  "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+  "asset_identity_gate_result": "PASS",
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-001-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0",
+      "dependency_scope": "IN_SCOPE"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-001-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72",
+      "dependency_scope": "IN_SCOPE"
+    },
+    {
+      "page_id": "P3",
+      "asset_id": "CONTENT-001-P3",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c54415544721caaa3fc2088e0d237ced6d49921bdae57ffc3f3319ddba371849",
+      "dependency_scope": "IN_SCOPE"
+    },
+    {
+      "page_id": "P4",
+      "asset_id": "CONTENT-001-P4",
+      "asset_revision": 1,
+      "fingerprint": "sha256:8ff01ba8723ce5a788761ae6e11be1941777b649ce287999b7dda2ee2da5a497",
+      "dependency_scope": "IN_SCOPE"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-001-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389",
+      "dependency_scope": "IN_SCOPE"
+    }
+  ],
+  "result": "PASS",
+  "input_bindings": {
+    "visual_plan": "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "page_task": "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "copy": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "account_strategy": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "image_workflow_protocol": "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md"
+  },
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "finding": "封面钩子明确，标题层级清晰；人物与产品同框关系成立；留白、装饰与主体关系平衡，未见阻断级裁切或可读性问题。"
+    },
+    "P2": {
+      "result": "PASS",
+      "finding": "六色结构拆解页功能明确；标签指向与层级清楚；信息量较大但仍可读，未见阻断级乱码、截断或融合异常。"
+    },
+    "P3": {
+      "result": "PASS",
+      "finding": "三档蓝色存在感解释功能明确；人物近景与信息卡组合区别于P1；三栏层级清晰，手部与五官未见阻断级异常。"
+    },
+    "P4": {
+      "result": "PASS",
+      "finding": "选前3问的判断页结构清楚，阅读路径顺畅；文本密度可接受，安全区与边缘留白未见阻断级问题。"
+    },
+    "P5": {
+      "result": "PASS",
+      "finding": "总结收束页功能明确；商品主体、三项总结与互动问题形成完整结尾；与前页风格统一且不构成机械重复。"
+    }
+  },
+  "cross_page_findings": [
+    "跨页节奏为封面引入→六色结构→三档蓝色存在感→选前3问→收藏总结，页面功能差异成立。",
+    "P1与P3均含人物近景，但构图、动作、文字组织和页面功能不同，不判定为机械重复。",
+    "冰蓝/银白/水晶装饰语言跨页稳定，同时产品页、人物页、信息页比例有变化。",
+    "未发现阻断级乱码、异常裁切、明显透视错误、严重五官/手部崩坏或背景/产品融合异常。",
+    "个别正文区域字级偏小，但未达到本轮FAIL门槛。"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_pages": [],
+  "output_paths": [
+    "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "evidence_refs": [
+    {
+      "path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+      "blob_sha": "6fb15d3de153fb0b66a00f12af08a09b086d006f"
+    },
+    {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f"
+    },
+    {
+      "path": "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+      "blob_sha": "5a27512aff58ba913a5b0c335fc29d59cf65f0cc"
+    }
+  ],
+  "completed_at": "2026-09-27T21:47:00+08:00",
+  "delivery_fingerprint_or_commit": null,
+  "next_role_suggestion": "R01",
+  "hard_rules": [
+    "本结果仅绑定exact active manifest及上述P1-P5 asset revision/fingerprint。",
+    "任一纳入审核的asset revision/fingerprint变化时，本R12证据应视为STALE。",
+    "SKU身份主判归R10，PERSONA身份主判归R11。",
+    "R12未修改图片、state、phase、pointer或LOCK。"
+  ]
+}
