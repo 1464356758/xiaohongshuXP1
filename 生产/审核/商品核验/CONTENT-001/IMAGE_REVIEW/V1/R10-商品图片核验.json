@@ -1,0 +1,122 @@
+{
+  "schema": "SYS-003_IMAGE_REVIEW_EVIDENCE_V2",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-REVIEW-R10-V1",
+  "review_role_id": "R10",
+  "review_type": "PRODUCT_SKU",
+  "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+  "delivery_path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/交付.json",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|IMAGE_REVIEW|R10|V1|1|null|MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+  "asset_manifest_id": "ASSET-CONTENT-001",
+  "manifest_revision": 1,
+  "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+  "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+  "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+  "asset_identity_gate_result": "PASS",
+  "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+  "product_lock_blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813",
+  "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+  "sku_lock_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "sku_identity": "03 Crystal Ball / 水晶球",
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-001-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0",
+      "immutable_attachment_id": "file_00000000ff6081fdae07c825f044d4a3",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-001-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72",
+      "immutable_attachment_id": "file_00000000151881fdba1749e3cf3c07c1",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-001-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389",
+      "immutable_attachment_id": "file_000000004de081fdba7a74badb549082",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    }
+  ],
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "findings": [
+        "商品视觉保持Snow Ballet 03 Crystal Ball / 水晶球身份。",
+        "可见盘体为两排三列六格结构，整体冷蓝/银蓝/冷灰褐/深冷棕色彩关系与03识别签名一致。",
+        "未发现01 Music Box、02 Romantic Waltz、Swan Ballet或其他旧系列混入。"
+      ]
+    },
+    "P2": {
+      "result": "PASS",
+      "findings": [
+        "六格产品结构与03水晶球身份一致。",
+        "页面呈现Frosted Pearl、Glacier Blue、Cool Taupe、Cold Brew、Silver Blue Ice、Iridescent Galaxy Blue的冷蓝银灰棕体系，与当前SKU LOCK一致。",
+        "未发现 sibling SKU 或旧系列视觉污染。"
+      ]
+    },
+    "P5": {
+      "result": "PASS",
+      "findings": [
+        "收尾页开盖/包装视觉继续保持03 Crystal Ball / 水晶球身份。",
+        "银色洛可可/雪花设计语言、六格结构与蓝银+灰棕关系一致。",
+        "未发现01/02/Swan Ballet混入。"
+      ]
+    }
+  },
+  "identity_checks": {
+    "brand": "PASS",
+    "formal_product_and_series": "PASS",
+    "sku_shade": "PASS",
+    "package_version_family": "PASS",
+    "pan_structure": "PASS",
+    "visible_color_signature": "PASS",
+    "logo_or_text_signature": "PASS_WITH_VISIBLE_SCOPE",
+    "do_not_confuse_with": "PASS"
+  },
+  "result": "PASS",
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_pages": [],
+  "input_bindings": {
+    "active_manifest": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "product_lock": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "page_task": "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "image_workflow_protocol": "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md"
+  },
+  "evidence_refs": [
+    "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json"
+  ],
+  "output_paths": [
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "review_execution_note": "本文件固化此前已完成的同一正式task实际USER_FILE像素审核PASS；本次仅补写正式GitHub交付，未重新审核或改变结论。",
+  "completed_at": "2026-09-27T21:47:00+08:00",
+  "delivery_fingerprint_or_commit": "BOUND_BY_DELIVERY_FILE_TO_EVIDENCE_GIT_BLOB",
+  "next_role_suggestion": "R01",
+  "hard_rules": [
+    "ASSET_IDENTITY_GATE对exact manifest为PASS。",
+    "证据只对引用的asset revision/fingerprint有效。",
+    "任一in-scope资产变化即STALE。",
+    "R01只激活精确review路径，目录里存在PASS不算。"
+  ]
+}
