@@ -1,0 +1,210 @@
+{
+  "schema": "XP1_R01_DISCOVERY_CANDIDATE_SET_V1",
+  "content_id": "CONTENT-001",
+  "candidate_set_id": "CONTENT-001-CANDIDATE-SET-V1",
+  "stage": "DISCOVERY",
+  "status": "FORMAL_CANDIDATE_SET_FOR_R04_RESEARCH",
+  "created_by": "R01",
+  "created_at": "2026-09-27T09:05:00+08:00",
+  "barrier_binding": {
+    "parallel_group_id": "CONTENT-001-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "barrier_status": "COMPLETE",
+    "required_dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8"
+  },
+  "evidence_bindings": {
+    "r02_research_path": "生产/产物/热点研究/CONTENT-001/V1/热点研究.json",
+    "r02_research_blob_sha": "89c857a86923ecda6b215040f9fa952758527545",
+    "r02_delivery_path": "生产/产物/热点研究/CONTENT-001/V1/交付.json",
+    "r02_delivery_blob_sha": "595e27b2ec6cf94b52f4acaadb1ee30e8e3ee4bc",
+    "r03_research_path": "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+    "r03_research_blob_sha": "3be327c58c4f51007e4df8becd211b729048ee8b",
+    "r03_delivery_path": "生产/产物/竞品研究/CONTENT-001/V1/交付.json",
+    "r03_delivery_blob_sha": "a4e2a709884738ed997133a54bf3e8fa0a239279"
+  },
+  "product_candidates": [
+    {
+      "candidate_id": "CAND-01",
+      "provisional_identity": "花知晓「雪花芭蕾」系列六色眼影盘方向",
+      "brand_lead": "FlowerKnows / 花知晓",
+      "category": "美妆/眼影",
+      "discovery_refs": [
+        "R02:HOT-01",
+        "R03:D1"
+      ],
+      "evidence_strength": "HIGH_DISCOVERY_SIGNAL",
+      "r04_priority": "P1",
+      "verification_status": "UNVERIFIED_PRODUCT_AND_SKU",
+      "why_in_pool": [
+        "R02确认处于新品传播窗口并有小红书端传播信号",
+        "R03验证通勤/选色/眼影决策内容具备稳定需求结构"
+      ],
+      "r04_must_verify": [
+        "品牌当前官方正式中文/英文商品名",
+        "六色眼影盘是否为正式独立商品及系列归属",
+        "所有当前在售盘号/色号/中文名/英文名与一一对应关系",
+        "包装外观与各SKU真实配色对应",
+        "发售时间、官方渠道与当前在售状态",
+        "官方宣称、可观察事实、聚合反馈之间的边界"
+      ],
+      "hard_warning": "不得沿用历史聊天中的任何盘名、色号或外观映射；只认本轮R04当前官方证据。"
+    },
+    {
+      "candidate_id": "CAND-02",
+      "provisional_identity": "FENTY BEAUTY「星尘流光唇釉」三款新色方向",
+      "brand_lead": "FENTY BEAUTY",
+      "category": "美妆/唇妆",
+      "discovery_refs": [
+        "R02:HOT-05",
+        "R03:D3"
+      ],
+      "evidence_strength": "MEDIUM_HIGH",
+      "r04_priority": "P1",
+      "verification_status": "UNVERIFIED_SKU",
+      "why_in_pool": [
+        "R02有当前窗口内品牌新闻媒体新品证据",
+        "R03唇妆方向显示色号、质地、干唇、氧化/版本差异具有高决策价值"
+      ],
+      "r04_must_verify": [
+        "官方正式商品名及中英文命名",
+        "所谓三款新色的准确色号/色名",
+        "是否同一产品线及当前市场/地区在售差异",
+        "官方包装与色号视觉",
+        "质地/闪耀等官方宣称及不可外推的体验属性"
+      ]
+    },
+    {
+      "candidate_id": "CAND-03",
+      "provisional_identity": "完美日记「小鹿」全脸盘 KKV线下首发线索",
+      "brand_lead": "Perfect Diary / 完美日记",
+      "category": "美妆/综合彩盘",
+      "discovery_refs": [
+        "R02:HOT-06"
+      ],
+      "evidence_strength": "LOW_TO_MEDIUM",
+      "r04_priority": "P1_VERIFY_IDENTITY_FIRST",
+      "verification_status": "UNVERIFIED_LEAD",
+      "why_in_pool": [
+        "R02确认9月22日存在近期小红书来源索引",
+        "产品形态与通勤/一盘多用的账号决策内容适配"
+      ],
+      "r04_must_verify": [
+        "是否真实存在该正式商品",
+        "正式商品全称、系列、渠道与首发范围",
+        "盘内结构、颜色数量、色号/款式、价格与包装",
+        "官方图片及是否存在版本差异"
+      ],
+      "hard_warning": "若无法取得可靠官方/一手商品证据，应明确BLOCKED_PRODUCT_UNCERTAIN，不得补全名称、盘色或价格。"
+    },
+    {
+      "candidate_id": "CAND-04",
+      "provisional_identity": "橘朵「缎光唇粉霜」新品方向",
+      "brand_lead": "Judydoll / 橘朵",
+      "category": "美妆/唇妆",
+      "discovery_refs": [
+        "R03:D3"
+      ],
+      "evidence_strength": "MEDIUM",
+      "r04_priority": "P2",
+      "verification_status": "UNVERIFIED_PRODUCT_AND_SKU",
+      "why_in_pool": [
+        "R03 12条唇妆方向样本中有近期新品讨论",
+        "色号、质地、干唇、氧化与选择卡结构适合账号内容模型"
+      ],
+      "r04_must_verify": [
+        "官方正式商品名是否确为「缎光唇粉霜」",
+        "当前全部在售/新品SKU、色号与包装映射",
+        "上市时间与官方渠道",
+        "官方质地描述与用户反馈的分离",
+        "是否存在氧化/拔干等分歧及其样本边界"
+      ]
+    },
+    {
+      "candidate_id": "CAND-05",
+      "provisional_identity": "YSL 610 哑光新版唇妆线索",
+      "brand_lead": "YSL Beauty",
+      "category": "美妆/唇妆",
+      "discovery_refs": [
+        "R03:D3"
+      ],
+      "evidence_strength": "MEDIUM",
+      "r04_priority": "P2",
+      "verification_status": "UNVERIFIED_VARIANT",
+      "why_in_pool": [
+        "R03近期样本出现610新版试色与新包装版本争议",
+        "新旧版本、色号、包装与秋季场景具备明确消费决策价值"
+      ],
+      "r04_must_verify": [
+        "610对应的准确产品线与正式商品名",
+        "新版/旧版是否真实存在及变更时间",
+        "包装差异、配方/色调是否有官方可证变化",
+        "当前官方市场在售状态与地区差异"
+      ]
+    }
+  ],
+  "theme_only_candidates": [
+    {
+      "theme_id": "THEME-01",
+      "name": "5s速成妈生伪素颜/轻量通勤妆",
+      "refs": [
+        "R02:HOT-02"
+      ],
+      "r04_action": "NO_PRODUCT_RESEARCH_UNLESS_LATER_BOUND_TO_PRODUCT"
+    },
+    {
+      "theme_id": "THEME-02",
+      "name": "秋冬换季以油养肤",
+      "refs": [
+        "R02:HOT-03"
+      ],
+      "r04_action": "KEEP_AS_THEME; specific product only after R01 explicit selection"
+    },
+    {
+      "theme_id": "THEME-03",
+      "name": "中秋/国庆节前短甲/穿戴甲/秋冬猫眼",
+      "refs": [
+        "R02:HOT-04",
+        "R03:D4"
+      ],
+      "r04_action": "KEEP_AS_THEME"
+    },
+    {
+      "theme_id": "THEME-04",
+      "name": "换季底妆暗沉/脱妆/卡粉分诊",
+      "refs": [
+        "R03:D2"
+      ],
+      "r04_action": "KEEP_AS_THEME"
+    },
+    {
+      "theme_id": "THEME-05",
+      "name": "换季屏障修护与肤质/版本分流",
+      "refs": [
+        "R03:D5"
+      ],
+      "r04_action": "KEEP_AS_THEME"
+    }
+  ],
+  "r04_scope": {
+    "included_candidate_ids": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-03",
+      "CAND-04",
+      "CAND-05"
+    ],
+    "excluded_theme_ids": [
+      "THEME-01",
+      "THEME-02",
+      "THEME-03",
+      "THEME-04",
+      "THEME-05"
+    ],
+    "rule": "R04只研究included_candidate_ids，不得自行新增候选或把theme-only对象强行商品化。"
+  },
+  "selection_rule_after_r04": [
+    "R01只能从R04已覆盖且商品身份可确认的候选中选择正式产品",
+    "最终产品选择前必须优先排除商品名/SKU/包装对应仍不确定的候选",
+    "R01选中后再创建R05 PRODUCT/SKU DRAFT任务，R05不得改变R01正式选择"
+  ]
+}
