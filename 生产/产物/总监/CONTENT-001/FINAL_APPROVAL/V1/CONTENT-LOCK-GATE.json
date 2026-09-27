@@ -1,0 +1,90 @@
+{
+  "schema": "XP1_R01_CONTENT_LOCK_GATE_EVIDENCE_V1",
+  "content_id": "CONTENT-001",
+  "gate_id": "CONTENT_LOCK_GATE",
+  "gate_result": "PASS",
+  "checked_by": "R01",
+  "checked_at": "2026-09-27T22:12:00+08:00",
+  "bindings": {
+    "final_copy": {
+      "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+      "revision": 1,
+      "git_blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+      "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+    },
+    "asset_manifest": {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "git_blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+      "asset_manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+    },
+    "locks": {
+      "product": {
+        "path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+        "git_blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813"
+      },
+      "sku": {
+        "path": "生产/批准/SKU-001-03/LOCK-V1.json",
+        "git_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5"
+      },
+      "persona": {
+        "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+        "git_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8"
+      },
+      "account_strategy": {
+        "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+        "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+      },
+      "voice": {
+        "path": "生产/批准/VOICE-001/LOCK-V1.json",
+        "git_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+      }
+    },
+    "image_qa": {
+      "barrier_path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "barrier_blob_sha": "596493d9367a181f826dbb87bd771930cfc4e3dc",
+      "barrier_status": "COMPLETE"
+    },
+    "reviews": {
+      "r10": {
+        "path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+        "git_blob_sha": "212899595e95c43f680e165f971084e37a13bfc0",
+        "result": "PASS"
+      },
+      "r11": {
+        "path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+        "git_blob_sha": "d4dc53b430f112e9943bf05e841e793ed5331c19",
+        "result": "PASS"
+      },
+      "r12": {
+        "path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+        "git_blob_sha": "0283a72e63daa51ce733ad2bf0cbb658f92c03fe",
+        "result": "PASS"
+      },
+      "r13": {
+        "path": "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+        "git_blob_sha": "09f4aaf67f609c45dca238ce4a6ec6c070f2b13b",
+        "result": "PASS"
+      }
+    },
+    "compliance": {
+      "snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+      "snapshot_blob_sha": "ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+      "snapshot_revision": 1,
+      "status": "VALID",
+      "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+      "valid_until": "2026-10-04T21:56:00+08:00"
+    }
+  },
+  "checks": [
+    "final copy fingerprint matches current active final copy",
+    "manifest path/id/revision/fingerprint match current active manifest",
+    "R10/R11/R12 PASS on same manifest and barrier COMPLETE",
+    "R13 PASS binds same copy, manifest, image QA and compliance snapshot",
+    "PRODUCT/SKU/PERSONA/ACCOUNT_STRATEGY/VOICE refs equal current active locks",
+    "compliance snapshot is VALID, time-valid and exact scope fingerprint matches",
+    "no cited current evidence is STALE or SUPERSEDED"
+  ],
+  "decision": "APPROVE_CONTENT_LOCK_V1"
+}
