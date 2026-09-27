@@ -1,0 +1,118 @@
+{
+  "schema": "XP1_R05_PRODUCT_DRAFT_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "lock_type": "PRODUCT_LOCK",
+  "lock_id": "PRODUCT-001-LOCK-V1",
+  "status": "DRAFT",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/PRODUCT_LOCK/V1/R05-PRODUCT-SKU草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+    "source_delivery_path": "生产/产物/锁定草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "brand": "Flower Knows / 花知晓",
+  "formal_product_name": "Snow Ballet Six-Color Satin Makeup Palette",
+  "series": "Snow Ballet Collection",
+  "model": "Six-Color Satin Makeup Palette",
+  "version": "Snow Ballet Collection 2026 launch; no separate model/version identifier found on the official product page",
+  "capacity_or_size": "6.5 g / 0.23 oz",
+  "package_description": "Silver Rococo-style compact with snowflake etching and a miniature ballet-stage motif; sculpted curtains, columns and arched-window details. Product contains six pans arranged in two rows of three in the official SKU imagery.",
+  "official_url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette",
+  "ecommerce_urls": [
+    "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette",
+    "https://www.yami.com/us/zh/p/snow-ballet-six-color-satin-eyeshadow-palette-03-crystal-ball-6-5g-cool-blue-with-earthy-gray-brown-palette-highly-pigmented-no-fallout/3194303991",
+    "https://www.jd.com/jiage/13164028ae49914db740.html"
+  ],
+  "reference_images": [
+    {
+      "ref_id": "PRODUCT-REF-SKU01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/01_f873e5f4-d700-4c6f-8713-2dbf750052a4.jpg?v=1789020439&width=1500",
+      "purpose": "Official first-party 01 Music Box product/SKU identity anchor"
+    },
+    {
+      "ref_id": "PRODUCT-REF-SKU02",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/02_ab9b9c6e-4a03-4213-94d2-ceefae8bc7d6.jpg?v=1789020439&width=1500",
+      "purpose": "Official first-party 02 Romantic Waltz product/SKU identity anchor"
+    },
+    {
+      "ref_id": "PRODUCT-REF-SKU03",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+      "purpose": "Official first-party 03 Crystal Ball product/SKU identity anchor"
+    }
+  ],
+  "known_sku_count_or_options": [
+    {
+      "sku_code": "01",
+      "official_english_name": "Music Box",
+      "cn_retail_name": "八音盒"
+    },
+    {
+      "sku_code": "02",
+      "official_english_name": "Romantic Waltz",
+      "cn_retail_name": "圆舞曲"
+    },
+    {
+      "sku_code": "03",
+      "official_english_name": "Crystal Ball",
+      "cn_retail_name": "水晶球"
+    }
+  ],
+  "sku_lock_required": true,
+  "do_not_confuse_with": [
+    "Flower Knows Swan Ballet / 天鹅芭蕾旧系列",
+    "01 Music Box 与 02 Romantic Waltz 的图片、配色或名称互换",
+    "01 Music Box 与 03 Crystal Ball 的图片、配色或名称互换",
+    "02 Romantic Waltz 与 03 Crystal Ball 的图片、配色或名称互换",
+    "历史项目中的旧N系列、旧花知晓图片或非Snow Ballet素材"
+  ],
+  "identity_checks": [
+    "brand=Flower Knows / 花知晓",
+    "formal_product_name=Snow Ballet Six-Color Satin Makeup Palette",
+    "series=Snow Ballet Collection",
+    "capacity=6.5g / 0.23oz",
+    "current official Snow Ballet silver Rococo six-pan package family",
+    "three SKU variants remain separately identifiable"
+  ],
+  "source_paths": [
+    "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/交付.json"
+  ],
+  "external_evidence": [
+    {
+      "evidence_id": "E01_FLOWERKNOWS_OFFICIAL_PRODUCT",
+      "url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette"
+    },
+    {
+      "evidence_id": "E02_FLOWERKNOWS_OFFICIAL_02",
+      "url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034344817"
+    },
+    {
+      "evidence_id": "E03_FLOWERKNOWS_OFFICIAL_03",
+      "url": "https://flowerknows.co/en-au/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034377585"
+    },
+    {
+      "evidence_id": "E04_FLOWERKNOWS_OFFICIAL_COLLECTION_STORY",
+      "url": "https://flowerknows.co/en-es/blogs/beauty-guide/snow-ballet-collection-inspiration"
+    },
+    {
+      "evidence_id": "E05_FLOWERKNOWS_CN_RETAIL",
+      "url": "https://www.yami.com/us/zh/p/snow-ballet-six-color-satin-eyeshadow-palette-03-crystal-ball-6-5g-cool-blue-with-earthy-gray-brown-palette-highly-pigmented-no-fallout/3194303991"
+    },
+    {
+      "evidence_id": "E06_FLOWERKNOWS_CN_JD",
+      "url": "https://www.jd.com/jiage/13164028ae49914db740.html"
+    }
+  ],
+  "approval_state": "PENDING_R01",
+  "approved_by": null,
+  "approved_at": null
+}
