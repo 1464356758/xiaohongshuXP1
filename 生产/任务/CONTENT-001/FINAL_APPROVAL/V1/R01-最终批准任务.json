@@ -1,0 +1,60 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-FINAL-APPROVAL-R01-V1",
+  "stage": "FINAL_APPROVAL",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "FINAL_APPROVAL",
+  "created_by": "R01",
+  "created_at": "2026-09-27T22:12:00+08:00",
+  "input_paths": [
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/交付.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "系统/生产架构/SYS-003/CONTENT_LOCK_GATE.json"
+  ],
+  "required_context": {
+    "active_r13_review_path": "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "final_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1"
+  },
+  "scope": [
+    "机械核验CONTENT_LOCK_GATE并建立不可变CONTENT LOCK；不执行任何专业审核或内容改写。"
+  ],
+  "frozen_scope": [
+    "copy",
+    "manifest",
+    "R10/R11/R12/R13",
+    "active locks",
+    "compliance snapshot"
+  ],
+  "acceptance_criteria": [
+    "R13 PASS当前有效",
+    "CONTENT_LOCK_GATE全部绑定一致",
+    "建立LOCKED CONTENT-001/LOCK-V1.json"
+  ],
+  "expected_output_paths": [
+    "生产/产物/总监/CONTENT-001/FINAL_APPROVAL/V1/CONTENT-LOCK-GATE.json",
+    "生产/批准/CONTENT-001/LOCK-V1.json"
+  ],
+  "dependency_revision": "R13|09f4aaf67f609c45dca238ce4a6ec6c070f2b13b|R13_DELIVERY|c90482d779f1f71fc709935aed83c453182bdf54|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|FINAL_APPROVAL|R01|V1|1|null|R13|09f4aaf67f609c45dca238ce4a6ec6c070f2b13b|R13_DELIVERY|c90482d779f1f71fc709935aed83c453182bdf54|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+  "routing": {
+    "on_success": [
+      "R14"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
