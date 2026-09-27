@@ -1,0 +1,102 @@
+{
+  "schema": "XP1_R05_SKU_DRAFT_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "lock_type": "SKU_LOCK",
+  "lock_id": "SKU-001-01-LOCK-V1",
+  "status": "LOCKED",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/PRODUCT_LOCK/V1/R05-PRODUCT-SKU草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+    "source_delivery_path": "生产/产物/锁定草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "product_lock_id": "PRODUCT-001-LOCK-V1",
+  "product_lock_status_required": "R01_APPROVAL_PENDING",
+  "ecommerce_url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette",
+  "multi_sku_link": true,
+  "target_sku": {
+    "platform_sku_name": "01 Music Box / 八音盒",
+    "sku_id_if_visible": "NOT_VISIBLE_IN_CURRENT_CANONICAL_URL",
+    "shade_or_color_number": "01",
+    "shade_or_color_name": "Music Box / 八音盒",
+    "model_or_variant": "Snow Ballet 01 Music Box",
+    "capacity_or_size": "6.5 g / 0.23 oz",
+    "package_version": "Current Snow Ballet Collection 2026 launch packaging; official 01 image shows a cool pale-blue/silver lid treatment paired with warm peach, rose and cocoa pans",
+    "palette_pan_count_or_structure": "6 pans; official imagery shows a two-row by three-column layout in a silver Rococo/snowflake compact",
+    "visible_color_signature": [
+      "warm apricot/peach family",
+      "rosy pink",
+      "apricot/rose brown",
+      "deep cocoa brown",
+      "pearl-white sparkle",
+      "champagne sparkle"
+    ],
+    "logo_or_text_signature": [
+      "central front-lid medallion carries the Flower Knows script/brand mark",
+      "Snow Ballet snowflake and silver Rococo ballet-stage design language",
+      "official variant page text must resolve to “01 Music Box”",
+      "SKU code/name is confirmed by official variant page; do not infer code solely from the compact lid artwork"
+    ],
+    "included_accessories": []
+  },
+  "official_pan_names": [
+    "Creamy Apricot",
+    "Peach Pink",
+    "Apricot Brown",
+    "Cocoa Brown",
+    "Pearl White Sparkle",
+    "Champagne Sparkle"
+  ],
+  "reference_images": [
+    {
+      "ref_id": "SKU-01-REF-01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/01_f873e5f4-d700-4c6f-8713-2dbf750052a4.jpg?v=1789020439&width=1500",
+      "must_match": true,
+      "source_role": "BRAND_OFFICIAL",
+      "identity_scope": "Only 01 Music Box; must not be reused as another sibling SKU reference"
+    }
+  ],
+  "sibling_skus_in_same_link": [
+    "02 Romantic Waltz / 圆舞曲",
+    "03 Crystal Ball / 水晶球"
+  ],
+  "do_not_confuse_with": [
+    "Flower Knows Swan Ballet / 天鹅芭蕾旧系列",
+    "02 Romantic Waltz: contains a conspicuous icy mint accent and stronger strawberry/rosewood story",
+    "03 Crystal Ball: dominated by glacier/silver-blue cool tones plus cool taupe/deep brown"
+  ],
+  "disambiguation_notes": "Identity is bound jointly to official variant text, official color story/pan names, and the unique first-party image URL above. A shared product page does not make sibling images interchangeable. No separate variant ID is exposed in the current canonical 01 URL, so identity is not inferred from an invented ID.",
+  "generation_gate": "status=LOCKED且字段足以唯一识别才允许生成含商品图片。",
+  "source_paths": [
+    "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/交付.json"
+  ],
+  "external_evidence": [
+    {
+      "source_kind": "BRAND_OFFICIAL_VARIANT_PAGE",
+      "url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette"
+    },
+    {
+      "source_kind": "BRAND_OFFICIAL_SKU_IMAGE",
+      "url": "https://flowerknows.co/cdn/shop/files/01_f873e5f4-d700-4c6f-8713-2dbf750052a4.jpg?v=1789020439&width=1500"
+    }
+  ],
+  "approval_state": "PENDING_R01",
+  "approved_by": "R01",
+  "approved_at": "2026-09-27T09:44:00+08:00",
+  "source_identity": {
+    "source_draft_path": "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-01-DRAFT.json",
+    "source_draft_blob_sha": "455159e84076499fc2c45ca565406b54b1b4c1b5",
+    "r05_delivery_path": "生产/产物/锁定草案/CONTENT-001/V1/交付.json",
+    "r05_delivery_blob_sha": "3b9d4c210e66f88b019bfc192aae02b03087200f"
+  },
+  "active_for_content": false,
+  "activation_note": "Verified sibling SKU LOCK retained for identity-safe comparison/history; not current active SKU."
+}
