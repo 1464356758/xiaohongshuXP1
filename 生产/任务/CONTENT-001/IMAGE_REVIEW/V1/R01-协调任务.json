@@ -1,0 +1,85 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-REVIEW-R01-V1",
+  "stage": "IMAGE_REVIEW",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVIEWING",
+  "phase": "IMAGE_REVIEW",
+  "created_by": "R01",
+  "created_at": "2026-09-27T21:34:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": "CONTENT-001-IMAGE-QA-G1",
+    "barrier_revision": 1,
+    "required_role_ids": [
+      "R10",
+      "R11",
+      "R12"
+    ],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "image_binary_transport": "USER_FILE",
+    "user_file_actual_pixels_required": true
+  },
+  "input_paths": [
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+    "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+    "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审任务.json"
+  ],
+  "scope": [
+    "等待R10/R11/R12同一active manifest的当前有效独立交付；不代替专业审核。",
+    "三者均PASS且证据有效时关闭barrier并执行IMAGE_REVIEW后续合法迁移。"
+  ],
+  "frozen_scope": [
+    "active manifest id/revision/fingerprint",
+    "active copy fingerprint",
+    "PRODUCT/SKU/PERSONA locks"
+  ],
+  "acceptance_criteria": [
+    "R10/R11/R12每个required role恰好一条当前有效证据。",
+    "三者绑定同一manifest。"
+  ],
+  "expected_output_paths": [],
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|IMAGE_REVIEW|R01|V1|1|null|MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
