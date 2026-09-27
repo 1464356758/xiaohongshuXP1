@@ -1,0 +1,139 @@
+{
+  "schema": "XP1_R11_PERSONA_SETUP_REVIEW_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PERSONA-SETUP-R11-V1",
+  "role_id": "R11",
+  "review_mode": "PERSONA_SETUP_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "idempotency_key": "CONTENT-001|PERSONA_SETUP|R11|V1|1|null|PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "result": "PASS",
+  "persona_draft_path": "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+  "persona_draft_blob_sha": "27746ea35bd3a9f60ee58f23d6f9f68604eea8c9",
+  "persona_draft_fingerprint": "sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA一致性审核任务.json",
+    "task_blob_sha": "b33004fa360c1d48a7d28a71f4ce0172c3a0808b",
+    "source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "active_persona_lock_path": null
+  },
+  "reviewed_anchor_identities": {
+    "front": {
+      "anchor_id": "PERSONA-001-FRONT",
+      "anchor_revision": 1,
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "git_blob_sha": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "sha256": "28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "visual_identity_check": "PASS"
+    },
+    "angle_45": {
+      "anchor_id": "PERSONA-001-45",
+      "anchor_revision": 1,
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "git_blob_sha": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "sha256": "e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "visual_identity_check": "PASS"
+    },
+    "halfbody": {
+      "anchor_id": "PERSONA-001-HALF",
+      "anchor_revision": 1,
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+      "git_blob_sha": "ce0084c9923d4eaffd8fa23397e65b01001a1e95",
+      "sha256": "71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "visual_identity_check": "PASS"
+    },
+    "fullbody_auxiliary": {
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "git_blob_sha": "c47d2970b552a9a27f036f8360ca3b577f2c28cc",
+      "sha256": "ee41506879b62c7ea69b4037f4623c38f4a053c6b79fd53cf3ce6bf328de3699",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "body_proportion_check": "PASS"
+    },
+    "three_view_auxiliary": {
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "git_blob_sha": "d2db38ac82de24637c1d56cac642e61b8380d8b6",
+      "sha256": "d711314caa96ca57fb2b89408b2ee605e36cab1e0896a1dfdd4ee4e158f8b029",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "body_proportion_check": "PASS"
+    },
+    "detail": {
+      "anchor_id": "PERSONA-001-DETAIL",
+      "anchor_revision": 1,
+      "path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+      "git_blob_sha": "e69e643707e9c808a21252bb0ba8ba184c039f17",
+      "sha256": "5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "actual_bytes_read": true,
+      "actual_byte_sha256_match": true,
+      "visual_identity_check": "PASS"
+    }
+  },
+  "checks": {
+    "required_anchor_presence": "PASS",
+    "anchor_identity_status": "VALID",
+    "asset_identity_gate": "PASS",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "first_person_opinion_eligible": true,
+    "identity_rule_complete": true,
+    "face_shape_complete": true,
+    "feature_proportions_complete": true,
+    "recognition_features_complete": true,
+    "skin_tone_range_complete": true,
+    "must_keep_complete": true,
+    "allowed_to_change_complete": true,
+    "forbidden_identity_drift_complete": true,
+    "page_rule_complete": true,
+    "cross_anchor_face_identity": "PASS",
+    "distinctive_cheek_mark_consistency": "PASS",
+    "face_feature_proportion_consistency": "PASS",
+    "base_hair_color_consistency": "PASS",
+    "age_impression_consistency": "PASS",
+    "body_proportion_consistency": "PASS",
+    "clothing_permanently_locked": false,
+    "bow_permanently_locked": false,
+    "current_half_up_hair_permanently_locked": false
+  },
+  "visual_review_summary": [
+    "front、45°、halfbody的人脸轮廓、眼距与眼型、鼻唇结构及面颊小痣在可见范围内无明显身份冲突。",
+    "fullbody与three_view显示的头身关系、肩宽、腰胯、四肢长度和手脚尺度无明显跨锚点漂移，可作为后续身体比例参考。",
+    "detail_board与主锚点交叉核验后，小痣、眼型、鼻唇与深棕基础发色关系一致。",
+    "当前碎花服装、白色针织衫、蝴蝶结及半扎发只属于本组造型，不构成永久身份锁。"
+  ],
+  "failed_scope": [],
+  "required_revision_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+    "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json"
+  ],
+  "output_paths": [
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA-SETUP-REVIEW.json",
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/交付.json"
+  ],
+  "lock_authority": "R01",
+  "lock_effect": "PASS仅表示该DRAFT可交R01审批PERSONA LOCK；R11未建立、未批准PERSONA LOCK，未修改active_persona_lock_path。",
+  "completed_at": "2026-09-27T08:23:00+08:00",
+  "next_role_suggestion": "R01"
+}
