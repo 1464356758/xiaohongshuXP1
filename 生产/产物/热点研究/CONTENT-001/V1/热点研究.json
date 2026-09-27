@@ -1,0 +1,328 @@
+{
+  "schema": "XHS_XP1_R02_HOT_RESEARCH_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-DISCOVERY-R02-V1",
+  "role_id": "R02",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|DISCOVERY|R02|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "research_platform": "小红书",
+  "freshness_window": {
+    "start": "2026-09-13T00:00:00+08:00",
+    "end": "2026-09-27T08:19:00+08:00",
+    "executed_at": "2026-09-27T08:55:00+08:00"
+  },
+  "account_context": {
+    "growth_stage": "INITIAL_COLD_START_0_PUBLISHED",
+    "primary_pillar": "美妆",
+    "secondary_pillars": [
+      "美甲",
+      "护肤"
+    ],
+    "positioning": "女性美妆消费决策与审美灵感型分享账号",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false
+  },
+  "independence": {
+    "r03_draft_read": false,
+    "r03_delivery_read": false,
+    "note": "R02仅依据正式task、active locks及公开近期来源独立研究。"
+  },
+  "source_handling_rules": [
+    "千瓜数据属于第三方平台数据/榜单信号，不视为小红书官方后台数据；仅用于证明近期可见度和持续性。",
+    "什么值得买AIGC聚合页仅作为其明确列出的来源索引使用，不把AIGC正文中的未核验推断当作商品事实。",
+    "媒体/品牌资讯可证明新品发布或活动发生；具体SKU、色号、价格、功效、配方与官方命名仍须R04/R05核验后才能进入正式商品事实链。",
+    "任何真实产品使用效果、使用时长、功效结果不得由SYNTHETIC_VISUAL_PERSONA冒充第一人称经历。"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "HOT-01",
+      "direction": "花知晓「雪花芭蕾」系列新品与“包装争议 vs 产品本身”讨论",
+      "pillar": "美妆",
+      "candidate_type": "NEW_COLLECTION_AND_DISCUSSION",
+      "freshness_status": "ACTIVE_IN_WINDOW",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-15",
+          "evidence": "亿邦动力报道：系列于9月14日发布，9月19日20点正式发售；图透阶段存在设计复用/质感争议，实物视频和博主开箱后口碑略有回暖。",
+          "source_url": "https://m.ebrun.com/708176.html",
+          "source_type": "INDUSTRY_MEDIA"
+        },
+        {
+          "published_or_observed_at": "2026-09-21",
+          "evidence": "千瓜小红书直播榜记录：FlowerKnows官方“雪花芭蕾系列新品首发”直播，以及达人“花知晓雪花芭蕾！！新品上新！！”同日出现，证明小红书端仍处新品传播窗口。",
+          "source_url": "https://wap.qian-gua.com/rank/live/2/1/20260921/47",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        }
+      ],
+      "related_products_or_topics": [
+        "雪花芭蕾系列整体",
+        "六色眼影盘方向",
+        "品牌首次双头唇釉方向",
+        "实物工艺与静态图观感差异"
+      ],
+      "fit_analysis": "高度贴合账号“热门产品事实拆解+选择卡”定位，也适合产品图为主、PERSONA可选的冷启动内容。",
+      "usable_angles": [
+        "把包装争议与产品本身拆开：先去噪，再讲眼影/唇妆选择问题。",
+        "围绕‘看起来像 vs 实际差在哪’做实物工艺/配色决策信息，但必须等待R04/R05核对准确SKU与颜色关系。",
+        "若进入最终候选，可做‘三盘/多SKU怎么选’而不是只复述参数。"
+      ],
+      "not_recommended_angles": [
+        "把‘显廉价/背刺’等用户评价写成客观事实。",
+        "未经R04/R05核验直接写具体盘名、色号、产品外观对应关系。",
+        "虚构账号本人开箱、试色、上脸或持妆经历。"
+      ],
+      "timing_risk": "VERY_HIGH",
+      "timing_note": "9月19日发售后的首发窗口正在快速衰减；适合近期承接，拖延后会从新品热点变为常规搜索内容。",
+      "verification_needed_next": [
+        "R04商品事实",
+        "R05官方商品/SKU命名与图像身份"
+      ]
+    },
+    {
+      "candidate_id": "HOT-02",
+      "direction": "“5s速成妈生伪素颜”与轻量化自然底妆/修容内容",
+      "pillar": "美妆",
+      "candidate_type": "MAKEUP_THEME",
+      "freshness_status": "ACTIVE_AND_REPEATED",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-20至2026-09-25",
+          "evidence": "千瓜多个小红书直播日榜反复出现毛戈平美妆企业账号“5s速成妈生伪素颜”同一主题，说明并非单日一次性标题。",
+          "source_url": "https://www.qian-gua.com/rank/live/4/1/20260925/24",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        },
+        {
+          "published_or_observed_at": "2026-09-23",
+          "evidence": "千瓜9月23日小红书直播榜仍记录“5s速成妈生伪素颜”，支持持续性。",
+          "source_url": "https://qian-gua.com/rank/live/1/1/20260923.html",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        }
+      ],
+      "related_products_or_topics": [
+        "轻薄底妆",
+        "自然修容与面部光影",
+        "低存在感眉眼",
+        "通勤伪素颜"
+      ],
+      "fit_analysis": "与账号轻通勤、问题解决、美妆主支柱高度一致；即使不绑定单一商品也能形成可收藏的选择/步骤内容。",
+      "usable_angles": [
+        "把‘伪素颜’拆成底妆厚薄、光影位置、眉眼存在感三个可执行变量。",
+        "做‘看着没化很多，为什么更精神’的问题解决型内容。",
+        "后续若绑定商品，只选R04/R05已核验的底妆/修容SKU。"
+      ],
+      "not_recommended_angles": [
+        "把直播标题中的“5s”当成真实可复现耗时承诺。",
+        "制作夸张前后对比或暗示虚拟人物真实使用产品获得结果。",
+        "把品牌直播标题直接改写成账号自有功效结论。"
+      ],
+      "timing_risk": "MEDIUM",
+      "timing_note": "主题在9月20-25连续出现，短期仍活跃，但属于可延展妆容趋势，硬截止弱于新品首发。",
+      "verification_needed_next": [
+        "若绑定具体商品，再交R04/R05"
+      ]
+    },
+    {
+      "candidate_id": "HOT-03",
+      "direction": "秋冬换季护肤：‘安稳换季’与‘以油养肤’",
+      "pillar": "护肤",
+      "candidate_type": "SEASONAL_SKINCARE_THEME",
+      "freshness_status": "ACTIVE_AND_SEASONAL",
+      "signal_strength": "MEDIUM_HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-19至2026-09-25",
+          "evidence": "千瓜小红书直播榜多日记录AFU阿芙企业账号“油然新生，安稳换季”；同窗口还出现“秋冬以油养肤”相关直播标题，说明换季/油类护肤正在进入季节性传播期。",
+          "source_url": "https://www.qian-gua.com/rank/live/3/1/20260924/1",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        },
+        {
+          "published_or_observed_at": "2026-09-19",
+          "evidence": "千瓜榜单记录“秋冬以油养肤，林清轩精华油！”直播主题，为同一季节需求提供跨品牌信号。",
+          "source_url": "https://wap.qian-gua.com/rank/live/2/1/20260919/47",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        }
+      ],
+      "related_products_or_topics": [
+        "精华油/面部油",
+        "换季干燥与护肤步骤调整",
+        "油类产品怎么选与怎么搭"
+      ],
+      "fit_analysis": "符合护肤20%支柱，也适合做收藏型决策内容；但冷启动首篇若以护肤开局，会偏离美妆60%主轴，适合作为候选而非R02直接定案。",
+      "usable_angles": [
+        "‘换季要不要加油’的选择逻辑：肤感、季节、现有护肤步骤，而非直接承诺功效。",
+        "精华油与面霜的使用场景差异，前提是后续核对官方用法。",
+        "做‘哪些人更需要关注厚重感/叠涂负担’的决策卡。"
+      ],
+      "not_recommended_angles": [
+        "未经证据直接写‘修复屏障、抗炎、祛痘、抗老见效’等功效。",
+        "虚构连续使用几天后的皮肤变化。",
+        "把季节性直播主题等同于全平台绝对热搜。"
+      ],
+      "timing_risk": "MEDIUM",
+      "timing_note": "9月下旬至秋冬仍有季节生命周期，当前处于上升窗口。",
+      "verification_needed_next": [
+        "R04功效/官方用法与产品事实",
+        "R13合规边界"
+      ]
+    },
+    {
+      "candidate_id": "HOT-04",
+      "direction": "中秋/国庆节前美甲：本甲、穿戴甲与秋冬款式选择",
+      "pillar": "美甲",
+      "candidate_type": "SEASONAL_NAIL_THEME",
+      "freshness_status": "ACTIVE_WITH_HARD_DEADLINE",
+      "signal_strength": "MEDIUM_HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-17",
+          "evidence": "什么值得买对小红书近期结果的二次梳理称：9月16日深夜查看“美甲 国庆”最新结果时，前20条中16条为店家号并集中写中秋国庆可约；同时“穿戴甲 避雷”一周新增多条内容。该信息为二次来源，需按趋势信号使用。",
+          "source_url": "https://post.smzdm.com/p/a260oor7/",
+          "source_type": "SECONDARY_XHS_INDEX"
+        },
+        {
+          "published_or_observed_at": "2026-09-25",
+          "evidence": "Cosmopolitan Taiwan发布秋冬深色‘迷雾森林’猫眼美甲专题，说明深色猫眼/灰绿/深棕等秋冬视觉正在进入新一轮季节传播。",
+          "source_url": "https://www.cosmopolitan.com/tw/beauty/make-up/g73769515/foggy-forest-nails/",
+          "source_type": "BEAUTY_MEDIA_TREND"
+        }
+      ],
+      "related_products_or_topics": [
+        "国庆节前美甲预约选择",
+        "本甲 vs 穿戴甲",
+        "深色猫眼/灰绿/深棕/琥珀视觉",
+        "短甲友好与通勤适配"
+      ],
+      "fit_analysis": "符合美甲20%支柱，节前搜索意图明确，可做高收藏视觉卡；但属于明显时效内容。",
+      "usable_angles": [
+        "国庆前‘来不及预约’时，本甲与穿戴甲怎么选。",
+        "短甲/通勤人群如何选秋冬深色猫眼而不做过度复杂设计。",
+        "把款式灵感和决策变量分开：甲型、底色、光感、日常场景。"
+      ],
+      "not_recommended_angles": [
+        "未经权威医学证据放大‘美甲灯一定黑手/伤害’等健康结论。",
+        "把二次聚合文里的帖子数量当作小红书官方全站统计。",
+        "宣称账号本人做过或佩戴过具体款式。"
+      ],
+      "timing_risk": "VERY_HIGH",
+      "timing_note": "节前窗口接近10月1日，内容价值在未来数日最强，过节后会迅速衰减。",
+      "verification_needed_next": [
+        "若涉及具体甲胶/穿戴甲商品，交R04/R05核验",
+        "健康风险表述交R13"
+      ]
+    },
+    {
+      "candidate_id": "HOT-05",
+      "direction": "FENTY BEAUTY 星尘流光唇釉三款新色与唇部玩色",
+      "pillar": "美妆",
+      "candidate_type": "NEW_LIP_PRODUCT",
+      "freshness_status": "WINDOW_EDGE_BUT_CURRENT_MEDIA",
+      "signal_strength": "MEDIUM",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-17",
+          "evidence": "新浪时尚报道：FENTY BEAUTY在上海新天地开启星尘流光主题店，并伴随星尘流光唇釉家族三款全新色号登场；报道发布时间位于本任务窗口内。",
+          "source_url": "https://fashion.sina.com.cn/b/nw/2026-09-17/1523/doc-iniscksf0365249.shtml",
+          "source_type": "BRAND_NEWS_MEDIA"
+        }
+      ],
+      "related_products_or_topics": [
+        "星尘流光唇釉新色",
+        "裸色/闪耀唇妆",
+        "唇色叠涂与场景选择"
+      ],
+      "fit_analysis": "适合账号‘色号/场景怎么选’的消费决策路线，品牌知名度与线下事件都能提供进入理由；但目前缺少本轮可直接核验的小红书笔记热度证据，因此只作为中等强度候选。",
+      "usable_angles": [
+        "三款新色的色调/场景选择，待R04/R05拿到官方色号后再细化。",
+        "单涂 vs 叠涂的视觉思路，不声称本人实测。",
+        "把‘闪耀感’拆为妆容搭配问题，而不是仅做新品搬运。"
+      ],
+      "not_recommended_angles": [
+        "当前阶段自行补齐三款新色名称、色号或肤色适配结论。",
+        "把品牌新闻稿式形容词直接当测评结论。",
+        "虚构丰唇、持妆或不粘腻等体验。"
+      ],
+      "timing_risk": "MEDIUM_HIGH",
+      "timing_note": "线下活动于9月12日开启，媒体报道在9月17日；事件发生时间略早于窗口起点1天，但报道与新品传播仍在窗口内。",
+      "verification_needed_next": [
+        "R04官方新品事实",
+        "R05色号/SKU与官方图"
+      ]
+    },
+    {
+      "candidate_id": "HOT-06",
+      "direction": "完美日记「小鹿」全脸盘 KKV线下首发",
+      "pillar": "美妆",
+      "candidate_type": "NEW_PALETTE_LEAD",
+      "freshness_status": "ACTIVE_BUT_UNDERVERIFIED",
+      "signal_strength": "MEDIUM_LOW",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-22",
+          "evidence": "9月23日国货彩妆日报的精选来源明确索引一条9月22日小红书内容“完美日记『小鹿』全脸盘 KKV 线下首发”。当前只验证到该近期平台来源存在，未独立核实商品全称、SKU、色盘配置与官方首发范围。",
+          "source_url": "https://post.smzdm.com/p/a82xq3ml/",
+          "source_type": "SECONDARY_INDEX_OF_XHS_POST"
+        }
+      ],
+      "related_products_or_topics": [
+        "全脸盘/多功能彩妆盘",
+        "线下首发",
+        "一盘完成通勤妆的选择逻辑"
+      ],
+      "fit_analysis": "产品形态天然适合冷启动账号的‘一个盘解决什么/不解决什么’决策内容，但当前证据链只够进入候选池，不能直接进入商品事实或SKU锁。",
+      "usable_angles": [
+        "全脸盘是否真的省步骤：先拆产品功能，再判断通勤价值。",
+        "与单独眼影/腮红组合的使用场景对比，但需要R04拿到正式产品事实。"
+      ],
+      "not_recommended_angles": [
+        "自行推断盘内颜色数量、色号、价格、包装或正式中文名。",
+        "仅凭单条索引写成‘全网爆款’。",
+        "在R04/R05前制作带具体商品外观的最终视觉。"
+      ],
+      "timing_risk": "HIGH",
+      "timing_note": "平台来源日期为9月22日，仍属非常新的线下首发信号；但商品事实缺口较大。",
+      "verification_needed_next": [
+        "R04优先核验商品官方事实",
+        "R05核验SKU/官方图片/渠道"
+      ]
+    }
+  ],
+  "supporting_format_signals": [
+    {
+      "observed_at": "2026-09-22",
+      "signal": "小红书近期出现“无广锐评近期三十盘眼影”内容索引，说明多盘横评/强选择题仍是近期彩妆内容形式之一。",
+      "source_url": "https://post.smzdm.com/p/a82xq3ml/",
+      "use_note": "仅作为内容形态信号，不等于账号可以声称亲测30盘；应改造成基于已核验事实的选择卡。"
+    },
+    {
+      "observed_at": "2026-09-24",
+      "signal": "千瓜小红书直播榜出现“9月超级多新品大放送”等多品牌新品集合型直播，说明9月下旬仍处美妆上新密集期。",
+      "source_url": "https://www.qian-gua.com/rank/live/3/1/20260924/1",
+      "use_note": "作为上新季背景信号，不作为某个具体SKU事实。"
+    }
+  ],
+  "r02_summary": {
+    "candidate_count": 6,
+    "beauty_candidates": 4,
+    "nail_candidates": 1,
+    "skincare_candidates": 1,
+    "high_or_medium_high_signal_candidates": [
+      "HOT-01",
+      "HOT-02",
+      "HOT-03",
+      "HOT-04"
+    ],
+    "underverified_product_leads": [
+      "HOT-06"
+    ],
+    "note": "R02不决定最终商品。建议R01结合R03独立研究形成候选商品集，再正式路由R04事实核验。"
+  },
+  "result": "PASS",
+  "blocked_items": [],
+  "failed_scope": [],
+  "completed_at": "2026-09-27T08:55:00+08:00"
+}
