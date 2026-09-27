@@ -1,0 +1,82 @@
+{
+  "schema": "XP1_R01_FORMAL_PRODUCT_SELECTION_V1",
+  "content_id": "CONTENT-001",
+  "stage": "PRODUCT_LOCK",
+  "selection_id": "CONTENT-001-PRODUCT-SELECTION-V1",
+  "status": "FORMALLY_SELECTED_FOR_R05_DRAFT",
+  "selected_by": "R01",
+  "selected_at": "2026-09-27T09:44:00+08:00",
+  "selected_candidate_id": "CAND-01",
+  "selected_product_identity": {
+    "brand": "Flower Knows / 花知晓",
+    "official_english_product_name": "Snow Ballet Six-Color Satin Makeup Palette",
+    "series": "Snow Ballet Collection",
+    "net_weight": "6.5g / 0.23 oz",
+    "product_identity_status": "VERIFIED",
+    "sku_identity_status": "VERIFIED_3_VARIANTS_TEXT_IDENTITY"
+  },
+  "selection_basis": [
+    "R02当前新品传播窗口信号强，适配hot-content cold-start策略。",
+    "R03通勤/选色/眼影决策方向具备稳定用户需求结构。",
+    "R04将CAND-01列为VERIFIED_ELIGIBLE且属于highest_identity_confidence。",
+    "账号策略以美妆为60%主支柱，并将产品名称、SKU、包装和颜色关系准确性作为底层门槛。"
+  ],
+  "sku_draft_scope": {
+    "mode": "DRAFT_ALL_THREE_THEN_R01_ACTIVATES_ONE",
+    "variants": [
+      {
+        "sku_code": "01",
+        "official_english_name": "Music Box",
+        "cn_retail_name": "八音盒"
+      },
+      {
+        "sku_code": "02",
+        "official_english_name": "Romantic Waltz",
+        "cn_retail_name": "圆舞曲"
+      },
+      {
+        "sku_code": "03",
+        "official_english_name": "Crystal Ball",
+        "cn_retail_name": "水晶球"
+      }
+    ],
+    "active_sku_selection": "PENDING_R05_IDENTITY_AND_REFERENCE_IMAGE_BINDING",
+    "rule": "R05必须分开建立01/02/03的SKU身份草案与reference_images，R05不得把三盘图片互换或自行决定active SKU；R01在草案完成后仅从身份可验证的SKU中激活一个。"
+  },
+  "hard_identity_rules": [
+    "Snow Ballet不得与Swan Ballet旧系列混图。",
+    "01=Music Box=八音盒；02=Romantic Waltz=圆舞曲；03=Crystal Ball=水晶球。",
+    "不得把任何历史聊天、旧项目图片或旧盘名映射当作本轮证据。",
+    "只有当前官方/一手商品证据支持的包装与SKU图片才可进入reference_images。",
+    "若任一SKU图片身份无法唯一确认，该SKU草案必须BLOCKED_SKU_UNCERTAIN，不得猜图。"
+  ],
+  "evidence_bindings": {
+    "r04_research_path": "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "r04_research_blob_sha": "a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+    "r04_delivery_path": "生产/产物/商品事实/CONTENT-001/V1/交付.json",
+    "r04_delivery_blob_sha": "241db9bd9661ecb7a791cc525c3c1376c0359b45",
+    "candidate_set_path": "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_blob_sha": "765e1aa9bd065dae37059069ffa5c1fdc4556560",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8"
+  },
+  "excluded_candidates": [
+    {
+      "candidate_id": "CAND-02",
+      "reason": "region-bound China launch trio adds scope complexity; retained as future candidate"
+    },
+    {
+      "candidate_id": "CAND-03",
+      "reason": "NOT_ELIGIBLE_FOR_SELECTION"
+    },
+    {
+      "candidate_id": "CAND-04",
+      "reason": "verified but current selected product is CAND-01; retained as future candidate"
+    },
+    {
+      "candidate_id": "CAND-05",
+      "reason": "NOT_ELIGIBLE_FOR_SELECTION"
+    }
+  ]
+}
