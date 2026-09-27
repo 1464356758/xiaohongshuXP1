@@ -18,51 +18,57 @@
     {
       "role_id": "R10",
       "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
-      "delivery_path": null,
-      "result": "PENDING",
+      "delivery_path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/交付.json",
+      "result": "PASS",
       "task_version": "V1",
       "input_revision": 1,
       "revision_round": null,
       "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
-      "completed_at": null,
-      "delivery_fingerprint_or_commit": null,
+      "completed_at": "2026-09-27T21:47:00+08:00",
+      "delivery_fingerprint_or_commit": "git_blob:212899595e95c43f680e165f971084e37a13bfc0",
       "asset_manifest_id": "ASSET-CONTENT-001",
       "manifest_revision": 1,
-      "evidence_valid": false
+      "evidence_valid": true
     },
     {
       "role_id": "R11",
       "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
-      "delivery_path": null,
-      "result": "PENDING",
+      "delivery_path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/交付.json",
+      "result": "PASS",
       "task_version": "V1",
       "input_revision": 1,
       "revision_round": null,
       "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
-      "completed_at": null,
-      "delivery_fingerprint_or_commit": null,
+      "completed_at": "2026-09-27T21:47:00+08:00",
+      "delivery_fingerprint_or_commit": "3381b1efa1ef470b23f24570472ae72f236b66d6",
       "asset_manifest_id": "ASSET-CONTENT-001",
       "manifest_revision": 1,
-      "evidence_valid": false
+      "evidence_valid": true
     },
     {
       "role_id": "R12",
       "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审任务.json",
-      "delivery_path": null,
-      "result": "PENDING",
+      "delivery_path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/交付.json",
+      "result": "PASS",
       "task_version": "V1",
       "input_revision": 1,
       "revision_round": null,
       "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
-      "completed_at": null,
-      "delivery_fingerprint_or_commit": null,
+      "completed_at": "2026-09-27T21:47:00+08:00",
+      "delivery_fingerprint_or_commit": "9110dcb6b34bac2cd2fd2a8f58d7045e1688a13a",
       "asset_manifest_id": "ASSET-CONTENT-001",
       "manifest_revision": 1,
-      "evidence_valid": false
+      "evidence_valid": true
     }
   ],
-  "barrier_status": "OPEN",
+  "barrier_status": "COMPLETE",
   "complete_rule": "R10/R11/R12均有唯一当前有效交付且绑定exact active manifest，全部PASS后COMPLETE。",
   "activation_rule": "R01已将该精确路径写入active_image_qa_barrier_path后生效。",
-  "revision_rule": "任一in-scope资产/manifest/dependency变化必须新barrier_revision。"
+  "revision_rule": "任一in-scope资产/manifest/dependency变化必须新barrier_revision。",
+  "completed_at": "2026-09-27T21:54:00+08:00",
+  "completion_evidence": {
+    "R10": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "R11": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "R12": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json"
+  }
 }
