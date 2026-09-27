@@ -115,7 +115,7 @@
     }
   ],
   "completed_at": "2026-09-27T21:47:00+08:00",
-  "delivery_fingerprint_or_commit": null,
+  "delivery_fingerprint_or_commit": "3466510d88048fcd37ee9d5f5fe6b2e8a05ec7a9",
   "next_role_suggestion": "R01",
   "hard_rules": [
     "本结果仅绑定exact active manifest及上述P1-P5 asset revision/fingerprint。",
