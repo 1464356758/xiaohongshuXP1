@@ -1,0 +1,289 @@
+{
+  "schema": "XP1_R13_CONTENT_TRUTH_COMPLIANCE_REVIEW_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COMPLIANCE-REVIEW-R13-V1",
+  "role_id": "R13",
+  "review_mode": "CONTENT_TRUTH_COMPLIANCE_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key": "CONTENT-001|COMPLIANCE_REVIEW|R13|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "result": "PASS",
+  "reviewed_at": "2026-09-27T22:10:06+08:00",
+  "exact_bindings": {
+    "final_copy": {
+      "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+      "git_blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+      "revision": 1,
+      "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+    },
+    "asset_manifest": {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "git_blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+      "manifest_id": "ASSET-CONTENT-001",
+      "revision": 1,
+      "fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+    },
+    "image_qa_barrier": {
+      "path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "git_blob_sha": "596493d9367a181f826dbb87bd771930cfc4e3dc",
+      "status": "COMPLETE"
+    },
+    "r10": {
+      "path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+      "git_blob_sha": "212899595e95c43f680e165f971084e37a13bfc0",
+      "result": "PASS"
+    },
+    "r11": {
+      "path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+      "git_blob_sha": "d4dc53b430f112e9943bf05e841e793ed5331c19",
+      "result": "PASS"
+    },
+    "r12": {
+      "path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+      "git_blob_sha": "0283a72e63daa51ce733ad2bf0cbb658f92c03fe",
+      "result": "PASS"
+    },
+    "compliance_snapshot": {
+      "path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+      "git_blob_sha": "ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+      "snapshot_id": "COMPLIANCE-XHS-0001",
+      "revision": 1,
+      "status": "VALID",
+      "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+      "valid_until": "2026-10-04T21:56:00+08:00",
+      "time_valid_at_review": true
+    },
+    "product_lock": {
+      "path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "git_blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813"
+    },
+    "sku_lock": {
+      "path": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "git_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5"
+    },
+    "persona_lock": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "git_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  },
+  "actual_pixel_binding": {
+    "result": "PASS",
+    "verification_method": "PLATFORM_IMMUTABLE_FILE_OR_ATTACHMENT_ID_FOR_EXACT_VERSION + DIRECT_VISUAL_PIXEL_REVIEW",
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "uploaded_user_files": [
+      {
+        "page_id": "P1",
+        "immutable_attachment_id": "file_00000000ff6081fdae07c825f044d4a3",
+        "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0",
+        "actual_pixels_read": true
+      },
+      {
+        "page_id": "P2",
+        "immutable_attachment_id": "file_00000000151881fdba1749e3cf3c07c1",
+        "fingerprint": "sha256:e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72",
+        "actual_pixels_read": true
+      },
+      {
+        "page_id": "P3",
+        "immutable_attachment_id": "file_00000000587c81fd9418fab085a6d5e2",
+        "fingerprint": "sha256:c54415544721caaa3fc2088e0d237ced6d49921bdae57ffc3f3319ddba371849",
+        "actual_pixels_read": true
+      },
+      {
+        "page_id": "P4",
+        "immutable_attachment_id": "file_00000000afc4823093387275229f4963",
+        "fingerprint": "sha256:8ff01ba8723ce5a788761ae6e11be1941777b649ce287999b7dda2ee2da5a497",
+        "actual_pixels_read": true
+      },
+      {
+        "page_id": "P5",
+        "immutable_attachment_id": "file_000000004de081fdba7a74badb549082",
+        "fingerprint": "sha256:c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389",
+        "actual_pixels_read": true
+      }
+    ],
+    "note": "本轮实际查看了用户本次上传的P1-P5；五个immutable_attachment_id与active manifest逐页精确一致。ASSET_IDENTITY_GATE允许不可变平台文件/附件ID作为exact version身份来源。"
+  },
+  "page_claim_audit": {
+    "P1": {
+      "result": "PASS",
+      "visible_claims": [
+        {
+          "text": "03水晶球 / 03 Crystal Ball / 水晶球",
+          "classification": "OFFICIAL_PRODUCT_SKU_FACT",
+          "finding": "与PRODUCT/SKU LOCK一致"
+        },
+        {
+          "text": "冷蓝眼影怎么放进通勤妆？",
+          "classification": "EDITORIAL_TOPIC",
+          "finding": "属于搭配讨论，不构成功效/性能承诺"
+        },
+        {
+          "text": "别急着看蓝有多抢眼，先看你想让它出现多少。",
+          "classification": "EDITORIAL_GUIDANCE",
+          "finding": "主观选择建议，无事实冲突"
+        }
+      ],
+      "authenticity_finding": "人物为SYNTHETIC_VISUAL_PERSONA，但页面没有‘我用了/我上眼/我实测’等现实经历表述；当前画面只能作为编辑视觉表达，不得在后续发布文案或评论区追加为真实试用证据。"
+    },
+    "P2": {
+      "result": "PASS",
+      "visible_claims": [
+        {
+          "text": "Frosted Pearl / Glacier Blue / Cool Taupe / Cold Brew / Silver Blue Ice / Iridescent Galaxy Blue",
+          "classification": "OFFICIAL_SKU_FACT",
+          "finding": "六个英文色名与SKU LOCK完全一致"
+        },
+        {
+          "text": "霜白珠光感 / 冰川蓝 / 冷灰褐 / 深冷棕 / 银蓝 / 偏光银河蓝",
+          "classification": "VERIFIED_COLOR_VISUAL_READ",
+          "finding": "与final copy的visual_read一致，未冒充新的独立SKU名称"
+        },
+        {
+          "text": "冷灰棕和蓝银怎么分工 / 灰棕当结构，蓝银留给冷感层次",
+          "classification": "EDITORIAL_INTERPRETATION",
+          "finding": "明确属于颜色关系/搭配解释，不是品牌官方教程"
+        }
+      ],
+      "product_sku_finding": "六盘结构、03水晶球身份和冷蓝银灰棕视觉关系与当前SKU LOCK及R10 PASS一致。"
+    },
+    "P3": {
+      "result": "PASS",
+      "visible_claims": [
+        {
+          "text": "蓝色存在感，分3档就好",
+          "classification": "EDITORIAL_FRAMEWORK",
+          "finding": "内容策划框架，不是官方分级"
+        },
+        {
+          "text": "Cool Taupe + Cold Brew做主体，Frosted Pearl小面积提亮",
+          "classification": "EDITORIAL_PAIRING_SUGGESTION",
+          "finding": "搭配建议，无性能保证"
+        },
+        {
+          "text": "加少量Glacier Blue或Silver Blue Ice",
+          "classification": "EDITORIAL_PAIRING_SUGGESTION",
+          "finding": "搭配建议，无性能保证"
+        },
+        {
+          "text": "提高Iridescent Galaxy Blue的视觉比重",
+          "classification": "EDITORIAL_PAIRING_SUGGESTION",
+          "finding": "视觉配色建议，无性能保证"
+        }
+      ],
+      "authenticity_finding": "人物出现蓝调妆面，但无文字声明其为该商品真实上眼/亲测结果；不能在后续发布环节把该视觉改述为真实产品使用证据。"
+    },
+    "P4": {
+      "result": "PASS",
+      "visible_claims": [
+        {
+          "text": "选03之前，先问自己3件事",
+          "classification": "EDITORIAL_SELF_SELECTION_GUIDE",
+          "finding": "用户自选问题，不是性能结论"
+        },
+        {
+          "text": "如果你更想要暖棕、杏桃...03就不必硬选",
+          "classification": "EDITORIAL_RECOMMENDATION",
+          "finding": "偏好匹配建议，不是绝对化承诺"
+        },
+        {
+          "text": "办公室更保守时，可以把蓝银缩到局部",
+          "classification": "EDITORIAL_SCENARIO_GUIDANCE",
+          "finding": "场景搭配建议，无事实性功效主张"
+        }
+      ]
+    },
+    "P5": {
+      "result": "PASS",
+      "visible_claims": [
+        {
+          "text": "灰棕定结构 / 蓝银定冷感强度 / 先选蓝色存在感，再决定怎么搭",
+          "classification": "EDITORIAL_SUMMARY",
+          "finding": "总结搭配逻辑，无医疗、疗效、性能保证"
+        },
+        {
+          "text": "你会把蓝色留在眼尾/下眼睑做点缀，还是更愿意让它直接当主色？",
+          "classification": "CTA_QUESTION",
+          "finding": "互动问题，不构成事实主张"
+        }
+      ]
+    }
+  },
+  "final_copy_claim_audit": {
+    "result": "PASS",
+    "official_facts": "产品品牌、系列、03 Crystal Ball / 水晶球、六个英文官方色名均绑定当前PRODUCT/SKU LOCK。",
+    "observable_or_verified_color_facts": "冷蓝、银蓝、冷灰褐、深冷棕等颜色关系与当前SKU事实证据及R10图像核验一致。",
+    "editorial_judgments": "通勤搭配、三档蓝色存在感、灰棕结构、选前3问均保持为建议/选择框架，没有伪装成品牌官方教程。",
+    "aggregated_feedback": "未使用。",
+    "personal_experience": "未使用。",
+    "prohibited_claim_screen": {
+      "medical_or_treatment": false,
+      "efficacy_guarantee": false,
+      "absolute_guarantee": false,
+      "unsupported_wear_time_or_performance": false,
+      "fake_purchase_or_repurchase": false,
+      "fake_empty_or_long_term_use": false,
+      "fake_first_person_test": false,
+      "fake_user_testimonial": false,
+      "official_tutorial_impersonation": false
+    }
+  },
+  "authenticity_review": {
+    "result": "PASS",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "real_world_experience_claim_found": false,
+    "notes": [
+      "未出现本人购买、收货、试用、回购、空瓶、持妆时长、使用天数或实测效果。",
+      "P1/P3人物画面不能作为现实亲测证据使用；当前锁定文案未这样表述，因此不构成FAIL。",
+      "后续R14发布包、发布正文及评论回复不得新增会把人物妆效解释成真实亲测/上眼效果的措辞。"
+    ]
+  },
+  "compliance_snapshot_consumption": {
+    "result": "PASS",
+    "status": "VALID",
+    "scope_match": true,
+    "time_valid": true,
+    "commercial_disclosure_requirement": "NOT_APPLICABLE_FOR_CURRENT_NON_COMMERCIAL_SCOPE",
+    "AI_label_requirement": "VERIFIED_AND_APPLICABLE"
+  },
+  "AI_label_publish_requirement": "REQUIRED_AT_PUBLISH",
+  "AI_label_handling": {
+    "image_internal_label_required_for_this_review": false,
+    "content_rework_required_now": false,
+    "rule": "不得仅因P1-P5图片内部未写‘AI生成’而返修图片；R14发布包和PUBLISH_COMPLIANCE_GATE必须在发布时通过小红书AI标识功能或符合active compliance snapshot要求的可见声明落实。",
+    "publish_gate_required": true
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_scope": [],
+  "output_paths": [
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/交付.json"
+  ],
+  "evidence_refs": [
+    "生产/任务/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核任务.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "user_file://file_00000000ff6081fdae07c825f044d4a3",
+    "user_file://file_00000000151881fdba1749e3cf3c07c1",
+    "user_file://file_00000000587c81fd9418fab085a6d5e2",
+    "user_file://file_00000000afc4823093387275229f4963",
+    "user_file://file_000000004de081fdba7a74badb549082"
+  ],
+  "completed_at": "2026-09-27T22:10:06+08:00",
+  "delivery_fingerprint_or_commit": "sha256:63c938f2b0e0a5ed66d33319b3ee77ddc537c72a851034d9e2de7844deec6885",
+  "next_role_suggestion": "R01机械核验R13 PASS并按CONTENT_LOCK_GATE继续正式路由；AI标识义务保留到R14/PUBLISH_COMPLIANCE_GATE落实。"
+}
