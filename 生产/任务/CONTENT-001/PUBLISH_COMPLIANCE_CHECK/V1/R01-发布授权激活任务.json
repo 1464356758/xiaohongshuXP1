@@ -1,0 +1,72 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PUBLISH-GATE-R01-V1",
+  "stage": "PUBLISH_COMPLIANCE_CHECK",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVIEWING",
+  "phase": "PUBLISH_COMPLIANCE_CHECK",
+  "created_by": "R01",
+  "created_at": "2026-09-28T07:35:00+08:00",
+  "input_paths": [
+    "系统/生产架构/SYS-003/PUBLISH_COMPLIANCE_GATE.json",
+    "模板/生产/PUBLISH_COMPLIANCE_GATE_TEMPLATE.json",
+    "生产/审核/CONTENT-001/V1/发布合规/R13-发布前合规核验.json",
+    "生产/审核/CONTENT-001/V1/发布合规/R13-交付.json",
+    "生产/批准/CONTENT-001/LOCK-V1.json",
+    "生产/发布包/CONTENT-001/V1/发布包.json",
+    "生产/审核/CONTENT-001/V1/发布合规/实际发布模式输入.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json"
+  ],
+  "required_context": {
+    "r13_publish_review_path": "生产/审核/CONTENT-001/V1/发布合规/R13-发布前合规核验.json",
+    "r13_result": "PASS",
+    "content_lock_path": "生产/批准/CONTENT-001/LOCK-V1.json",
+    "publish_package_path": "生产/发布包/CONTENT-001/V1/发布包.json",
+    "package_fingerprint": "sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102",
+    "actual_publish_scope_path": "生产/审核/CONTENT-001/V1/发布合规/实际发布模式输入.json",
+    "actual_publish_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "compliance_snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "compliance_snapshot_valid_until": "2026-10-04T21:56:00+08:00"
+  },
+  "scope": [
+    "机械消费R13 PUBLISH_COMPLIANCE_REVIEW PASS。",
+    "建立PUBLISH_COMPLIANCE_GATE evidence并签发不超过active compliance snapshot valid_until的time-bounded authorization。",
+    "若Gate PASS，按PGC与PGR合法迁移至READY/PUBLISH_READY。",
+    "actual_publish_recheck保持PENDING，直到用户真正到达发布按钮前由R01即时复核。"
+  ],
+  "frozen_scope": [
+    "CONTENT-001-LOCK-V1",
+    "R14 publish package",
+    "actual publish scope",
+    "active compliance snapshot",
+    "R13 publish compliance PASS"
+  ],
+  "acceptance_criteria": [
+    "Gate全部检查为true。",
+    "authorization issued_at非空。",
+    "publish_authorization_valid_until非空且不晚于snapshot valid_until。",
+    "active_pre_publish_gate_path指向正式Gate evidence。",
+    "进入READY/PUBLISH_READY后actual_publish_recheck仍为PENDING。"
+  ],
+  "expected_output_paths": [
+    "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json"
+  ],
+  "dependency_revision": "R13_PUBLISH_REVIEW|253134196fec2fb040396a90ac3578e86fd5d20f|R13_DELIVERY|7c6273c56f23f137ab9c7f03391ba62fb2f63d4f|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102|PUBLISH_SCOPE|7155df97180e73803cd69f15095a4fb8c99e1d0d|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|2026-10-04T21:56:00+08:00",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PUBLISH_COMPLIANCE_CHECK|R01|V1|1|null|R13_PUBLISH_REVIEW|253134196fec2fb040396a90ac3578e86fd5d20f|R13_DELIVERY|7c6273c56f23f137ab9c7f03391ba62fb2f63d4f|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102|PUBLISH_SCOPE|7155df97180e73803cd69f15095a4fb8c99e1d0d|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|2026-10-04T21:56:00+08:00",
+  "routing": {
+    "on_success": [
+      "USER_ACTION_REQUIRED"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
