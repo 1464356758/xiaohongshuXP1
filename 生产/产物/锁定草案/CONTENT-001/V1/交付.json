@@ -1,0 +1,57 @@
+{
+  "schema": "XP1_R05_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|PRODUCT_LOCK|R05|V1|1|null|SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "formal_product_selection_path": "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "formal_product_selection_blob_sha": "ebdc2923662424faeb8d887818b478d0e40d7fa4",
+    "selected_candidate_id": "CAND-01",
+    "selected_product_identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette",
+    "r04_research_path": "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "r04_research_blob_sha": "a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+    "r04_delivery_blob_sha": "241db9bd9661ecb7a791cc525c3c1376c0359b45",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "runtime_mode": "LIVE",
+    "task_role_id": "R05"
+  },
+  "output_paths": [
+    "生产/产物/锁定草案/CONTENT-001/V1/PRODUCT-001-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-01-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-02-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-03-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "E01_FLOWERKNOWS_OFFICIAL_PRODUCT",
+    "E02_FLOWERKNOWS_OFFICIAL_02",
+    "E03_FLOWERKNOWS_OFFICIAL_03",
+    "E04_FLOWERKNOWS_OFFICIAL_COLLECTION_STORY",
+    "E05_FLOWERKNOWS_CN_RETAIL",
+    "E06_FLOWERKNOWS_CN_JD",
+    "OFFICIAL_SKU_IMAGE_01=https://flowerknows.co/cdn/shop/files/01_f873e5f4-d700-4c6f-8713-2dbf750052a4.jpg?v=1789020439&width=1500",
+    "OFFICIAL_SKU_IMAGE_02=https://flowerknows.co/cdn/shop/files/02_ab9b9c6e-4a03-4213-94d2-ceefae8bc7d6.jpg?v=1789020439&width=1500",
+    "OFFICIAL_SKU_IMAGE_03=https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500"
+  ],
+  "identity_summary": {
+    "product": "VERIFIED_DRAFT",
+    "sku_01": "VERIFIED_DRAFT_01_MUSIC_BOX",
+    "sku_02": "VERIFIED_DRAFT_02_ROMANTIC_WALTZ",
+    "sku_03": "VERIFIED_DRAFT_03_CRYSTAL_BALL",
+    "snow_vs_swan_guard": "ENFORCED",
+    "cross_sku_image_reuse": "FORBIDDEN_UNLESS_SEPARATELY_PROVEN"
+  },
+  "completed_at": "2026-09-27T10:18:00+08:00",
+  "delivery_fingerprint_or_commit": "8d026a7e3b3ebfc16b7eb806053cc678d62dd4c4",
+  "next_role_suggestion": "R01"
+}
