@@ -1,0 +1,68 @@
+{
+  "schema": "SYS-003_PARALLEL_BARRIER_V2",
+  "content_id": "CONTENT-001",
+  "stage": "IMAGE_REVIEW",
+  "parallel_group_id": "CONTENT-001-IMAGE-QA-G1",
+  "barrier_revision": 1,
+  "task_revision": 1,
+  "required_role_ids": [
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "required_dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "required_asset_manifest_id": "ASSET-CONTENT-001",
+  "required_manifest_revision": 1,
+  "required_manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+  "role_results": [
+    {
+      "role_id": "R10",
+      "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    },
+    {
+      "role_id": "R11",
+      "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    },
+    {
+      "role_id": "R12",
+      "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    }
+  ],
+  "barrier_status": "OPEN",
+  "complete_rule": "R10/R11/R12均有唯一当前有效交付且绑定exact active manifest，全部PASS后COMPLETE。",
+  "activation_rule": "R01已将该精确路径写入active_image_qa_barrier_path后生效。",
+  "revision_rule": "任一in-scope资产/manifest/dependency变化必须新barrier_revision。"
+}
