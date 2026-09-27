@@ -1,0 +1,646 @@
+{
+  "schema": "XP1_R04_PRODUCT_FACT_RESEARCH_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R04-V1",
+  "role_id": "R04",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "CANDIDATE_SET|CONTENT-001-CANDIDATE-SET-V1|765e1aa9bd065dae37059069ffa5c1fdc4556560|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|PRODUCT_LOCK|R04|V1|1|null|CANDIDATE_SET|CONTENT-001-CANDIDATE-SET-V1|765e1aa9bd065dae37059069ffa5c1fdc4556560|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "executed_under": {
+    "runtime_enabled": true,
+    "runtime_mode": "LIVE",
+    "state": "BUILDING",
+    "phase": "PRODUCT_LOCK",
+    "active_task_path": "生产/任务/CONTENT-001/PRODUCT_LOCK/V1/R04-商品事实研究任务.json",
+    "active_revision_path": null,
+    "candidate_set_path": "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_blob_sha": "765e1aa9bd065dae37059069ffa5c1fdc4556560",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false
+  },
+  "research_rules_applied": [
+    "只研究CAND-01至CAND-05；未扩展theme-only候选。",
+    "一手品牌官方页面优先；电商、媒体与公开用户内容只能作为补充。",
+    "商品名、SKU、色号与包装/视觉身份不确定时保留UNKNOWN或排除，不补猜。",
+    "官方宣称不改写为账号亲测结论；当前PERSONA禁止现实产品第一人称使用经历。",
+    "图片与包装最终字节级/视觉一一对应仍须后续R05/R10身份门禁，R04不替代图片核验。"
+  ],
+  "evidence_register": [
+    {
+      "evidence_id": "E01_FLOWERKNOWS_OFFICIAL_PRODUCT",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette",
+      "supports": [
+        "正式英文商品名",
+        "01 Music Box",
+        "六色结构",
+        "01配色名称",
+        "6.5g",
+        "官方配方/妆效宣称",
+        "包装设计总特征"
+      ]
+    },
+    {
+      "evidence_id": "E02_FLOWERKNOWS_OFFICIAL_02",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034344817",
+      "supports": [
+        "02 Romantic Waltz",
+        "六个官方色块名称",
+        "6.5g",
+        "当前页面区域可售状态可能显示Coming Soon"
+      ]
+    },
+    {
+      "evidence_id": "E03_FLOWERKNOWS_OFFICIAL_03",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://flowerknows.co/en-au/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034377585",
+      "supports": [
+        "03 Crystal Ball",
+        "六个官方色块名称",
+        "6.5g",
+        "冷蓝灰棕官方色彩描述"
+      ]
+    },
+    {
+      "evidence_id": "E04_FLOWERKNOWS_OFFICIAL_COLLECTION_STORY",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://flowerknows.co/en-es/blogs/beauty-guide/snow-ballet-collection-inspiration",
+      "supports": [
+        "Snow Ballet系列官方存在",
+        "官方文章发布日期2026-09-14",
+        "系列归属"
+      ]
+    },
+    {
+      "evidence_id": "E05_FLOWERKNOWS_CN_RETAIL",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "YAMI_RETAIL_LISTING",
+      "source_url": "https://www.yami.com/us/zh/p/snow-ballet-six-color-satin-eyeshadow-palette-03-crystal-ball-6-5g-cool-blue-with-earthy-gray-brown-palette-highly-pigmented-no-fallout/3194303991",
+      "supports": [
+        "中文零售命名：雪花芭蕾系列六色丝缎眼影盘",
+        "01八音盒/02圆舞曲/03水晶球中文映射",
+        "03标注6.5g"
+      ]
+    },
+    {
+      "evidence_id": "E06_FLOWERKNOWS_CN_JD",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "JD_RETAIL_INDEX",
+      "source_url": "https://www.jd.com/jiage/13164028ae49914db740.html",
+      "supports": [
+        "01八音盒/02圆舞曲/03水晶球在中国电商索引中的一致映射",
+        "雪花芭蕾与旧天鹅芭蕾为不同系列线索"
+      ]
+    },
+    {
+      "evidence_id": "E07_FENTY_OFFICIAL_GLOSS_BOMB",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://fentybeauty.com/products/gloss-bomb-universal-lip-luminizer-hot-chocolit-fantasy",
+      "supports": [
+        "正式英文商品名Gloss Bomb Universal Lip Luminizer",
+        "Hot Chocolit Fantasy/Pink Dragonfly/Rose Amber均存在于当前官方色号选择器",
+        "Standard 9mL/Mini 5.5mL产品线容量",
+        "官方配方与妆效宣称"
+      ]
+    },
+    {
+      "evidence_id": "E08_FENTY_CN_LAUNCH_MEDIA",
+      "claim_class": "EDITORIAL_INFERENCE",
+      "source_kind": "BRAND_NEWS_MEDIA",
+      "source_url": "https://fashion.sina.com.cn/b/nw/2026-09-17/1523/doc-iniscksf0365249.shtml",
+      "supports": [
+        "中国上海活动将Hot Chocolit Fantasy/Pink Dragonfly/Rose Amber报道为三款全新色号",
+        "中文名星尘热可可/星尘蜻蜓粉/琥珀瑰棕",
+        "主题店2026-09-12上海启幕"
+      ],
+      "use_limit": "不是Fenty中国官方商品页；中文正式商品名与中国SKU新色标签只能按媒体报道归因，不升级为全球统一官方命名。"
+    },
+    {
+      "evidence_id": "E09_FENTY_GLOBAL_NEW_LABEL",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://fentybeauty.com/en-to/products/gloss-bomb-universal-lip-luminizer-hot-chocolit-fantasy",
+      "supports": [
+        "当前全球站在页面上把Cherry Amor/Diamond Milk/Caviar Crystalz标记为New，同时Hot Chocolit Fantasy/Pink Dragonfly/Rose Amber仍在色号列表中"
+      ],
+      "use_limit": "证明“新色”标签具有市场/时间范围差异，不能把中国活动三色写成全球当前统一New三色。"
+    },
+    {
+      "evidence_id": "E10_PERFECTDIARY_SECONDARY_INDEX",
+      "claim_class": "EDITORIAL_INFERENCE",
+      "source_kind": "SECONDARY_INDEX_OF_XHS_POST",
+      "source_url": "https://post.smzdm.com/p/a82xq3ml/",
+      "supports": [
+        "仅能确认二次索引中存在2026-09-22小红书来源标题‘完美日记「小鹿」全脸盘 KKV 线下首发’"
+      ],
+      "use_limit": "不能据此确认正式商品全称、盘内结构、SKU、价格、官方首发范围或包装。"
+    },
+    {
+      "evidence_id": "E11_JUDYDOLL_OFFICIAL",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://judydoll.com/products/cushion-satin-lip-cream",
+      "supports": [
+        "正式英文商品名Cushion Satin Lip Cream",
+        "页面标New",
+        "S01 Fig Ganache",
+        "2.6mL",
+        "官方质地/8H保湿/12H持妆宣称"
+      ]
+    },
+    {
+      "evidence_id": "E12_JUDYDOLL_4_SHADE_RETAIL",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "YESSTYLE_RETAIL_LISTING",
+      "source_url": "https://www.yesstyle.com/es/judydoll-cushion-satin-lip-cream-4-colors-s01-fig-ganache-2-6ml/info.html/pid.1138028650",
+      "supports": [
+        "S01 Fig Ganache/S02 Barbie Choco/S03 Cocoa Mocha/S04 Roasted Chestnut",
+        "2.6mL"
+      ]
+    },
+    {
+      "evidence_id": "E13_JUDYDOLL_CN_JD",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "JD_RETAIL_INDEX",
+      "source_url": "https://www.jd.com/hprm/1316583ff24810a4fbeb.html",
+      "supports": [
+        "中国电商使用‘缎光唇粉霜’命名",
+        "S01无花果生巧/S02芭比甜巧/S03可可生巧/S04烤栗生巧",
+        "与旧N系列唇粉霜同时存在，存在版本混淆风险"
+      ]
+    },
+    {
+      "evidence_id": "E14_YSL_TW_NEW_MATTE",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL_TAIWAN",
+      "source_url": "https://www.yslbeauty.com.tw/product/%E5%94%87%E8%86%8F/%E6%83%85%E6%8C%91%E8%A3%B8%E5%90%BB%E7%85%99%E9%9C%A7%E6%8C%81%E8%89%B2%E5%94%87%E8%90%83/WW-51595YSL.html",
+      "supports": [
+        "台湾官方新品‘情挑裸吻煙霧持色唇萃’",
+        "#610原生奢棕",
+        "8色",
+        "官方92%精华基底/12H奢润/16H持色宣称"
+      ]
+    },
+    {
+      "evidence_id": "E15_YSL_TW_GLOSS_610",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL_TAIWAN",
+      "source_url": "https://www.yslbeauty.com.tw/product/%E5%94%87%E9%83%A8/%E5%A5%A2%E8%8F%AF%E5%8D%B0%E8%A8%98%E9%8E%96%E5%BF%83%E5%85%89%E5%94%87%E9%87%89/WW-20677YSL.html",
+      "supports": [
+        "另一当前官方产品线‘奢華印記鎖心光唇釉’也存在#610冰裸烏龍",
+        "610数字不能脱离产品线使用"
+      ]
+    },
+    {
+      "evidence_id": "E16_YSL_CN_JD_610",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "JD_RETAIL_INDEX",
+      "source_url": "https://www.jd.com/hprm/1316583ff24810a4fbeb.html",
+      "supports": [
+        "中国电商索引出现YSL‘水雾唇釉610日晒乌龙哑光柔雾’命名线索"
+      ],
+      "use_limit": "本轮未取得YSL中国官方一手商品页确认该中文正式商品名/色名，不能与台湾官方#610原生奢棕自动视为同名同SKU。"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND-01",
+      "provisional_identity": "花知晓「雪花芭蕾」系列六色眼影盘方向",
+      "brand": "Flower Knows / 花知晓",
+      "category": "美妆/眼影",
+      "product_identity_status": "VERIFIED",
+      "sku_identity_status": "VERIFIED_3_VARIANTS_TEXT_IDENTITY",
+      "selection_status": "VERIFIED_ELIGIBLE",
+      "confirmed_fields": {
+        "official_english_product_name": "Snow Ballet Six-Color Satin Makeup Palette",
+        "series": "Snow Ballet Collection",
+        "official_product_structure": "six-shade makeup palette; four silky satin shades plus two sparkling accents",
+        "net_weight": "6.5g / 0.23 oz",
+        "variants": [
+          {
+            "sku_code": "01",
+            "official_english_name": "Music Box",
+            "cn_retail_name": "八音盒",
+            "official_color_story": "warm apricot and rosy brown with pearl white and champagne sparkle",
+            "official_pan_names": [
+              "Creamy Apricot",
+              "Peach Pink",
+              "Apricot Brown",
+              "Cocoa Brown",
+              "Pearl White Sparkle",
+              "Champagne Sparkle"
+            ],
+            "evidence_refs": [
+              "E01_FLOWERKNOWS_OFFICIAL_PRODUCT",
+              "E05_FLOWERKNOWS_CN_RETAIL",
+              "E06_FLOWERKNOWS_CN_JD"
+            ]
+          },
+          {
+            "sku_code": "02",
+            "official_english_name": "Romantic Waltz",
+            "cn_retail_name": "圆舞曲",
+            "official_color_story": "muted rosewood and cocoa with strawberry pink, icy mint and iridescent pink",
+            "official_pan_names": [
+              "Rose Ivoire",
+              "Soft Strawberry Pink",
+              "Rosewood",
+              "Cocoa Truffle",
+              "Mint Crystal",
+              "Iridescent Pink"
+            ],
+            "evidence_refs": [
+              "E02_FLOWERKNOWS_OFFICIAL_02",
+              "E05_FLOWERKNOWS_CN_RETAIL",
+              "E06_FLOWERKNOWS_CN_JD"
+            ]
+          },
+          {
+            "sku_code": "03",
+            "official_english_name": "Crystal Ball",
+            "cn_retail_name": "水晶球",
+            "official_color_story": "cool glacier blue, taupe and deep cold brew with silver-blue and iridescent galaxy sparkle",
+            "official_pan_names": [
+              "Frosted Pearl",
+              "Glacier Blue",
+              "Cool Taupe",
+              "Cold Brew",
+              "Silver Blue Ice",
+              "Iridescent Galaxy Blue"
+            ],
+            "evidence_refs": [
+              "E03_FLOWERKNOWS_OFFICIAL_03",
+              "E05_FLOWERKNOWS_CN_RETAIL",
+              "E06_FLOWERKNOWS_CN_JD"
+            ]
+          }
+        ],
+        "current_status": "官方站当前处Snow Ballet new launch窗口；SKU页面可售状态会随地区/库存变化，02页面在本轮抓取可显示Coming Soon，03可显示Add to cart。",
+        "launch_information": "Flower Knows官方系列故事文章发布日期为2026-09-14；官方首页当前列为new launch。"
+      },
+      "unconfirmed_fields": [
+        "中国大陆品牌官方页面的正式中文商品全称尚未取得；‘雪花芭蕾系列六色丝缎眼影盘’按电商零售命名使用，不升级为全球官方中文名。",
+        "各SKU最终用于生产的官方包装图片字节与商品图资产尚未由R05/R10建立身份绑定。",
+        "不同市场的实时库存/上架状态可能变化，不能把本轮某地区Coming Soon/可购买状态写成全球固定状态。"
+      ],
+      "claim_boundaries": {
+        "official_claims": [
+          "丝缎色与多维闪片、可叠加妆效。",
+          "品牌宣称Up to 12 Hours of Wear；只能写‘品牌宣称’，不能写成本账号亲测12小时。"
+        ],
+        "aggregated_user_feedback": "NOT_ESTABLISHED_IN_THIS_R04_RUN",
+        "editorial_notes": [
+          "Snow Ballet与旧Swan Ballet/天鹅芭蕾名称高度相似，搜图和素材库存在错拿旧系列图的高风险。",
+          "中文盘名映射与官方英文盘名已交叉核对，但后续图片生成必须以R05锁定的SKU+官方图身份为准。"
+        ]
+      },
+      "advantages_or_usable_points": [
+        "产品与三款SKU的官方英文身份清楚，盘号、英文名、官方色彩故事可逐一绑定。",
+        "中国零售端01八音盒/02圆舞曲/03水晶球映射与官方01/02/03英文SKU结构一致，适合做‘三盘怎么选’。"
+      ],
+      "drawbacks_or_disputes": [
+        "中英文正式命名层级不同：官方英文名是一手，中文完整商品名目前主要来自电商。",
+        "Snow Ballet与Swan Ballet视觉/名称近似，错误素材污染风险高。",
+        "官方持妆时长属于品牌宣称，不是独立实测。"
+      ],
+      "sku_risk": "MEDIUM_HIGH_IMAGE_IDENTITY",
+      "image_mapping_status": "TEXT_AND_COLOR_STORY_VERIFIED; EXACT_ASSET_MAPPING_REQUIRES_R05_R10",
+      "writable_boundary": [
+        "可写官方英文商品名、三盘编号/英文名、6.5g、官方色彩故事。",
+        "中文盘名可写为中国零售端对应名，并保留来源层级。",
+        "可比较官方色彩结构，不写账号本人上眼、持妆或飞粉体验。"
+      ],
+      "forbidden_claims": [
+        "不得把任何Swan Ballet/天鹅芭蕾旧系列图片当Snow Ballet。",
+        "不得把品牌12H宣称写成‘我上眼12小时’。",
+        "不得在R05图片身份锁前自行配图认定某包装必然对应某盘。"
+      ],
+      "evidence_refs": [
+        "E01_FLOWERKNOWS_OFFICIAL_PRODUCT",
+        "E02_FLOWERKNOWS_OFFICIAL_02",
+        "E03_FLOWERKNOWS_OFFICIAL_03",
+        "E04_FLOWERKNOWS_OFFICIAL_COLLECTION_STORY",
+        "E05_FLOWERKNOWS_CN_RETAIL",
+        "E06_FLOWERKNOWS_CN_JD"
+      ]
+    },
+    {
+      "candidate_id": "CAND-02",
+      "provisional_identity": "FENTY BEAUTY「星尘流光唇釉」三款新色方向",
+      "brand": "FENTY BEAUTY",
+      "category": "美妆/唇妆",
+      "product_identity_status": "VERIFIED_PRODUCT_LINE",
+      "sku_identity_status": "VERIFIED_CN_LAUNCH_TRIO_WITH_REGION_NEW_LABEL_CONFLICT",
+      "selection_status": "VERIFIED_ELIGIBLE",
+      "eligibility_conditions": [
+        "R01若选择本候选，正式scope必须明确为‘2026-09中国上海星尘流光主题店报道的三款新色’，不得泛化成全球当前New三色。",
+        "后续R05必须对三款SKU的中国市场商品图与官方/授权素材做一一绑定。"
+      ],
+      "confirmed_fields": {
+        "official_english_product_name": "Gloss Bomb Universal Lip Luminizer",
+        "cn_media_family_name": "星尘流光唇釉家族",
+        "cn_launch_trio": [
+          {
+            "official_english_shade": "Hot Chocolit Fantasy",
+            "cn_media_name": "星尘热可可"
+          },
+          {
+            "official_english_shade": "Pink Dragonfly",
+            "cn_media_name": "星尘蜻蜓粉"
+          },
+          {
+            "official_english_shade": "Rose Amber",
+            "cn_media_name": "琥珀瑰棕"
+          }
+        ],
+        "official_current_global_presence": "三款英文色号均存在于Fenty官方Gloss Bomb Universal Lip Luminizer当前色号选择器。",
+        "fill_weight_product_line": "Standard 9mL; Mini 5.5mL（官方产品线信息，具体地区/色号是否同时提供两规格需下游再核）",
+        "china_event": "新浪时尚2026-09-17报道主题店于2026-09-12在上海启幕，并将上述三色称为三款全新色号。"
+      },
+      "unconfirmed_fields": [
+        "未取得Fenty Beauty中国官方商品页，因此‘星尘流光唇釉’和三款中文色名按中国品牌新闻媒体报道归因，不提升为全球官方中文命名。",
+        "中国市场三款SKU的实时在售渠道、库存与容量组合未做官方一手逐SKU确认。",
+        "三款中国活动色的精确包装资产尚未绑定。"
+      ],
+      "claim_boundaries": {
+        "official_claims": [
+          "Fenty官方产品页说明产品线含Shea Butter、Vitamin E与Peptide，并宣传高光泽、滋润等属性。",
+          "官方页面的体验/功效措辞仍属于品牌宣称，不能改写为博主亲测。"
+        ],
+        "aggregated_user_feedback": "NOT_ESTABLISHED_IN_THIS_R04_RUN",
+        "editorial_notes": [
+          "当前Fenty全球站把Cherry Amor、Diamond Milk、Caviar Crystalz标记为New，而Hot Chocolit Fantasy、Pink Dragonfly、Rose Amber虽在售/列出但未统一标New。",
+          "因此‘三款新色’是中国活动时间/市场语境，不能写成全球当前统一新品标签。"
+        ]
+      },
+      "advantages_or_usable_points": [
+        "正式英文产品线和三款英文色号均能在Fenty官方页面找到。",
+        "中国新品事件有明确日期、地点和三色中文报道，适合做市场限定的新品选择内容。"
+      ],
+      "drawbacks_or_disputes": [
+        "全球站当前New标签与中国活动三色不一致，存在时间/地区命名冲突。",
+        "中文商品家族名和中文色名本轮不是Fenty中国官方页面直接证据。"
+      ],
+      "sku_risk": "MEDIUM_REGION_SCOPE",
+      "image_mapping_status": "SKU_NAMES_VERIFIED; CN_MARKET_EXACT_ASSET_MAPPING_REQUIRES_R05_R10",
+      "writable_boundary": [
+        "可写正式英文产品线及三款英文色号。",
+        "涉及‘三款全新色号’和中文名时必须明确为中国上海活动/媒体报道语境。",
+        "可写官方配方宣称，但不可写本人不粘、丰唇、持妆等体验。"
+      ],
+      "forbidden_claims": [
+        "不得写成‘Fenty全球最新三色就是Hot Chocolit Fantasy/Pink Dragonfly/Rose Amber’。",
+        "不得把当前全球站标New的Cherry Amor/Diamond Milk/Caviar Crystalz替换进中国活动三色。",
+        "不得把媒体描述的肤色适配或提亮感写成账号实测结果。"
+      ],
+      "evidence_refs": [
+        "E07_FENTY_OFFICIAL_GLOSS_BOMB",
+        "E08_FENTY_CN_LAUNCH_MEDIA",
+        "E09_FENTY_GLOBAL_NEW_LABEL"
+      ]
+    },
+    {
+      "candidate_id": "CAND-03",
+      "provisional_identity": "完美日记「小鹿」全脸盘 KKV线下首发线索",
+      "brand": "Perfect Diary / 完美日记",
+      "category": "美妆/综合彩盘",
+      "product_identity_status": "UNVERIFIED_LEAD",
+      "sku_identity_status": "UNKNOWN",
+      "selection_status": "NOT_ELIGIBLE_FOR_SELECTION",
+      "confirmed_fields": {
+        "only_confirmed_lead": "二次聚合页的精选参考来源中存在一条标注为2026-09-22、来自小红书的标题‘完美日记「小鹿」全脸盘 KKV 线下首发’。"
+      },
+      "unconfirmed_fields": [
+        "正式商品全称",
+        "是否确属Perfect Diary当前正式独立商品",
+        "系列名",
+        "SKU/款式/色号",
+        "盘内结构与颜色数量",
+        "容量/净含量",
+        "价格",
+        "KKV首发范围与是否独家",
+        "官方包装与商品图",
+        "当前官方在售状态"
+      ],
+      "claim_boundaries": {
+        "official_claims": [],
+        "aggregated_user_feedback": "NOT_ESTABLISHED",
+        "editorial_notes": [
+          "当前证据只够证明一个近期小红书来源标题被二次索引，不够建立商品身份。",
+          "‘小鹿’在完美日记历史产品语境中可能与旧动物盘/探索家系列产生名称碰撞，因此更不能按标题补全。"
+        ]
+      },
+      "advantages_or_usable_points": [
+        "题材本身与全脸盘/通勤决策内容适配，但这不是商品事实。"
+      ],
+      "drawbacks_or_disputes": [
+        "缺少品牌官方或可靠一手商品页。",
+        "名称存在历史产品碰撞风险。"
+      ],
+      "sku_risk": "CRITICAL_UNVERIFIED_IDENTITY",
+      "image_mapping_status": "UNKNOWN",
+      "writable_boundary": [
+        "后台只能记为‘待核实线索’，不能进入公开商品事实内容。"
+      ],
+      "forbidden_claims": [
+        "不得写正式商品名、盘色、盘格数量、价格、包装、KKV独家/首发范围。",
+        "不得生成或选用具体产品外观进入最终图。"
+      ],
+      "blocked_code": "BLOCKED_PRODUCT_UNCERTAIN",
+      "evidence_refs": [
+        "E10_PERFECTDIARY_SECONDARY_INDEX"
+      ]
+    },
+    {
+      "candidate_id": "CAND-04",
+      "provisional_identity": "橘朵「缎光唇粉霜」新品方向",
+      "brand": "Judydoll / 橘朵",
+      "category": "美妆/唇妆",
+      "product_identity_status": "VERIFIED",
+      "sku_identity_status": "VERIFIED_4_SHADE_TEXT_IDENTITY",
+      "selection_status": "VERIFIED_ELIGIBLE",
+      "confirmed_fields": {
+        "official_english_product_name": "Cushion Satin Lip Cream",
+        "cn_ecommerce_product_name": "缎光唇粉霜",
+        "net_weight": "2.6mL / 0.09 oz",
+        "official_status": "Judydoll官方页面标New",
+        "variants": [
+          {
+            "sku_code": "S01",
+            "official_english_name": "Fig Ganache",
+            "cn_ecommerce_name": "无花果生巧"
+          },
+          {
+            "sku_code": "S02",
+            "official_english_name": "Barbie Choco",
+            "cn_ecommerce_name": "芭比甜巧"
+          },
+          {
+            "sku_code": "S03",
+            "official_english_name": "Cocoa Mocha",
+            "cn_ecommerce_name": "可可生巧"
+          },
+          {
+            "sku_code": "S04",
+            "official_english_name": "Roasted Chestnut",
+            "cn_ecommerce_name": "烤栗生巧"
+          }
+        ]
+      },
+      "unconfirmed_fields": [
+        "Judydoll中国官方一手页面的正式中文全称与中文色名页面本轮未取得，中文命名按中国电商交叉证据使用。",
+        "四个SKU的最终商品图/包装资产尚未由R05/R10做字节/视觉身份绑定。",
+        "中国市场明确首发日期本轮未取得品牌官方一手证据。"
+      ],
+      "claim_boundaries": {
+        "official_claims": [
+          "Judydoll官方称Silky-Smooth Glide、Soft Satin Glow、8H Hydration、12H Long Wear。",
+          "这些属于品牌宣称，不能写成账号亲测8H/12H结果。"
+        ],
+        "aggregated_user_feedback": "NOT_ESTABLISHED_IN_THIS_R04_RUN",
+        "editorial_notes": [
+          "中国电商同时存在旧N系列‘唇粉霜’与新S系列‘缎光唇粉霜’，不能只搜‘唇粉霜’后混用包装、色号或产品图。",
+          "S系列的身份锚点应是S01-S04 + 2.6mL + Cushion Satin Lip Cream。"
+        ]
+      },
+      "advantages_or_usable_points": [
+        "官方英文产品身份、净含量和S系列结构清楚。",
+        "S01-S04英文名与中国电商中文名可以形成稳定一一映射。"
+      ],
+      "drawbacks_or_disputes": [
+        "‘唇粉霜’旧N系列与新S系列容易被搜索结果混在一起。",
+        "8H保湿/12H持妆是品牌宣称，不是独立体验结论；本轮没有足够多样本支持氧化、拔干等确定判断。"
+      ],
+      "sku_risk": "MEDIUM_HIGH_VERSION_COLLISION",
+      "image_mapping_status": "TEXT_IDENTITY_VERIFIED; EXACT_ASSET_MAPPING_REQUIRES_R05_R10",
+      "writable_boundary": [
+        "可写Cushion Satin Lip Cream、2.6mL、S01-S04及其英文名。",
+        "中文‘缎光唇粉霜’与四个中文色名按电商命名层级写。",
+        "可写品牌宣称但必须归因，不写本人持妆/拔干/氧化体验。"
+      ],
+      "forbidden_claims": [
+        "不得把N系列色号/旧唇粉霜包装混到S01-S04。",
+        "不得把8H/12H宣传写成账号实测。",
+        "不得在R05图片身份核验前凭搜索图认定SKU包装。"
+      ],
+      "evidence_refs": [
+        "E11_JUDYDOLL_OFFICIAL",
+        "E12_JUDYDOLL_4_SHADE_RETAIL",
+        "E13_JUDYDOLL_CN_JD"
+      ]
+    },
+    {
+      "candidate_id": "CAND-05",
+      "provisional_identity": "YSL 610 哑光新版唇妆线索",
+      "brand": "YSL Beauty",
+      "category": "美妆/唇妆",
+      "product_identity_status": "AMBIGUOUS_CROSS_REGION_PRODUCT_LINE",
+      "sku_identity_status": "SHADE_NUMBER_COLLISION_AND_REGION_NAME_CONFLICT",
+      "selection_status": "NOT_ELIGIBLE_FOR_SELECTION_AS_CURRENTLY_NAMED",
+      "confirmed_fields": {
+        "taiwan_new_matte_line": {
+          "official_product_name": "情挑裸吻煙霧持色唇萃",
+          "shade": "#610 原生奢棕",
+          "current_status": "YSL Beauty Taiwan官方标新品",
+          "shade_count": 8,
+          "evidence_ref": "E14_YSL_TW_NEW_MATTE"
+        },
+        "taiwan_gloss_line_same_number": {
+          "official_product_name": "奢華印記鎖心光唇釉",
+          "shade": "#610 冰裸烏龍",
+          "evidence_ref": "E15_YSL_TW_GLOSS_610"
+        },
+        "mainland_ecommerce_lead": {
+          "listing_name": "YSL 水雾唇釉 610 日晒乌龙 哑光柔雾",
+          "evidence_ref": "E16_YSL_CN_JD",
+          "status": "ECOMMERCE_ONLY_NOT_FIRST_PARTY_CONFIRMED"
+        }
+      },
+      "unconfirmed_fields": [
+        "中国大陆YSL官方对该2026新哑光产品线的正式中文商品名。",
+        "中国大陆官方#610正式中文色名究竟是否为‘日晒乌龙’以及与台湾#610原生奢棕的对应关系。",
+        "候选所谓‘新版’是新产品线、改版、配方升级还是仅市场俗称；当前无一手证据支持把不同610写成新旧版本关系。",
+        "中国大陆正式上市时间、容量、包装版本与SKU图像身份。"
+      ],
+      "claim_boundaries": {
+        "official_claims": [
+          "台湾官方对情挑裸吻煙霧持色唇萃宣传92%精华基底、12H奢润、16H持色；只能按台湾官方品牌宣称归因。"
+        ],
+        "aggregated_user_feedback": "NOT_ESTABLISHED_IN_THIS_R04_RUN",
+        "editorial_notes": [
+          "610只是色号数字，必须与产品线和市场一起写。",
+          "台湾官方当前至少两条不同唇釉产品线都存在#610，因此不能把‘YSL 610’直接当唯一SKU。",
+          "中国电商‘日晒乌龙’与台湾官方‘原生奢棕’名称存在地区命名差异线索，未取得中国官方一手页前不可自动等同。"
+        ]
+      },
+      "advantages_or_usable_points": [
+        "YSL台湾官方能确认2026新品哑光线存在#610原生奢棕，为继续核验提供了明确锚点。"
+      ],
+      "drawbacks_or_disputes": [
+        "同一610数字跨产品线复用，且跨市场中文名不一致。",
+        "候选‘新版’描述本身不够精确，容易把新产品线误写成旧品改版。"
+      ],
+      "sku_risk": "CRITICAL_SHADE_NUMBER_COLLISION",
+      "image_mapping_status": "NOT_SAFE_TO_BIND_UNTIL_MARKET_AND_PRODUCT_LINE_FIXED",
+      "writable_boundary": [
+        "后台可写台湾官方新品线‘情挑裸吻煙霧持色唇萃 #610原生奢棕’这一已证事实。",
+        "若要做大陆小红书内容，必须先由R01/R05把中国市场正式产品线与#610官方中文名锁定。"
+      ],
+      "forbidden_claims": [
+        "不得只写‘YSL 610新版’而省略产品线。",
+        "不得声称#610原生奢棕、#610冰裸乌龙、#610日晒乌龙是同一SKU的新旧名称。",
+        "不得声称配方升级、包装改版或色调改变，除非取得同一产品线前后版本的一手证据。"
+      ],
+      "blocked_code": "BLOCKED_SKU_UNCERTAIN",
+      "evidence_refs": [
+        "E14_YSL_TW_NEW_MATTE",
+        "E15_YSL_TW_GLOSS_610",
+        "E16_YSL_CN_JD"
+      ]
+    }
+  ],
+  "summary": {
+    "result": "PASS",
+    "candidates_covered": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-03",
+      "CAND-04",
+      "CAND-05"
+    ],
+    "verified_eligible_candidates": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-04"
+    ],
+    "not_eligible_candidates": [
+      "CAND-03",
+      "CAND-05"
+    ],
+    "highest_identity_confidence": [
+      "CAND-01",
+      "CAND-04"
+    ],
+    "selection_notes": {
+      "CAND-01": "可继续选择；R05必须把01/02/03官方商品图和对应SKU锁死，尤其防Snow Ballet与Swan Ballet错图。",
+      "CAND-02": "可继续选择，但只能按2026-09中国上海活动三色的region-bound scope；不能泛化为全球当前New三色。",
+      "CAND-03": "缺一手商品身份，不可选择。",
+      "CAND-04": "可继续选择；R05必须防旧N系列与新S系列图片/色号混用。",
+      "CAND-05": "当前候选名过于模糊，610跨产品线/地区冲突，需先固定中国市场产品线与正式SKU后再进入选择。"
+    },
+    "overall_blocked_reason": null,
+    "failed_scope": []
+  },
+  "completed_at": "2026-09-27T09:23:00+08:00"
+}
