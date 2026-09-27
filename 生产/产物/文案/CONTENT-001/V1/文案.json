@@ -1,0 +1,232 @@
+{
+  "schema": "XHS_XP1_R07_COPY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COPY-R07-V1",
+  "role_id": "R07",
+  "work_mode": "CONTENT_COPY",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|PLANNING_DELIVERY|aa6ded7763b326f424bba210b2a9af68bea5c79c|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key": "CONTENT-001|COPY|R07|V1|1|null|PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|PLANNING_DELIVERY|aa6ded7763b326f424bba210b2a9af68bea5c79c|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "status": "DRAFT_FOR_R01_ACTIVATION",
+  "final_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+  "copy_revision": 1,
+  "bindings": {
+    "planning": {
+      "path": "生产/产物/策划/CONTENT-001/V1/策划.json",
+      "blob_sha": "548b8cc9de324e422f55f3f71522f4885ece6191"
+    },
+    "planning_delivery": {
+      "path": "生产/产物/策划/CONTENT-001/V1/交付.json",
+      "blob_sha": "aa6ded7763b326f424bba210b2a9af68bea5c79c"
+    },
+    "account_strategy": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    "voice": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false,
+      "first_person_opinion_eligible": true
+    },
+    "product": {
+      "path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813",
+      "identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette"
+    },
+    "sku": {
+      "path": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+      "identity": "03 Crystal Ball / 水晶球"
+    },
+    "r04": {
+      "path": "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+      "blob_sha": "a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+    }
+  },
+  "public_copy": {
+    "recommended_title": "花知晓03水晶球｜冷蓝眼影怎么放进通勤妆？",
+    "alternative_titles": [
+      "03水晶球别只看蓝色｜这6色怎么分工更重要",
+      "喜欢冷蓝又怕难日常？先看03水晶球的灰棕＋蓝银结构"
+    ],
+    "body": [
+      "03水晶球第一眼最抢的是冷蓝和银蓝，但日常好不好搭，重点其实不是“蓝多不多”，而是你准备让蓝色出现多少。",
+      "这盘是 Flower Knows / 花知晓 Snow Ballet Six-Color Satin Makeup Palette 的 03 Crystal Ball / 水晶球。六个官方色名是 Frosted Pearl、Glacier Blue、Cool Taupe、Cold Brew、Silver Blue Ice、Iridescent Galaxy Blue。",
+      "如果目标是通勤，不需要把六色都塞进一个眼妆。更稳的思路是先用 Cool Taupe + Cold Brew 把灰棕结构定住，再决定蓝色只留一点，还是让冷感更明显。",
+      "想低存在感，就把蓝收住；想多一点冷感，可以加少量 Glacier Blue 或 Silver Blue Ice；想让蓝成为视觉重点，再把 Iridescent Galaxy Blue 的存在感提高。",
+      "所以选03之前，先问自己三件事：喜欢冷灰棕＋冷蓝这组关系吗？蓝色想当主角还是点缀？日常环境能接受多少闪感？答案比“蓝色眼影日不日常”更有用。"
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "role": "COVER_DECISION_HOOK",
+        "headline": "03水晶球｜冷蓝眼影怎么放进通勤妆？",
+        "subheadline": "别急着看蓝有多抢眼，先看你想让它出现多少。",
+        "product_identity_line": "Flower Knows / 花知晓｜Snow Ballet｜03 Crystal Ball / 水晶球"
+      },
+      {
+        "page": 2,
+        "role": "FACT_MAP",
+        "headline": "先看六色结构",
+        "intro": "03水晶球的重点，是冷灰棕和蓝银怎么分工。",
+        "color_map": [
+          {
+            "official_name": "Frosted Pearl",
+            "visual_read": "霜白珠光感"
+          },
+          {
+            "official_name": "Glacier Blue",
+            "visual_read": "冰川蓝"
+          },
+          {
+            "official_name": "Cool Taupe",
+            "visual_read": "冷灰褐"
+          },
+          {
+            "official_name": "Cold Brew",
+            "visual_read": "深冷棕"
+          },
+          {
+            "official_name": "Silver Blue Ice",
+            "visual_read": "银蓝"
+          },
+          {
+            "official_name": "Iridescent Galaxy Blue",
+            "visual_read": "偏光银河蓝"
+          }
+        ],
+        "footer": "从颜色关系看，可以把灰棕当结构，把蓝银留给冷感层次。"
+      },
+      {
+        "page": 3,
+        "role": "HOW_TO_TRANSLATE_FOR_COMMUTE",
+        "headline": "蓝色存在感，分3档就好",
+        "levels": [
+          {
+            "level": "低存在感",
+            "copy": "Cool Taupe + Cold Brew 做主体，Frosted Pearl 小面积提亮。先把灰棕结构稳住。"
+          },
+          {
+            "level": "冷感点缀",
+            "copy": "在灰棕结构上，加少量 Glacier Blue 或 Silver Blue Ice。蓝色有存在感，但不抢走全部重点。"
+          },
+          {
+            "level": "明显冷蓝",
+            "copy": "想让冷蓝更突出，再提高 Iridescent Galaxy Blue 的视觉比重。它更像重点色，不需要硬塞进所有日常场景。"
+          }
+        ],
+        "footer": "重点不是六色全上，而是先定结构，再决定蓝色出现多少。"
+      },
+      {
+        "page": 4,
+        "role": "SELF_SELECTION_CARD",
+        "headline": "选03之前，先问自己3件事",
+        "questions": [
+          "① 你喜欢冷灰棕＋冷蓝 / 银蓝这组关系吗？",
+          "② 蓝色想当主角，还是只做点缀？",
+          "③ 你的日常环境，能接受多少闪感？"
+        ],
+        "decision_note": "如果你更想要暖棕、杏桃，或者日常几乎不想出现蓝色，03就不必硬选。办公室更保守时，可以把蓝银缩到局部；想要更明显冷感，再提高蓝色存在感。"
+      },
+      {
+        "page": 5,
+        "role": "SAVE_AND_COMMENT",
+        "headline": "收藏这张｜03水晶球日常思路",
+        "summary_points": [
+          "灰棕定结构",
+          "蓝银定冷感强度",
+          "先选蓝色存在感，再决定怎么搭"
+        ],
+        "save_point": "六色结构＋三档蓝色存在感＋选前3问",
+        "comment_prompt": "你会把蓝色留在眼尾 / 下眼睑做点缀，还是更愿意让它直接当主色？"
+      }
+    ],
+    "cta": "先收藏这张选择卡。等真的要选03时，先看自己想要的是“灰棕里一点蓝”，还是“让冷蓝直接成为重点”。",
+    "comment_prompt": "你会把蓝色留在眼尾 / 下眼睑做点缀，还是更愿意让它直接当主色？",
+    "tags": [
+      "#花知晓",
+      "#SnowBallet",
+      "#水晶球眼影",
+      "#冷蓝眼影",
+      "#通勤眼妆",
+      "#眼影盘怎么选"
+    ]
+  },
+  "fact_evidence_map": [
+    {
+      "claim": "产品身份为 Flower Knows / 花知晓 Snow Ballet Six-Color Satin Makeup Palette",
+      "claim_type": "VERIFIED_PRODUCT_FACT",
+      "evidence": [
+        "生产/批准/PRODUCT-001/LOCK-V1.json#5417421c820b6f46408bc57cff7a741a9ffb5813",
+        "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json#a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+      ]
+    },
+    {
+      "claim": "当前唯一 active SKU 为 03 Crystal Ball / 水晶球",
+      "claim_type": "VERIFIED_SKU_FACT",
+      "evidence": [
+        "生产/批准/SKU-001-03/LOCK-V1.json#c42f36a0e1c2c2d2add03ef194305f622de629f5"
+      ]
+    },
+    {
+      "claim": "03官方六色色名为 Frosted Pearl、Glacier Blue、Cool Taupe、Cold Brew、Silver Blue Ice、Iridescent Galaxy Blue",
+      "claim_type": "VERIFIED_SKU_FACT",
+      "evidence": [
+        "生产/批准/SKU-001-03/LOCK-V1.json#c42f36a0e1c2c2d2add03ef194305f622de629f5",
+        "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json#a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+      ]
+    },
+    {
+      "claim": "六色视觉关系可概括为银白/冰川蓝/冷灰褐/深冷棕/银蓝/偏光银河蓝",
+      "claim_type": "VERIFIED_COLOR_STORY_WITH_CHINESE_VISUAL_READ",
+      "evidence": [
+        "生产/批准/SKU-001-03/LOCK-V1.json#c42f36a0e1c2c2d2add03ef194305f622de629f5",
+        "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json#a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+      ]
+    },
+    {
+      "claim": "Cool Taupe + Cold Brew 作为主体、Frosted Pearl提亮，以及三档蓝色存在感",
+      "claim_type": "EDITORIAL_PAIRING_SUGGESTION_NOT_OFFICIAL_TUTORIAL",
+      "evidence": [
+        "生产/产物/策划/CONTENT-001/V1/策划.json#548b8cc9de324e422f55f3f71522f4885ece6191"
+      ]
+    },
+    {
+      "claim": "选前3问与场景建议",
+      "claim_type": "EDITORIAL_SELF_SELECTION_GUIDE",
+      "evidence": [
+        "生产/产物/策划/CONTENT-001/V1/策划.json#548b8cc9de324e422f55f3f71522f4885ece6191"
+      ]
+    }
+  ],
+  "truthfulness_checks": {
+    "uses_real_world_first_person_experience": false,
+    "claims_personal_purchase": false,
+    "claims_personal_wear_time": false,
+    "claims_personal_repurchase_or_empty": false,
+    "claims_unverified_performance": false,
+    "treats_editorial_pairing_as_official": false,
+    "switches_to_sibling_sku": false,
+    "confuses_snow_ballet_with_swan_ballet": false
+  },
+  "frozen_structure_check": {
+    "page_count": 5,
+    "p1": "问题钩子",
+    "p2": "六色色彩结构",
+    "p3": "三档蓝色存在感",
+    "p4": "选前3问",
+    "p5": "收藏总结 + 评论互动",
+    "matches_r06": true
+  },
+  "generated_at": "2026-09-27T11:03:00+08:00",
+  "final_copy_fingerprint_algorithm": "SHA256_CANONICAL_JSON_EXCLUDING_final_copy_fingerprint",
+  "final_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+}
