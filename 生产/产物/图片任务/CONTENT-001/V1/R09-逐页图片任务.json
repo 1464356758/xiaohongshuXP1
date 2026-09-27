@@ -1,0 +1,620 @@
+{
+  "schema": "XHS_XP1_R08_R09_PAGE_BUILD_SPEC_V1",
+  "content_id": "CONTENT-001",
+  "source_r08_task_id": "CONTENT-001-VISUAL-PLAN-R08-V1",
+  "package_id": "CONTENT-001-R09-PAGE-BUILD-SPEC-V1",
+  "status": "READY_FOR_R01_HANDOFF",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|COPY_REV|1|COPY_FP|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "source_visual_plan_path": "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+  "source_visual_plan_blob_sha": "8e0a35899885685041329779f1a8d6234eeb7d66",
+  "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+  "active_copy_blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+  "active_copy_revision": 1,
+  "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+  "locked_dependencies": {
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8"
+    },
+    "product": {
+      "path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813"
+    },
+    "sku": {
+      "path": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+      "identity": "03 Crystal Ball / 水晶球"
+    },
+    "sku_official_reference": {
+      "ref_id": "SKU-03-REF-01",
+      "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+      "source_role": "BRAND_OFFICIAL",
+      "must_match": true
+    }
+  },
+  "execution_rules": [
+    "本文件是R08提供给R09的施工规格包，不是R01控制面的ACTIVE任务；R09只能在R01正式IMAGE_BUILD任务创建后执行。",
+    "画布统一3:4；建议1242x1660或等比例高清输出。",
+    "所有最终公开文字必须从本包page.public_text逐字排版；不得让生成模型自行造字、改字、漏字。文字应作为后置排版层准确输入。",
+    "product_required=true时必须绑定PRODUCT-001 + SKU-001-03 + SKU-03-REF-01。优先使用官方参考资产裁切/合成或以其为强参考；若生成导致外壳、盘格、色彩签名或SKU身份失真，不得硬交付。",
+    "persona_required=true时必须绑定PERSONA-001 LOCK与实际锚点，保持脸型、眼型/眼距、鼻唇结构、面颊小痣、年龄观感、基础发色和身体比例。",
+    "P1/P3人物造型必须变化，不得复刻锚点碎花衣+白针织+白蝴蝶结组合。",
+    "SYNTHETIC_VISUAL_PERSONA不得被表现为现实亲测主体：禁止刷眼、上妆步骤、前后对比、手持产品宣称使用等镜头。",
+    "Snow Ballet与Swan Ballet严格隔离；01/02与03严格隔离。",
+    "任何页面若无法满足独立acceptance_points，返回最小失败范围，不自行改文案、换SKU、换人或改变页面结构。"
+  ],
+  "export_rules": {
+    "page_count": 5,
+    "page_ids": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "preferred_format": "JPG或PNG高质量",
+    "color_space": "sRGB",
+    "no_svg": true,
+    "no_watermark": true,
+    "text_legibility": "手机端缩略预览仍可读",
+    "target_paths_rule": "由R01后续正式IMAGE_BUILD任务指定；R08不在本阶段发明最终图片输出路径。"
+  },
+  "global_visual_system": {
+    "canvas": {
+      "ratio": "3:4",
+      "recommended_pixels": "1242x1660或任何等比例高清画布",
+      "orientation": "portrait"
+    },
+    "direction": "轻通勤、冷银蓝、干净真实拍摄感。产品事实页更克制，人物页更自然，不做Snow Ballet夸张舞台海报。",
+    "palette": [
+      "冷白",
+      "浅冰蓝",
+      "银灰",
+      "冷灰褐",
+      "小面积深冷棕",
+      "极少量偏光蓝强调"
+    ],
+    "color_rule": "人物肤色不得被整体冷调染灰；蓝色只做结构性强调，不把整页染成高饱和电蓝。",
+    "typography_system": {
+      "primary": "中文无衬线/黑体类，标题中粗至粗体",
+      "secondary": "英文色名使用简洁无衬线，中等字重",
+      "rules": [
+        "同页最多3个字重层级",
+        "正文不使用花体",
+        "产品官方英文名保持拼写准确",
+        "不得用超细字承载关键事实"
+      ]
+    },
+    "spacing": {
+      "outer_margin": "6%-7%",
+      "top_safe": "7%",
+      "bottom_safe": "10%",
+      "text_block_line_spacing": "1.2-1.35",
+      "minimum_card_gap": "2.5%"
+    },
+    "realism_rules": [
+      "人物皮肤保留正常纹理，不塑料磨皮",
+      "金属产品高光受控，不爆白",
+      "透视自然，手部/四肢比例按PERSONA辅助锚点",
+      "产品盘面、外壳、颜色关系优先准确，再做氛围"
+    ],
+    "cross_page_rhythm": [
+      "P1人物+产品双主体封面",
+      "P2纯产品事实地图",
+      "P3单人物近景+三档编辑信息",
+      "P4纯信息三问卡",
+      "P5产品近物总结"
+    ],
+    "anti_template_rule": "相邻页面至少在主体、景别、构图、背景或信息密度中有两项明显变化；P1与P3的人物页必须至少在发型、服装、景别、构图四项中改变两项以上，本方案四项均改变。",
+    "authenticity_boundary": "SYNTHETIC_VISUAL_PERSONA不得承载现实购买/试用/持妆经历；人物页只承担账号识别与主题审美，不制作亲测证据感镜头。",
+    "product_identity_gate": "任何product_required=true页面都绑定PRODUCT-001 + SKU-001-03 + SKU-03-REF-01；R09不得自行替换为搜索到的相似盘、01/02或Swan Ballet。"
+  },
+  "pages": [
+    {
+      "build_order": 1,
+      "page_id": "P1",
+      "purpose": "问题钩子：一眼说明本篇只讲03水晶球，并把焦点放在“冷蓝放进通勤妆时，蓝色出现多少”这个选择问题。",
+      "page_type": "EDITORIAL_COVER_PERSONA_PLUS_PRODUCT",
+      "subject": "PERSONA-001半身/肩部近景 + 03 Crystal Ball独立产品视觉",
+      "persona_required": true,
+      "product_required": true,
+      "persona_lock_ref": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "product_lock_ref": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "sku_lock_ref": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "styling": {
+        "clothing": "雾灰蓝或冷米白简洁通勤上衣，领口干净，不复刻锚点碎花吊带/白针织组合。",
+        "hair": "自然披发或低位松束，深棕/暖深棕基础发色；不使用锚点的大白蝴蝶结。",
+        "makeup": "低饱和冷灰棕为主，眼周只允许很轻的冰蓝/银蓝氛围点缀；它是主题视觉，不得表达‘已用03实测’。",
+        "jewelry": "小尺寸银色耳钉或无首饰。",
+        "expression": "自然平静、略带思考感，视线朝镜头或略偏向标题区。",
+        "action": "人物不手持、不涂抹、不触碰产品；产品作为独立右下角视觉锚点，避免虚构拥有/试用情境。"
+      },
+      "shot": {
+        "framing": "胸上至半身，人物约画面高度55%-65%。",
+        "camera": "眼平机位，轻微45°侧转；35-50mm等效视觉，避免广角脸形变。",
+        "angle": "人物面部保持可核对小痣侧，产品单独3/4开盖视角。",
+        "composition": "人物位于左侧40%-45%，标题在上中偏右；产品位于右下约22%-28%画面面积，与人物保持明显分离。"
+      },
+      "scene": {
+        "background": "冷灰白通勤梳妆台/窗边浅景深，避免粉色卧室复刻锚点场景。",
+        "light": "大面积柔和侧窗光 + 很轻的正面补光；皮肤真实，金属产品高光不能过曝。",
+        "materials": "磨砂灰白、玻璃、少量拉丝银；不使用廉价亮片背景。",
+        "color_temperature": "中性偏冷约5000-5400K，肤色仍保持自然中性偏暖桃调。"
+      },
+      "product_display": {
+        "position": "右下独立产品区；开盖盘面优先。",
+        "orientation": "正面略俯视3/4角，六格两排三列可辨认。",
+        "identity_points": [
+          "银色洛可可/雪花设计语言",
+          "两排三列六格盘面",
+          "03冷蓝/银蓝/冷灰褐/深冷棕色彩签名",
+          "中央Flower Knows品牌/徽章识别"
+        ],
+        "reference": {
+          "ref_id": "SKU-03-REF-01",
+          "transport": "URL",
+          "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+          "identity_scope": "Only 03 Crystal Ball",
+          "visual_verification": "实际读取官方同源图像预览：银色洛可可雪花外壳、六格两排三列盘面；03显示霜白/冷灰褐/冰川蓝/银蓝偏光/深冷棕组合。禁止借用01粉棕或02粉/薄荷配色。"
+        }
+      },
+      "public_text": {
+        "headline": "03水晶球｜冷蓝眼影怎么放进通勤妆？",
+        "subheadline": "别急着看蓝有多抢眼，先看你想让它出现多少。",
+        "product_identity_line": "Flower Knows / 花知晓｜Snow Ballet｜03 Crystal Ball / 水晶球"
+      },
+      "typography": {
+        "headline": "一级标题，黑体/无衬线，2-3行内，左对齐或上中偏左，粗体。",
+        "subheadline": "二级，约标题字号45%-55%，常规字重。",
+        "identity": "三级最小信息层，单行或两行，不抢标题。",
+        "contrast": "深灰黑文字+少量冰蓝关键词，不用大面积渐变描边。"
+      },
+      "information_hierarchy": [
+        "标题",
+        "副标题",
+        "人物+03产品双主体",
+        "产品身份线"
+      ],
+      "whitespace_safe_zone": "四周至少6%；顶部7%；底部10%；右下产品与底部UI安全区至少8%。",
+      "reference_refs": [
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+        "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500"
+      ],
+      "forbidden_items": [
+        "人物手持/使用/涂抹03形成亲测暗示",
+        "锚点碎花衣+白针织+白蝴蝶结整套复刻",
+        "01/02/Swan Ballet产品或配色",
+        "小痣缺失/换侧/位移",
+        "人物脸型、眼距、鼻唇或年龄观感漂移",
+        "产品六格变五格/七格或蓝棕关系错误",
+        "舞台海报式雪花特效、廉价炫光",
+        "新增‘亲测/实测/我用了’等文案"
+      ],
+      "acceptance_points": [
+        "公开文字逐字来自active copy，可断行不可改义",
+        "人物身份与PERSONA-001一致，小痣可辨认",
+        "人物造型明显区别于锚点原服装/发型",
+        "产品与人物视觉分离，不暗示使用经历",
+        "03产品至少露出银色洛可可结构+六格盘面+蓝银/灰棕识别色",
+        "标题手机端一眼可读，产品身份线不遮脸不压产品"
+      ],
+      "difference_from_neighbors": "P1是人物+产品双主体情绪封面；P2切到纯产品事实图，不延续同一人物/同一场景。",
+      "r09_execution_notes": [
+        "先建立人物与背景，再单独放置03产品视觉；两者不要共用同一手部互动。",
+        "产品若无法准确生成，使用官方03参考图的干净抠图/裁切作为独立产品层，不得用相似盘替代。",
+        "文字后置排版，不让摄影主体穿过标题区域。"
+      ]
+    },
+    {
+      "build_order": 2,
+      "page_id": "P2",
+      "purpose": "事实地图：准确展示03的六色色彩结构，并明确冷灰棕与蓝银的分工关系。",
+      "page_type": "PRODUCT_FACT_MAP",
+      "subject": "03 Crystal Ball开盖产品 + 独立六色信息图",
+      "persona_required": false,
+      "product_required": true,
+      "persona_lock_ref": null,
+      "product_lock_ref": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "sku_lock_ref": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "jewelry": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "产品静物中近景；开盖产品约画面宽度45%-55%。",
+        "camera": "略俯视15°-25°，避免镜面反射遮挡盘面。",
+        "angle": "盘面正向读者，六格完整且不被文字压住。",
+        "composition": "上半区产品主体；下半区/左右两侧六个色名信息条。六色信息条不得强行连线到具体盘位，除非R09能从官方资产明确核对位置。"
+      },
+      "scene": {
+        "background": "冷白到极浅冰蓝纯净背景，少量拉丝银底座。",
+        "light": "双侧柔光，重点控制银色金属反射，六色真实可分。",
+        "materials": "磨砂纸、亚克力、细银边；禁止高反射镜面把色盘冲白。",
+        "color_temperature": "偏冷约5200-5600K。"
+      },
+      "product_display": {
+        "position": "上半区中央或略偏左。",
+        "orientation": "开盖盘面正面偏俯视。",
+        "identity_points": [
+          "必须两排三列共6格",
+          "Frosted Pearl/Glacier Blue/Cool Taupe/Cold Brew/Silver Blue Ice/Iridescent Galaxy Blue六个名称全部准确",
+          "03特征必须包含冰川蓝、银蓝、冷灰褐、深冷棕，不得出现01粉棕主导或02薄荷+粉调结构"
+        ],
+        "reference": {
+          "ref_id": "SKU-03-REF-01",
+          "transport": "URL",
+          "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+          "identity_scope": "Only 03 Crystal Ball",
+          "visual_verification": "实际读取官方同源图像预览：银色洛可可雪花外壳、六格两排三列盘面；03显示霜白/冷灰褐/冰川蓝/银蓝偏光/深冷棕组合。禁止借用01粉棕或02粉/薄荷配色。"
+        }
+      },
+      "public_text": {
+        "headline": "先看六色结构",
+        "intro": "03水晶球的重点，是冷灰棕和蓝银怎么分工。",
+        "color_map": [
+          {
+            "official_name": "Frosted Pearl",
+            "visual_read": "霜白珠光感"
+          },
+          {
+            "official_name": "Glacier Blue",
+            "visual_read": "冰川蓝"
+          },
+          {
+            "official_name": "Cool Taupe",
+            "visual_read": "冷灰褐"
+          },
+          {
+            "official_name": "Cold Brew",
+            "visual_read": "深冷棕"
+          },
+          {
+            "official_name": "Silver Blue Ice",
+            "visual_read": "银蓝"
+          },
+          {
+            "official_name": "Iridescent Galaxy Blue",
+            "visual_read": "偏光银河蓝"
+          }
+        ],
+        "footer": "从颜色关系看，可以把灰棕当结构，把蓝银留给冷感层次。"
+      },
+      "typography": {
+        "headline": "一级，顶部左对齐。",
+        "intro": "二级短句置于标题下。",
+        "color_labels": "六个同级信息单元，英文名较粗，中文视觉读法次级；保证最小字号手机端可读。",
+        "footer": "底部横条总结，常规字重。"
+      },
+      "information_hierarchy": [
+        "标题",
+        "03开盖产品",
+        "六色名称+中文视觉读法",
+        "页尾结论"
+      ],
+      "whitespace_safe_zone": "四周6%；色名卡之间最少2.5%间距；产品四周留8%呼吸区；底部10%。",
+      "reference_refs": [
+        "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+        "生产/批准/SKU-001-03/LOCK-V1.json",
+        "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json"
+      ],
+      "forbidden_items": [
+        "任何人物",
+        "把六个官方色名硬贴到未经确认的具体盘位",
+        "遗漏/改写官方色名",
+        "把六格改成其他数量",
+        "混入01/02或Swan Ballet图",
+        "为了美观把蓝色改成粉/紫主调",
+        "使用未经active copy允许的功效/持妆文案"
+      ],
+      "acceptance_points": [
+        "六色信息6/6完整无拼写错误",
+        "实际显示的产品外观与03官方参考一致",
+        "六格盘面清楚可见且颜色关系可辨",
+        "信息图不把色名与物理盘位做未经证据的错误绑定",
+        "标题/intro/footer逐字来自active copy",
+        "无人物、无体验暗示"
+      ],
+      "difference_from_neighbors": "P2是高信息密度的纯产品事实地图，与P1人物封面形成明显功能和构图变化；P3再回到人物编辑建议。",
+      "r09_execution_notes": [
+        "产品准确性优先级最高。开盖六格必须可辨。",
+        "六色名称采用独立图例，不把名字强连到具体盘位，避免未经确认的pan-position错误。",
+        "如果产品生成无法稳定呈现03盘面，直接使用官方03参考资产作为主产品视觉。"
+      ]
+    },
+    {
+      "build_order": 3,
+      "page_id": "P3",
+      "purpose": "把编辑搭配建议转成‘蓝色存在感三档’的可保存视觉，不伪造成真人试妆或官方教程。",
+      "page_type": "PERSONA_EDITORIAL_GUIDE",
+      "subject": "PERSONA-001单一近景 + 三档冷蓝强度信息轨道",
+      "persona_required": true,
+      "product_required": false,
+      "persona_lock_ref": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "product_lock_ref": null,
+      "sku_lock_ref": null,
+      "styling": {
+        "clothing": "冷灰蓝衬衫/针织上衣或白衬衫+银灰层次，简洁通勤；与P1服装款式不同。",
+        "hair": "低马尾或简洁盘发，保留深棕基础发色；不使用白蝴蝶结。",
+        "makeup": "人物只呈现一种低饱和冷灰棕+小面积冷蓝点缀的主题妆感，避免同脸三份‘前后/强弱试妆’。",
+        "jewelry": "极细银色耳圈或无。",
+        "expression": "侧看信息区或微抬眼，冷静、编辑感。",
+        "action": "不拿产品、不做刷眼动作；手可自然落在下巴附近但避免与锚点托脸姿势完全相同。"
+      },
+      "shot": {
+        "framing": "脸部至肩部近景，面部占画面高度45%-55%。",
+        "camera": "眼平或略高5°，50-70mm等效压缩感。",
+        "angle": "3/4侧脸但小痣侧必须可见。",
+        "composition": "人物位于右侧约42%，左侧留出三档信息轨道；三档以三条纵向/横向强度带表达，不复制三张人脸。"
+      },
+      "scene": {
+        "background": "浅冷灰办公/梳妆镜边缘虚化背景，控制干净。",
+        "light": "柔和正侧光，眼周细节清楚，皮肤质感自然。",
+        "materials": "半透明磨砂信息卡、细银线。",
+        "color_temperature": "中性偏冷5000-5300K。"
+      },
+      "product_display": null,
+      "public_text": {
+        "headline": "蓝色存在感，分3档就好",
+        "levels": [
+          {
+            "level": "低存在感",
+            "copy": "Cool Taupe + Cold Brew 做主体，Frosted Pearl 小面积提亮。先把灰棕结构稳住。"
+          },
+          {
+            "level": "冷感点缀",
+            "copy": "在灰棕结构上，加少量 Glacier Blue 或 Silver Blue Ice。蓝色有存在感，但不抢走全部重点。"
+          },
+          {
+            "level": "明显冷蓝",
+            "copy": "想让冷蓝更突出，再提高 Iridescent Galaxy Blue 的视觉比重。它更像重点色，不需要硬塞进所有日常场景。"
+          }
+        ],
+        "footer": "重点不是六色全上，而是先定结构，再决定蓝色出现多少。"
+      },
+      "typography": {
+        "headline": "一级，左上。",
+        "level_labels": "二级粗体，用三个冰蓝深浅层级条区分。",
+        "level_copy": "三级正文，行长控制在12-16个汉字视觉宽度，分2-4行。",
+        "footer": "底部总结条。"
+      },
+      "information_hierarchy": [
+        "标题",
+        "三档标签",
+        "每档说明",
+        "人物主题视觉",
+        "页尾结论"
+      ],
+      "whitespace_safe_zone": "四周6%；左侧信息区宽约52%；人物不进入标题安全区；底部10%。",
+      "reference_refs": [
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+        "生产/产物/文案/CONTENT-001/V1/文案.json"
+      ],
+      "forbidden_items": [
+        "同一个人物复制成三张对比脸",
+        "前后对比/实测步骤/上眼前后",
+        "人物手持03或刷眼形成亲测叙事",
+        "把三档写成官方教程",
+        "新增持妆/显色强弱/飞粉等未经证实结论",
+        "小痣或身份漂移",
+        "与P1相同服装+发型+机位"
+      ],
+      "acceptance_points": [
+        "仅一名PERSONA人物，身份稳定且小痣可见",
+        "三档信息3/3完整，文字来自active copy",
+        "画面明确是编辑建议卡而非真人试妆证据",
+        "P3与P1至少在发型、服装、景别、构图中有两项明显变化，实际计划为四项均变化",
+        "没有产品出镜也不影响信息理解"
+      ],
+      "difference_from_neighbors": "P3从P2纯产品切换为单人近景+编辑信息轨；P4完全移除人物，变成高可读选择卡。",
+      "r09_execution_notes": [
+        "只生成一名PERSONA，不做三张脸、三联试妆或before/after。",
+        "三档用图形强度条/色块表达，人物妆容仅作为冷调主题氛围，不作为产品实测证据。",
+        "小痣必须保留且侧别正确。"
+      ]
+    },
+    {
+      "build_order": 4,
+      "page_id": "P4",
+      "purpose": "用三问让用户自筛是否适合03，优先信息可读，不靠装饰抢注意力。",
+      "page_type": "SELF_SELECTION_INFO_CARD",
+      "subject": "三张问题卡 + 场景说明",
+      "persona_required": false,
+      "product_required": false,
+      "persona_lock_ref": null,
+      "product_lock_ref": null,
+      "sku_lock_ref": null,
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "jewelry": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "纯平面信息卡，无摄影主体。",
+        "camera": null,
+        "angle": null,
+        "composition": "标题上方约18%；中部三张编号卡纵向排列或2+1错落，编号①②③巨大但不压正文；底部decision_note占25%-30%。"
+      },
+      "scene": {
+        "background": "冷白底，极浅冰蓝到银灰细微分区；可使用抽象雪花/弧线纹理但透明度低于6%。",
+        "light": "平面设计不模拟强光晕。",
+        "materials": "轻磨砂玻璃感卡片+细银边。",
+        "color_temperature": "视觉综合色温偏冷。"
+      },
+      "product_display": null,
+      "public_text": {
+        "headline": "选03之前，先问自己3件事",
+        "questions": [
+          "① 你喜欢冷灰棕＋冷蓝 / 银蓝这组关系吗？",
+          "② 蓝色想当主角，还是只做点缀？",
+          "③ 你的日常环境，能接受多少闪感？"
+        ],
+        "decision_note": "如果你更想要暖棕、杏桃，或者日常几乎不想出现蓝色，03就不必硬选。办公室更保守时，可以把蓝银缩到局部；想要更明显冷感，再提高蓝色存在感。"
+      },
+      "typography": {
+        "headline": "一级，顶部左对齐。",
+        "question_numbers": "视觉强调，但只使用原有①②③。",
+        "questions": "二级，粗体/中粗体。",
+        "decision_note": "三级正文，使用独立底卡，最多4-5行。"
+      },
+      "information_hierarchy": [
+        "标题",
+        "三问",
+        "decision_note"
+      ],
+      "whitespace_safe_zone": "四周7%；卡片内边距6%；正文与边缘至少5%；底部10%。",
+      "reference_refs": [
+        "生产/产物/文案/CONTENT-001/V1/文案.json",
+        "生产/批准/SKU-001-03/LOCK-V1.json"
+      ],
+      "forbidden_items": [
+        "人物/产品硬塞进来导致可读性下降",
+        "把问题改成测评结果或购买建议",
+        "新增价格/功效/持妆结论",
+        "使用过多雪花/舞台元素形成主题海报",
+        "小字号塞满整页"
+      ],
+      "acceptance_points": [
+        "三问3/3逐字完整",
+        "decision_note逐字完整",
+        "手机端快速扫读时①②③层级清晰",
+        "无人物无产品也能单页成立",
+        "没有新增事实或夸张购买导向"
+      ],
+      "difference_from_neighbors": "P4是全篇唯一纯信息决策卡；与P3人物页和P5产品总结页在主体、密度、留白上明显不同。",
+      "r09_execution_notes": [
+        "这是纯信息页，先排文字再加装饰；任何装饰都不能挤压正文。",
+        "雪花/银线仅低透明度背景纹理，不做舞台海报。"
+      ]
+    },
+    {
+      "build_order": 5,
+      "page_id": "P5",
+      "purpose": "把前四页压缩成可收藏总结，同时用评论问题自然收尾。",
+      "page_type": "SAVE_SUMMARY_PRODUCT_CARD",
+      "subject": "03 Crystal Ball产品近物 + 三条总结 + 评论互动",
+      "persona_required": false,
+      "product_required": true,
+      "persona_lock_ref": null,
+      "product_lock_ref": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "sku_lock_ref": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "jewelry": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "产品近物/局部大图，产品约画面35%-42%。",
+        "camera": "略低于P2的3/4平视角，和P2俯视事实图形成差异。",
+        "angle": "可用闭盖+开盖局部并置，但必须全部来自03身份；主视觉优先闭盖银蓝外壳，辅以开盖盘面小窗。",
+        "composition": "标题顶部；左中三条总结；右下/下中产品；评论问题放底部独立横条。"
+      },
+      "scene": {
+        "background": "冰蓝灰渐层或冷白桌面，加入一小块透明玻璃/银色亚克力制造收藏卡质感。",
+        "light": "侧逆光勾勒银色轮廓，正面补光保证包装纹理。",
+        "materials": "拉丝银、透明亚克力、冷白纸。",
+        "color_temperature": "偏冷约5300-5600K。"
+      },
+      "product_display": {
+        "position": "右下35%-42%区域。",
+        "orientation": "闭盖3/4 + 开盖小窗二选一或并置；六格若出现必须完整正确。",
+        "identity_points": [
+          "银色雪花/洛可可外壳",
+          "03冰蓝/银蓝视觉签名",
+          "如开盖则两排三列六格",
+          "不得出现粉棕01或粉/薄荷02盘面"
+        ],
+        "reference": {
+          "ref_id": "SKU-03-REF-01",
+          "transport": "URL",
+          "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+          "identity_scope": "Only 03 Crystal Ball",
+          "visual_verification": "实际读取官方同源图像预览：银色洛可可雪花外壳、六格两排三列盘面；03显示霜白/冷灰褐/冰川蓝/银蓝偏光/深冷棕组合。禁止借用01粉棕或02粉/薄荷配色。"
+        }
+      },
+      "public_text": {
+        "headline": "收藏这张｜03水晶球日常思路",
+        "summary_points": [
+          "灰棕定结构",
+          "蓝银定冷感强度",
+          "先选蓝色存在感，再决定怎么搭"
+        ],
+        "save_point": "六色结构＋三档蓝色存在感＋选前3问",
+        "comment_prompt": "你会把蓝色留在眼尾 / 下眼睑做点缀，还是更愿意让它直接当主色？"
+      },
+      "typography": {
+        "headline": "一级，顶部。",
+        "summary_points": "二级，三条短句用大号圆点/短横分隔。",
+        "save_point": "三级标签式信息。",
+        "comment_prompt": "底部互动横条，字号略大于正文但低于标题。"
+      },
+      "information_hierarchy": [
+        "标题",
+        "三条总结",
+        "产品视觉",
+        "save_point",
+        "评论问题"
+      ],
+      "whitespace_safe_zone": "四周6%；产品距底部UI至少10%；评论横条底边距8%。",
+      "reference_refs": [
+        "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+        "生产/批准/SKU-001-03/LOCK-V1.json",
+        "生产/产物/文案/CONTENT-001/V1/文案.json"
+      ],
+      "forbidden_items": [
+        "出现人物",
+        "把评论问题改成诱导关注/购买",
+        "错误SKU/旧Swan Ballet",
+        "产品轮廓或六格盘面失真",
+        "新增‘必买/闭眼入/通勤万能’等结论",
+        "P2同机位同构图复制"
+      ],
+      "acceptance_points": [
+        "标题/summary/save_point/comment_prompt全部来自active copy",
+        "03产品身份清楚可辨",
+        "P5机位/构图与P2明显不同",
+        "三条总结一眼可扫，评论问题独立可读",
+        "页面留白充分，产品不压文字"
+      ],
+      "difference_from_neighbors": "P5从P4纯信息卡回到产品近物总结，但采用低角度/3-4视角和收藏收尾，不复制P2的俯拍六色地图。",
+      "r09_execution_notes": [
+        "产品与P2使用不同机位/构图；P5更像收藏总结卡。",
+        "如同时出现闭盖与开盖，二者都必须是03身份，不得把不同SKU拼在同一页。",
+        "评论问题独立成底部互动区，不添加关注/购买号召。"
+      ]
+    }
+  ],
+  "preflight_checks": [
+    "P1-P5数量=5且顺序不变",
+    "公开文字与active copy逐字一致",
+    "P1、P3 persona_required=true；P2、P4、P5 persona_required=false",
+    "P1、P2、P5 product_required=true且均绑定SKU-03-REF-01",
+    "P3无产品使用动作，无三联试妆",
+    "P2六色名称6/6完整且不做错误pan-position硬映射",
+    "P4三问3/3完整、decision_note完整",
+    "P5三条summary + save_point + comment_prompt完整",
+    "全篇没有01/02/Swan Ballet视觉污染",
+    "P1/P3人物身份一致但服装/发型/景别/构图显著不同",
+    "所有页含forbidden_items和acceptance_points"
+  ],
+  "next_authority": "R01",
+  "completed_at": "2026-09-27T11:31:00+08:00"
+}
