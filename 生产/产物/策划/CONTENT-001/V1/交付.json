@@ -1,0 +1,78 @@
+{
+  "schema": "XHS_XP1_R06_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PLANNING-R06-V1",
+  "role_id": "R06",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key": "CONTENT-001|PLANNING|R06|V1|1|null|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "result": "PASS",
+  "input_bindings": {
+    "runtime_mode": "LIVE",
+    "active_task_path": "生产/任务/CONTENT-001/PLANNING/V1/R06-选题策划任务.json",
+    "account_strategy_lock": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    "voice_lock": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    "persona_lock": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    },
+    "product_lock": {
+      "path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+      "blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813",
+      "identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette"
+    },
+    "active_sku_lock": {
+      "path": "生产/批准/SKU-001-03/LOCK-V1.json",
+      "blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+      "identity": "03 Crystal Ball / 水晶球"
+    },
+    "r02_hot_research": {
+      "path": "生产/产物/热点研究/CONTENT-001/V1/热点研究.json",
+      "blob_sha": "89c857a86923ecda6b215040f9fa952758527545"
+    },
+    "r03_competitor_research": {
+      "path": "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+      "blob_sha": "3be327c58c4f51007e4df8becd211b729048ee8b"
+    },
+    "r04_product_facts": {
+      "path": "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+      "blob_sha": "a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+    }
+  },
+  "output_paths": [
+    "生产/产物/策划/CONTENT-001/V1/策划.json",
+    "生产/产物/策划/CONTENT-001/V1/交付.json"
+  ],
+  "planning_summary": {
+    "unique_main_proposition": "03 Crystal Ball / 水晶球的冷蓝眼影如何进入通勤妆：用冷灰棕建立主体结构，再按场景控制蓝银存在感。",
+    "recommended_page_count": 5,
+    "collection_point": "六色结构＋三档蓝色存在感＋选前3问",
+    "comment_point": "蓝色更适合做点缀还是直接做主色，由用户基于自身场景讨论。",
+    "active_sku_preserved": true,
+    "sibling_sku_switched": false,
+    "first_person_real_experience_used": false
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "PRODUCT-001/LOCK-V1#5417421c820b6f46408bc57cff7a741a9ffb5813",
+    "SKU-001-03/LOCK-V1#c42f36a0e1c2c2d2add03ef194305f622de629f5",
+    "R02#89c857a86923ecda6b215040f9fa952758527545",
+    "R03#3be327c58c4f51007e4df8becd211b729048ee8b",
+    "R04#a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+    "PLANNING_BLOB#548b8cc9de324e422f55f3f71522f4885ece6191"
+  ],
+  "completed_at": "2026-09-27T10:30:00+08:00",
+  "delivery_fingerprint_or_commit": "5b21e603b040788ffc17467a11201d70289fae3c",
+  "next_role_suggestion": "R01"
+}
