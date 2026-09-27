@@ -1,0 +1,107 @@
+{
+  "schema": "SYS-003_PARTIAL_REVISION_V1",
+  "content_id": "CONTENT-001",
+  "revision_id": "CONTENT-001-IMAGE-BUILD-R09-R3",
+  "stage": "IMAGE_BUILD",
+  "target_role_id": "R09",
+  "source_task_path": "生产/任务/CONTENT-001/IMAGE_BUILD/V3/R09-图片制作任务.json",
+  "source_task_id": "CONTENT-001-IMAGE-BUILD-R09-V3",
+  "source_task_version": "V3",
+  "new_task_version": "V4",
+  "revision_round": 3,
+  "input_revision": 4,
+  "reason": "User-file candidate set now has correct page numbers, but visual inspection against active copy and R08 page spec shows remaining copy/layout drift. Final manifest must not be created until these exact issues are corrected.",
+  "failure_scope": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "allowed_changes": [
+    "Correct public text to active copy/R08 page spec.",
+    "P1 remove product-holding/usage implication and separate product from persona as an independent composited visual anchor.",
+    "P2 restore the exact six official English names plus Chinese visual reads and active-copy headline/intro/footer.",
+    "P3 remove three simulated eye-look comparison panels; use one PERSONA portrait plus three information tracks/cards.",
+    "P4 restore exact three questions and exact decision_note from active copy.",
+    "P5 restore exact save-page headline, three summary points, save_point and comment_prompt from active copy.",
+    "Keep existing 1/5...5/5 page numbers in the same lower-right style."
+  ],
+  "frozen_scope": [
+    "03 Crystal Ball / 水晶球 product identity and current cool-blue/silver/taupe visual direction",
+    "PERSONA-001 core identity",
+    "3:4 portrait canvas",
+    "current overall cool silver-blue art direction",
+    "page numbering style and positions",
+    "USER_FILE transport",
+    "P1/P2/P5 product-required and P3/P4 product-forbidden rules"
+  ],
+  "exact_copy_requirements": {
+    "P1": {
+      "headline": "03水晶球｜冷蓝眼影怎么放进通勤妆？",
+      "subheadline": "别急着看蓝有多抢眼，先看你想让它出现多少。",
+      "product_identity_line": "Flower Knows / 花知晓｜Snow Ballet｜03 Crystal Ball / 水晶球"
+    },
+    "P2": {
+      "headline": "先看六色结构",
+      "intro": "03水晶球的重点，是冷灰棕和蓝银怎么分工。",
+      "color_map": [
+        "Frosted Pearl｜霜白珠光感",
+        "Glacier Blue｜冰川蓝",
+        "Cool Taupe｜冷灰褐",
+        "Cold Brew｜深冷棕",
+        "Silver Blue Ice｜银蓝",
+        "Iridescent Galaxy Blue｜偏光银河蓝"
+      ],
+      "footer": "从颜色关系看，可以把灰棕当结构，把蓝银留给冷感层次。"
+    },
+    "P3": {
+      "headline": "蓝色存在感，分3档就好",
+      "levels": [
+        "低存在感｜Cool Taupe + Cold Brew 做主体，Frosted Pearl 小面积提亮。先把灰棕结构稳住。",
+        "冷感点缀｜在灰棕结构上，加少量 Glacier Blue 或 Silver Blue Ice。蓝色有存在感，但不抢走全部重点。",
+        "明显冷蓝｜想让冷蓝更突出，再提高 Iridescent Galaxy Blue 的视觉比重。它更像重点色，不需要硬塞进所有日常场景。"
+      ],
+      "footer": "重点不是六色全上，而是先定结构，再决定蓝色出现多少。"
+    },
+    "P4": {
+      "headline": "选03之前，先问自己3件事",
+      "questions": [
+        "① 你喜欢冷灰棕＋冷蓝 / 银蓝这组关系吗？",
+        "② 蓝色想当主角，还是只做点缀？",
+        "③ 你的日常环境，能接受多少闪感？"
+      ],
+      "decision_note": "如果你更想要暖棕、杏桃，或者日常几乎不想出现蓝色，03就不必硬选。办公室更保守时，可以把蓝银缩到局部；想要更明显冷感，再提高蓝色存在感。"
+    },
+    "P5": {
+      "headline": "收藏这张｜03水晶球日常思路",
+      "summary_points": [
+        "灰棕定结构",
+        "蓝银定冷感强度",
+        "先选蓝色存在感，再决定怎么搭"
+      ],
+      "save_point": "六色结构＋三档蓝色存在感＋选前3问",
+      "comment_prompt": "你会把蓝色留在眼尾 / 下眼睑做点缀，还是更愿意让它直接当主色？"
+    }
+  },
+  "hard_layout_rules": [
+    "P1 persona must not hold/touch/use the product; product is a visually separate composited anchor.",
+    "P2 no persona; product plus fact map only.",
+    "P3 exactly one PERSONA portrait; three levels must be information tracks/cards, not three eye-look comparison images.",
+    "P4 pure information card; no product and no swatch/test imagery.",
+    "P5 product summary/save page; no invented purchase recommendation language.",
+    "Keep page numbers 1/5 through 5/5 lower-right."
+  ],
+  "acceptance_criteria": [
+    "All five pages match active copy in required literal fields.",
+    "P1 no product-holding/usage implication.",
+    "P2 six official English names 6/6 present with matching Chinese visual reads.",
+    "P3 one persona portrait only and no three-look simulated comparison.",
+    "P4 exact three questions + decision note.",
+    "P5 exact headline/summary/save point/comment prompt.",
+    "Page numbers remain 1/5 to 5/5.",
+    "Only after these corrections may R09 perform USER_FILE asset registration."
+  ],
+  "created_by": "R01",
+  "created_at": "2026-09-27T18:48:00+08:00"
+}
