@@ -1,0 +1,68 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PERSONA-SETUP-R08-V1",
+  "role_id": "R08",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001-USER-SOURCE-V1|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "idempotency_key": "CONTENT-001|PERSONA_SETUP|R08|V1|1|null|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001-USER-SOURCE-V1|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/PERSONA_SETUP/V1/R08-PERSONA草案任务.json",
+    "task_blob_sha": "a505a6da373bf4be1b29e151be4ffb74f64df7c8",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "persona_source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "required_anchor_blob_shas": {
+      "front": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "angle_45": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "halfbody": "ce0084c9923d4eaffd8fa23397e65b01001a1e95"
+    },
+    "auxiliary_anchor_blob_shas": {
+      "fullbody": "c47d2970b552a9a27f036f8360ca3b577f2c28cc",
+      "three_view": "d2db38ac82de24637c1d56cac642e61b8380d8b6",
+      "detail": "e69e643707e9c808a21252bb0ba8ba184c039f17"
+    }
+  },
+  "output_paths": [
+    "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "生产/产物/PERSONA草案/CONTENT-001/V1/交付.json"
+  ],
+  "persona_draft_path": "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+  "persona_draft_fingerprint": "sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+  "anchor_identity_status": "VALID",
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/任务/CONTENT-001/PERSONA_SETUP/V1/R08-PERSONA草案任务.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+  ],
+  "acceptance_summary": {
+    "status_is_draft": true,
+    "synthetic_visual_persona": true,
+    "first_person_experience_eligible_false": true,
+    "first_person_opinion_eligible_true": true,
+    "required_anchor_fingerprints_complete": true,
+    "clothing_bow_halfup_not_locked": true,
+    "appearance_variation_scope_recorded": true,
+    "body_proportion_references_recorded": true,
+    "review_mode_requested": "PERSONA_SETUP_REVIEW",
+    "lock_authority": "R01"
+  },
+  "completed_at": "2026-09-27T08:04:23+08:00",
+  "delivery_fingerprint_or_commit": "sha256:d427a4a3ab562b2a78f66bc70811d9a2de57f4a71622e2de5c7b7d95a075097f",
+  "next_role_suggestion": "R01创建R11 PERSONA_SETUP_REVIEW正式任务；R11独立审核PASS后仍仅由R01建立PERSONA LOCK。"
+}
