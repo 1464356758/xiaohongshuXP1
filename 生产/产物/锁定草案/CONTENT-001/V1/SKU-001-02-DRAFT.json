@@ -1,0 +1,94 @@
+{
+  "schema": "XP1_R05_SKU_DRAFT_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "lock_type": "SKU_LOCK",
+  "lock_id": "SKU-001-02-LOCK-V1",
+  "status": "DRAFT",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/PRODUCT_LOCK/V1/R05-PRODUCT-SKU草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+    "source_delivery_path": "生产/产物/锁定草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "product_lock_id": "PRODUCT-001-LOCK-V1",
+  "product_lock_status_required": "R01_APPROVAL_PENDING",
+  "ecommerce_url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034344817",
+  "multi_sku_link": true,
+  "target_sku": {
+    "platform_sku_name": "02 Romantic Waltz / 圆舞曲",
+    "sku_id_if_visible": "64517034344817",
+    "shade_or_color_number": "02",
+    "shade_or_color_name": "Romantic Waltz / 圆舞曲",
+    "model_or_variant": "Snow Ballet 02 Romantic Waltz",
+    "capacity_or_size": "6.5 g / 0.23 oz",
+    "package_version": "Current Snow Ballet Collection 2026 launch packaging; official 02 image shows a pink-lilac/silver lid treatment and a visibly mint-colored pan among pink/rose/cocoa pans",
+    "palette_pan_count_or_structure": "6 pans; official imagery shows a two-row by three-column layout in a silver Rococo/snowflake compact",
+    "visible_color_signature": [
+      "pale rose/ivory",
+      "strawberry pink",
+      "rosewood",
+      "cocoa brown",
+      "icy mint accent",
+      "iridescent pink sparkle"
+    ],
+    "logo_or_text_signature": [
+      "central front-lid medallion carries the Flower Knows script/brand mark",
+      "Snow Ballet snowflake and silver Rococo ballet-stage design language",
+      "official variant page text must resolve to “02 Romantic Waltz”",
+      "SKU code/name is confirmed by official variant page; do not infer code solely from the compact lid artwork"
+    ],
+    "included_accessories": []
+  },
+  "official_pan_names": [
+    "Rose Ivoire",
+    "Soft Strawberry Pink",
+    "Rosewood",
+    "Cocoa Truffle",
+    "Mint Crystal",
+    "Iridescent Pink"
+  ],
+  "reference_images": [
+    {
+      "ref_id": "SKU-02-REF-01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/02_ab9b9c6e-4a03-4213-94d2-ceefae8bc7d6.jpg?v=1789020439&width=1500",
+      "must_match": true,
+      "source_role": "BRAND_OFFICIAL",
+      "identity_scope": "Only 02 Romantic Waltz; must not be reused as another sibling SKU reference"
+    }
+  ],
+  "sibling_skus_in_same_link": [
+    "01 Music Box / 八音盒",
+    "03 Crystal Ball / 水晶球"
+  ],
+  "do_not_confuse_with": [
+    "Flower Knows Swan Ballet / 天鹅芭蕾旧系列",
+    "01 Music Box: warm apricot/peach/cocoa story and no defining mint pan",
+    "03 Crystal Ball: glacier/silver-blue dominant cool story rather than pink/rosewood/mint"
+  ],
+  "disambiguation_notes": "Identity is bound jointly to official variant text, official color story/pan names, and the unique first-party image URL above. A shared product page does not make sibling images interchangeable. The numeric value recorded above is the official-site variant parameter visible in the first-party URL, not a separately claimed merchant SKU code.",
+  "generation_gate": "status=LOCKED且字段足以唯一识别才允许生成含商品图片。",
+  "source_paths": [
+    "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/交付.json"
+  ],
+  "external_evidence": [
+    {
+      "source_kind": "BRAND_OFFICIAL_VARIANT_PAGE",
+      "url": "https://flowerknows.co/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034344817"
+    },
+    {
+      "source_kind": "BRAND_OFFICIAL_SKU_IMAGE",
+      "url": "https://flowerknows.co/cdn/shop/files/02_ab9b9c6e-4a03-4213-94d2-ceefae8bc7d6.jpg?v=1789020439&width=1500"
+    }
+  ],
+  "approval_state": "PENDING_R01",
+  "approved_by": null,
+  "approved_at": null
+}
