@@ -13,18 +13,18 @@
     "publish_authority": "USER_ONLY"
   },
   "content_id": "CONTENT-001",
-  "task_id": "CONTENT-001-PUBLISH-COMPLIANCE-R13-V1",
+  "task_id": "CONTENT-001-PUBLISH-GATE-R01-V1",
   "task_version": "V1",
   "input_revision": 1,
   "revision_round": null,
-  "state": "REVIEWING",
+  "state": "PASS",
   "phase": "PUBLISH_COMPLIANCE_CHECK",
   "task_lifecycle_status": "ACTIVE",
   "state_owner": "R01",
   "phase_owner": "R01",
-  "active_task_path": "生产/任务/CONTENT-001/PUBLISH_COMPLIANCE_CHECK/V1/R13-发布前合规核验任务.json",
+  "active_task_path": "生产/任务/CONTENT-001/PUBLISH_COMPLIANCE_CHECK/V1/R01-发布授权激活任务.json",
   "active_revision_path": null,
-  "delivery_path": null,
+  "delivery_path": "生产/审核/CONTENT-001/V1/发布合规/R13-交付.json",
   "active_account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
   "active_voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
   "active_product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
@@ -41,7 +41,7 @@
   "active_r11_review_path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
   "active_r12_review_path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
   "active_r13_review_path": "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
-  "active_pre_publish_gate_path": null,
+  "active_pre_publish_gate_path": "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json",
   "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
   "active_copy_revision": 1,
   "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
@@ -102,21 +102,21 @@
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R13"
+    "R01"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
-    "result": "PENDING",
-    "evidence_path": null,
+    "result": "PASS",
+    "evidence_path": "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json",
     "content_lock_path": "生产/批准/CONTENT-001/LOCK-V1.json",
     "compliance_snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
     "actual_publish_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
-    "checked_at": null,
-    "publish_authorization_issued_at": null,
-    "publish_authorization_valid_until": null,
-    "authorization_status": "NOT_STARTED",
+    "checked_at": "2026-09-28T07:35:00+08:00",
+    "publish_authorization_issued_at": "2026-09-28T07:35:00+08:00",
+    "publish_authorization_valid_until": "2026-10-04T21:56:00+08:00",
+    "authorization_status": "VALID",
     "actual_publish_recheck_required": true,
-    "publish_package_binding_valid": false
+    "publish_package_binding_valid": true
   },
   "conditional_role_readiness": {
     "C1": {
