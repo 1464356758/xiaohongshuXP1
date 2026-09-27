@@ -1,0 +1,121 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COPY-R07-V1",
+  "stage": "COPY",
+  "role_id": "R07",
+  "work_mode": "CONTENT_COPY",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "COPY",
+  "created_by": "R01",
+  "created_at": "2026-09-27T10:31:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "first_person_opinion_eligible": true,
+    "actual_publish_scope_fingerprint": null,
+    "planning_path": "生产/产物/策划/CONTENT-001/V1/策划.json",
+    "planning_blob_sha": "548b8cc9de324e422f55f3f71522f4885ece6191",
+    "active_product_identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette",
+    "active_sku_identity": "03 Crystal Ball / 水晶球"
+  },
+  "input_paths": [
+    "生产/产物/策划/CONTENT-001/V1/策划.json",
+    "生产/产物/策划/CONTENT-001/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json"
+  ],
+  "scope": [
+    "严格按R06已通过的5页策划写完整可发布文案，不改变主命题、active SKU或页面逻辑。",
+    "推荐标题优先围绕：03水晶球冷蓝眼影如何进入通勤妆；可给备选标题，但不得换成包装争议主叙事。",
+    "逐页文字必须覆盖P1问题钩子、P2六色色彩结构、P3三档蓝色存在感搭配逻辑、P4选前3问、P5收藏总结与评论互动。",
+    "所有品牌/产品/SKU/六色色名必须逐字服从active PRODUCT/SKU LOCK与R04事实研究。",
+    "编辑搭配建议与官方事实必须分层表达，不得把搭配建议伪装成品牌官方教程。",
+    "执行VOICE-001 LOCK的句长、节奏、标题习惯、自然口语、广告腔/AI腔禁区。",
+    "SYNTHETIC_VISUAL_PERSONA只能表达非现实经历观点，不得写任何真实购买、亲测、上眼时长、持妆时长、回购、空瓶或功效结果经历。",
+    "公开文案不得机械塞入‘AI制作、资料整理、非本人测试、仅供参考、产品视觉示意’等后台说明字样；同时不得因此越过平台依法要求的标识/披露。",
+    "输出推荐标题、备选标题、正文、逐页文字、CTA/评论引导、标签建议、事实/evidence map，并生成final_copy fingerprint供R01机械激活。"
+  ],
+  "frozen_scope": [
+    "R06策划主命题与5页结构",
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "PRODUCT-001 LOCK-V1",
+    "SKU-001-03 LOCK-V1",
+    "03=Crystal Ball=水晶球",
+    "Snow Ballet不得与Swan Ballet混淆",
+    "first_person_experience_eligible=false"
+  ],
+  "acceptance_criteria": [
+    "work_mode必须为CONTENT_COPY。",
+    "最终文案只绑定03 Crystal Ball / 水晶球，不得自行切换01/02。",
+    "5页逐页文字与R06 page_plan一一对应，不能删掉事实地图、选择卡或收藏总结。",
+    "六色色名拼写和SKU身份必须与active SKU LOCK一致。",
+    "不得出现虚构第一人称现实产品经历、时长或功效结果。",
+    "不得使用闭眼入、必买、封神等过强广告腔作为核心表达。",
+    "必须输出final_copy_path、copy_revision=1、可机械绑定的final_copy_fingerprint。",
+    "事实/evidence map必须能追溯到PRODUCT/SKU LOCK、R04与R06策划。",
+    "写后回读文案与交付文件，确认路径、版本、fingerprint和关键文本真实存在。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/产物/文案/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|PLANNING_DELIVERY|aa6ded7763b326f424bba210b2a9af68bea5c79c|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|COPY|R07|V1|1|null|PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|PLANNING_DELIVERY|aa6ded7763b326f424bba210b2a9af68bea5c79c|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R07只写文案产物与交付，不修改state/phase/active pointer。",
+    "R07不得修改任何LOCK。",
+    "R01验收final_copy identity后才可执行CPC并进入VISUAL_PLAN。"
+  ]
+}
