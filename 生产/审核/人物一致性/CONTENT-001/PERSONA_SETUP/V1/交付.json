@@ -1,0 +1,57 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PERSONA-SETUP-R11-V1",
+  "role_id": "R11",
+  "review_mode": "PERSONA_SETUP_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "idempotency_key": "CONTENT-001|PERSONA_SETUP|R11|V1|1|null|PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA一致性审核任务.json",
+    "task_blob_sha": "b33004fa360c1d48a7d28a71f4ce0172c3a0808b",
+    "persona_draft_path": "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "persona_draft_blob_sha": "27746ea35bd3a9f60ee58f23d6f9f68604eea8c9",
+    "persona_draft_fingerprint": "sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+    "source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "active_persona_lock_path": null
+  },
+  "output_paths": [
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA-SETUP-REVIEW.json",
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA-SETUP-REVIEW.json",
+    "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json"
+  ],
+  "reviewed_anchor_summary": {
+    "required_anchors": [
+      "front",
+      "angle_45",
+      "halfbody"
+    ],
+    "auxiliary_evidence": [
+      "fullbody",
+      "three_view",
+      "detail"
+    ],
+    "actual_bytes_read_6_of_6": true,
+    "actual_byte_sha256_match_6_of_6": true,
+    "anchor_identity_status": "VALID",
+    "visual_identity_result": "PASS",
+    "body_proportion_result": "PASS"
+  },
+  "minimum_issue_scope": [],
+  "persona_lock_action": "NONE_R11_HAS_NO_LOCK_AUTHORITY",
+  "completed_at": "2026-09-27T08:23:00+08:00",
+  "delivery_fingerprint_or_commit": "75c1a7bb7d27243138b6b5c365b1f0243a3454bc",
+  "next_role_suggestion": "R01"
+}
