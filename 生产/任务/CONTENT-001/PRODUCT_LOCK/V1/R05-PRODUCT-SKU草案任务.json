@@ -1,0 +1,122 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PRODUCT-LOCK-R05-V1",
+  "stage": "PRODUCT_LOCK",
+  "role_id": "R05",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PRODUCT_LOCK",
+  "created_by": "R01",
+  "created_at": "2026-09-27T09:44:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "formal_product_selection_path": "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "formal_product_selection_blob_sha": "ebdc2923662424faeb8d887818b478d0e40d7fa4",
+    "selected_candidate_id": "CAND-01",
+    "selected_product_identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette",
+    "sku_scope": [
+      "01 Music Box / 八音盒",
+      "02 Romantic Waltz / 圆舞曲",
+      "03 Crystal Ball / 水晶球"
+    ]
+  },
+  "input_paths": [
+    "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "模板/锁定/PRODUCT_LOCK_TEMPLATE.json",
+    "模板/锁定/SKU_LOCK_TEMPLATE.json"
+  ],
+  "scope": [
+    "仅处理R01正式选中的CAND-01，不得改选CAND-02/CAND-04或新增商品。",
+    "建立1份PRODUCT DRAFT：品牌、正式英文商品名、Snow Ballet系列、6.5g/0.23oz、包装描述、官方URL、电商URL、known SKU options、reference_images、do_not_confuse_with。",
+    "分别建立01/02/03三份SKU DRAFT，不得把三个SKU合并为一个模糊目标。",
+    "01固定为Music Box / 八音盒；02固定为Romantic Waltz / 圆舞曲；03固定为Crystal Ball / 水晶球。",
+    "每个SKU必须绑定可追溯官方/一手reference_images，并记录visible_color_signature、logo/text signature、盘格结构及兄弟SKU。",
+    "必须显式防Snow Ballet与Swan Ballet旧系列混淆，也必须防01/02/03互相错图。",
+    "R05只提交DRAFT与证据，不批准PRODUCT/SKU LOCK，不修改active_product_lock_path或active_sku_lock_path。",
+    "若任一关键SKU身份字段或目标图片不能唯一确认，返回BLOCKED_SKU_UNCERTAIN，不得用搜索缩略图或历史项目图猜。"
+  ],
+  "frozen_scope": [
+    "R01正式选品=CAND-01",
+    "01=Music Box=八音盒",
+    "02=Romantic Waltz=圆舞曲",
+    "03=Crystal Ball=水晶球",
+    "R04当前商品事实研究Blob=a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+    "ACCOUNT_STRATEGY/VOICE/PERSONA现行LOCK",
+    "SYNTHETIC_VISUAL_PERSONA真实性边界"
+  ],
+  "acceptance_criteria": [
+    "PRODUCT草案status=DRAFT且formal_product_name精确绑定R04已确认的Snow Ballet Six-Color Satin Makeup Palette。",
+    "PRODUCT草案必须明确Snow Ballet与Swan Ballet不可混淆。",
+    "SKU-01草案必须唯一对应Music Box/八音盒；SKU-02唯一对应Romantic Waltz/圆舞曲；SKU-03唯一对应Crystal Ball/水晶球。",
+    "三份SKU草案各自必须有非空reference_images和可追溯来源；同一图片不得在无法证明的情况下跨SKU复用。",
+    "三份SKU草案必须记录visible_color_signature与logo_or_text_signature，用于后续R09/R10图像核验。",
+    "不得把任何历史旧N系列、旧项目图片或Swan Ballet素材写入Snow Ballet目标身份。",
+    "若三份SKU中任何一份关键身份仍不可唯一确认，必须BLOCKED_SKU_UNCERTAIN并指出最小阻塞范围。",
+    "全部草案与交付写后回读验证，交付回R01。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/锁定草案/CONTENT-001/V1/PRODUCT-001-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-01-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-02-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/SKU-001-03-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PRODUCT_LOCK|R05|V1|1|null|SELECTION|CONTENT-001-PRODUCT-SELECTION-V1|ebdc2923662424faeb8d887818b478d0e40d7fa4|R04_FACTS|a3306ec92bc9f1b69c8d67b685335c29504ffcd4|R04_DELIVERY|241db9bd9661ecb7a791cc525c3c1376c0359b45|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R05不得修改R01正式选品。",
+    "R05不得自行批准LOCK。",
+    "R01将在R05 PASS后机械检查PRODUCT草案与三份SKU草案，再决定正式PRODUCT LOCK和唯一active SKU LOCK。"
+  ]
+}
