@@ -1,0 +1,155 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PERSONA-SETUP-R11-V1",
+  "stage": "PERSONA_SETUP",
+  "role_id": "R11",
+  "review_mode": "PERSONA_SETUP_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PERSONA_SETUP",
+  "created_by": "R01",
+  "created_at": "2026-09-27T08:19:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_path": null,
+    "persona_draft_path": "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "persona_draft_blob_sha": "27746ea35bd3a9f60ee58f23d6f9f68604eea8c9",
+    "persona_draft_fingerprint": "sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+    "persona_source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "persona_source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "first_person_opinion_eligible": true,
+    "anchor_identity_status": "VALID"
+  },
+  "input_paths": [
+    "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "生产/产物/PERSONA草案/CONTENT-001/V1/交付.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+    "模板/锁定/PERSONA_LOCK_TEMPLATE.json"
+  ],
+  "reviewed_anchor_bindings": {
+    "front": {
+      "anchor_id": "PERSONA-001-FRONT",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:3c4f926bfc046c1ec6197e2f94f63779c3c52f04|sha256:28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "git_blob_sha": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "sha256": "28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "angle_45": {
+      "anchor_id": "PERSONA-001-45",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:5a2b03bc6adc26c6690bc58a9303c1f33db3dc08|sha256:e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "git_blob_sha": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "sha256": "e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "halfbody": {
+      "anchor_id": "PERSONA-001-HALF",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:ce0084c9923d4eaffd8fa23397e65b01001a1e95|sha256:71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "git_blob_sha": "ce0084c9923d4eaffd8fa23397e65b01001a1e95",
+      "sha256": "71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "detail": {
+      "anchor_id": "PERSONA-001-DETAIL",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:e69e643707e9c808a21252bb0ba8ba184c039f17|sha256:5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "sha256": "5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "git_blob_sha": "e69e643707e9c808a21252bb0ba8ba184c039f17",
+      "immutable_attachment_id": null,
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    }
+  },
+  "scope": [
+    "仅审核显式绑定的PERSONA-001 V1 DRAFT及其实际锚点，不扫描目录猜最新版",
+    "实际读取front、45°、halfbody必要锚点像素，并以fullbody、three_view、detail作为辅助身份与身体比例证据",
+    "核验persona_subject_type、first_person_experience_eligible、first_person_opinion_eligible与真实性边界",
+    "核验identity_rule、face_shape、feature_proportions、recognition_features、skin_tone_range、must_keep、allowed_to_change、forbidden_identity_drift、page_rule完整且互不冲突",
+    "核验面颊小痣、核心脸型、五官比例、年龄观感、基础发色与身体比例在锚点间属于同一人物身份",
+    "确认衣服、蝴蝶结、当前半扎发型未被误锁为永久身份特征",
+    "PASS仅表示该DRAFT可交R01建立PERSONA LOCK；R11不得自行建立/批准LOCK或修改active_persona_lock_path"
+  ],
+  "frozen_scope": [
+    "PERSONA DRAFT实际绑定fingerprint与6张锚点字节身份",
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "SYS-003锁定架构",
+    "当前active_persona_lock_path=null"
+  ],
+  "acceptance_criteria": [
+    "persona_draft_path精确等于生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "persona_draft_fingerprint精确等于sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+    "persona_draft_blob_sha精确等于27746ea35bd3a9f60ee58f23d6f9f68604eea8c9",
+    "front/angle_45/halfbody必要锚点必须全部实际可读且fingerprint与DRAFT、SOURCE-MANIFEST一致",
+    "anchor_identity_status必须可验证为VALID，不得只依据路径存在判断",
+    "persona_subject_type=SYNTHETIC_VISUAL_PERSONA时first_person_experience_eligible必须为false",
+    "服装、发型、妆容、首饰、环境、表情、姿势允许变化，但核心身份与身体比例不得漂移",
+    "审核结果只能为PASS/FAIL/BLOCKED_*/STALE之一；FAIL给最小问题范围",
+    "写入后必须回读审核文件与交付文件"
+  ],
+  "expected_output_paths": [
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA-SETUP-REVIEW.json",
+    "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/交付.json"
+  ],
+  "dependency_revision": "PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PERSONA_SETUP|R11|V1|1|null|PERSONA-001|V1|sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1|DRAFT_BLOB|27746ea35bd3a9f60ee58f23d6f9f68604eea8c9|SOURCE_MANIFEST|4084319c69e43f44b8f0830792509b6aa775dfb1",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "review_mode必须为PERSONA_SETUP_REVIEW。",
+    "首次PERSONA初始化时active_persona_lock_path=null是合法状态。",
+    "R11不得修改人物图片、批准PERSONA LOCK或写正式state/phase/pointer。",
+    "审核输出必须严格位于生产/审核/人物一致性/下指定路径。"
+  ]
+}
