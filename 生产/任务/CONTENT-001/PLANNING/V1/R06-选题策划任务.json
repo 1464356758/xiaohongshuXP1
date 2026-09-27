@@ -1,0 +1,115 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PLANNING-R06-V1",
+  "stage": "PLANNING",
+  "role_id": "R06",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PLANNING",
+  "created_by": "R01",
+  "created_at": "2026-09-27T09:44:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "active_product_identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette",
+    "active_sku_identity": "03 Crystal Ball / 水晶球"
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "生产/产物/热点研究/CONTENT-001/V1/热点研究.json",
+    "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/总监/CONTENT-001/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/锁定草案/CONTENT-001/V1/交付.json"
+  ],
+  "scope": [
+    "基于当前热点、竞品空缺、商品事实和active PRODUCT/SKU LOCK，为CONTENT-001确定唯一主命题。",
+    "本篇核心商品固定为Flower Knows Snow Ballet Six-Color Satin Makeup Palette，active SKU固定为03 Crystal Ball / 水晶球，不得换品。",
+    "若提及01/02，只能作为collection-level兄弟SKU背景，且不得展开未由当前active SKU支持的具体图像/体验结论；主叙事、主视觉和核心结论围绕03。",
+    "结合R02新品窗口和R03通勤/选色需求，优先回答一个明确消费决策或妆容使用问题，而不是只复述参数。",
+    "输出选题一句话、内容目标、用户痛点、核心结论、差异化角度、标题方向、建议页数、逐页目的、人物/产品/信息页分配、收藏点、评论互动点、事实边界与风险点。",
+    "PERSONA可用于建立识别度但不强制每页出现；人物出现时必须绑定PERSONA-001 LOCK-V1。",
+    "禁止任何虚构亲测、购买、上眼时长、持妆时长或效果型第一人称经历。"
+  ],
+  "frozen_scope": [
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "PRODUCT-001 LOCK-V1",
+    "active SKU=SKU-001-03 LOCK-V1",
+    "03=Crystal Ball=水晶球",
+    "Snow Ballet不得与Swan Ballet混淆",
+    "SYNTHETIC_VISUAL_PERSONA first_person_experience_eligible=false"
+  ],
+  "acceptance_criteria": [
+    "唯一主命题明确且服务当前冷启动美妆主轴。",
+    "所有商品/SKU名称、色号、包装和颜色描述均来自当前active PRODUCT/SKU LOCK或任务显式输入。",
+    "active SKU必须保持03 Crystal Ball / 水晶球，不得自行换到01或02。",
+    "至少给出一个可收藏的信息结构和一个自然评论互动点。",
+    "逐页目的足够让R07写文案、R08做视觉计划，不能只写抽象审美词。",
+    "人物/产品/信息页比例服从账号策略窗口而非机械单篇配额。",
+    "不得制造第一人称现实产品体验。",
+    "写后回读正式策划与交付文件。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/策划/CONTENT-001/V1/策划.json",
+    "生产/产物/策划/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PLANNING|R06|V1|1|null|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R06不得更换已LOCK商品或active SKU。",
+    "R06只提交策划与交付，不修改state/phase/active pointers。",
+    "后续R01机械验收策划后才会进入COPY。"
+  ]
+}
