@@ -1,0 +1,181 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-BUILD-R09-V1",
+  "stage": "IMAGE_BUILD",
+  "role_id": "R09",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "IMAGE_BUILD",
+  "created_by": "R01",
+  "created_at": "2026-09-27T12:28:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "visual_plan_path": "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "visual_plan_blob_sha": "8e0a35899885685041329779f1a8d6234eeb7d66",
+    "r09_page_task_path": "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "r09_page_task_blob_sha": "af2cf2803610b83e9e76c44f079624264b0fcc58",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "active_sku_identity": "03 Crystal Ball / 水晶球",
+    "product_reference_image": {
+      "ref_id": "SKU-03-REF-01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+      "identity_scope": "Only 03 Crystal Ball"
+    }
+  },
+  "input_paths": [
+    "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "生产/产物/视觉策划/CONTENT-001/V1/交付.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "模板/生产/ASSET_MANIFEST_TEMPLATE.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+  ],
+  "page_output_contract": [
+    {
+      "page_id": "P1",
+      "output_path": "生产/产物/图片执行/CONTENT-001/V1/P1.png",
+      "persona_required": true,
+      "product_required": true
+    },
+    {
+      "page_id": "P2",
+      "output_path": "生产/产物/图片执行/CONTENT-001/V1/P2.png",
+      "persona_required": false,
+      "product_required": true
+    },
+    {
+      "page_id": "P3",
+      "output_path": "生产/产物/图片执行/CONTENT-001/V1/P3.png",
+      "persona_required": true,
+      "product_required": false
+    },
+    {
+      "page_id": "P4",
+      "output_path": "生产/产物/图片执行/CONTENT-001/V1/P4.png",
+      "persona_required": false,
+      "product_required": false
+    },
+    {
+      "page_id": "P5",
+      "output_path": "生产/产物/图片执行/CONTENT-001/V1/P5.png",
+      "persona_required": false,
+      "product_required": true
+    }
+  ],
+  "scope": [
+    "严格执行R08正式视觉策划与R09逐页图片任务包，制作P1-P5五张实际可发布图片，不自行补设计或改页面结构。",
+    "画布使用3:4竖图，优先1242x1660或等比例高清尺寸；最终正式资产必须是实际图片字节，不得用占位图、说明文件或仅prompt冒充图片。",
+    "P1与P3涉及PERSONA，必须实际读取PERSONA-001锚点并保持同一人物身份、面颊小痣、五官比例、年龄观感、基础发色范围与身体比例；允许按R08改变服装、发型、妆容、动作和场景。",
+    "P1/P2/P5涉及商品，必须实际读取并绑定03 Crystal Ball官方reference image；不得混入01/02、Swan Ballet或自行重新设计商品外观。",
+    "P2必须保持两排三列六格结构和03冷蓝/银蓝/冷灰褐/深冷棕身份特征；六个官方英文色名不得改写。",
+    "P3只表达编辑建议的三档蓝色存在感，不得制作三张同脸的真实试妆前后对比，也不得暗示PERSONA实际使用过产品。",
+    "P4/P5优先手机端文字可读性，不得为了装饰牺牲信息层级。",
+    "所有公开文字必须来自active copy / R08逐页任务，允许断行，不得新增亲测、AI制作、资料整理、非本人测试、仅供参考、产品视觉示意等公开说明。",
+    "完成后对P1-P5实际文件字节计算机器可验证身份；GitHub资产应记录git_blob_sha并在实际字节可读时同时记录sha256。",
+    "建立ASSET-CONTENT-001 manifest_revision=1，五个ACTIVE页全部登记page_id、asset_id、asset_revision、fingerprint_type、fingerprint、asset_ref、transport、persona_required、product_required。",
+    "manifest_fingerprint必须按ASSET_IDENTITY_GATE规定从五个ACTIVE页canonical identity自动计算；R09只提交manifest候选，不得自行把它写成active_asset_manifest_path。",
+    "R09不自审，不声明R10/R11/R12 PASS，不修改state/phase/active pointer。"
+  ],
+  "frozen_scope": [
+    "active copy revision 1及fingerprint sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "R08视觉策划Blob=8e0a35899885685041329779f1a8d6234eeb7d66",
+    "R09逐页图片任务包Blob=af2cf2803610b83e9e76c44f079624264b0fcc58",
+    "PRODUCT-001 LOCK-V1",
+    "SKU-001-03 LOCK-V1 / 03 Crystal Ball / 水晶球",
+    "PERSONA-001 LOCK-V1",
+    "P1-P5五页结构、公开文字含义、persona_required/product_required标记",
+    "Snow Ballet与Swan Ballet隔离；03与01/02隔离",
+    "SYNTHETIC_VISUAL_PERSONA first_person_experience_eligible=false"
+  ],
+  "acceptance_criteria": [
+    "P1-P5五张正式图片均真实存在于page_output_contract指定路径，且为可读取图片字节。",
+    "五页尺寸均为3:4竖图高清资产，不得出现缺页、重复页或文件名与page_id错配。",
+    "P1/P3人物身份必须绑定PERSONA-001，P1与P3造型/景别/构图按R08要求有明显差异。",
+    "P1/P2/P5商品必须唯一对应03 Crystal Ball，产品六格结构、银色洛可可身份与冷蓝/银蓝/冷灰棕/深冷棕特征不得漂移。",
+    "P2六个官方色名6/6正确；P4三问和P5总结/互动文字来自active copy。",
+    "每个ACTIVE页都有非空可验证fingerprint和asset_ref；路径存在本身不算身份验证。",
+    "ASSET MANIFEST的manifest_identity_status=VALID且manifest_fingerprint非空，计算规则符合ASSET_IDENTITY_GATE。",
+    "交付必须列出五页实际fingerprint、manifest path/id/revision/fingerprint以及所有输出路径。",
+    "写后必须重新读取P1-P5实际资产、manifest和交付，确认字节身份与manifest记录一致。",
+    "R09不得激活manifest，不得创建IMAGE_REVIEW任务。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/图片执行/CONTENT-001/V1/P1.png",
+    "生产/产物/图片执行/CONTENT-001/V1/P2.png",
+    "生产/产物/图片执行/CONTENT-001/V1/P3.png",
+    "生产/产物/图片执行/CONTENT-001/V1/P4.png",
+    "生产/产物/图片执行/CONTENT-001/V1/P5.png",
+    "生产/资产清单/CONTENT-001/V1/ASSET-MANIFEST.json",
+    "生产/产物/图片执行/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|IMAGE_BUILD|R09|V1|1|null|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R09只制作与登记资产，不自审自批。",
+    "R01将在R09交付后独立执行ASSET_IDENTITY_GATE；只有gate PASS才会激活manifest并创建R10/R11/R12并行审核。",
+    "任何图片实际变化都必须触发新manifest_revision/asset_revision，不得原地偷偷替换已激活资产。"
+  ]
+}
