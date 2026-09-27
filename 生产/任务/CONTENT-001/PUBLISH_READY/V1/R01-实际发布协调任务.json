@@ -1,0 +1,62 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PUBLISH-READY-R01-V1",
+  "stage": "PUBLISH_READY",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "READY",
+  "phase": "PUBLISH_READY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T07:35:00+08:00",
+  "input_paths": [
+    "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json",
+    "生产/批准/CONTENT-001/LOCK-V1.json",
+    "生产/发布包/CONTENT-001/V1/发布包.json",
+    "生产/审核/CONTENT-001/V1/发布合规/实际发布模式输入.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json"
+  ],
+  "required_context": {
+    "gate_result": "PASS",
+    "authorization_status": "VALID",
+    "publish_authorization_valid_until": "2026-10-04T21:56:00+08:00",
+    "actual_publish_recheck_required": true,
+    "actual_publish_authority": "USER_ONLY"
+  },
+  "scope": [
+    "等待用户真实发布动作。",
+    "用户到达发布按钮前，R01必须立即重新读取Gate、CONTENT LOCK、发布包、actual publish scope和compliance snapshot并执行actual_publish_recheck。",
+    "只有actual_publish_recheck=PASS后才允许用户点击发布。",
+    "用户实际发布后，创建R14正式发布回执任务；收到有效R14回执后R01才能确认PUBLISHED。"
+  ],
+  "frozen_scope": [
+    "CONTENT-001-LOCK-V1",
+    "R14 publish package fingerprint sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102",
+    "actual publish scope fingerprint sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "P1-P5 USER_FILE identities"
+  ],
+  "acceptance_criteria": [
+    "发布前即时recheck PASS。",
+    "USER实际发布。",
+    "R14正式发布回执存在且可验证。",
+    "R01确认后才执行PUB迁移。"
+  ],
+  "expected_output_paths": [
+    "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json"
+  ],
+  "dependency_revision": "GATE|生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102|SCOPE|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|AUTH_UNTIL|2026-10-04T21:56:00+08:00",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PUBLISH_READY|R01|V1|1|null|GATE|生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102|SCOPE|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|AUTH_UNTIL|2026-10-04T21:56:00+08:00",
+  "routing": {
+    "on_user_ready": [
+      "R01_IMMEDIATE_RECHECK"
+    ],
+    "on_user_published": [
+      "R14"
+    ],
+    "on_expired_or_stale": "PUBLISH_AUTH_EXPIRED_RETURN"
+  }
+}
