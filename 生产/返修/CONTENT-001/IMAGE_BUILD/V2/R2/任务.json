@@ -1,0 +1,75 @@
+{
+  "schema": "SYS-003_PARTIAL_REVISION_V1",
+  "content_id": "CONTENT-001",
+  "revision_id": "CONTENT-001-IMAGE-BUILD-R09-R2",
+  "stage": "IMAGE_BUILD",
+  "target_role_id": "R09",
+  "source_task_path": "生产/任务/CONTENT-001/IMAGE_BUILD/V2/R09-图片制作任务.json",
+  "source_task_id": "CONTENT-001-IMAGE-BUILD-R09-V2",
+  "source_task_version": "V2",
+  "new_task_version": "V3",
+  "revision_round": 2,
+  "input_revision": 3,
+  "reason": "User-provided generated P1-P5 contain wrong product/SKU visual identity and multiple copy/layout deviations. Product shown is warm peach/pink/brown six-pan imagery incompatible with active SKU 03 Crystal Ball cool blue/silver/taupe identity.",
+  "failure_scope": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "defect_evidence": [
+    "Generated set labels pages as 03 Crystal Ball but repeatedly shows a warm peach/pink/brown six-pan palette.",
+    "Active SKU-001-03 official color story is Frosted Pearl, Glacier Blue, Cool Taupe, Cold Brew, Silver Blue Ice, Iridescent Galaxy Blue.",
+    "Generated warm palette visually resembles 01 Music Box direction more than 03 Crystal Ball and therefore cannot be accepted as 03.",
+    "P3 improperly uses three repeated persona portraits and also includes product even though product_required=false.",
+    "P4 includes product and rewritten selection-copy although product_required=false and active copy is frozen.",
+    "P1/P5 visible headline/body copy drift from active copy."
+  ],
+  "allowed_changes": [
+    "Regenerate P1-P5 only.",
+    "Replace every product visual with exact 03 Crystal Ball official reference asset from SKU-001-03 LOCK-V1.",
+    "Use official product asset by crop/cutout/compositing; do not redraw, regenerate, restyle, repaint or synthesize the compact itself.",
+    "Restore all public text to active copy/R08 page task wording.",
+    "Restore persona/page composition to R08 requirements."
+  ],
+  "frozen_scope": [
+    "active copy revision 1 and fingerprint sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "PRODUCT-001 LOCK-V1",
+    "SKU-001-03 LOCK-V1 / 03 Crystal Ball / 水晶球",
+    "PERSONA-001 LOCK-V1",
+    "R08 visual plan",
+    "P1-P5 page purposes",
+    "USER_FILE transport protocol",
+    "Snow Ballet vs Swan Ballet isolation",
+    "03 vs 01/02 isolation"
+  ],
+  "hard_product_rules": [
+    "P1/P2/P5 product source MUST be SKU-03-REF-01 exact official asset.",
+    "Do not ask an image model to invent the product packshot.",
+    "03 must visibly read as cool blue/silver/taupe/deep-cool-brown, never warm apricot/peach/rose-brown dominant.",
+    "Forbidden: 01 Music Box warm apricot/peach/rose-brown imagery.",
+    "Forbidden: 02 Romantic Waltz pink/rosewood/mint imagery.",
+    "Forbidden: Swan Ballet or any old-series product image.",
+    "P3 and P4 must contain no product compact at all."
+  ],
+  "hard_page_rules": [
+    "P1 headline/subheadline/product identity line must come from active copy.",
+    "P2 must present the six official names exactly and must not invent pan-position mappings unless directly supported.",
+    "P3 must use one PERSONA-001 portrait only, not three cloned faces; three levels are information tracks, not three simulated before/after looks.",
+    "P4 is pure information card, no product image, no swatches presented as personal testing.",
+    "P5 is summary/save page with exact active-copy summary and comment prompt."
+  ],
+  "acceptance_criteria": [
+    "All five pages regenerated.",
+    "P1/P2/P5 use exact official 03 reference image via compositing/cutout, not generated imitation.",
+    "P3/P4 contain no product compact.",
+    "No warm apricot/peach/rose-brown palette is shown as 03.",
+    "Public text matches active copy in meaning and required literal fields.",
+    "Persona pages remain same PERSONA-001 with required identity markers.",
+    "Return actual P1-P5 images to user under USER_FILE workflow.",
+    "Do not create manifest PASS until the new five files have verifiable identities."
+  ],
+  "created_by": "R01",
+  "created_at": "2026-09-27T15:22:00+08:00"
+}
