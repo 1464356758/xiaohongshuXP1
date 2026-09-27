@@ -1,0 +1,43 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-DISCOVERY-R01-V1",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|DISCOVERY|R01|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "coordinator_task_path": "生产/任务/CONTENT-001/DISCOVERY/V1/R01-协调任务.json",
+    "coordinator_task_blob_sha": "ee89cb62f5d7f377c4e4b057c0d5799b24aac1c5",
+    "parallel_group_id": "CONTENT-001-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "barrier_status": "COMPLETE",
+    "r02_delivery_path": "生产/产物/热点研究/CONTENT-001/V1/交付.json",
+    "r02_delivery_blob_sha": "595e27b2ec6cf94b52f4acaadb1ee30e8e3ee4bc",
+    "r03_delivery_path": "生产/产物/竞品研究/CONTENT-001/V1/交付.json",
+    "r03_delivery_blob_sha": "a4e2a709884738ed997133a54bf3e8fa0a239279"
+  },
+  "output_paths": [
+    "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json",
+    "生产/产物/总监/CONTENT-001/DISCOVERY/V1/交付.json"
+  ],
+  "candidate_set_path": "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json",
+  "candidate_set_blob_sha": "765e1aa9bd065dae37059069ffa5c1fdc4556560",
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/当前进度.json",
+    "生产/任务/CONTENT-001/DISCOVERY/V1/R01-协调任务.json",
+    "生产/产物/热点研究/CONTENT-001/V1/交付.json",
+    "生产/产物/竞品研究/CONTENT-001/V1/交付.json",
+    "生产/产物/热点研究/CONTENT-001/V1/热点研究.json",
+    "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+    "生产/产物/总监/CONTENT-001/DISCOVERY/V1/候选商品集.json"
+  ],
+  "completed_at": "2026-09-27T09:06:00+08:00",
+  "delivery_fingerprint_or_commit": "60fdcc4e97cc6f999876d22aaa7353db62410ac9",
+  "next_role_suggestion": "R04"
+}
