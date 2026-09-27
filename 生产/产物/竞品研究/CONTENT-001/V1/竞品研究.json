@@ -1,0 +1,532 @@
+{
+  "schema": "XHS_XP1_R03_COMPETITOR_RESEARCH_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-DISCOVERY-R03-V1",
+  "role_id": "R03",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|DISCOVERY|R03|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "research_platform": "小红书",
+  "sample_window_end": "2026-09-27T08:19:00+08:00",
+  "account_growth_stage": "INITIAL_COLD_START_0_PUBLISHED",
+  "research_mode": "INDEPENDENT_FROM_R02",
+  "result": "PASS",
+  "methodology": {
+    "goal": "研究当前女性美妆/美甲/护肤代表内容中，用户为何停留、收藏、评论，以及哪些结构可借鉴但不可复刻。",
+    "sample_rule": "每个方向8-12条公开可验证的小红书来源索引；不把单条点赞高当稳定规律。",
+    "evidence_rule": "事实与R03归纳分离。外部浏览器无法稳定直开具体小红书笔记时，只记录公开索引可核验的标题主题、日期、平台和聚合页明示的评论/互动信息，不虚构页数、逐页构图或评论全文。",
+    "visual_access_limit": "抽测多个小红书具体explore链接均被网页版登录/404门禁拦截，因此note-level封面、页数、人物/产品比例、拍摄角度、逐页节奏仅在公开预览明确可见时记录；其余标NOT_PUBLICLY_VERIFIABLE。",
+    "r02_delivery_read": false
+  },
+  "input_bindings": {
+    "account_strategy_lock": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "status": "LOCKED"
+    },
+    "voice_lock": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "git_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+      "status": "LOCKED"
+    },
+    "persona_lock": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "git_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "status": "LOCKED",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  },
+  "public_sources": [
+    {
+      "source_id": "SRC-EYE-01",
+      "url": "https://post.smzdm.com/p/arzp7qww/",
+      "role": "公开索引页，列出多条小红书通勤/新手眼影代表样本及日期"
+    },
+    {
+      "source_id": "SRC-BASE-01",
+      "url": "https://post.smzdm.com/p/aomxg8m7/",
+      "role": "公开索引页，列出换季底妆、卡粉、脱妆、补妆小红书代表样本及日期"
+    },
+    {
+      "source_id": "SRC-LIP-01",
+      "url": "https://post.smzdm.com/p/az86w4dn/",
+      "role": "公开索引页，列出2026早秋雾面唇/唇粉霜/试色/避雷小红书样本，并分析模板化软广与负反馈"
+    },
+    {
+      "source_id": "SRC-NAIL-01",
+      "url": "https://post.smzdm.com/p/axkl9x8w/",
+      "role": "公开索引页，列出初秋猫眼/短甲/紫调/价格争议小红书样本及评论问题"
+    },
+    {
+      "source_id": "SRC-SKIN-01",
+      "url": "https://post.smzdm.com/p/awwz8x92/",
+      "role": "公开索引页，列出换季修护/敏感肌/版本选择的小红书正反样本及日期"
+    },
+    {
+      "source_id": "SRC-XHS-RULE-01",
+      "url": "https://pgy.xiaohongshu.com/help/detail?id=6495c527d1eedeeb48fb18b1f875650e&userType=4",
+      "role": "小红书蒲公英2026-08-19内容审核规范，用于识别商业表达、绝对化与护肤功效边界"
+    },
+    {
+      "source_id": "SRC-XHS-INSIGHT-01",
+      "url": "https://idea.xiaohongshu.com/",
+      "role": "小红书灵犀官方页面，证明平台商业洞察维度包含趋势分析、搜索与笔记洞察"
+    }
+  ],
+  "directions": [
+    {
+      "direction_id": "D1",
+      "name": "通勤/早八眼妆与眼影选择",
+      "category": "美妆",
+      "sample_count": 10,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "source_id": "SRC-EYE-01",
+      "samples": [
+        {
+          "index_slot": 7,
+          "date": "2026-05-15",
+          "descriptor": "新手眼影挑选攻略，强调快速理解选色"
+        },
+        {
+          "index_slot": 9,
+          "date": "2026-06-04",
+          "descriptor": "通勤彩妆组合，一盘眼影加一件底妆/膏状产品"
+        },
+        {
+          "index_slot": 10,
+          "date": "2026-05-15",
+          "descriptor": "618节点的通勤彩妆组合清单"
+        },
+        {
+          "index_slot": 12,
+          "date": "2026-05-23",
+          "descriptor": "TF01低调通勤眼影的长期使用主题"
+        },
+        {
+          "index_slot": 17,
+          "date": "2026-04-23",
+          "descriptor": "WAKEMAKE多色盘按四季色彩做选色与试色"
+        },
+        {
+          "index_slot": 18,
+          "date": "2026-06-28",
+          "descriptor": "早八懒人眼影，突出快速成妆"
+        },
+        {
+          "index_slot": 19,
+          "date": "2026-03-29",
+          "descriptor": "YSL眼影按四季型做选色并附试色"
+        },
+        {
+          "index_slot": 26,
+          "date": "2026-03-21",
+          "descriptor": "多种眼影画法，覆盖通勤和约会场景"
+        },
+        {
+          "index_slot": 27,
+          "date": "2026-04-22",
+          "descriptor": "Burberry 02单品锐评型内容"
+        },
+        {
+          "index_slot": 28,
+          "date": "2026-03-21",
+          "descriptor": "TF30新旧版本对比，强调一眼看懂差别"
+        }
+      ],
+      "observed_facts": [
+        "标题高频入口不是单纯产品名，而是早八、通勤、新手、选色、试色、对比、画法等明确任务词。",
+        "10条样本同时出现单品评价、横向/新旧对比、选色指南和教程，说明用户需求同时覆盖买前决策与用法学习。",
+        "公开索引能核验标题主题、日期和平台；具体笔记页数、逐页布局和评论全文无法从当前公开入口稳定核验。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED",
+        "cover": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "shooting_angle": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "scene": "SUPPORTED_BY_TITLES_AND_PUBLIC_PREVIEWS",
+        "visual_rhythm": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "information_density": "SUPPORTED_BY_GUIDE_COMPARE_TUTORIAL_FORMATS",
+        "save_points": "选色指南、画法步骤、新旧版差异、一盘多场景属于天然可回看信息。",
+        "comment_questions": "当前公开索引不足以逐条验证评论问题，禁止补写。",
+        "objections": "新手是否好上手、肿眼/肤色适配、是否飞粉显脏、版本差异是公开内容反复出现的决策变量。",
+        "commercial_traces": "部分标题使用闭眼冲、天花板等强推词；本账号不应照搬。"
+      },
+      "r03_synthesis": [
+        "可借鉴的是“场景问题→选色/画法→适合谁”的决策链，而不是把某盘眼影包装成万能答案。",
+        "冷启动首图应优先让用户看到一个可解决的问题，例如肿眼、显脏、早八时间不够，而不是先放抽象氛围词。",
+        "差异化应放在SKU事实准确、色彩关系讲清楚、对比条件统一，避免用虚构持妆时长或本人亲测撑可信度。"
+      ]
+    },
+    {
+      "direction_id": "D2",
+      "name": "换季底妆急救：暗沉/脱妆/卡粉分诊",
+      "category": "美妆",
+      "sample_count": 9,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "source_id": "SRC-BASE-01",
+      "samples": [
+        {
+          "index_slot": 1,
+          "date": "2026-08-27",
+          "descriptor": "下午暗沉脱妆，询问粉底是否还有救"
+        },
+        {
+          "index_slot": 2,
+          "date": "2026-05-11",
+          "descriptor": "下午补妆不建议全脸重铺"
+        },
+        {
+          "index_slot": 4,
+          "date": "2025-10-29",
+          "descriptor": "针对斑驳、积线、脱妆的无痕补妆思路"
+        },
+        {
+          "index_slot": 5,
+          "date": "2026-08-27",
+          "descriptor": "换季不卡粉主题"
+        },
+        {
+          "index_slot": 6,
+          "date": "2026-07-27",
+          "descriptor": "韩系补妆技巧热点型内容"
+        },
+        {
+          "index_slot": 7,
+          "date": "2025-06-02",
+          "descriptor": "湿巾加气垫处理斑驳脱妆"
+        },
+        {
+          "index_slot": 8,
+          "date": "2026-06-16",
+          "descriptor": "全妆后鼻部起皮的局部补救"
+        },
+        {
+          "index_slot": 10,
+          "date": "2026-08-27",
+          "descriptor": "卡粉人群的底妆产品推荐主题"
+        },
+        {
+          "index_slot": 12,
+          "date": "2026-08-27",
+          "descriptor": "换季肤况变化共鸣型内容"
+        }
+      ],
+      "observed_facts": [
+        "问题型标题集中在下午、鼻翼/起皮、斑驳、暗沉、卡粉等具体症状，具备明显搜索意图。",
+        "公开聚合内容将补妆拆成先识别油崩或干卡，再做局部清理、润开、薄补，而不是统一重铺全脸。",
+        "样本既有方法帖也有产品推荐帖，说明同一需求可做非商品型常青内容与商品型热点内容。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED",
+        "cover": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "shooting_angle": "公开同类视觉常用鼻翼、嘴角、眼下等局部近景展示问题点；具体9条样本不可逐条确认。",
+        "scene": "下午办公室/换季/补妆场景明确。",
+        "visual_rhythm": "适合问题局部→原因分型→动作步骤→产品可选项；具体样本页序不可核验。",
+        "information_density": "分诊表、局部步骤和症状对照为高信息密度收藏结构。",
+        "save_points": "症状分型、局部补妆动作、什么情况先别换粉底。",
+        "comment_questions": "公开索引可见的问题集中在为什么卡粉、哪一步出错、局部怎么补；逐条评论全文不可核验。",
+        "objections": "换粉底是否必要、保湿与持妆是否冲突、全脸重铺会不会更斑驳。",
+        "commercial_traces": "“天选底妆crush”等强情绪产品推荐信号存在，需与方法内容区分。"
+      },
+      "r03_synthesis": [
+        "这个方向的停留点是“先判断我属于哪种翻车”，收藏点是能现场照做的急救步骤。",
+        "可借鉴分诊结构，但必须把皮肤状态、手法、产品选择分开，不把一个粉底写成所有卡粉问题的答案。",
+        "冷启动可用非商业问题解决内容建立可信度，随后再接入经R04/R05核验的具体产品。"
+      ]
+    },
+    {
+      "direction_id": "D3",
+      "name": "早秋雾面唇：质地/干唇/氧化/试色决策",
+      "category": "美妆",
+      "sample_count": 12,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "source_id": "SRC-LIP-01",
+      "samples": [
+        {
+          "index_slot": 1,
+          "date": "2026-08-27",
+          "descriptor": "橘朵缎光唇粉霜新品，强调生巧般丝滑质地"
+        },
+        {
+          "index_slot": 2,
+          "date": "2026-09-02",
+          "descriptor": "明星代言加断货预期的新品热度内容"
+        },
+        {
+          "index_slot": 3,
+          "date": "2026-09-08",
+          "descriptor": "围绕缎光唇粉霜本身提出疑问/讨论"
+        },
+        {
+          "index_slot": 4,
+          "date": "2026-08-29",
+          "descriptor": "YSL 610哑光新版试色与秋季色感"
+        },
+        {
+          "index_slot": 5,
+          "date": "2026-08-03",
+          "descriptor": "YSL 610新包装版本争议"
+        },
+        {
+          "index_slot": 6,
+          "date": "2026-09-06",
+          "descriptor": "RC秋季新品，主打干唇友好叙事"
+        },
+        {
+          "index_slot": 7,
+          "date": "2026-09-07",
+          "descriptor": "MAC秋季限定套组展示"
+        },
+        {
+          "index_slot": 8,
+          "date": "2026-08-09",
+          "descriptor": "三支雾面唇釉的高级感推荐"
+        },
+        {
+          "index_slot": 9,
+          "date": "2026-08-10",
+          "descriptor": "强调雾面但不太拔干的单品推荐"
+        },
+        {
+          "index_slot": 10,
+          "date": "2026-08-23",
+          "descriptor": "打工人极简出门化妆品清单"
+        },
+        {
+          "index_slot": 11,
+          "date": "2026-09-07",
+          "descriptor": "裸茶棕、低饱和、干唇早秋场景"
+        },
+        {
+          "index_slot": 12,
+          "date": "2026-09-07",
+          "descriptor": "保质期内唇釉氧化变质的避雷反馈"
+        }
+      ],
+      "observed_facts": [
+        "9月样本同时存在新品试色、代言热度、秋季色调、干唇友好卖点、新旧包装争议和氧化避雷，正反信号并存。",
+        "公开聚合页指出多账号出现高度相似的“旧痛点→产品救场”脚本，属于明显软广模板风险。",
+        "氧化、拔干、色差/版本变化、渠道和价格是比单纯显色更能触发讨论的问题。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED",
+        "cover": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "唇部局部、产品包装、试色块天然适合产品/局部为主；具体样本比例不可逐条确认。",
+        "shooting_angle": "公开同类试色常见唇部近景、手臂/唇部色块、产品正面静物；具体12条不可逐条确认。",
+        "scene": "早秋、通勤、干唇、限定上新、版本更新。",
+        "visual_rhythm": "适合包装/色号→上唇色感→干唇/氧化风险→适合谁；具体样本页序不可核验。",
+        "information_density": "色号、质地路线、干唇门槛、新旧版、氧化/渠道风险可形成高密度选择卡。",
+        "save_points": "色调地图、干唇适配、氧化风险、新旧版差异、购买前检查项。",
+        "comment_questions": "公开聚合页明确出现对氧化幅度、干燥、颜色变化和渠道风险的集中讨论。",
+        "objections": "“雾面不拔干”不是稳定共识；新品热度与真实使用反馈需要拆开看。",
+        "commercial_traces": "明星代言、断货叙事、模板化痛点脚本、只夸单一卖点是高风险商业痕迹。"
+      },
+      "r03_synthesis": [
+        "可借鉴“好看之外再回答干不干、会不会变色、版本有没有变”的决策结构。",
+        "必须差异化：不重复生巧、断层、闭眼入等同质营销词，把色号/SKU/包装核验交给R04/R05后再做视觉。",
+        "适合用一页正向色感、一页反向风险来建立可信度，避免整篇只有赞美。"
+      ]
+    },
+    {
+      "direction_id": "D4",
+      "name": "初秋短甲：猫眼/紫调/肤色/价格与复刻风险",
+      "category": "美甲",
+      "sample_count": 9,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "source_id": "SRC-NAIL-01",
+      "samples": [
+        {
+          "index_slot": 1,
+          "date": "2025-08-30",
+          "descriptor": "秋季第一款美甲的季节切换主题"
+        },
+        {
+          "index_slot": 2,
+          "date": "2026-08-16",
+          "descriptor": "绸缎猫眼02的单款展示"
+        },
+        {
+          "index_slot": 3,
+          "date": "2026-06-27",
+          "descriptor": "高级感短甲与具体新品型号"
+        },
+        {
+          "index_slot": 4,
+          "date": "2026-08-17",
+          "descriptor": "紫色系氛围型美甲内容"
+        },
+        {
+          "index_slot": 5,
+          "date": "2025-09-23",
+          "descriptor": "黄黑皮适配的芋泥紫显白主题"
+        },
+        {
+          "index_slot": 6,
+          "date": "2026-08-05",
+          "descriptor": "芋泥紫短甲与黄皮适配"
+        },
+        {
+          "index_slot": 7,
+          "date": "2026-07-11",
+          "descriptor": "葡萄芋泥紫加碎钻的短甲主题"
+        },
+        {
+          "index_slot": 8,
+          "date": "2026-08-18",
+          "descriptor": "258元美甲是否被坑的价格求证"
+        },
+        {
+          "index_slot": 9,
+          "date": "2026-08-23",
+          "descriptor": "高价美甲与甲片质量翻车投诉"
+        }
+      ],
+      "observed_facts": [
+        "样本把审美与交易问题绑在一起：猫眼/紫调/短甲负责吸引，肤色适配、甲型、价格和实际复刻负责评论。",
+        "公开聚合页明确写到评论里高频问题是甲型、黄皮能否做、多少钱，并记录了价格求证和质量投诉。",
+        "短甲友好是重复出现的标签，说明“漂亮但能不能在自己手上成立”是核心决策。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED",
+        "cover": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "美甲天然以手部局部为主，不需要强制露脸；具体9条样本不可逐条确认。",
+        "shooting_angle": "公开同类视觉主要依靠手部近景、指尖特写、不同光线下猫眼光带；具体样本不可逐条确认。",
+        "scene": "入秋换甲、通勤短甲、肤色适配、到店复刻与价格咨询。",
+        "visual_rhythm": "适合主款近景→不同光线/甲型→肤色/长度适配→价格与沟通清单。",
+        "information_density": "款式图本身低文本，但一旦加入甲型、肤色、预算、底色/磁粉变量就变成收藏型内容。",
+        "save_points": "短甲适配、肤色分流、做前沟通清单、价格区间和翻车变量。",
+        "comment_questions": "公开聚合页明确核验到甲型、黄皮能否做、价格三类高频问题。",
+        "objections": "照片显白不等于本人显白；底色、甲长、灯光、磁粉和店家手艺会导致复刻差异。",
+        "commercial_traces": "只发精修客片和“闭眼冲显白”容易隐藏复刻/价格变量；价格求证帖反而更接近真实决策。"
+      },
+      "r03_synthesis": [
+        "最值得借鉴的不是某张美甲图，而是“这款放到你的手型、肤色、办公室灯光和预算里会怎样”。",
+        "账号可做款式灵感，但必须加复刻变量，避免成为纯图库。",
+        "PERSONA不是必需，手部局部或纯甲片可以承担主体，符合账号不强制每页露脸的策略。"
+      ]
+    },
+    {
+      "direction_id": "D5",
+      "name": "换季屏障修护：肤质/版本分流与广告噪音识别",
+      "category": "护肤",
+      "sample_count": 8,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "source_id": "SRC-SKIN-01",
+      "samples": [
+        {
+          "index_slot": 1,
+          "date": "2026-09-22",
+          "descriptor": "换季修护能力强的高情绪正向体验主题"
+        },
+        {
+          "index_slot": 2,
+          "date": "2026-08-12",
+          "descriptor": "品牌代言与修红稳屏障的官方传播"
+        },
+        {
+          "index_slot": 3,
+          "date": "2026-04-15",
+          "descriptor": "水乳使用后红烫并质疑客服的避雷反馈"
+        },
+        {
+          "index_slot": 4,
+          "date": "2026-08-27",
+          "descriptor": "玉泽青蒿与薇诺娜311次抛的敏感肌比较"
+        },
+        {
+          "index_slot": 5,
+          "date": "2026-09-22",
+          "descriptor": "明星高原护肤关联的种草内容"
+        },
+        {
+          "index_slot": 6,
+          "date": "2026-06-03",
+          "descriptor": "油敏霜修护正向但控油有限的两面评价"
+        },
+        {
+          "index_slot": 8,
+          "date": "2026-09-19",
+          "descriptor": "围绕致痘风险的短问题帖"
+        },
+        {
+          "index_slot": 9,
+          "date": "2026-05-31",
+          "descriptor": "当前价格是否划算的购买决策帖"
+        }
+      ],
+      "observed_facts": [
+        "同一品牌同时存在高热正向、官方代言、版本比较、红烫避雷、致痘疑问和价格问题，不能把单边口碑当共识。",
+        "公开聚合页把差异核心指向干敏/油敏等版本和肤质匹配，并明确提醒急性过敏或皮炎爆发不是护肤品治疗场景。",
+        "小红书官方2026-08内容审核规范对修护/舒缓可表达范围和绝对化用语有明确边界，后续文案必须独立核验。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED",
+        "cover": "PARTIAL_DIRECTION_LEVEL_ONLY",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "护肤方向可用产品静物、质地、成分/版本卡和人物局部，但不可把合成人物包装成真实使用者。",
+        "shooting_angle": "公开同类内容常用面部局部/产品近景/质地展示；具体8条不可逐条确认。",
+        "scene": "换季泛红、干敏/油敏分流、价格/版本选择。",
+        "visual_rhythm": "适合症状边界→肤质/版本矩阵→正反反馈→何时停止自行处理。",
+        "information_density": "肤质、版本、正反反馈、价格和适用边界可形成高收藏信息卡。",
+        "save_points": "选错版本风险、肤质分流、试用/价格判断、护肤与就医边界。",
+        "comment_questions": "公开聚合页可核验到版本是否选错、致痘、价格是否合适、不同敏感肤质适配等问题。",
+        "objections": "高热广告/明星内容不能代表普遍口碑；同一产品存在油、刺痛、致痘与正向修护的分歧。",
+        "commercial_traces": "明星代言、惊悚式修护标题、同模板剧情种草是明显商业噪音，需要与低互动负反馈交叉看。"
+      },
+      "r03_synthesis": [
+        "可借鉴“先分肤质和状态，再谈产品”的结构，不可借鉴夸张前后对比或疗效化语言。",
+        "这个方向更适合做选择/风险教育，而不是让合成PERSONA承担真实修护经历。",
+        "若后续进入具体商品，必须由R04/R05核验版本、规格、名称和功效证据，R13再做合规审核。"
+      ]
+    }
+  ],
+  "cross_direction_findings": {
+    "observed": [
+      "五个方向的高频入口都更接近具体问题和选择任务，而非空泛审美口号。",
+      "可回看结构反复出现：对比、分型、选色/选款、步骤、价格或风险检查。",
+      "争议与反例能带来真实评论问题：氧化、拔干、复刻差异、肤质不适、价格是否合理。",
+      "商业化痕迹常见于明星/断货叙事、重复痛点脚本、只给单边正向结论、闭眼冲/天花板等绝对化推荐。"
+    ],
+    "synthesis": [
+      "对0篇冷启动账号，R03建议把“问题解决 + 选择卡 + 一个反对点”作为首批内容的共同机制，而不是统一某个版式。",
+      "热点商品可以进，但每篇都应至少回答一个可验证的买前/使用前问题，降低纯追热点带来的信任风险。",
+      "视觉上应保持产品事实优先，人物只在能增加场景理解或账号识别时出现，不为满足比例机械露脸。",
+      "R03不决定最终商品。五个方向全部作为DISCOVERY证据交R01，与R02独立热点结果汇总后再形成候选商品集。"
+    ]
+  },
+  "reusable_mechanisms": [
+    "明确场景词前置：早八、下午补妆、早秋干唇、短甲、换季泛红。",
+    "先分型后建议：肤色/肤质/甲长/症状/质地路线。",
+    "正反证据同屏：亮点旁边保留一个真实限制或翻车变量。",
+    "收藏卡而非参数墙：把差异转成可执行选择规则。",
+    "商品画面与名称/SKU绑定后再美化，避免包装、色号和名称错配。",
+    "评论入口问真实选择，不诱导一致意见。"
+  ],
+  "must_differentiate": [
+    "不复刻同行具体文案、版式、照片或固定封面。",
+    "不使用合成PERSONA伪造购买、亲测、回购、空瓶、持妆时长或功效结果。",
+    "不以单条高赞或明星代言直接推出稳定规律。",
+    "不把“闭眼冲、天花板、绝对不踩雷”等商业话术作为账号默认表达。",
+    "不能核验的页数、逐页视觉、评论全文一律不补猜。"
+  ],
+  "acceptance_check": {
+    "directions_at_least_5": true,
+    "direction_count": 5,
+    "each_direction_samples_8_to_12_or_exploratory": true,
+    "all_samples_have_source_and_date": true,
+    "observed_and_synthesis_separated": true,
+    "requested_fields_addressed": true,
+    "no_competitor_copying": true,
+    "no_final_product_decision": true,
+    "r02_independence_preserved": true
+  },
+  "completed_at": "2026-09-27T09:00:00+08:00"
+}
