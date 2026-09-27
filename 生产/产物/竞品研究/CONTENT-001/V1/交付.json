@@ -1,0 +1,58 @@
+{
+  "schema": "SYS-003_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-DISCOVERY-R03-V1",
+  "role_id": "R03",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|DISCOVERY|R03|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/DISCOVERY/V1/R03-市场竞品研究任务.json",
+    "parallel_group_id": "CONTENT-001-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "runtime_mode": "LIVE",
+    "r02_delivery_read": false
+  },
+  "output_paths": [
+    "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+    "生产/产物/竞品研究/CONTENT-001/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json",
+    "https://post.smzdm.com/p/arzp7qww/",
+    "https://post.smzdm.com/p/aomxg8m7/",
+    "https://post.smzdm.com/p/az86w4dn/",
+    "https://post.smzdm.com/p/axkl9x8w/",
+    "https://post.smzdm.com/p/awwz8x92/",
+    "https://pgy.xiaohongshu.com/help/detail?id=6495c527d1eedeeb48fb18b1f875650e&userType=4"
+  ],
+  "completion_summary": {
+    "direction_count": 5,
+    "sample_counts": {
+      "commute_eye_makeup": 10,
+      "seasonal_base_makeup_rescue": 9,
+      "autumn_lip_decision": 12,
+      "autumn_short_nails": 9,
+      "seasonal_barrier_skincare": 8
+    },
+    "total_indexed_xhs_samples": 48,
+    "observation_synthesis_separated": true,
+    "visual_access_limitation_recorded": true,
+    "final_product_selected": false,
+    "parallel_barrier_crossed": false
+  },
+  "completed_at": "2026-09-27T09:00:00+08:00",
+  "delivery_fingerprint_or_commit": "BOUND_RESEARCH_COMMIT:f80774107748dba487d45d4795cb996d6de2ca5b",
+  "next_role_suggestion": "R01"
+}
