@@ -1,0 +1,178 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-BUILD-R09-V4",
+  "stage": "IMAGE_BUILD",
+  "role_id": "R09",
+  "task_version": "V4",
+  "input_revision": 4,
+  "parent_version": "V3",
+  "revision_round": 3,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "IMAGE_BUILD",
+  "created_by": "R01",
+  "created_at": "2026-09-27T18:48:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-001/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "visual_plan_path": "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "visual_plan_blob_sha": "8e0a35899885685041329779f1a8d6234eeb7d66",
+    "r09_page_task_path": "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "r09_page_task_blob_sha": "af2cf2803610b83e9e76c44f079624264b0fcc58",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "active_sku_identity": "03 Crystal Ball / 水晶球",
+    "product_reference_image": {
+      "ref_id": "SKU-03-REF-01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+      "identity_scope": "Only 03 Crystal Ball"
+    },
+    "image_workflow_protocol_path": "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md",
+    "image_workflow_protocol_blob_sha": "691ee443483bc129d7cf4595b17a001acbbf63e7",
+    "active_revision_path": "生产/返修/CONTENT-001/IMAGE_BUILD/V3/R3/任务.json",
+    "active_revision_blob_sha": "679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+    "image_binary_transport": "USER_FILE",
+    "github_image_binary_required": false,
+    "active_sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "active_sku_lock_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+    "exact_product_render_rule": "USE_OFFICIAL_ASSET_BY_COMPOSITING_NOT_GENERATIVE_REDRAW",
+    "official_product_reference_url": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+    "official_product_variant_page": "https://flowerknows.co/en-au/products/snow-ballet-six-color-satin-makeup-palette?variant=64517034377585",
+    "current_candidate_status": "USER_FILE_NEEDS_FINAL_COPY_LAYOUT_CORRECTION"
+  },
+  "input_paths": [
+    "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md",
+    "生产/返修/CONTENT-001/IMAGE_BUILD/V3/R3/任务.json",
+    "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json"
+  ],
+  "user_file_output_contract": [
+    {
+      "page_id": "P1",
+      "suggested_filename": "CONTENT-001_P1_R3.png",
+      "persona_required": true,
+      "product_required": true,
+      "delivery": "Return actual image file/attachment to user; do not require GitHub binary upload."
+    },
+    {
+      "page_id": "P2",
+      "suggested_filename": "CONTENT-001_P2_R3.png",
+      "persona_required": false,
+      "product_required": true,
+      "delivery": "Return actual image file/attachment to user; do not require GitHub binary upload."
+    },
+    {
+      "page_id": "P3",
+      "suggested_filename": "CONTENT-001_P3_R3.png",
+      "persona_required": true,
+      "product_required": false,
+      "delivery": "Return actual image file/attachment to user; do not require GitHub binary upload."
+    },
+    {
+      "page_id": "P4",
+      "suggested_filename": "CONTENT-001_P4_R3.png",
+      "persona_required": false,
+      "product_required": false,
+      "delivery": "Return actual image file/attachment to user; do not require GitHub binary upload."
+    },
+    {
+      "page_id": "P5",
+      "suggested_filename": "CONTENT-001_P5_R3.png",
+      "persona_required": false,
+      "product_required": true,
+      "delivery": "Return actual image file/attachment to user; do not require GitHub binary upload."
+    }
+  ],
+  "scope": [
+    "以用户刚上传的带页码P1-P5候选图为视觉基础执行最后一轮最小返修。",
+    "只修正R3返修文件明确列出的公开文字和P1/P3/P4页面表达问题；不得重新设计商品身份、整体配色或风格。",
+    "P1必须把产品从人物手中分离，作为独立合成视觉锚点；人物不得呈现持有/使用产品情境。",
+    "P2必须显示六个官方英文色名及对应中文视觉读法，并恢复active copy标题/intro/footer。",
+    "P3只保留一个PERSONA主肖像，三档用文字信息轨道/卡片表达，禁止三组眼妆近景模拟效果对比。",
+    "P4为纯信息卡，使用active copy精确三问与decision_note，不放产品/试色图。",
+    "P5恢复active copy精确标题、三条summary、save_point、comment_prompt。",
+    "保留右下角1/5至5/5页码。",
+    "新P1-P5实际图片仍直接以USER_FILE返回用户；先不要登记旧候选图。",
+    "只有新图完成且用户重新上传给R09后，才建立最终ASSET MANIFEST与交付。"
+  ],
+  "frozen_scope": [
+    "03 Crystal Ball / 水晶球当前冷蓝银蓝冷灰棕商品视觉方向",
+    "PERSONA-001核心身份",
+    "3:4竖图",
+    "当前冷银蓝视觉体系",
+    "页码样式与右下角位置",
+    "P1/P2/P5 product_required，P3/P4 product_forbidden",
+    "USER_FILE workflow",
+    "active copy revision 1 / fingerprint sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+  ],
+  "acceptance_criteria": [
+    "P1-P5全部完成R3要求的最小修正。",
+    "P1不再手持/触碰产品。",
+    "P2六个官方英文色名及中文视觉读法6/6存在。",
+    "P3只有一个人物主肖像且无三组模拟眼妆效果对比。",
+    "P4精确三问与decision_note完整。",
+    "P5精确headline/summary/save_point/comment_prompt完整。",
+    "页码1/5至5/5保持。",
+    "五页实际图片返回用户。",
+    "新图片身份未登记前不得PASS资产门禁、不得启动R10/R11/R12。"
+  ],
+  "expected_output_paths": [
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/图片执行/CONTENT-001/V4/交付.json"
+  ],
+  "dependency_revision": "VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|IMAGE_PROTOCOL|691ee443483bc129d7cf4595b17a001acbbf63e7|TRANSPORT_REVISION|166b80e047eacc95947274fa7bb7d5db8e4b9792|R2|1efff6eea393975d669e513cac2abd6a8ead8550|R3|679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|IMAGE_BUILD|R09|V4|4|3|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|IMAGE_PROTOCOL|691ee443483bc129d7cf4595b17a001acbbf63e7|TRANSPORT_REVISION|166b80e047eacc95947274fa7bb7d5db8e4b9792|R2|1efff6eea393975d669e513cac2abd6a8ead8550|R3|679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "Do not register the previously uploaded candidate images as final manifest assets.",
+    "This is a final copy/layout correction round only.",
+    "R09 does not alter state/phase/pointers or start image review."
+  ]
+}
