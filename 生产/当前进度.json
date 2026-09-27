@@ -60,35 +60,35 @@
       {
         "role_id": "R02",
         "task_path": "生产/任务/CONTENT-001/DISCOVERY/V1/R02-热点侦察任务.json",
-        "delivery_path": null,
-        "result": "PENDING",
+        "delivery_path": "生产/产物/热点研究/CONTENT-001/V1/交付.json",
+        "result": "PASS",
         "task_version": "V1",
         "input_revision": 1,
         "revision_round": null,
         "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
-        "completed_at": null,
-        "delivery_fingerprint_or_commit": "",
+        "completed_at": "2026-09-27T08:55:00+08:00",
+        "delivery_fingerprint_or_commit": "57bfca7662bdf9d8ec24c496a72764bded97c5c0",
         "asset_manifest_id": null,
         "manifest_revision": null,
-        "evidence_valid": false
+        "evidence_valid": true
       },
       {
         "role_id": "R03",
         "task_path": "生产/任务/CONTENT-001/DISCOVERY/V1/R03-市场竞品研究任务.json",
-        "delivery_path": null,
-        "result": "PENDING",
+        "delivery_path": "生产/产物/竞品研究/CONTENT-001/V1/交付.json",
+        "result": "PASS",
         "task_version": "V1",
         "input_revision": 1,
         "revision_round": null,
         "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
-        "completed_at": null,
-        "delivery_fingerprint_or_commit": "",
+        "completed_at": "2026-09-27T09:00:00+08:00",
+        "delivery_fingerprint_or_commit": "BOUND_RESEARCH_COMMIT:f80774107748dba487d45d4795cb996d6de2ca5b",
         "asset_manifest_id": null,
         "manifest_revision": null,
-        "evidence_valid": false
+        "evidence_valid": true
       }
     ],
-    "barrier_status": "OPEN"
+    "barrier_status": "COMPLETE"
   },
   "quality_gates": {
     "product_sku_image_verify": {
@@ -130,8 +130,7 @@
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R02",
-    "R03"
+    "R01"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
