@@ -1,0 +1,62 @@
+{
+  "schema": "SYS-003_CONTENT_LOCK_V2",
+  "lock_type": "CONTENT_LOCK",
+  "content_lock_id": "CONTENT-001-LOCK-V1",
+  "content_id": "CONTENT-001",
+  "lock_version": "LOCK-V1",
+  "status": "LOCKED",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "source_delivery_path": "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/交付.json",
+    "source_gate_evidence_path": "生产/产物/总监/CONTENT-001/FINAL_APPROVAL/V1/CONTENT-LOCK-GATE.json",
+    "supersedes": null
+  },
+  "final_copy": {
+    "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "revision": 1,
+    "fingerprint_type": "SHA256_CANONICAL_JSON",
+    "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+  },
+  "asset_manifest": {
+    "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+  },
+  "locks": {
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json"
+  },
+  "reviews": {
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "active_r10_review_path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "active_r11_review_path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "active_r12_review_path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "active_r13_review_path": "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json"
+  },
+  "compliance": {
+    "snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "snapshot_revision": 1,
+    "compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "AI_label_publish_requirement": "REQUIRED_AT_PUBLISH"
+  },
+  "approval": {
+    "approved_by": "R01",
+    "approved_at": "2026-09-27T22:12:00+08:00"
+  },
+  "mechanical_checks": [
+    "final copy fingerprint matches current active final copy",
+    "manifest path/id/revision/fingerprint match current active manifest",
+    "R10/R11/R12 PASS on same manifest and barrier COMPLETE",
+    "R13 PASS binds same copy, manifest, image QA and compliance snapshot",
+    "PRODUCT/SKU/PERSONA/ACCOUNT_STRATEGY/VOICE refs equal current active locks",
+    "compliance snapshot is VALID, time-valid and exact scope fingerprint matches",
+    "no cited current evidence is STALE or SUPERSEDED"
+  ],
+  "immutable_rule": "LOCKED不可覆盖；任何最终绑定变化必须新LOCK版本并supersedes旧LOCK。"
+}
