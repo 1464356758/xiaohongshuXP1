@@ -1,0 +1,148 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-VISUAL-PLAN-R08-V1",
+  "stage": "VISUAL_PLAN",
+  "role_id": "R08",
+  "work_mode": "CONTENT_VISUAL_PLAN",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "VISUAL_PLAN",
+  "created_by": "R01",
+  "created_at": "2026-09-27T11:10:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "active_product_identity": "Flower Knows / 花知晓 | Snow Ballet Six-Color Satin Makeup Palette",
+    "active_sku_identity": "03 Crystal Ball / 水晶球",
+    "product_reference_image": {
+      "ref_id": "SKU-03-REF-01",
+      "transport": "URL",
+      "location": "https://flowerknows.co/cdn/shop/files/03_d738848e-61e6-4538-95df-45c9ecfd7f78.jpg?v=1789020440&width=1500",
+      "identity_scope": "Only 03 Crystal Ball"
+    },
+    "persona_required_anchor_paths": [
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png"
+    ],
+    "persona_auxiliary_anchor_paths": [
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+    ]
+  },
+  "input_paths": [
+    "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "生产/产物/文案/CONTENT-001/V1/交付.json",
+    "生产/产物/策划/CONTENT-001/V1/策划.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "生产/批准/SKU-001-03/LOCK-V1.json",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+  ],
+  "scope": [
+    "严格把当前active copy的5页内容转成R09可逐页执行的视觉施工图，不改标题事实、页面结构或页面文字含义。",
+    "必须实际读取03 Crystal Ball官方reference image，并以其包装、六格盘面、冷蓝/银蓝/冷灰棕视觉签名作为商品身份锚点；不得使用01/02或Swan Ballet图像。",
+    "人物页必须实际读取PERSONA-001必要锚点和身体比例辅助锚点，保持脸型、五官比例、面颊小痣、年龄观感、基础发色范围和身体比例。",
+    "允许为本篇重新设计人物服装、发型、妆容、配饰、动作和场景；不得把当前锚点中的碎花衣、蝴蝶结或半扎发型当成固定制服。",
+    "遵循R06建议的页面混排：人物只在确有信息价值时出现，P1/P3是优先人物候选页；P2/P4/P5可纯产品/局部/信息卡，不得强制每页露脸。",
+    "整体视觉方向为轻通勤、冷银蓝、干净真实拍摄感，不做廉价模板感，不把Snow Ballet做成夸张舞台海报。",
+    "每页必须明确page_id、页面目的、页面类型、主体、persona_required、product_required、PERSONA/PRODUCT/SKU引用、人物造型与动作、景别机位、构图主体占比、背景场景、光线材质色温、产品位置与识别点、页面文字、字体层级、信息层级、留白安全区、reference refs、forbidden items、acceptance points以及与前后页的视觉差异。",
+    "P2六色色彩结构必须优先保证色盘和六色信息准确可读；P4/P5优先信息层级清楚，不能为了装饰牺牲文字可读性。",
+    "P3三档蓝色存在感是编辑搭配建议，视觉可以表达三种强弱方向，但不得伪造成真实试妆前后对比、实测效果或官方教程。",
+    "产出一份总体视觉策划和一份供R09直接执行的逐页图片任务包。"
+  ],
+  "frozen_scope": [
+    "active_copy_path=生产/产物/文案/CONTENT-001/V1/文案.json",
+    "active_copy_revision=1",
+    "active_copy_fingerprint=sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "PRODUCT-001 LOCK-V1",
+    "SKU-001-03 LOCK-V1 / 03 Crystal Ball / 水晶球",
+    "PERSONA-001 LOCK-V1",
+    "5页结构：P1问题钩子、P2六色色彩结构、P3三档蓝色存在感、P4选前3问、P5收藏总结+评论互动",
+    "Snow Ballet与Swan Ballet隔离",
+    "01/02与03图像隔离",
+    "SYNTHETIC_VISUAL_PERSONA不得承载现实产品体验"
+  ],
+  "acceptance_criteria": [
+    "work_mode必须为CONTENT_VISUAL_PLAN。",
+    "5页任务必须一页不少且page_id固定P1-P5。",
+    "每页显示的公开文字必须来自active copy；允许视觉断行与层级拆分，但不得改事实、改SKU或另造结论。",
+    "任何product_required=true页面都必须显式绑定PRODUCT-001与SKU-001-03并引用03官方reference image。",
+    "任何persona_required=true页面都必须显式绑定PERSONA-001 LOCK并引用实际锚点。",
+    "人物造型不得机械复制锚点原服装/原发型；同一篇人物页之间动作、景别或构图至少有两项明显变化。",
+    "P2必须明确六格盘面和六色标注的准确性门禁；P3不得表现为真人亲测过程；P4/P5必须优先信息可读性。",
+    "所有页面必须包含forbidden_items与可独立审核的acceptance_points。",
+    "视觉计划必须提供整体色温、字体层级、留白、安全区和跨页差异规则，避免五页像同一模板复制。",
+    "逐页图片任务包必须足够让R09无需自行补设计即可执行。",
+    "写后回读视觉策划、逐页图片任务包和交付文件。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/视觉策划/CONTENT-001/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-001/V1/R09-逐页图片任务.json",
+    "生产/产物/视觉策划/CONTENT-001/V1/交付.json"
+  ],
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|COPY_REV|1|COPY_FP|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|VISUAL_PLAN|R08|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|COPY_REV|1|COPY_FP|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|PLANNING|548b8cc9de324e422f55f3f71522f4885ece6191|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R08只提交视觉策划、R09逐页图片任务包与交付，不修改state/phase/active pointer。",
+    "R08不得改写final copy或任何LOCK。",
+    "R01验收R08 PASS后才创建R09正式IMAGE_BUILD任务。"
+  ]
+}
