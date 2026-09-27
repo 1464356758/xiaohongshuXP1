@@ -1,0 +1,109 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-COMPLIANCE-REVIEW-R13-V1",
+  "role_id": "R13",
+  "review_mode": "CONTENT_TRUTH_COMPLIANCE_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "idempotency_key": "CONTENT-001|COMPLIANCE_REVIEW|R13|V1|1|null|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41|MANIFEST|ad76323bd6027ae4b30b391384dbd3c6fd66577f|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|IMAGE_QA|596493d9367a181f826dbb87bd771930cfc4e3dc|R10|212899595e95c43f680e165f971084e37a13bfc0|R11|d4dc53b430f112e9943bf05e841e793ed5331c19|R12|0283a72e63daa51ce733ad2bf0cbb658f92c03fe|SNAPSHOT|ebceb3c313ef49ce92dfb177365c36edb7d91bb3|COMPLIANCE-XHS-0001|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核任务.json",
+      "binding": "FORMAL_R13_TASK",
+      "git_blob_sha": "85d39b101fe4534af9ee9e33486cea41df78674a"
+    },
+    {
+      "path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+      "binding": "EXACT_FINAL_COPY",
+      "git_blob_sha": "30394b4d2d917b12d0a5a1fab381856a08e8afd4",
+      "fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41"
+    },
+    {
+      "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+      "binding": "EXACT_ACTIVE_MANIFEST",
+      "git_blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+      "manifest_id": "ASSET-CONTENT-001",
+      "manifest_revision": 1,
+      "fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051"
+    },
+    {
+      "path": "生产/产物/总监/CONTENT-001/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "binding": "CURRENT_IMAGE_QA_BARRIER",
+      "git_blob_sha": "596493d9367a181f826dbb87bd771930cfc4e3dc",
+      "status": "COMPLETE"
+    },
+    {
+      "path": "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+      "binding": "CURRENT_R10",
+      "git_blob_sha": "212899595e95c43f680e165f971084e37a13bfc0",
+      "result": "PASS"
+    },
+    {
+      "path": "生产/审核/人物一致性/CONTENT-001/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+      "binding": "CURRENT_R11",
+      "git_blob_sha": "d4dc53b430f112e9943bf05e841e793ed5331c19",
+      "result": "PASS"
+    },
+    {
+      "path": "生产/审核/图片终审/CONTENT-001/IMAGE_REVIEW/V1/R12-图片终审.json",
+      "binding": "CURRENT_R12",
+      "git_blob_sha": "0283a72e63daa51ce733ad2bf0cbb658f92c03fe",
+      "result": "PASS"
+    },
+    {
+      "path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+      "binding": "ACTIVE_COMPLIANCE_SNAPSHOT",
+      "git_blob_sha": "ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+      "snapshot_id": "COMPLIANCE-XHS-0001",
+      "snapshot_revision": 1,
+      "status": "VALID",
+      "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1"
+    }
+  ],
+  "actual_pixel_review": {
+    "result": "PASS",
+    "method": "DIRECT_VISUAL_PIXEL_REVIEW + PLATFORM_IMMUTABLE_FILE_OR_ATTACHMENT_ID_FOR_EXACT_VERSION",
+    "page_count": 5,
+    "exact_manifest_identity_match": true
+  },
+  "findings_summary": {
+    "product_sku_identity": "PASS",
+    "image_text_vs_final_copy": "PASS",
+    "synthetic_persona_experience_boundary": "PASS",
+    "medical_or_efficacy_claims": "PASS",
+    "guarantee_or_absolute_claims": "PASS",
+    "unsupported_performance_claims": "PASS",
+    "fake_user_experience": "PASS",
+    "editorial_vs_official_tutorial_boundary": "PASS",
+    "active_compliance_snapshot_consumption": "PASS"
+  },
+  "AI_label_publish_requirement": "REQUIRED_AT_PUBLISH",
+  "AI_label_publish_note": "本轮图片内部未写“AI生成”不构成返修理由；R14发布包和PUBLISH_COMPLIANCE_GATE必须按active compliance snapshot落实平台AI标识功能或合规可见声明。",
+  "publish_guardrails": [
+    "P1/P3合成视觉人物不得在发布正文、标题、评论回复中被描述为真实上眼、亲测、试用、购买、回购、空瓶、持妆时长或实测效果。",
+    "若commercial_status、AI_modalities、正文/图片、manifest或scope发生变化，本交付不得继续沿用，需按规则STALE/刷新。"
+  ],
+  "output_paths": [
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/审核/内容合规/CONTENT-001/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json#09f4aaf67f609c45dca238ce4a6ec6c070f2b13b",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json#ebceb3c313ef49ce92dfb177365c36edb7d91bb3",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json#ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+    "user_file://file_00000000ff6081fdae07c825f044d4a3",
+    "user_file://file_00000000151881fdba1749e3cf3c07c1",
+    "user_file://file_00000000587c81fd9418fab085a6d5e2",
+    "user_file://file_00000000afc4823093387275229f4963",
+    "user_file://file_000000004de081fdba7a74badb549082"
+  ],
+  "completed_at": "2026-09-27T22:10:06+08:00",
+  "delivery_fingerprint_or_commit": "sha256:aa4ef75ed7c7c3e1210fba2a590f8e7021c90810c733d7566442e1e5db2e5d43",
+  "next_role_suggestion": "R01机械核验本R13 PASS后继续正式路由；是否建立CONTENT LOCK及后续发布准备均由R01决定。"
+}
