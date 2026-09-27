@@ -1,0 +1,165 @@
+{
+  "schema": "SYS-003_PERSONA_LOCK_V4",
+  "lock_type": "PERSONA_LOCK",
+  "lock_id": "PERSONA-001-LOCK-V1",
+  "persona_id": "PERSONA-001",
+  "lock_version": "LOCK-V1",
+  "status": "LOCKED",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-001/PERSONA_SETUP/V1/R08-PERSONA草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "source_delivery_path": "生产/产物/PERSONA草案/CONTENT-001/V1/交付.json",
+    "supersedes": null
+  },
+  "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+  "first_person_experience_eligible": false,
+  "first_person_opinion_eligible": true,
+  "experience_rule": "该人物是合成视觉人物，可承载账号审美与编辑观点，但不得被写成现实中购买、收货、亲测、持续使用、回购、空瓶、持妆时长、功效结果等第一人称经历主体。",
+  "identity_rule": "以PRIMARY_FACE_ANCHOR为首要人脸身份基准，以FACE_45_DEGREE_ANCHOR与REFERENCE_SEATED交叉确认；造型可变化，但核心脸型、五官相对比例、面颊小痣、年轻成年女性观感、基础深棕发色范围及自然身体比例必须保持为同一固定虚拟人物。",
+  "anchor_identity_status": "VALID",
+  "anchors": {
+    "front": {
+      "anchor_id": "PERSONA-001-FRONT",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:3c4f926bfc046c1ec6197e2f94f63779c3c52f04|sha256:28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "sha256": "28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "git_blob_sha": "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "immutable_attachment_id": null,
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "angle_45": {
+      "anchor_id": "PERSONA-001-45",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:5a2b03bc6adc26c6690bc58a9303c1f33db3dc08|sha256:e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "sha256": "e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "git_blob_sha": "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "immutable_attachment_id": null,
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "halfbody": {
+      "anchor_id": "PERSONA-001-HALF",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:ce0084c9923d4eaffd8fa23397e65b01001a1e95|sha256:71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "sha256": "71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "git_blob_sha": "ce0084c9923d4eaffd8fa23397e65b01001a1e95",
+      "immutable_attachment_id": null,
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    },
+    "detail": {
+      "anchor_id": "PERSONA-001-DETAIL",
+      "anchor_revision": 1,
+      "transport": "GITHUB",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+      "fingerprint_type": "GIT_BLOB_SHA_PLUS_SHA256",
+      "fingerprint": "git_blob_sha:e69e643707e9c808a21252bb0ba8ba184c039f17|sha256:5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "sha256": "5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e",
+      "git_blob_sha": "e69e643707e9c808a21252bb0ba8ba184c039f17",
+      "immutable_attachment_id": null,
+      "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+    }
+  },
+  "auxiliary_anchors": {
+    "fullbody": {
+      "role": "FULL_BODY_PROPORTION_ANCHOR",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "git_blob_sha": "c47d2970b552a9a27f036f8360ca3b577f2c28cc",
+      "sha256": "ee41506879b62c7ea69b4037f4623c38f4a053c6b79fd53cf3ce6bf328de3699"
+    },
+    "three_view": {
+      "role": "BODY_THREE_VIEW_REFERENCE",
+      "location": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "git_blob_sha": "d2db38ac82de24637c1d56cac642e61b8380d8b6",
+      "sha256": "d711314caa96ca57fb2b89408b2ee605e36cab1e0896a1dfdd4ee4e158f8b029"
+    }
+  },
+  "anchor_activation_gate": "Every required anchor has a non-empty machine-verifiable fingerprint and was independently verified by R11 from actual bytes.",
+  "anchor_change_rule": "Any required anchor byte/content change, including same path with new bytes, requires a new PERSONA LOCK version with supersedes; never mutate this LOCK in place.",
+  "face_shape": "小幅椭圆至柔和V形脸；上庭轮廓圆润、颧区不过分外扩，下颌线平顺收窄，颏部小而圆润，不做尖削锥形或宽方下颌漂移。",
+  "feature_proportions": {
+    "eyes": "双眼偏大，杏仁圆眼取向，眼裂横向长度适中、眼距自然偏开；外眼角轻微上扬但不锐利。保持双眼大小、眼距、内外眼角关系与PRIMARY_FACE_ANCHOR一致，禁止夸张扩眼或缩眼。",
+    "nose": "鼻梁纤细顺直、鼻根至鼻尖过渡柔和；鼻头小而圆润，鼻翼窄，整体与眼距和唇宽保持当前紧凑比例，禁止高鼻梁锐化或鼻翼明显变宽。",
+    "lips": "唇形偏饱满、下唇略丰于上唇；唇峰柔和、嘴角自然，整体唇宽中等。保持自然闭口/微启时的厚薄关系，禁止过度丰唇或明显缩唇。",
+    "brows": "眉形偏自然平缓，眉峰轻柔，粗细中等偏细，与眼睛间距和额头比例稳定；可因妆容轻微改变颜色和修饰，不改变基础走向。",
+    "jaw": "下颌线纤细平滑、由耳下向小圆颏自然内收；禁止方颌、过窄刀削脸或下巴异常拉长。"
+  },
+  "recognition_features": [
+    "PRIMARY_FACE_ANCHOR正脸画面右侧面颊、靠近外眼下方至上颧区的小痣：位置、大小、与眼尾/鼻翼/颧区的相对关系为核心识别点，禁止消失、换侧或明显位移。",
+    "大而清晰的棕色杏仁圆眼，眼距与面部宽度关系稳定。",
+    "纤细顺直的小鼻结构与偏饱满自然唇形组合。",
+    "深棕至暖深棕基础发色；光线可改变高光观感，但不得漂移为黑蓝、浅金或高饱和彩色作为默认身份。",
+    "整体为年轻成年女性的柔和、清透、轻通勤审美观感；不将服装、蝴蝶结或具体半扎发型作为身份标记。"
+  ],
+  "skin_tone_range": "浅色肤色范围，整体中性至偏暖桃调；允许随环境光产生自然冷暖与明暗变化，但不得通过过度美白、粉化、灰化或高饱和橘化改变基础肤色识别。",
+  "body_proportion_rule": "以FULL_BODY_PROPORTION_ANCHOR与BODY_THREE_VIEW_REFERENCE为长期身体比例基准：整体纤细自然、肩宽偏窄、四肢修长，腰胯比例和手脚尺度保持自然。不得因镜头或服装导致明显头身比、肩宽、腰胯、腿长、手掌/脚部尺度漂移。",
+  "must_keep": [
+    "同一固定虚拟人物身份",
+    "核心脸型与额头-颧区-下颌-下巴轮廓关系",
+    "双眼大小、眼型、眼距及与眉鼻的相对比例",
+    "鼻梁、鼻头、鼻翼的紧凑结构",
+    "上下唇厚薄与唇宽关系",
+    "面颊小痣的固定位置、大小及与五官相对关系",
+    "年轻成年女性的年龄观感",
+    "深棕至暖深棕基础发色范围",
+    "FULL_BODY_PROPORTION_ANCHOR与BODY_THREE_VIEW_REFERENCE所示自然身体比例和四肢长度关系"
+  ],
+  "allowed_to_change": [
+    "发型：披发、半扎、扎发、盘发及合理刘海变化",
+    "服装：当前碎花上衣、针织衫、宽松长裤均不锁死，可按内容换装",
+    "妆容：浓淡、眼影、腮红、唇色可随主题变化，但不得改变骨相与五官比例",
+    "首饰与配饰，包括蝴蝶结是否出现",
+    "环境、背景、道具与光线",
+    "表情、视线方向、动作与姿势",
+    "拍摄角度、景别与构图，只要不通过镜像或夸张透视造成身份漂移"
+  ],
+  "forbidden_identity_drift": [
+    "换脸或生成成另一人物",
+    "小痣消失、换侧、明显移位、尺寸夸张",
+    "眼睛明显扩大/缩小、眼距改变、眼型变为狭长锐利或其他不一致形态",
+    "鼻梁高度、鼻翼宽度、鼻尖结构发生明显改变",
+    "唇厚、唇宽或下巴长度发生明显漂移",
+    "脸型从柔和椭圆/V形漂移为方脸、极尖锥形或明显宽颧结构",
+    "基础发色长期漂移为与深棕范围无关的颜色",
+    "人物年龄观感明显幼化或成熟化",
+    "头身比、肩宽、腰胯、腿长、手脚尺寸出现不自然或跨页不一致"
+  ],
+  "page_rule": "后续每一页必须显式声明persona_required。persona_required=false时可使用纯产品、静物、手拿局部、信息卡等；persona_required=true时必须引用正式PERSONA LOCK及对应锚点，不要求每页露脸，更不允许把当前服装或发型当作固定模板。",
+  "approved_by": "R01",
+  "approved_at": "2026-09-27T08:19:00+08:00",
+  "source_identity": {
+    "persona_draft_path": "生产/产物/PERSONA草案/CONTENT-001/V1/PERSONA-001-DRAFT.json",
+    "persona_draft_blob_sha": "27746ea35bd3a9f60ee58f23d6f9f68604eea8c9",
+    "persona_draft_fingerprint": "sha256:b8c33bf391bac7d1a1e421e2415f11d9688e2173772532a9590e6f6d700827f1",
+    "r08_delivery_path": "生产/产物/PERSONA草案/CONTENT-001/V1/交付.json",
+    "r08_delivery_blob_sha": "0430ef0977b16065ac96dbb5d8bb205b4dc1022c",
+    "source_manifest_path": "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/SOURCE-MANIFEST-V1.json",
+    "source_manifest_blob_sha": "4084319c69e43f44b8f0830792509b6aa775dfb1",
+    "source_commit": "eea1e136fe527c4dfd4f1db76a8c6ca82bd34300"
+  },
+  "approval_evidence": {
+    "r11_review_path": "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/R11-PERSONA-SETUP-REVIEW.json",
+    "r11_review_blob_sha": "d6397b57ec04d986f92d531b80ff1b44f13df0db",
+    "r11_delivery_path": "生产/审核/人物一致性/CONTENT-001/PERSONA_SETUP/V1/交付.json",
+    "r11_delivery_blob_sha": "4196b0be986ae94772d29d06cccfd079985906f5",
+    "r11_result": "PASS",
+    "review_mode": "PERSONA_SETUP_REVIEW",
+    "actual_bytes_read_6_of_6": true,
+    "actual_byte_sha256_match_6_of_6": true
+  },
+  "usage_rules": [
+    "核心人物身份、面颊小痣、脸型与五官相对比例、年龄观感、基础发色范围、自然身体比例必须保持稳定。",
+    "发型、衣服、妆容、首饰、环境、表情、姿势与拍摄角度允许变化。",
+    "当前碎花服装、白色针织衫、蝴蝶结与半扎发型不是永久身份特征。",
+    "persona_required=false的页面可以不出现人物；persona_required=true必须引用本LOCK及当前有效锚点。",
+    "SYNTHETIC_VISUAL_PERSONA不得拥有现实产品使用、购买、回购、空瓶、持妆时长或功效结果型第一人称经历。"
+  ]
+}
