@@ -1,0 +1,49 @@
+{
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-DISCOVERY-R02-V1",
+  "role_id": "R02",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-001|DISCOVERY|R02|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/DISCOVERY/V1/R02-热点侦察任务.json",
+    "parallel_group_id": "CONTENT-001-DISCOVERY-G1",
+    "account_strategy_lock": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json#a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock": "生产/批准/VOICE-001/LOCK-V1.json#0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock": "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "runtime_mode": "LIVE",
+    "research_platform": "小红书",
+    "freshness_window": "2026-09-13T00:00:00+08:00/2026-09-27T08:19:00+08:00"
+  },
+  "output_paths": [
+    "生产/产物/热点研究/CONTENT-001/V1/热点研究.json",
+    "生产/产物/热点研究/CONTENT-001/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "https://m.ebrun.com/708176.html",
+    "https://wap.qian-gua.com/rank/live/2/1/20260921/47",
+    "https://www.qian-gua.com/rank/live/4/1/20260925/24",
+    "https://qian-gua.com/rank/live/1/1/20260923.html",
+    "https://www.qian-gua.com/rank/live/3/1/20260924/1",
+    "https://wap.qian-gua.com/rank/live/2/1/20260919/47",
+    "https://post.smzdm.com/p/a260oor7/",
+    "https://www.cosmopolitan.com/tw/beauty/make-up/g73769515/foggy-forest-nails/",
+    "https://fashion.sina.com.cn/b/nw/2026-09-17/1523/doc-iniscksf0365249.shtml",
+    "https://post.smzdm.com/p/a82xq3ml/"
+  ],
+  "completed_at": "2026-09-27T08:55:00+08:00",
+  "primary_output_blob_sha": "89c857a86923ecda6b215040f9fa952758527545",
+  "primary_output_commit": "57bfca7662bdf9d8ec24c496a72764bded97c5c0",
+  "delivery_fingerprint_or_commit": "57bfca7662bdf9d8ec24c496a72764bded97c5c0",
+  "next_role_suggestion": "R01",
+  "notes": [
+    "共形成6个候选方向；R02未决定最终商品。",
+    "HOT-06完美日记小鹿全脸盘仅有近期平台来源索引，商品事实明确标为待R04/R05核验。",
+    "R03草稿/交付未读取，保持DISCOVERY并行独立性。"
+  ]
+}
