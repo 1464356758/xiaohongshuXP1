@@ -1,0 +1,76 @@
+{
+  "schema": "SYS-003_PUBLISH_COMPLIANCE_GATE_EVIDENCE_V2_FINAL",
+  "content_id": "CONTENT-001",
+  "task_version": "V1",
+  "input_revision": 1,
+  "content_lock_path": "生产/批准/CONTENT-001/LOCK-V1.json",
+  "content_lock_id": "CONTENT-001-LOCK-V1",
+  "publish_package_path": "生产/发布包/CONTENT-001/V1/发布包.json",
+  "actual_publish_scope": {
+    "content_mode": "ORGANIC_SHARE",
+    "commercial_status": "NON_COMMERCIAL",
+    "product_category": "BEAUTY",
+    "AI_modalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "claims_risk": "MEDIUM",
+    "account_type": "PERSONAL_CREATOR",
+    "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1"
+  },
+  "compliance_snapshot_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+  "compliance_snapshot_revision": 1,
+  "active_compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+  "checks": {
+    "time_valid": true,
+    "snapshot_status_valid": true,
+    "scope_match": true,
+    "commercial_status_unchanged": true,
+    "ai_modalities_unchanged": true,
+    "ai_label_requirement_current": true,
+    "commercial_disclosure_requirement_current": true,
+    "publish_package_binding_match": true,
+    "authorization_time_valid": true
+  },
+  "result": "PASS",
+  "refresh_only": false,
+  "content_change_required": false,
+  "checked_by": "R01 with current R13 compliance evidence",
+  "checked_at": "2026-09-28T07:35:00+08:00",
+  "hard_rule": "PUBLISH_READY requires result=PASS plus explicit publish_authorization_valid_until and exact package-to-CONTENT-LOCK copy+manifest fingerprint binding. USER_ACTUAL_PUBLISH requires the actual_publish_recheck PASS immediately before publication.",
+  "publish_package_binding": {
+    "bound_content_lock_path": "生产/批准/CONTENT-001/LOCK-V1.json",
+    "bound_content_lock_id": "CONTENT-001-LOCK-V1",
+    "bound_final_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "bound_asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "bound_asset_manifest_id": "ASSET-CONTENT-001",
+    "bound_manifest_revision": 1,
+    "bound_manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "package_binding_fingerprint": "sha256:f781cab710b9105e19d607f4e58248f4748ae23900f09e45c4eb83632d808102"
+  },
+  "publish_authorization_issued_at": "2026-09-28T07:35:00+08:00",
+  "publish_authorization_valid_until": "2026-10-04T21:56:00+08:00",
+  "authorization_status": "VALID",
+  "actual_publish_recheck": {
+    "required": true,
+    "checked_at": null,
+    "authorization_time_valid": false,
+    "package_binding_still_matches": false,
+    "scope_still_matches": false,
+    "compliance_still_current": false,
+    "result": "PENDING"
+  },
+  "evidence_bindings": {
+    "r13_publish_review_path": "生产/审核/CONTENT-001/V1/发布合规/R13-发布前合规核验.json",
+    "r13_publish_review_blob_sha": "253134196fec2fb040396a90ac3578e86fd5d20f",
+    "r13_delivery_path": "生产/审核/CONTENT-001/V1/发布合规/R13-交付.json",
+    "r13_delivery_blob_sha": "7c6273c56f23f137ab9c7f03391ba62fb2f63d4f",
+    "content_lock_blob_sha": "d94a6bc44f94ad6fb2b10a596907000d71af3942",
+    "publish_package_blob_sha": "3da59075eff56247e1160286e52b78c05e78fd21",
+    "actual_publish_scope_blob_sha": "7155df97180e73803cd69f15095a4fb8c99e1d0d",
+    "compliance_snapshot_blob_sha": "ebceb3c313ef49ce92dfb177365c36edb7d91bb3"
+  },
+  "AI_label_publish_requirement": "REQUIRED_AT_PUBLISH",
+  "commercial_disclosure_requirement": "NOT_APPLICABLE",
+  "actual_publish_authority": "USER_ONLY"
+}
