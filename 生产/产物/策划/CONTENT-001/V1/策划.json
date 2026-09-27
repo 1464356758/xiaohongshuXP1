@@ -1,0 +1,202 @@
+{
+  "schema": "XHS_XP1_R06_PLANNING_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PLANNING-R06-V1",
+  "role_id": "R06",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "idempotency_key": "CONTENT-001|PLANNING|R06|V1|1|null|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|R02|89c857a86923ecda6b215040f9fa952758527545|R03|3be327c58c4f51007e4df8becd211b729048ee8b|R04|a3306ec92bc9f1b69c8d67b685335c29504ffcd4",
+  "result": "PASS",
+  "locked_subject": {
+    "brand": "Flower Knows / 花知晓",
+    "product": "Snow Ballet Six-Color Satin Makeup Palette",
+    "active_sku": "03 Crystal Ball / 水晶球",
+    "active_sku_lock": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "sibling_skus_context_only": [
+      "01 Music Box / 八音盒",
+      "02 Romantic Waltz / 圆舞曲"
+    ],
+    "hard_guard": "Snow Ballet不得与Swan Ballet / 天鹅芭蕾旧系列混淆"
+  },
+  "planning": {
+    "topic_one_liner": "把花知晓 Snow Ballet 03 Crystal Ball / 水晶球从“新品冷蓝盘”拆成一张通勤使用决策卡：先看六色色彩结构，再决定蓝银色作为主角还是点缀，而不是被包装争议或单纯颜值带着走。",
+    "content_goal": "承接Snow Ballet新品传播窗口，同时满足小红书通勤/新手眼影的高频决策需求。让用户看完能判断03水晶球的冷蓝、灰棕、银蓝结构是否符合自己的日常妆容路线，并能保存一套可复用的搭配思路。",
+    "target_user_problem": "喜欢03水晶球的冷蓝与银蓝视觉，但担心日常难用、妆感太重或不知道六色怎么分工；想先看清颜色关系再决定是否纳入自己的通勤妆路线。",
+    "core_conclusion": "03水晶球的决策重点不是“蓝色能不能日常”，而是是否愿意让冷灰棕承担主体结构、让蓝银与偏光蓝承担不同程度的提亮/点缀。它更适合按颜色角色拆解，而不是六色平均使用。",
+    "differentiation_angle": [
+      "把R02新品热度与R03通勤选色需求合并，不做纯开箱、纯包装争议或参数复述。",
+      "只讲当前active SKU 03水晶球，不借01/02做未经授权的三盘横向体验比较。",
+      "把官方可核验的六色色彩结构与“编辑搭配建议”分层呈现，事实与观点不混写。",
+      "不使用虚构亲测、持妆时长、飞粉、显色强弱等账号体验来制造可信度。"
+    ],
+    "title_directions": [
+      "花知晓03水晶球｜冷蓝眼影怎么放进通勤妆？",
+      "03水晶球别只看蓝色｜这6色怎么分工更重要",
+      "喜欢冷蓝又怕难日常？先看03水晶球的灰棕＋蓝银结构"
+    ],
+    "recommended_page_count": 5,
+    "page_plan": [
+      {
+        "page": 1,
+        "role": "COVER_DECISION_HOOK",
+        "purpose": "把用户从新品/包装讨论拉回具体使用问题，明确本篇只讲03水晶球。",
+        "key_message": "03水晶球｜冷蓝眼影怎么放进通勤妆？",
+        "content_elements": [
+          "03 Crystal Ball / 水晶球正式名称",
+          "Snow Ballet产品身份",
+          "一个明确问题：冷蓝盘如何进入日常通勤"
+        ],
+        "visual_direction": "产品为视觉主角，可搭配PERSONA-001眼妆局部或半脸建立账号识别；产品外观必须按SKU-001-03官方reference image，不得出现01/02或Swan Ballet素材。",
+        "persona_role": "可出现，用于账号识别与妆感氛围，不得暗示其真实购买或亲测。",
+        "product_role": "主视觉",
+        "information_density": "LOW_MEDIUM"
+      },
+      {
+        "page": 2,
+        "role": "FACT_MAP",
+        "purpose": "先建立准确盘面认知，避免名称、盘色、包装再次错配。",
+        "key_message": "先看六色结构：冷灰棕打底骨架，蓝银与偏光蓝形成冷感层次。",
+        "verified_facts": [
+          "Frosted Pearl",
+          "Glacier Blue",
+          "Cool Taupe",
+          "Cold Brew",
+          "Silver Blue Ice",
+          "Iridescent Galaxy Blue"
+        ],
+        "editorial_boundary": "只可把颜色按视觉关系分组，不把分组写成品牌官方用法或真实上眼结果。",
+        "visual_direction": "以03官方盘面/锁定产品视觉为核心，六色做清晰标注；不展示01/02盘面。",
+        "persona_role": "不需要",
+        "product_role": "核心",
+        "information_density": "HIGH"
+      },
+      {
+        "page": 3,
+        "role": "HOW_TO_TRANSLATE_FOR_COMMUTE",
+        "purpose": "把冷蓝盘从“看起来难用”转译成日常可理解的颜色角色。",
+        "key_message": "通勤思路不是六色全上，而是先定主结构，再决定蓝色出现多少。",
+        "editorial_pairing_suggestions": [
+          "低存在感路线：Cool Taupe + Cold Brew 做主体，Frosted Pearl做小面积提亮。",
+          "冷感点缀路线：在低存在感路线基础上加入少量Glacier Blue或Silver Blue Ice。",
+          "更强冷蓝路线：Iridescent Galaxy Blue只作为更明显的视觉重点，不把它描述为所有人都适合的日常主色。"
+        ],
+        "factual_disclaimer_internal": "以上为编辑搭配建议，不是品牌官方教程，不代表账号本人上眼实测。",
+        "visual_direction": "可使用PERSONA-001眼部/半脸做三段式妆感方向图，但不得制造真实试用过程、时间结果或前后功效对比。",
+        "persona_role": "建议出现",
+        "product_role": "辅助出现",
+        "information_density": "MEDIUM_HIGH"
+      },
+      {
+        "page": 4,
+        "role": "SELF_SELECTION_CARD",
+        "purpose": "让用户用自己的审美与通勤环境完成自我筛选，而不是由账号替用户下结论。",
+        "key_message": "选03之前先问自己3件事：你喜不喜欢冷调、蓝色想当主角还是点缀、日常环境能接受多少闪感。",
+        "decision_prompts": [
+          "偏好冷灰棕＋冷蓝/银蓝关系，03更值得继续看。",
+          "只想要暖棕、杏桃或几乎不出现蓝色的日常盘，则本篇不把03硬说成万能选择。",
+          "办公室更保守时，可把蓝银控制在局部；想要更明显冷感时，再提高蓝色存在感。"
+        ],
+        "boundary": "这是审美与场景选择建议，不写肤色绝对适配、不写肿眼皮一定显肿/不显肿等未经本品证据支持的结论。",
+        "visual_direction": "信息卡为主，产品小图做身份锚点；避免过度堆字。",
+        "persona_role": "可不出现",
+        "product_role": "辅助",
+        "information_density": "HIGH"
+      },
+      {
+        "page": 5,
+        "role": "SAVE_AND_COMMENT",
+        "purpose": "形成可收藏的快速复盘，并留下自然评论问题。",
+        "key_message": "收藏这张：03水晶球的日常思路＝灰棕定结构，蓝银决定冷感强度。",
+        "save_point": [
+          "六色名称与颜色结构速查",
+          "三档蓝色存在感搭配逻辑",
+          "选03前的3个自问"
+        ],
+        "comment_prompt": "你会把蓝色留在眼尾/下眼睑做点缀，还是更愿意让它直接当主色？",
+        "visual_direction": "一页清爽总结卡，产品身份继续保持03水晶球；互动问题放底部，不做“点赞收藏关注”统一口播。",
+        "persona_role": "不强制",
+        "product_role": "身份锚点",
+        "information_density": "MEDIUM"
+      }
+    ],
+    "page_mix": {
+      "rationale": "自然服务本篇信息结构，不把账号窗口比例机械化为单篇配额。",
+      "persona_pages_recommended": [
+        1,
+        3
+      ],
+      "product_visible_pages_recommended": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "information_card_heavy_pages": [
+        2,
+        4,
+        5
+      ]
+    },
+    "save_point": "“六色结构＋三档蓝色存在感＋选前3问”组成一张可回看的03水晶球通勤决策卡。",
+    "comment_interaction": "你会把蓝色留在眼尾/下眼睑做点缀，还是直接当主色？",
+    "fact_boundaries": {
+      "allowed": [
+        "品牌：Flower Knows / 花知晓",
+        "产品：Snow Ballet Six-Color Satin Makeup Palette",
+        "容量：6.5 g / 0.23 oz",
+        "active SKU：03 Crystal Ball / 水晶球",
+        "官方六色名：Frosted Pearl、Glacier Blue、Cool Taupe、Cold Brew、Silver Blue Ice、Iridescent Galaxy Blue",
+        "03当前锁定视觉色彩签名：银白/冰川蓝/冷灰褐/深冷棕/银蓝/偏光或饱和银河蓝",
+        "品牌层面可归因的丝缎色、多维闪片、可叠加妆效等官方宣称；本篇建议不把12H持妆作为主叙事"
+      ],
+      "forbidden": [
+        "把Snow Ballet写成Swan Ballet或混入天鹅芭蕾旧系列素材",
+        "把01八音盒或02圆舞曲图片/配色当作03水晶球",
+        "写“我试了、我用了几天、我上眼多久、我回购、我买了”等现实第一人称经历",
+        "把品牌Up to 12 Hours of Wear写成账号本人12小时实测",
+        "未经证据写本品飞粉、不飞粉、显肿、不显肿、拔干、持妆、显色强弱等体验结论",
+        "把黄皮/冷皮/肿眼泡等人群写成绝对适合或绝对不适合"
+      ]
+    },
+    "risks": [
+      {
+        "risk": "SKU/系列视觉错配",
+        "severity": "P0_POTENTIAL",
+        "mitigation": "R07/R08/R09只使用SKU-001-03 LOCK中的名称、盘色和reference image；Snow Ballet与Swan Ballet硬隔离。"
+      },
+      {
+        "risk": "把编辑用法写成官方用法或实测",
+        "severity": "P1",
+        "mitigation": "文案明确用“可以这样搭/如果你更想要……”等建议句式，不写效果承诺。"
+      },
+      {
+        "risk": "为了蹭包装争议把内容重新变成争吵帖",
+        "severity": "P1",
+        "mitigation": "包装争议只作为进入新品讨论的背景，不下价值判断，主体回到03的色彩结构与通勤决策。"
+      },
+      {
+        "risk": "冷启动首篇过度像广告",
+        "severity": "P1",
+        "mitigation": "保留“不是万能选择”的自我筛选页，避免必买、闭眼入、封神等强推词。"
+      }
+    ],
+    "downstream_briefs": {
+      "R07": "按5页结构写短句口语文案，先问题后结论；事实名称逐字对照LOCK。编辑建议与官方事实分层，不制造第一人称产品经历。",
+      "R08": "围绕03官方产品图做视觉身份锚定；整体轻通勤、冷银蓝但不过度舞台化。PERSONA建议仅P1/P3出现，人物必须绑定PERSONA-001，不要求每页露脸。产品包装、六格盘面与蓝/灰棕关系优先准确。"
+    }
+  },
+  "evidence_refs": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json#a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "生产/批准/VOICE-001/LOCK-V1.json#0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "生产/批准/PRODUCT-001/LOCK-V1.json#5417421c820b6f46408bc57cff7a741a9ffb5813",
+    "生产/批准/SKU-001-03/LOCK-V1.json#c42f36a0e1c2c2d2add03ef194305f622de629f5",
+    "生产/产物/热点研究/CONTENT-001/V1/热点研究.json#89c857a86923ecda6b215040f9fa952758527545",
+    "生产/产物/竞品研究/CONTENT-001/V1/竞品研究.json#3be327c58c4f51007e4df8becd211b729048ee8b",
+    "生产/产物/商品事实/CONTENT-001/V1/商品事实研究.json#a3306ec92bc9f1b69c8d67b685335c29504ffcd4"
+  ],
+  "completed_at": "2026-09-27T10:30:00+08:00"
+}
