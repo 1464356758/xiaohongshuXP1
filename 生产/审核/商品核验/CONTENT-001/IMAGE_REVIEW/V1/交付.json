@@ -1,0 +1,62 @@
+{
+  "schema": "XP1_R10_IMAGE_REVIEW_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-REVIEW-R10-V1",
+  "role_id": "R10",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-001|IMAGE_REVIEW|R10|V1|1|null|MANIFEST|ASSET-CONTENT-001|1|sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "product_lock_blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "sku_lock_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5"
+  },
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-001-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-001-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-001-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389"
+    }
+  ],
+  "output_paths": [
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_pages": [],
+  "evidence_refs": [
+    "生产/审核/商品核验/CONTENT-001/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/产物/总监/CONTENT-001/IMAGE_BUILD/V4/ASSET-IDENTITY-GATE.json",
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json"
+  ],
+  "evidence_blob_sha": "212899595e95c43f680e165f971084e37a13bfc0",
+  "completed_at": "2026-09-27T21:47:00+08:00",
+  "delivery_fingerprint_or_commit": "git_blob:212899595e95c43f680e165f971084e37a13bfc0",
+  "next_role_suggestion": "R01",
+  "control_plane_mutation": false,
+  "state_phase_pointer_modified": false
+}
