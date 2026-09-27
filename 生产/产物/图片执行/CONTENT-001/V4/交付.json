@@ -1,0 +1,108 @@
+{
+  "schema": "XHS_XP1_R09_IMAGE_BUILD_DELIVERY_V1",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-IMAGE-BUILD-R09-V4",
+  "role_id": "R09",
+  "stage": "IMAGE_BUILD",
+  "task_version": "V4",
+  "input_revision": 4,
+  "revision_round": 3,
+  "dependency_revision": "VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|IMAGE_PROTOCOL|691ee443483bc129d7cf4595b17a001acbbf63e7|TRANSPORT_REVISION|166b80e047eacc95947274fa7bb7d5db8e4b9792|R2|1efff6eea393975d669e513cac2abd6a8ead8550|R3|679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+  "idempotency_key": "CONTENT-001|IMAGE_BUILD|R09|V4|4|3|VISUAL|8e0a35899885685041329779f1a8d6234eeb7d66|PAGE_TASK|af2cf2803610b83e9e76c44f079624264b0fcc58|VISUAL_DELIVERY|b36022367be9a9c650daf733438c874ccae0d3ee|COPY|30394b4d2d917b12d0a5a1fab381856a08e8afd4|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|5417421c820b6f46408bc57cff7a741a9ffb5813|SKU|c42f36a0e1c2c2d2add03ef194305f622de629f5|IMAGE_PROTOCOL|691ee443483bc129d7cf4595b17a001acbbf63e7|TRANSPORT_REVISION|166b80e047eacc95947274fa7bb7d5db8e4b9792|R2|1efff6eea393975d669e513cac2abd6a8ead8550|R3|679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+  "result": "PASS",
+  "input_bindings": {
+    "active_task_path": "生产/任务/CONTENT-001/IMAGE_BUILD/V4/R09-图片制作任务.json",
+    "active_task_blob_sha": "a7fa327c478ef50335a2137a502afe7e090ee927",
+    "active_revision_path": "生产/返修/CONTENT-001/IMAGE_BUILD/V3/R3/任务.json",
+    "active_revision_blob_sha": "679c0070f9a7ba32a594d19fc23bdc3dca6846ac",
+    "active_copy_path": "生产/产物/文案/CONTENT-001/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:792f0cd5ececf583fa8f6bd122cdf51dbd6e8b9ac0cc8c4fee282b3d2377fa41",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "product_lock_path": "生产/批准/PRODUCT-001/LOCK-V1.json",
+    "product_lock_blob_sha": "5417421c820b6f46408bc57cff7a741a9ffb5813",
+    "sku_lock_path": "生产/批准/SKU-001-03/LOCK-V1.json",
+    "sku_lock_blob_sha": "c42f36a0e1c2c2d2add03ef194305f622de629f5",
+    "image_workflow_protocol_path": "生产/批准/IMAGE-WORKFLOW-PROTOCOL/V1.md",
+    "image_workflow_protocol_blob_sha": "691ee443483bc129d7cf4595b17a001acbbf63e7",
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_identity_gate_blob_sha": "69806d9f5cfc673d04ea45fce85e2fd9806e4adf"
+  },
+  "user_file_assets": [
+    {
+      "page_id": "P1",
+      "page_number": "1/5",
+      "attachment_id": "file_00000000ff6081fdae07c825f044d4a3",
+      "sha256": "7727095f04537b57652100ef79699227eff9b3b33fed3bc8a75ca172e0e878e0",
+      "byte_size": 2640192,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "page_id": "P2",
+      "page_number": "2/5",
+      "attachment_id": "file_00000000151881fdba1749e3cf3c07c1",
+      "sha256": "e5973a46dece0ab451d4be9171663002a190dce922bdc6be6763894917e41c72",
+      "byte_size": 2560959,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "page_id": "P3",
+      "page_number": "3/5",
+      "attachment_id": "file_00000000587c81fd9418fab085a6d5e2",
+      "sha256": "c54415544721caaa3fc2088e0d237ced6d49921bdae57ffc3f3319ddba371849",
+      "byte_size": 2465657,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "page_id": "P4",
+      "page_number": "4/5",
+      "attachment_id": "file_00000000afc4823093387275229f4963",
+      "sha256": "8ff01ba8723ce5a788761ae6e11be1941777b649ce287999b7dda2ee2da5a497",
+      "byte_size": 2359858,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "page_id": "P5",
+      "page_number": "5/5",
+      "attachment_id": "file_000000004de081fdba7a74badb549082",
+      "sha256": "c2904a99e5246e2dfbbf2e5f0dc5164f2379a745fe7faa8092ef5170f3a29389",
+      "byte_size": 2572028,
+      "width": 1086,
+      "height": 1448
+    }
+  ],
+  "asset_manifest": {
+    "path": "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "blob_sha": "ad76323bd6027ae4b30b391384dbd3c6fd66577f",
+    "commit_sha": "edb880dd714926ebf23d47bbf4147dbfbd9d36f4",
+    "asset_manifest_id": "ASSET-CONTENT-001",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:a440c035ba76f2c924cb24afb7024e30f510f5107eae7b6642d86dbaf6d78051",
+    "activation_status": "PENDING_R01"
+  },
+  "output_paths": [
+    "生产/资产清单/CONTENT-001/V3/ASSET-MANIFEST.json",
+    "生产/产物/图片执行/CONTENT-001/V4/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "USER_FILE actual bytes read P1-P5",
+    "SHA-256 computed from actual uploaded bytes for all five ACTIVE pages",
+    "P1-P5 dimensions verified as 1086x1448 PNG (3:4)",
+    "ASSET_IDENTITY_GATE accepted identity source: SHA256_COMPUTED_FROM_ACTUAL_BYTES",
+    "manifest_fingerprint computed from canonical ordered ACTIVE asset identities"
+  ],
+  "asset_identity_precheck": "PASS",
+  "manifest_activation_performed": false,
+  "image_review_tasks_created": false,
+  "state_phase_pointer_modified": false,
+  "completed_at": "2026-09-27T21:30:12+08:00",
+  "delivery_fingerprint_or_commit": "sha256:09f8a3234422ceb564fe68fd6a9ae7de6acb29cb943ef4dab0b4bac79400e2cf",
+  "next_role_suggestion": "R01"
+}
