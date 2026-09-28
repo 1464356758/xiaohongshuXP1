@@ -17,14 +17,14 @@
   "task_version": "V1",
   "input_revision": 1,
   "revision_round": null,
-  "state": "BUILDING",
+  "state": "PASS",
   "phase": "COPY",
   "task_lifecycle_status": "ACTIVE",
   "state_owner": "R01",
   "phase_owner": "R01",
   "active_task_path": "生产/任务/CONTENT-002/COPY/V1/R07-文案任务.json",
   "active_revision_path": null,
-  "delivery_path": null,
+  "delivery_path": "生产/产物/文案/CONTENT-002/V1/交付.json",
   "active_account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
   "active_voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
   "active_product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
@@ -42,9 +42,9 @@
   "active_r12_review_path": null,
   "active_r13_review_path": null,
   "active_pre_publish_gate_path": null,
-  "active_copy_path": null,
-  "active_copy_revision": null,
-  "active_copy_fingerprint": null,
+  "active_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+  "active_copy_revision": 1,
+  "active_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
   "parallel_group": {
     "parallel_group_id": null,
     "barrier_revision": null,
@@ -96,7 +96,7 @@
     "counting_rule": "PUBLISHED::{content_id} unique; increment only after R01 confirms actual publication from valid R14 receipt."
   },
   "next_role_ids": [
-    "R07"
+    "R01"
   ],
   "pointer_rule": "null表示无正式对象；禁止扫描目录猜最新版。",
   "publish_compliance_gate": {
