@@ -1,0 +1,33 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R01-V1",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R01|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "r02_delivery_path": "生产/产物/热点研究/CONTENT-002/V1/交付.json",
+    "r02_delivery_blob_sha": "4b5cc3754f7b77cb77d1a64cefb0c406c5d892ce",
+    "r03_delivery_path": "生产/产物/竞品研究/CONTENT-002/V1/交付.json",
+    "r03_delivery_blob_sha": "e589507bb483ff8339e961afd0de0054a91e7017",
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "barrier_status": "COMPLETE"
+  },
+  "output_paths": [
+    "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "生产/产物/总监/CONTENT-002/DISCOVERY/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json"
+  ],
+  "completed_at": "2026-09-28T09:48:00+08:00",
+  "delivery_fingerprint_or_commit": "CANDIDATE_SET_COMMIT:56b85da402e2ff51a952a2b80a9b7f3abf4af752",
+  "next_role_suggestion": "R04"
+}
