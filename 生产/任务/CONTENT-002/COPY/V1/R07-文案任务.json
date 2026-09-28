@@ -1,0 +1,132 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COPY-R07-V1",
+  "stage": "COPY",
+  "role_id": "R07",
+  "work_mode": "CONTENT_COPY",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "COPY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T10:58:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "first_person_opinion_eligible": true,
+    "actual_publish_scope_fingerprint": null,
+    "planning_path": "生产/产物/策划/CONTENT-002/V1/策划.json",
+    "planning_blob_sha": "eb46295d78a873b05dccf001c48bb474a8297563",
+    "active_product_identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection",
+    "active_sku_identity": "365 Charmed Green",
+    "sibling_sku_identity": "883 Lucky Rosewood"
+  },
+  "input_paths": [
+    "生产/产物/策划/CONTENT-002/V1/策划.json",
+    "生产/产物/策划/CONTENT-002/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json"
+  ],
+  "scope": [
+    "严格按R06已通过的5页策划写完整可发布文案，不改变唯一主命题、active SKU或页面逻辑。",
+    "本篇唯一主线固定为365 Charmed Green；883 Lucky Rosewood只能作为P4同季兄弟SKU对照，不能抢主线。",
+    "推荐标题优先围绕‘限定去FOMO + 先判断绿色是否真的会进入日常眼妆’；可给备选标题，但不能改成抢购、稀缺或库存焦虑主叙事。",
+    "逐页文字必须一一覆盖：P1限定去FOMO决策钩子；P2 365五色色彩关系/结构事实地图；P3选365前3问；P4 365与883配色路线对照；P5收藏检查卡+评论互动。",
+    "所有品牌/产品/SKU/系列名称、5色结构、matte/satin/pearly、包装及可见色彩描述必须服从active PRODUCT/SKU LOCK与R04事实研究。",
+    "Lucky Clover只能作为Fall 2026系列主题，365官方英文色名固定为Charmed Green，883固定为Lucky Rosewood。",
+    "中国大陆官方中文色名、净含量、中国大陆实时库存保持UNKNOWN；不得在公开文案中自行补造具体值。",
+    "库存如需提及，只允许写‘按具体地区/官方渠道实时核对’，不得写全球售罄/全球有货。",
+    "P2颜色关系属于锁定官方资产的可观察视觉描述，不得伪装为Dior官方色名命名体系。",
+    "P3自我筛选与P4选择逻辑属于编辑建议，不得写成品牌官方教程，不得做黄皮/肿眼泡等绝对人群适配结论。",
+    "执行VOICE-001 LOCK的自然口语、句长、节奏与标题习惯，避免参数表腔、广告腔、AI腔和FOMO催单腔。",
+    "SYNTHETIC_VISUAL_PERSONA可以表达观点，但不得写任何真实购买、亲测、上眼时长、持妆时长、回购、空瓶或效果型第一人称经历。",
+    "公开文案不得机械塞入‘AI制作、资料整理、非本人测试、仅供参考、产品视觉示意’等后台说明字样；同时不得绕过后续依法/平台要求的AI标识。",
+    "输出推荐标题、备选标题、正文、P1-P5逐页文字、CTA/评论引导、标签建议、事实/evidence map，并生成copy_revision=1与可机械绑定的final_copy_fingerprint。"
+  ],
+  "frozen_scope": [
+    "R06策划唯一主命题与5页结构",
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "PRODUCT-002 LOCK-V1",
+    "active SKU=SKU-002-365 LOCK-V1",
+    "365=Charmed Green",
+    "883=Lucky Rosewood sibling comparison only",
+    "Lucky Clover=Fall 2026 collection theme",
+    "中国大陆官方中文色名/净含量/大陆实时库存=UNKNOWN",
+    "first_person_experience_eligible=false"
+  ],
+  "acceptance_criteria": [
+    "work_mode必须为CONTENT_COPY。",
+    "最终文案主线只绑定365 Charmed Green，不得自行切换active SKU到883。",
+    "P1-P5逐页文字与R06 page_plan一一对应，不能删掉P2事实地图、P3三问、P4兄弟SKU对照或P5收藏总结。",
+    "Dior / Diorshow 5 Couleurs - Limited Edition / Lucky Clover Fall 2026 / 365 Charmed Green / 883 Lucky Rosewood书写与锁一致。",
+    "任何颜色描述必须能追溯至锁定SKU的visible_color_signature；不得发明官方中文色名。",
+    "不得出现虚构第一人称现实产品经历、时长、持妆或功效结果。",
+    "不得使用闭眼入、必买、封神、抢不到亏等强催单表达作为核心结论。",
+    "必须输出final_copy_path、copy_revision=1、非空final_copy_fingerprint。",
+    "事实/evidence map必须能追溯到PRODUCT/SKU LOCK、R04与R06策划。",
+    "写后回读文案与交付文件，确认路径、版本、fingerprint和关键文本真实存在。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/产物/文案/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|COPY|R07|V1|1|null|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R07只写文案产物与交付，不修改state/phase/active pointer。",
+    "R07不得修改任何LOCK。",
+    "R01验收final_copy identity后才可执行CPC并进入VISUAL_PLAN。"
+  ]
+}
