@@ -1,0 +1,167 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-BUILD-R09-V1",
+  "stage": "IMAGE_BUILD",
+  "role_id": "R09",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "IMAGE_BUILD",
+  "created_by": "R01",
+  "created_at": "2026-09-28T15:20:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "active_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "visual_plan_path": "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "visual_plan_blob_sha": "e24b04d89f9fe757f3ed2a9334932bb376fafa6a",
+    "r09_page_task_path": "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "r09_page_task_blob_sha": "e248a2d81c705f63268baea0a622ec0506f42931",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "active_sku_identity": "365 Charmed Green",
+    "sibling_sku_identity": "883 Lucky Rosewood",
+    "asset_transport_mode": "USER_FILE",
+    "preexisting_user_file_set_status": "USER_ALREADY_GENERATED_AND_APPROVED_FOR_REGISTRATION_ONLY"
+  },
+  "input_paths": [
+    "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "生产/产物/视觉策划/CONTENT-002/V1/交付.json",
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "模板/生产/ASSET_MANIFEST_TEMPLATE.json"
+  ],
+  "page_output_contract": [
+    {
+      "page_id": "P1",
+      "transport": "USER_FILE",
+      "persona_required": true,
+      "product_required": true,
+      "status_required": "ACTIVE"
+    },
+    {
+      "page_id": "P2",
+      "transport": "USER_FILE",
+      "persona_required": false,
+      "product_required": true,
+      "status_required": "ACTIVE"
+    },
+    {
+      "page_id": "P3",
+      "transport": "USER_FILE",
+      "persona_required": false,
+      "product_required": false,
+      "status_required": "ACTIVE"
+    },
+    {
+      "page_id": "P4",
+      "transport": "USER_FILE",
+      "persona_required": false,
+      "product_required": true,
+      "status_required": "ACTIVE"
+    },
+    {
+      "page_id": "P5",
+      "transport": "USER_FILE",
+      "persona_required": false,
+      "product_required": true,
+      "status_required": "ACTIVE"
+    }
+  ],
+  "scope": [
+    "继续使用用户已经在原R09会话生成并确认的P1-P5五张最终USER_FILE图片；本任务不要求重新生成。",
+    "如果原R09会话仍可读取这5张最终文件，直接对同一实际字节做正式登记；如果当前R09会话已无法读取，才要求用户重新上传同一5张原图，不得另生成新图。",
+    "逐页核对R08 page_id与实际页码P1=1/5、P2=2/5、P3=3/5、P4=4/5、P5=5/5，不修改任何图片像素。",
+    "对每个ACTIVE USER_FILE从实际字节自动计算SHA-256；如平台同时提供不可变附件ID则一并记录。",
+    "建立ASSET-CONTENT-002 manifest_revision=1；每页记录page_id、asset_id、asset_revision、fingerprint_type、fingerprint、asset_ref、transport、status、persona_required、product_required。",
+    "manifest_fingerprint必须从五个ACTIVE页canonical identity自动计算，且不得照抄聊天中此前口头报告值而不重新由实际文件验证。",
+    "本轮已有人类确认的候选SHA仅可作为一致性复核线索：P1 c1e4...2b8b1；P2 554d...e582b；P3 7c50...aac6f；P4 eb68...bf8e8；P5 533b...fc889。只有实际字节重新计算一致才可登记。",
+    "365 Charmed Green为唯一active SKU；883 Lucky Rosewood只允许P4对照。不得自改图片、文字、人物、商品、构图、颜色或页码。",
+    "只写task指定manifest与R09交付；不激活manifest，不修改state/phase/pointer，不创建R10/R11/R12任务。"
+  ],
+  "frozen_scope": [
+    "R08视觉策划Blob=e24b04d89f9fe757f3ed2a9334932bb376fafa6a",
+    "R09逐页图片任务包Blob=e248a2d81c705f63268baea0a622ec0506f42931",
+    "active copy revision 1 / fingerprint sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "PRODUCT-002 LOCK-V1",
+    "SKU-002-365 LOCK-V1 / 365 Charmed Green",
+    "SKU-002-883 LOCK-V1 / P4 comparison only",
+    "PERSONA-001 LOCK-V1",
+    "P1-P5当前已生成USER_FILE像素内容不得变化"
+  ],
+  "acceptance_criteria": [
+    "P1-P5五张USER_FILE均能读取实际图片字节，页码和page_id一一对应。",
+    "五个ACTIVE页均有非空、机器可验证fingerprint；不能用文件名、路径或聊天文字替代身份。",
+    "实际重新计算的五页SHA-256必须与同一批最终USER_FILE一致；如与此前候选SHA不一致则不得静默接受，返回BLOCKED_CONFLICT并指出页码。",
+    "ASSET MANIFEST的asset_manifest_id=ASSET-CONTENT-002、manifest_revision=1、manifest_identity_status=VALID、manifest_fingerprint非空。",
+    "manifest_fingerprint按ASSET_IDENTITY_GATE从canonical ACTIVE identities自动计算。",
+    "交付列出五页fingerprint、manifest path/id/revision/fingerprint、failed_scope、blocked_reason。",
+    "正式写入GitHub后必须重新读取manifest与交付，确认真实存在且字段一致。",
+    "R09不得激活manifest，不得创建IMAGE_REVIEW任务，不得声明R10/R11/R12 PASS。"
+  ],
+  "expected_output_paths": [
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/产物/图片执行/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|VISUAL_DELIVERY|a6c302fcf45571852dda59e72b687dadc5b5b2ab|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|IMAGE_BUILD|R09|V1|1|null|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|VISUAL_DELIVERY|a6c302fcf45571852dda59e72b687dadc5b5b2ab|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R09只做同一批USER_FILE的正式资产登记，不重生成。",
+    "R01将在R09正式GitHub交付后独立执行ASSET_IDENTITY_GATE；只有gate PASS才会激活manifest并创建R10/R11/R12并行审核。"
+  ]
+}
