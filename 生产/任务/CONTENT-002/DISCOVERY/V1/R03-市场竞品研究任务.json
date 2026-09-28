@@ -1,0 +1,100 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R03-V1",
+  "stage": "DISCOVERY",
+  "role_id": "R03",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "DISCOVERY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T09:27:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "required_role_ids": [
+      "R02",
+      "R03"
+    ],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "prior_content_user_reported_published": true,
+    "prior_content_formal_postpublish_loop_deferred": true,
+    "research_platform": "小红书",
+    "sample_window_end": "2026-09-28T09:27:00+08:00",
+    "account_growth_stage": "EARLY_COLD_START_USER_REPORTED_1_PUBLISHED"
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json"
+  ],
+  "scope": [
+    "独立研究当前女性美妆/美甲/护肤竞品与代表内容，不读取R02草稿",
+    "围绕至少5个代表性内容/商品方向，每个方向尽量抽取8至12条可验证代表样本；样本不足必须标EXPLORATORY并说明实际样本数",
+    "拆解标题、首图、页数、人物/产品比例、拍摄角度、场景、视觉节奏、信息密度、收藏点、评论问题、用户反对点与商业化痕迹",
+    "优先覆盖近期热门产品/新品/争议产品的真实用户讨论结构，同时避免把单条爆款当稳定规律",
+    "区分观察事实与归纳，输出可借鉴机制及必须差异化点，不复制同行具体文案/版式/照片",
+    "不决定最终商品"
+  ],
+  "frozen_scope": [
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "SYNTHETIC_VISUAL_PERSONA现实亲测经历禁止",
+    "R02并行独立性"
+  ],
+  "acceptance_criteria": [
+    "至少5个研究方向；目标样本量为每方向8至12条，样本不足必须显式标EXPLORATORY",
+    "样本记录来源与时间，观察事实和归纳分离",
+    "至少覆盖标题/首图/页面结构/人物产品比例/构图/收藏点/评论问题/反对点/商业化痕迹",
+    "输出可借鉴机制与差异化点，不复刻同行成品",
+    "正式交付写后回读并返回R01"
+  ],
+  "expected_output_paths": [
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+    "生产/产物/竞品研究/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R03|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "只完成R03独立研究，不等待、不读取、不模仿R02交付。"
+  ]
+}
