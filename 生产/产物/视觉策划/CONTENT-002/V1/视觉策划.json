@@ -1,0 +1,693 @@
+{
+  "schema": "XHS_XP1_R08_VISUAL_PLAN_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-VISUAL-PLAN-R08-V1",
+  "role_id": "R08",
+  "work_mode": "CONTENT_VISUAL_PLAN",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key": "CONTENT-002|VISUAL_PLAN|R08|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "result": "PASS",
+  "input_bindings": {
+    "active_copy": {
+      "path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+      "blob_sha": "2b6cb650577e2dd0877a2c3a3d37dfc929497fe8",
+      "copy_revision": 1,
+      "fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7"
+    },
+    "planning": {
+      "path": "生产/产物/策划/CONTENT-002/V1/策划.json",
+      "blob_sha": "eb46295d78a873b05dccf001c48bb474a8297563"
+    },
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "anchors": [
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+      ]
+    },
+    "product": {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1"
+    },
+    "active_sku": {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+      "reference_images": {
+        "full": {
+          "ref_id": "SKU-365-REF-FULL",
+          "transport": "URL",
+          "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+          "identity_scope": "365 Charmed Green palette + matching ivory/ecru couture pouch only",
+          "actual_visual_read": "Dior黑色五色盘；中央菱形浅鼠尾草绿CD压纹；四周四叶草压纹；盘面包含黄绿/香槟米色/鼠尾草绿/橄榄金绿/深咖灰棕；配套象牙/米白绗缝手包带灰绿四叶草。"
+        },
+        "color": {
+          "ref_id": "SKU-365-REF-COLOR",
+          "transport": "URL",
+          "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+          "identity_scope": "365 Charmed Green five-pan close-up only",
+          "actual_visual_read": "五格结构清晰：中央菱形CD；四周四叶草压纹；可观察为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown。"
+        }
+      }
+    },
+    "sibling_sku": {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1",
+      "role": "P4_COMPARISON_ONLY",
+      "reference_images": {
+        "full": {
+          "ref_id": "SKU-883-REF-FULL",
+          "transport": "URL",
+          "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+          "identity_scope": "883 Lucky Rosewood palette + matching pale pink couture pouch only; P4 comparison use",
+          "actual_visual_read": "Dior黑色五色盘；中央菱形玫瑰木/藕棕CD压纹；四周四叶草压纹；配套浅粉绗缝手包带浅色四叶草。"
+        },
+        "color": {
+          "ref_id": "SKU-883-REF-COLOR",
+          "transport": "URL",
+          "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg",
+          "identity_scope": "883 Lucky Rosewood five-pan close-up only; P4 comparison use",
+          "actual_visual_read": "五格玫瑰木和谐：dusty rose/rose-gold、pale blush-ivory pearl、muted rosewood-mauve center、deep berry/burgundy、soft pale pink-lilac pearl。"
+        }
+      }
+    },
+    "r04": {
+      "path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+      "blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+    }
+  },
+  "official_reference_actual_read": {
+    "sku_365_full": true,
+    "sku_365_color": true,
+    "sku_883_full": true,
+    "sku_883_color": true,
+    "identity_summary": "365=象牙/米白手包+绿色和谐五色盘；883=浅粉手包+玫瑰木和谐五色盘。两者均为黑色Dior五色盘、中央菱形CD、四周四叶草压纹。"
+  },
+  "global_visual_system": {
+    "canvas": {
+      "ratio": "3:4",
+      "recommended_pixels": "1242x1660或同等比例高清",
+      "orientation": "portrait"
+    },
+    "direction": "真实拍摄感 + 克制编辑感 + 轻奢但非硬广。主色浅象牙、黑、鼠尾草绿、橄榄绿；P4仅用少量玫瑰木/淡粉灰区分883。",
+    "color_temperature": "人物/生活感页约5000-5300K；产品事实页约5100-5400K。避免高饱和翠绿、奢华金光或促销红。",
+    "typography": {
+      "primary": "中文无衬线/黑体，中粗至粗体",
+      "secondary": "英文/数字使用干净无衬线",
+      "max_weight_levels": 3,
+      "rules": [
+        "关键事实不用超细字",
+        "公开文字不让生成模型自行造字，统一后置排版",
+        "英文SKU与visible_direction保持原拼写"
+      ]
+    },
+    "spacing": {
+      "outer_margin": "6%-7%",
+      "top_safe": "7%",
+      "bottom_safe": "10%",
+      "minimum_card_gap": "2.5%-3%",
+      "line_spacing": "1.2-1.35"
+    },
+    "realism_rules": [
+      "皮肤保留自然纹理",
+      "黑色Dior盘保持黑而非灰塑料",
+      "珠光不过曝",
+      "五格结构和四叶草压纹优先准确",
+      "couture pouch颜色必须与SKU绑定"
+    ],
+    "cross_page_rhythm": [
+      "P1人物+365双主体去FOMO封面",
+      "P2纯365产品事实地图",
+      "P3纯三问自筛信息卡",
+      "P4 365主位+883小型路线对照",
+      "P5收藏检查卡+小型365锚点"
+    ],
+    "anti_template_rule": "相邻页至少在主体、景别、构图、信息密度、背景材质中变化2项以上；本方案五页主体和功能均不同。",
+    "persona_boundary": "仅P1使用PERSONA。人物不承担现实试用经历，不手持/涂抹产品，不复刻锚点原服装发型。",
+    "product_identity_gate": "任何365产品展示必须绑定PRODUCT-002 + SKU-002-365 + 365官方FULL/COLOR参考；883只允许P4且绑定SKU-002-883 + 883官方参考。",
+    "fomo_guard": "任何页面禁止售罄红章、倒计时、最后机会、库存告急、全球售罄、抢购按钮等视觉。"
+  },
+  "pages": [
+    {
+      "page_id": "P1",
+      "purpose": "限定去FOMO决策钩子：先把“限定”从购买理由里拿开，转向这组绿色是否真的进入日常眼妆。",
+      "page_type": "EDITORIAL_COVER_PERSONA_PLUS_PRODUCT",
+      "subject": "PERSONA-001编辑型半身肖像 + 365 Charmed Green独立产品视觉",
+      "persona_required": true,
+      "product_required": true,
+      "persona_lock_ref": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "product_lock_ref": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "sku_lock_refs": [
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "styling": {
+        "clothing": "浅象牙无图案针织短袖或简洁方领上衣，外搭鼠尾草绿轻薄西装/开衫；避免锚点碎花吊带、白色大针织衫整套复刻。",
+        "hair": "深棕自然披发，轻微侧分；不使用大白蝴蝶结，不复刻半扎发。",
+        "makeup": "自然通勤底妆；眼妆只做克制橄榄灰棕氛围，不呈现‘用了365后的效果’叙事。",
+        "accessories": "小号金属耳钉或无配饰，避免奢侈品Logo堆叠。",
+        "expression": "平静、有判断感，轻微抬眉或看向标题区。",
+        "action": "人物不手持、不涂抹、不打开产品；365产品作为独立静物层出现。"
+      },
+      "shot": {
+        "framing": "胸上至半身",
+        "camera": "眼平，50mm左右等效视角，避免广角脸形变",
+        "angle": "人物轻微3/4转向，右侧面颊小痣保持可见",
+        "composition": "人物左侧约42%-46%；365开盖盘+象牙手包作为右下独立产品组约22%-26%；标题放上中偏右",
+        "subject_ratio": "人物约55%-62%画面高度；产品组约25%画面面积"
+      },
+      "scene": {
+        "background": "浅象牙编辑桌/窗边，少量黑色书册与鼠尾草绿玻璃作为点缀；不做Dior广告棚景复刻。",
+        "light": "柔和侧窗光+弱正面补光；人物肤色自然，黑盘不死黑，象牙手包不过曝。",
+        "materials": "象牙纸、磨砂玻璃、细黑金属、亚麻",
+        "color_temperature": "5000-5300K，中性偏暖白；绿色点缀保持克制"
+      },
+      "product_display": {
+        "position": "右下独立组",
+        "orientation": "365开盖盘正面3/4 + 象牙/米白couture pouch并置",
+        "recognition_points": [
+          "Dior黑色五色盘",
+          "5 pans：中央菱形CD盘+四个外盘",
+          "外盘四叶草压纹",
+          "365绿色和谐配色",
+          "365专属象牙/米白绗缝手包+灰绿色四叶草"
+        ],
+        "reference_refs": [
+          {
+            "ref_id": "SKU-365-REF-FULL",
+            "transport": "URL",
+            "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+            "identity_scope": "365 Charmed Green palette + matching ivory/ecru couture pouch only",
+            "actual_visual_read": "Dior黑色五色盘；中央菱形浅鼠尾草绿CD压纹；四周四叶草压纹；盘面包含黄绿/香槟米色/鼠尾草绿/橄榄金绿/深咖灰棕；配套象牙/米白绗缝手包带灰绿四叶草。"
+          },
+          {
+            "ref_id": "SKU-365-REF-COLOR",
+            "transport": "URL",
+            "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+            "identity_scope": "365 Charmed Green five-pan close-up only",
+            "actual_visual_read": "五格结构清晰：中央菱形CD；四周四叶草压纹；可观察为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown。"
+          }
+        ]
+      },
+      "public_text": {
+        "headline": "Dior 365 Charmed Green",
+        "subheadline": "先别被限定推着买",
+        "body": "先问一个更实际的问题：这组绿色，真的会进入你的日常眼妆吗？",
+        "collection_context": "Lucky Clover｜Fall 2026"
+      },
+      "typography": {
+        "headline": "一级，无衬线/黑体中粗，2行以内",
+        "subheadline": "二级，字号约一级55%-60%，鼠尾草绿强调“限定”之外的判断",
+        "body": "三级常规字重，最多3行",
+        "collection_context": "最小层级，黑/灰色，小号英文"
+      },
+      "information_hierarchy": [
+        "headline",
+        "subheadline",
+        "365产品+人物",
+        "body",
+        "collection_context"
+      ],
+      "whitespace": "标题与人脸至少保持6%间隔；右下产品组四周留5%呼吸区",
+      "safe_zone": "四周6%；顶部7%；底部10%；产品不可压底部UI区",
+      "reference_refs": [
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+        "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png",
+        "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+        "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg"
+      ],
+      "forbidden_items": [
+        "售罄红章、倒计时、限量抢购、最后机会、全球售罄等FOMO视觉",
+        "人物手持/试用365形成亲测暗示",
+        "883产品或粉色couture pouch进入P1",
+        "365盘面变成玫瑰木/粉色路线",
+        "锚点旧碎花衣+白针织+白蝴蝶结整套复制",
+        "小痣缺失、换侧或面部比例漂移",
+        "仿拍Dior官方模特广告图或硬广构图"
+      ],
+      "acceptance_points": [
+        "公开文字逐字来自active copy，仅允许断行",
+        "365识别点完整，手包必须是象牙/米白+灰绿四叶草",
+        "人物身份与PERSONA-001一致，右侧面颊小痣可辨",
+        "画面传达‘停一下再判断’而非‘赶快买’",
+        "标题手机缩略图可读"
+      ],
+      "difference_from_neighbors": "P1有人物、有产品、有情绪钩子；P2完全移除人物并转为俯视产品事实地图。"
+    },
+    {
+      "page_id": "P2",
+      "purpose": "365五色色彩关系事实地图：让用户看清5 pans、中央菱形盘、四叶草压纹与五色结构。",
+      "page_type": "PRODUCT_FACT_MAP",
+      "subject": "365 Charmed Green五色盘近景 + 五色文字地图",
+      "persona_required": false,
+      "product_required": true,
+      "persona_lock_ref": null,
+      "product_lock_ref": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "sku_lock_refs": [
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "accessories": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "产品中近景/顶部俯视",
+        "camera": "俯视约10°-18°，尽量接近盘面正视",
+        "angle": "保证五格轮廓和中央菱形可准确读取",
+        "composition": "五色盘居中上半区约45%-52%；五条色彩描述分布于下半区或左右，不用连线强行绑定具体盘位",
+        "subject_ratio": "盘面约画面宽度48%-55%"
+      },
+      "scene": {
+        "background": "浅象牙纯净桌面，黑色细边框或深灰阴影稳定层级",
+        "light": "双侧柔光+顶部柔光，四叶草纹理和CD压纹必须看得见，珠光不过曝",
+        "materials": "哑光象牙纸、少量黑色亚克力",
+        "color_temperature": "5100-5400K"
+      },
+      "product_display": {
+        "position": "中央偏上",
+        "orientation": "开盖盘正面近俯视，不出现883手包",
+        "recognition_points": [
+          "5 pans",
+          "central diamond-shaped pan",
+          "中央CD压纹",
+          "四周四叶草压纹",
+          "light yellow-green/chartreuse-gold",
+          "pale champagne-beige",
+          "muted sage green center",
+          "olive-gold/moss green",
+          "deep espresso-charcoal brown"
+        ],
+        "reference_refs": [
+          {
+            "ref_id": "SKU-365-REF-FULL",
+            "transport": "URL",
+            "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+            "identity_scope": "365 Charmed Green palette + matching ivory/ecru couture pouch only",
+            "actual_visual_read": "Dior黑色五色盘；中央菱形浅鼠尾草绿CD压纹；四周四叶草压纹；盘面包含黄绿/香槟米色/鼠尾草绿/橄榄金绿/深咖灰棕；配套象牙/米白绗缝手包带灰绿四叶草。"
+          },
+          {
+            "ref_id": "SKU-365-REF-COLOR",
+            "transport": "URL",
+            "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+            "identity_scope": "365 Charmed Green five-pan close-up only",
+            "actual_visual_read": "五格结构清晰：中央菱形CD；四周四叶草压纹；可观察为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown。"
+          }
+        ]
+      },
+      "public_text": {
+        "headline": "先看365的五色色彩关系",
+        "intro": "它不是一盘“只有绿色”的眼影。真正影响使用门槛的，是浅色、绿色和深色怎么一起出现。",
+        "visible_color_map": [
+          "light yellow-green / chartreuse-gold",
+          "pale champagne-beige",
+          "muted sage green center",
+          "olive-gold / moss green",
+          "deep espresso-charcoal brown"
+        ],
+        "structure_note": "5 pans｜central diamond-shaped pan + four surrounding pans",
+        "finish_note": "matte / satin / pearly",
+        "footer": "这些是锁定官方盘面里可观察到的色彩关系，不把它们改写成Dior官方中文色名。"
+      },
+      "typography": {
+        "headline": "一级，顶部左对齐",
+        "intro": "二级，两行以内",
+        "color_map": "五条同级信息，用黑字+细绿点区分，不翻译成自造中文色名",
+        "structure_note": "三级技术标签",
+        "finish_note": "三级技术标签",
+        "footer": "底部说明，字重常规"
+      },
+      "information_hierarchy": [
+        "headline",
+        "intro",
+        "365五色盘",
+        "visible_color_map",
+        "structure_note+finish_note",
+        "footer"
+      ],
+      "whitespace": "产品四周8%；五条色彩描述之间至少2.5%间距",
+      "safe_zone": "四周6%；底部12%用于footer和UI安全",
+      "reference_refs": [
+        "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+        "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "forbidden_items": [
+        "任何人物",
+        "把五条可观察色彩改写成Dior官方中文色名",
+        "盘面变成四格/六格或中心不是菱形",
+        "四叶草压纹缺失或变成其他纹样",
+        "883玫瑰木配色、浅粉手包、其他季Dior绿盘",
+        "为了美观改变365真实五色关系"
+      ],
+      "acceptance_points": [
+        "5 pans结构准确，中央菱形CD清楚",
+        "四个外盘四叶草压纹可见",
+        "五条visible_color_map 5/5完整无改写",
+        "365五色与官方COLOR reference一致",
+        "footer明确这是可观察色彩关系，不冒充官方中文色名",
+        "手机端文字可读"
+      ],
+      "difference_from_neighbors": "P2是无人物的俯视事实页；P3切换为纯决策问答信息页，不继续展示产品大图。"
+    },
+    {
+      "page_id": "P3",
+      "purpose": "选365前3问自我筛选：把使用频率、绿色存在感和真实场景转成可回答的购买前判断。",
+      "page_type": "THREE_QUESTION_SELF_FILTER_CARD",
+      "subject": "三张问题卡 + 极少量365色彩抽象条带，不展示真人试色",
+      "persona_required": false,
+      "product_required": false,
+      "persona_lock_ref": null,
+      "product_lock_ref": null,
+      "sku_lock_refs": [
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "accessories": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "纯信息卡",
+        "camera": null,
+        "angle": null,
+        "composition": "顶部标题约16%；中部三张问题卡纵向或1+2错落；右侧可放5色抽象窄条作为视觉提示；底部guidance独立区",
+        "subject_ratio": "文字与留白为主，装饰色块不超过18%"
+      },
+      "scene": {
+        "background": "浅象牙底，黑字，鼠尾草绿/橄榄绿细线和小面积色块",
+        "light": "平面设计，不模拟棚拍硬光",
+        "materials": "轻纸张纹理/低透明磨砂卡片",
+        "color_temperature": "视觉中性偏暖，避免过绿"
+      },
+      "product_display": null,
+      "public_text": {
+        "headline": "选365前，先问自己3件事",
+        "questions": [
+          "① 绿色会真的进入你的日常眼妆，还是只停在“看起来很特别”？",
+          "② 你愿意让绿色承担多少存在感：很轻、能看见，还是直接成为重点？",
+          "③ 你的真实使用场景够不够：通勤、周末、聚会里，能想到多少次会主动选它？"
+        ],
+        "guidance": "如果绿色只会偶尔做一点点缀，就把“限定”先放一边，看看这点使用频率值不值得为一整盘买单。喜欢绿色路线，也不等于自动适合所有肤色和眼型。"
+      },
+      "typography": {
+        "headline": "一级，左上",
+        "question_numbers": "大号①②③，鼠尾草绿",
+        "questions": "二级，中粗体，单卡2-4行",
+        "guidance": "三级常规字重，底部独立浅灰绿底卡"
+      },
+      "information_hierarchy": [
+        "headline",
+        "three questions",
+        "guidance"
+      ],
+      "whitespace": "每张问题卡内边距6%；卡间距3%-4%",
+      "safe_zone": "四周7%；底部10%",
+      "reference_refs": [
+        "生产/产物/文案/CONTENT-002/V1/文案.json",
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "forbidden_items": [
+        "真人试色前后对比",
+        "持妆测试、眼妆步骤图、刷眼动作",
+        "冒充Dior官方教程",
+        "任何‘所有肤色适合/不适合’绝对结论",
+        "售罄、倒计时、抢购符号",
+        "添加购买按钮或价格"
+      ],
+      "acceptance_points": [
+        "三问3/3逐字完整",
+        "guidance逐字完整",
+        "页面一眼看出是‘自我筛选’而非试妆教程",
+        "没有人物亲测叙事、没有官方教程暗示",
+        "文字优先于装饰"
+      ],
+      "difference_from_neighbors": "P3是全篇最纯粹的问答卡；P2是产品事实，P4切换成双SKU路线对照。"
+    },
+    {
+      "page_id": "P4",
+      "purpose": "365 Charmed Green vs 883 Lucky Rosewood：展示同季两条色彩路线，365保持主位，883只做参照。",
+      "page_type": "PRIMARY_VS_SIBLING_ROUTE_COMPARISON",
+      "subject": "365主卡 + 883小型对照卡",
+      "persona_required": false,
+      "product_required": true,
+      "persona_lock_ref": null,
+      "product_lock_ref": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "sku_lock_refs": [
+        "生产/批准/SKU-002-365/LOCK-V1.json",
+        "生产/批准/SKU-002-883/LOCK-V1.json"
+      ],
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "accessories": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "产品双卡式静物/信息混排",
+        "camera": "365略俯视3/4；883正面小图",
+        "angle": "两盘都需保留五格结构与中央菱形",
+        "composition": "365占左侧/上部约62%-68%视觉权重；883占右侧/下部约28%-34%；中间用细线或‘vs’文本弱连接，禁止做胜负竞技感",
+        "subject_ratio": "365产品图约32%-38%；883产品图约16%-20%"
+      },
+      "scene": {
+        "background": "主底浅象牙；365区域鼠尾草绿/橄榄绿细边；883区域少量玫瑰木/淡粉灰细边",
+        "light": "产品图保持真实柔光；不做高对比广告光束",
+        "materials": "哑光纸+少量细黑金属线",
+        "color_temperature": "5200K左右"
+      },
+      "product_display": {
+        "position": "365主位、883小位",
+        "orientation": "365建议使用FULL或COLOR reference大图；883只用FULL/COLOR reference缩小对照",
+        "recognition_points_365": [
+          "黑色五色盘",
+          "中央菱形CD",
+          "四叶草压纹",
+          "黄绿/香槟/鼠尾草/橄榄金/深咖灰棕",
+          "象牙/米白+灰绿四叶草手包如出现"
+        ],
+        "recognition_points_883": [
+          "黑色五色盘",
+          "中央菱形CD",
+          "四叶草压纹",
+          "玫瑰金/浅粉珠光/玫瑰木藕棕/莓红/浅粉紫珠光",
+          "浅粉手包如出现"
+        ],
+        "reference_refs": [
+          {
+            "ref_id": "SKU-365-REF-FULL",
+            "transport": "URL",
+            "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+            "identity_scope": "365 Charmed Green palette + matching ivory/ecru couture pouch only",
+            "actual_visual_read": "Dior黑色五色盘；中央菱形浅鼠尾草绿CD压纹；四周四叶草压纹；盘面包含黄绿/香槟米色/鼠尾草绿/橄榄金绿/深咖灰棕；配套象牙/米白绗缝手包带灰绿四叶草。"
+          },
+          {
+            "ref_id": "SKU-365-REF-COLOR",
+            "transport": "URL",
+            "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+            "identity_scope": "365 Charmed Green five-pan close-up only",
+            "actual_visual_read": "五格结构清晰：中央菱形CD；四周四叶草压纹；可观察为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown。"
+          },
+          {
+            "ref_id": "SKU-883-REF-FULL",
+            "transport": "URL",
+            "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+            "identity_scope": "883 Lucky Rosewood palette + matching pale pink couture pouch only; P4 comparison use",
+            "actual_visual_read": "Dior黑色五色盘；中央菱形玫瑰木/藕棕CD压纹；四周四叶草压纹；配套浅粉绗缝手包带浅色四叶草。"
+          },
+          {
+            "ref_id": "SKU-883-REF-COLOR",
+            "transport": "URL",
+            "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg",
+            "identity_scope": "883 Lucky Rosewood five-pan close-up only; P4 comparison use",
+            "actual_visual_read": "五格玫瑰木和谐：dusty rose/rose-gold、pale blush-ivory pearl、muted rosewood-mauve center、deep berry/burgundy、soft pale pink-lilac pearl。"
+          }
+        ]
+      },
+      "public_text": {
+        "headline": "365 vs 883｜其实是在选两条色彩路线",
+        "comparisons": [
+          {
+            "sku": "365 Charmed Green",
+            "family": "green harmony",
+            "visible_direction": "light yellow-green / champagne-beige / muted sage / olive-moss green / deep espresso-charcoal",
+            "decision_copy": "如果你明确想把绿色放进眼妆结构，365继续看。"
+          },
+          {
+            "sku": "883 Lucky Rosewood",
+            "family": "rosewood harmony",
+            "visible_direction": "dusty rose / rose-gold / blush-ivory pearl / rosewood-mauve / berry-burgundy / pale pink-lilac pearl",
+            "decision_copy": "如果你真正偏爱玫瑰木路线，就把883当同季参照，不用为了限定感硬选365。"
+          }
+        ],
+        "footer": "不是谁更高级，也不是谁一定更日常。看你真正会用哪条色彩路线。"
+      },
+      "typography": {
+        "headline": "一级，顶部",
+        "sku_names": "二级中粗，365字号/卡片面积大于883约20%-30%",
+        "family": "三级小标签",
+        "visible_direction": "三级正文，小字号但可读",
+        "decision_copy": "二级正文",
+        "footer": "底部中等强调"
+      },
+      "information_hierarchy": [
+        "headline",
+        "365主卡",
+        "883参照卡",
+        "各自route text",
+        "footer"
+      ],
+      "whitespace": "两卡之间至少5%；365卡内部留白大于883，避免视觉拥挤",
+      "safe_zone": "四周6%；底部10%",
+      "reference_refs": [
+        "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+        "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+        "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+        "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+      ],
+      "forbidden_items": [
+        "365与883互换盘面或couture pouch",
+        "把883做成与365等大甚至更大的主视觉",
+        "写成新旧版本、高低配、升级版",
+        "暗示谁更高级、谁一定更日常",
+        "绝对肤色适配结论",
+        "胜负奖章、打勾打叉、冠军/淘汰视觉"
+      ],
+      "acceptance_points": [
+        "365视觉权重明确高于883",
+        "365与883各自盘面、颜色、手包身份正确",
+        "comparisons两组文字逐字来自active copy",
+        "footer逐字完整",
+        "画面表达‘路线选择’而不是‘优劣排名’"
+      ],
+      "difference_from_neighbors": "P4是双SKU对照页；P3没有产品，P5回归单页收藏检查卡且不再做双产品对照。"
+    },
+    {
+      "page_id": "P5",
+      "purpose": "收藏检查卡 + 评论互动：把限定去FOMO结论压缩为下单前检查，不制造紧迫感。",
+      "page_type": "SAVE_CHECKLIST_EDITORIAL_CARD",
+      "subject": "四项检查卡 + 小型365静物锚点",
+      "persona_required": false,
+      "product_required": true,
+      "persona_lock_ref": null,
+      "product_lock_ref": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "sku_lock_refs": [
+        "生产/批准/SKU-002-365/LOCK-V1.json"
+      ],
+      "styling": {
+        "clothing": null,
+        "hair": null,
+        "makeup": null,
+        "accessories": null,
+        "expression": null,
+        "action": null
+      },
+      "shot": {
+        "framing": "信息卡+小型产品静物",
+        "camera": "365产品平视或轻微低角3/4，和P2俯视形成差异",
+        "angle": "产品可用闭盖/开盖组合，但必须仍是365",
+        "composition": "标题顶部；左侧/中部四项checklist占60%-65%；365产品小图右下约18%-22%；summary与comment_prompt底部独立区",
+        "subject_ratio": "文字约65%；产品≤22%"
+      },
+      "scene": {
+        "background": "浅象牙底，黑字；鼠尾草绿作为勾线/编号；不使用红色促销元素",
+        "light": "产品柔和侧光，静物不做高饱和商业广告效果",
+        "materials": "纸张、细线、亚克力小底座",
+        "color_temperature": "5100-5300K"
+      },
+      "product_display": {
+        "position": "右下小型锚点",
+        "orientation": "365开盖盘或盘+象牙手包小组合",
+        "recognition_points": [
+          "365五色盘不变",
+          "中央菱形CD",
+          "四叶草压纹",
+          "若手包出现必须象牙/米白+灰绿四叶草"
+        ],
+        "reference_refs": [
+          {
+            "ref_id": "SKU-365-REF-FULL",
+            "transport": "URL",
+            "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+            "identity_scope": "365 Charmed Green palette + matching ivory/ecru couture pouch only",
+            "actual_visual_read": "Dior黑色五色盘；中央菱形浅鼠尾草绿CD压纹；四周四叶草压纹；盘面包含黄绿/香槟米色/鼠尾草绿/橄榄金绿/深咖灰棕；配套象牙/米白绗缝手包带灰绿四叶草。"
+          },
+          {
+            "ref_id": "SKU-365-REF-COLOR",
+            "transport": "URL",
+            "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+            "identity_scope": "365 Charmed Green five-pan close-up only",
+            "actual_visual_read": "五格结构清晰：中央菱形CD；四周四叶草压纹；可观察为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown。"
+          }
+        ]
+      },
+      "public_text": {
+        "headline": "收藏这张｜限定不是适配证明",
+        "checklist": [
+          "配色会不会真的用？",
+          "使用场景够不够多？",
+          "自己真正偏绿色，还是玫瑰木路线？",
+          "库存只看具体地区的Dior官方渠道实时状态。"
+        ],
+        "summary": "365的购买理由，应该是你真的想用这组绿色和谐，而不是只因为它写着限定。",
+        "comment_prompt": "如果只能选一个方向，你会选365的绿色和谐，还是883的玫瑰木和谐？"
+      },
+      "typography": {
+        "headline": "一级，左上",
+        "checklist": "二级，每项独立行/卡片，使用普通圆点或数字，不用红色警报符号",
+        "summary": "三级，单独浅绿底卡",
+        "comment_prompt": "底部互动条，字号略高于summary"
+      },
+      "information_hierarchy": [
+        "headline",
+        "checklist",
+        "summary",
+        "365产品小锚点",
+        "comment_prompt"
+      ],
+      "whitespace": "四项checklist之间3%间距；summary上下留4%",
+      "safe_zone": "四周7%；底部10%",
+      "reference_refs": [
+        "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+        "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+        "生产/产物/文案/CONTENT-002/V1/文案.json"
+      ],
+      "forbidden_items": [
+        "售罄红章",
+        "抢购倒计时",
+        "最后机会",
+        "全球售罄/全球有货",
+        "红色警报、购物车、购买按钮、价格",
+        "把库存地区状态写成普遍结论",
+        "883产品图抢占页面主视觉"
+      ],
+      "acceptance_points": [
+        "checklist 4/4逐字完整",
+        "库存项保留‘具体地区Dior官方渠道实时状态’",
+        "summary与comment_prompt逐字完整",
+        "365静物身份准确且面积克制",
+        "整页首先像收藏检查卡，不像促销页"
+      ],
+      "difference_from_neighbors": "P5是高可读收藏卡，仅保留小型365锚点；与P4双SKU产品对照明显不同。"
+    }
+  ],
+  "completed_at": "2026-09-28T12:46:00+08:00"
+}
