@@ -1,0 +1,126 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R05-V1",
+  "stage": "PRODUCT_LOCK",
+  "role_id": "R05",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PRODUCT_LOCK",
+  "created_by": "R01",
+  "created_at": "2026-09-28T10:03:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "formal_product_selection_path": "生产/产物/总监/CONTENT-002/PRODUCT_LOCK/V1/正式选品.json",
+    "formal_product_selection_blob_sha": "4e7b9fded8589f5faa01bca9b06a69495cc4a05a",
+    "selected_candidate_id": "CAND-05",
+    "selected_product_identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection",
+    "sku_scope": [
+      "365 Charmed Green",
+      "883 Lucky Rosewood"
+    ]
+  },
+  "input_paths": [
+    "生产/产物/总监/CONTENT-002/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-002/V1/交付.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "模板/锁定/PRODUCT_LOCK_TEMPLATE.json",
+    "模板/锁定/SKU_LOCK_TEMPLATE.json"
+  ],
+  "scope": [
+    "仅处理R01正式选中的CAND-05，不得改选CAND-03或新增商品。",
+    "建立1份PRODUCT DRAFT，正式产品必须绑定Dior / Diorshow 5 Couleurs - Limited Edition / Lucky Clover Fall 2026 Makeup Collection。",
+    "分别建立365 Charmed Green与883 Lucky Rosewood两份独立SKU DRAFT，不得将两个SKU合并成一个模糊目标。",
+    "核实并记录5色盘结构、matte/satin/pearly妆效结构、couture pouch、四叶草压纹/包装主题。",
+    "每个SKU必须绑定可回溯的Dior官方一手reference_images，并明确目标SKU图片，不得用搜索缩略图猜图。",
+    "必须把365 Charmed Green与883 Lucky Rosewood记录为同季、同产品线两个兄弟SKU，而不是新旧版本。",
+    "Lucky Clover是2026秋季系列主题，不得替代365的Dior官方英文色名Charmed Green。",
+    "地区在售状态必须分地区记录，不得把美国官网下架状态扩写为全球售罄，也不得把国际页面存在扩写为中国大陆有货。",
+    "中国大陆正式中文色名若无Dior中国一手证据，保持UNKNOWN，不得自译后作为官方名。",
+    "R05只提交DRAFT与证据，不批准PRODUCT/SKU LOCK，不修改active_product_lock_path或active_sku_lock_path。"
+  ],
+  "frozen_scope": [
+    "R01正式选品=CAND-05",
+    "正式产品名=Diorshow 5 Couleurs - Limited Edition",
+    "系列=Lucky Clover Fall 2026 Makeup Collection",
+    "365=Charmed Green",
+    "883=Lucky Rosewood",
+    "365/883为同季同产品线兄弟SKU",
+    "R04当前商品事实研究Blob=572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+    "ACCOUNT_STRATEGY/VOICE/PERSONA现行LOCK",
+    "SYNTHETIC_VISUAL_PERSONA真实性边界"
+  ],
+  "acceptance_criteria": [
+    "PRODUCT草案status=DRAFT且brand/formal_product_name/series与R04 VERIFIED事实精确一致。",
+    "PRODUCT草案必须记录官方URL、reference_images、known SKU options以及地区库存差异边界。",
+    "SKU-365草案必须唯一对应365 Charmed Green；SKU-883草案必须唯一对应883 Lucky Rosewood。",
+    "两份SKU草案各自必须有非空Dior官方一手reference_images和可追溯来源。",
+    "两份SKU草案必须记录5色盘结构、visible_color_signature、logo_or_text_signature、couture pouch/包装识别点和兄弟SKU。",
+    "不得把Lucky Clover写成365唯一正式色名。",
+    "不得把365/883写成新旧版本。",
+    "中国大陆官方中文色名、实时库存、净含量若无法一手确认，必须明确UNKNOWN，不得补猜。",
+    "任一关键SKU图片身份无法唯一确认时必须BLOCKED_SKU_UNCERTAIN并指出最小阻塞范围。",
+    "全部草案与交付写后回读验证，交付回R01。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/锁定草案/CONTENT-002/V1/PRODUCT-002-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/SKU-002-365-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/SKU-002-883-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|PRODUCT_LOCK|R05|V1|1|null|SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R05不得修改R01正式选品。",
+    "R05不得自行批准LOCK。",
+    "R01将在R05 PASS后机械检查PRODUCT草案和365/883两份SKU草案，再正式批准PRODUCT LOCK并确定唯一active SKU LOCK。"
+  ]
+}
