@@ -1,0 +1,83 @@
+{
+  "schema": "SYS-003_PARTIAL_REVISION_TEMPLATE_V2",
+  "task_id": "CONTENT-002",
+  "task_version": "V1",
+  "input_revision": 2,
+  "parent_version": "V1",
+  "revision_round": "R1",
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVISION_REQUIRED",
+  "revision_path": "生产/返修/CONTENT-002/V1/R1/",
+  "scope": [
+    "P1",
+    "P2",
+    "P4",
+    "P5"
+  ],
+  "frozen_pages": [
+    "P3"
+  ],
+  "issues": [
+    {
+      "page_id": "P1",
+      "severity": "P0",
+      "problem": "365 Charmed Green product/pouch visual identity does not match exact official Dior SKU reference.",
+      "required_fix": "Keep current page function/copy/persona intent, but replace product/pouch with verified first-party Dior 365 official asset. Do not generatively redraw the product."
+    },
+    {
+      "page_id": "P2",
+      "severity": "P0",
+      "problem": "365 five-pan product visual/color placement drifted from exact official Dior reference.",
+      "required_fix": "Use exact official Dior 365 product image/cutout as locked layer and rebuild labels around it. Preserve official pan geometry, colors, CD center and clover embossing."
+    },
+    {
+      "page_id": "P4",
+      "severity": "P0",
+      "problem": "365/883 comparison product and couture pouch visuals are not faithful to official exact-SKU packaging.",
+      "required_fix": "Use verified official Dior 365 and 883 assets only. 365 remains dominant; 883 remains smaller comparison. Do not recolor or synthesize either product/pouch."
+    },
+    {
+      "page_id": "P5",
+      "severity": "P0",
+      "problem": "365 product/pouch visual identity is not faithful to official exact-SKU reference.",
+      "required_fix": "Replace only product/pouch visual with exact official Dior 365 asset; preserve page purpose and copy."
+    }
+  ],
+  "allowed_changes": [
+    "Only P1/P2/P4/P5 image composition and their direct product visual layers.",
+    "Background/persona/layout may be regenerated or adjusted only as needed to place exact official product assets.",
+    "Official Dior product assets may be cropped, scaled, masked/background-removed and placed; no recolor, redraw, inpainting, logo/pan/pouch modification, style transfer, or SKU mixing."
+  ],
+  "forbidden_changes": [
+    "Do not modify P3.",
+    "Do not modify final copy meaning, PRODUCT/SKU locks, PERSONA lock or page order.",
+    "Do not generate a lookalike Dior product.",
+    "Do not use third-party marketplace seller images unless the listing is verified as Dior official flagship and R01 task explicitly permits it."
+  ],
+  "re_review_scope": [
+    "P1/P2/P4/P5 exact product identity",
+    "P1 PERSONA consistency because P1 pixels will change",
+    "P1-P5 cross-page visual after new manifest",
+    "CONTENT truth/compliance after new manifest and new image-QA evidence"
+  ],
+  "traceability": {
+    "required_fields_in_every_delivery": [
+      "task_version",
+      "input_revision",
+      "parent_version",
+      "revision_round"
+    ],
+    "must_not_overwrite_previous_v_or_r": true,
+    "must_not_use_legacy_root_revision_path": true
+  },
+  "max_same_issue_revision_rounds": 3,
+  "on_same_issue_after_R3": "BLOCKED_CONFLICT",
+  "source_policy_path": "生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json",
+  "correction_record_path": "生产/产物/总监/CONTENT-002/CORRECTION/V1/商品视觉身份纠错.json",
+  "authoritative_product_refs": {
+    "365_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+    "365_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+    "883_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+    "883_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+  }
+}
