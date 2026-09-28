@@ -1,0 +1,86 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-REVIEW-R01-V1",
+  "stage": "IMAGE_REVIEW",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVIEWING",
+  "phase": "IMAGE_REVIEW",
+  "created_by": "R01",
+  "created_at": "2026-09-28T15:20:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": "CONTENT-002-IMAGE-QA-G1",
+    "barrier_revision": 1,
+    "required_role_ids": [
+      "R10",
+      "R11",
+      "R12"
+    ],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "image_binary_transport": "USER_FILE",
+    "user_file_actual_pixels_required": true
+  },
+  "input_paths": [
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json",
+    "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+    "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审任务.json"
+  ],
+  "scope": [
+    "等待R10/R11/R12在同一active manifest下完成当前有效独立审核，不代替专业审核。",
+    "三者均PASS且证据有效时关闭IMAGE-QA barrier并继续合法路由。",
+    "任一FAIL/BLOCKED/STALE时保持当前IMAGE_REVIEW并按最小范围返修。"
+  ],
+  "frozen_scope": [
+    "active manifest id/revision/fingerprint",
+    "active copy fingerprint",
+    "PRODUCT-002/SKU-002-365/SKU-002-883/PERSONA-001 LOCK",
+    "R08 visual plan"
+  ],
+  "acceptance_criteria": [
+    "R10/R11/R12 required role各恰好一条当前有效交付。",
+    "三者全部绑定ASSET-CONTENT-002 revision 1 fingerprint sha256:9d6a5f...fec5。",
+    "仅全部PASS时barrier可COMPLETE。"
+  ],
+  "expected_output_paths": [],
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|IMAGE_REVIEW|R01|V1|1|null|MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
