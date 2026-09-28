@@ -1,0 +1,78 @@
+{
+  "schema": "XP1_R01_ASSET_IDENTITY_GATE_EVIDENCE_V1",
+  "content_id": "CONTENT-002",
+  "gate_id": "ASSET_IDENTITY_VERIFIABLE",
+  "gate_result": "PASS",
+  "checked_by": "R01",
+  "checked_at": "2026-09-28T15:20:00+08:00",
+  "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+  "asset_manifest_blob_sha": "91fb047cd21f22fcf5c94e2d3c331f27e1974a31",
+  "asset_manifest_id": "ASSET-CONTENT-002",
+  "manifest_revision": 1,
+  "manifest_identity_status": "VALID",
+  "manifest_fingerprint_type": "SHA256_CANONICAL_ACTIVE_ASSET_IDENTITIES",
+  "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+  "canonical_active_identity_material": "P1|CONTENT-002-P1|1|sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1\nP2|CONTENT-002-P2|1|sha256:554dc61f5fd0ee4de68c70741d455ecf1e830f32092b219a07b58a65737e582b\nP3|CONTENT-002-P3|1|sha256:7c501530a0b3e2e447af6c9b4b1e548ef739266ab17e60f78aa17b7cd70aac6f\nP4|CONTENT-002-P4|1|sha256:eb688650afe2bdce9ef2d402d04e4c8945faa73c05c626cab9dd525302bbf8e8\nP5|CONTENT-002-P5|1|sha256:533b39b0e6b6f80bcc02b4badea33e4770d0680d3b0509c2ba8b8ce9425fc889",
+  "active_page_count": 5,
+  "active_pages": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-002-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1",
+      "asset_ref": "user_file://file_000000002d5c81fda856c13c1aa071c2",
+      "asset_transport": "USER_FILE",
+      "status": "ACTIVE"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-002-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:554dc61f5fd0ee4de68c70741d455ecf1e830f32092b219a07b58a65737e582b",
+      "asset_ref": "user_file://file_00000000a03881fd9afd93c6aab5f278",
+      "asset_transport": "USER_FILE",
+      "status": "ACTIVE"
+    },
+    {
+      "page_id": "P3",
+      "asset_id": "CONTENT-002-P3",
+      "asset_revision": 1,
+      "fingerprint": "sha256:7c501530a0b3e2e447af6c9b4b1e548ef739266ab17e60f78aa17b7cd70aac6f",
+      "asset_ref": "user_file://file_00000000f57c81fdb77a751887aae666",
+      "asset_transport": "USER_FILE",
+      "status": "ACTIVE"
+    },
+    {
+      "page_id": "P4",
+      "asset_id": "CONTENT-002-P4",
+      "asset_revision": 1,
+      "fingerprint": "sha256:eb688650afe2bdce9ef2d402d04e4c8945faa73c05c626cab9dd525302bbf8e8",
+      "asset_ref": "user_file://file_0000000071d08230ae4584e5ca72b428",
+      "asset_transport": "USER_FILE",
+      "status": "ACTIVE"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-002-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:533b39b0e6b6f80bcc02b4badea33e4770d0680d3b0509c2ba8b8ce9425fc889",
+      "asset_ref": "user_file://file_000000007c6481fd9a431e86bc07c207",
+      "asset_transport": "USER_FILE",
+      "status": "ACTIVE"
+    }
+  ],
+  "delivery_binding": {
+    "path": "生产/产物/图片执行/CONTENT-002/V1/交付.json",
+    "blob_sha": "0c8aa74046fca6eb344d94398a43d0832a11eef5",
+    "task_id": "CONTENT-002-IMAGE-BUILD-R09-V1",
+    "result": "PASS"
+  },
+  "pass_checks": [
+    "R09 delivery result=PASS and task/version/revision/dependency match the current IMAGE_BUILD V1 task.",
+    "P1-P5 each ACTIVE with non-empty SHA256_COMPUTED_FROM_ACTUAL_BYTES fingerprint and non-empty USER_FILE asset_ref.",
+    "All five pages bind immutable attachment identity plus actual-byte SHA256 evidence.",
+    "manifest_identity_status=VALID.",
+    "manifest_fingerprint is non-empty and independently matches canonical ordered ACTIVE asset identities."
+  ],
+  "activation_decision": "APPROVED_FOR_ACTIVE_POINTER"
+}
