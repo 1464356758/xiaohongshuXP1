@@ -1,0 +1,388 @@
+{
+  "schema": "XHS_XP1_R02_HOT_RESEARCH_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R02-V1",
+  "role_id": "R02",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R02|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "research_platform": "小红书",
+  "freshness_window": {
+    "start": "2026-09-14T00:00:00+08:00",
+    "end": "2026-09-28T09:27:00+08:00",
+    "executed_at": "2026-09-28T09:38:00+08:00"
+  },
+  "account_context": {
+    "growth_stage": "EARLY_COLD_START_USER_REPORTED_1_PUBLISHED",
+    "primary_pillar": "美妆",
+    "secondary_pillars": [
+      "美甲",
+      "护肤"
+    ],
+    "positioning": "女性美妆消费决策与审美灵感型分享账号",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "prior_content_formal_postpublish_loop_deferred": true
+  },
+  "independence": {
+    "r03_draft_read": false,
+    "r03_delivery_read": false,
+    "note": "R02仅依据正式task、active locks与公开近期来源独立研究；未读取R03产物。"
+  },
+  "source_handling_rules": [
+    "千瓜数据为第三方小红书榜单/直播索引，用于证明近期平台可见信号，不视为小红书官方全站数据。",
+    "什么值得买相关AIGC聚合页仅作为其明确列出的来源索引/讨论线索使用，不把AIGC正文中的未核验推断写成商品事实。",
+    "新浪新闻中的品牌官方微博镜像可用于证明品牌近期发布动作；具体功效、色号、SKU、包装版本仍须R04/R05核验。",
+    "品牌或达人宣称中的持妆、养肤、淡纹、修护等效果不在R02阶段采信为事实。",
+    "SYNTHETIC_VISUAL_PERSONA不得被写成现实购买、使用、回购、时长或功效结果的第一人称经历。"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "HOT-01",
+      "direction": "毛戈平首款卸妆膏「净悦润肌卸妆膏」新品与首发种草争议",
+      "pillar": "护肤/卸妆",
+      "candidate_type": "NEW_PRODUCT_WITH_SEEDING_DISCUSSION",
+      "freshness_status": "ACTIVE_IN_WINDOW",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-17",
+          "evidence": "二次索引明确记录毛戈平官方小红书于9月17日官宣首款卸妆膏，并列出9月16-17日多条小红书新品/反馈笔记。",
+          "source_url": "https://post.smzdm.com/p/awwzx5rm/",
+          "source_type": "SECONDARY_INDEX_OF_XHS_POSTS"
+        }
+      ],
+      "related_products_or_topics": [
+        "毛戈平净悦润肌卸妆膏",
+        "新品官宣前后的集中种草",
+        "卸妆膏是否值得替换既有卸妆产品",
+        "广告/收样内容与真实长期反馈如何区分"
+      ],
+      "fit_analysis": "近期性强，既有新品入口又有评论区可讨论的‘宣传先行还是产品先行’问题，适合做事实拆解型内容。",
+      "controversy_or_comment_need": [
+        "首发阶段集中出现强烈正向措辞，商业合作/收样痕迹需要识别。",
+        "产品真实清洁力、肤感、残膜感、敏感肌适配目前不能由R02下结论。",
+        "首款卸妆膏与品牌既有卸妆产品的差异需要R04核验。"
+      ],
+      "usable_angles": [
+        "先把新品事实、活动节奏与用户反馈分层，不跟着‘最牛’等强情绪话术走。",
+        "做‘新品值不值得继续看’的核验清单：容量、价格、核心卖点、卸妆对象、使用步骤。",
+        "将‘首发口碑’与‘长期使用反馈’区分。"
+      ],
+      "not_recommended_angles": [
+        "复述或放大‘最牛卸妆膏’等无法证实结论。",
+        "虚构账号本人卸妆体验。",
+        "在R04前写具体配方、功效或旧款对比结论。"
+      ],
+      "timing_risk": "HIGH",
+      "timing_note": "9月17日官宣，仍处上市早期讨论窗口；但首发活动结束后热度可能迅速回落。",
+      "verification_needed_next": [
+        "R04官方商品事实与价格/容量/功效宣称边界",
+        "R05正式SKU与官方图像"
+      ]
+    },
+    {
+      "candidate_id": "HOT-02",
+      "direction": "完美日记「小鹿」眼影综合盘国内上新与‘神作/不显色飞粉’分歧",
+      "pillar": "美妆",
+      "candidate_type": "NEW_PALETTE_WITH_POLARIZED_FEEDBACK",
+      "freshness_status": "ACTIVE_AND_RISING",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-21至2026-09-26",
+          "evidence": "9月28日二次聚合页列出多条近期小红书来源：9月21日‘新品完全神作’、9月22日KKV线下首发、9月23日入手、9月24-25日新品内容，以及9月26日‘有点失望’反馈。",
+          "source_url": "https://post.smzdm.com/p/a70n3nkg/",
+          "source_type": "SECONDARY_INDEX_OF_XHS_POSTS"
+        }
+      ],
+      "related_products_or_topics": [
+        "完美日记小鹿眼影综合盘",
+        "KKV线下首发",
+        "综合盘/全脸盘",
+        "显色与飞粉分歧"
+      ],
+      "fit_analysis": "与账号的‘热门产品事实拆解+怎么选’主轴高度贴合，而且天然存在评论问题和反对点；但具体盘面、色号、渠道、定价必须后续核实。",
+      "controversy_or_comment_need": [
+        "近期内容同时存在强烈好评与负面使用反馈。",
+        "日本首发、国内渠道上架时间线属于二次来源说法，需R04独立核验。",
+        "‘眼影综合盘/全脸盘’正式商品名称与功能边界需核实。"
+      ],
+      "usable_angles": [
+        "不先站队，先拆‘这盘到底解决什么问题’：眼妆、腮红或全脸用途分别核。",
+        "围绕显色、飞粉、配色实用度建立待验证问题。",
+        "若R04/R05核验通过，可做新手/通勤人群的选择卡。"
+      ],
+      "not_recommended_angles": [
+        "把‘神作’或‘不显色飞粉’任何一边直接当最终事实。",
+        "未经官方证据写具体SKU、盘面数量、色名或售价。",
+        "直接复制竞品测评话术或图。"
+      ],
+      "timing_risk": "HIGH",
+      "timing_note": "9月21-26持续出现新笔记，且9月28仍有二次聚合，当前仍在讨论窗口。",
+      "verification_needed_next": [
+        "R04商品正式名称/上市渠道/功能事实",
+        "R05 SKU与盘面/官方图片对应"
+      ]
+    },
+    {
+      "candidate_id": "HOT-03",
+      "direction": "INTO YOU「第二颗纽扣」系列：小光环气垫 + 钻光精华口红新品",
+      "pillar": "美妆",
+      "candidate_type": "NEW_PRODUCT_AND_CELEBRITY_CAMPAIGN",
+      "freshness_status": "ACTIVE_IN_WINDOW",
+      "signal_strength": "MEDIUM_HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-23至2026-09-25",
+          "evidence": "INTO YOU官方微博镜像显示9月23日限定礼盒上线，9月24日连续发布钻光精华口红选色/EL06琥珀棕，9月25日发布小光环气垫干皮/油皮选择内容。",
+          "source_url": "https://www.sina.cn/media/7339405441",
+          "source_type": "OFFICIAL_BRAND_WEIBO_MIRROR"
+        },
+        {
+          "published_or_observed_at": "2026-09-25",
+          "evidence": "企业供稿报道限定礼盒以小光环气垫和钻光精华口红EL06为核心，作为近期品牌发布动作的辅助证据。",
+          "source_url": "https://dzshyw.com/news/73639.html",
+          "source_type": "BRAND_PR_SECONDARY"
+        }
+      ],
+      "related_products_or_topics": [
+        "INTO YOU小光环气垫",
+        "INTO YOU钻光精华口红",
+        "EL06琥珀棕（需R04/R05再核）",
+        "干皮/油皮底妆怎么选"
+      ],
+      "fit_analysis": "新品视觉和‘肤质怎么选’问题都适合消费决策型账号，但当前传播明显包含代言人和限定周边驱动，需要避免把粉丝热度误当纯产品热度。",
+      "controversy_or_comment_need": [
+        "产品讨论与明星代言/礼盒周边热度高度耦合。",
+        "官方宣称48H持妆、淡纹、修护等不在R02阶段验证。",
+        "干皮/油皮版本和色号对应需R04/R05核验。"
+      ],
+      "usable_angles": [
+        "把明星礼盒与产品本身拆开，重点讲气垫肤质选择或口红色调选择。",
+        "若产品事实通过，可做‘干皮款 vs 油皮款’选择逻辑。",
+        "围绕琥珀棕等秋冬唇色做视觉方向，但不宣称本人上唇体验。"
+      ],
+      "not_recommended_angles": [
+        "用粉丝互动量证明产品本身效果或口碑。",
+        "照搬48H持妆、淡纹修护等品牌功效宣称。",
+        "把代言人同款直接当作购买建议。"
+      ],
+      "timing_risk": "HIGH",
+      "timing_note": "9月23日刚上线，当前仍属新品首周窗口。",
+      "verification_needed_next": [
+        "R04产品事实与宣称证据",
+        "R05版本/色号/SKU/官方图"
+      ]
+    },
+    {
+      "candidate_id": "HOT-04",
+      "direction": "‘5s速成妈生伪素颜’持续热度：自然底妆+低存在感修容",
+      "pillar": "美妆",
+      "candidate_type": "CONTINUING_MAKEUP_THEME",
+      "freshness_status": "ACTIVE_AND_REPEATED",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-27",
+          "evidence": "千瓜小红书直播榜9月27日仍记录毛戈平美妆企业账号‘5s速成妈生伪素颜’，说明该主题延续至当前窗口末端。",
+          "source_url": "https://qian-gua.com/rank/live/",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        }
+      ],
+      "related_products_or_topics": [
+        "伪素颜",
+        "轻薄底妆",
+        "自然修容",
+        "通勤快速妆容",
+        "‘化了但看不出很重’的妆效需求"
+      ],
+      "fit_analysis": "与账号通勤、问题解决、可收藏内容高度一致，且不必须绑定单一商品，适合避免连续两篇都只做新品搬运。",
+      "controversy_or_comment_need": [
+        "‘5s’是营销标题，不应当作可复现真实耗时。",
+        "‘妈生感’是妆效描述，不代表完全无妆或无产品。",
+        "若后续绑定商品，仍需正式商品核验。"
+      ],
+      "usable_angles": [
+        "拆成底妆薄度、光影位置、眉眼存在感三个变量。",
+        "做‘为什么同样淡妆，有人像没睡醒有人像原生好状态’的问题型内容。",
+        "人物可用于示意妆感，但不能冒充产品真实使用经历。"
+      ],
+      "not_recommended_angles": [
+        "承诺5秒完成完整妆容。",
+        "用夸张前后对比制造功效感。",
+        "未经核验带入具体毛戈平SKU。"
+      ],
+      "timing_risk": "MEDIUM",
+      "timing_note": "9月27日仍有直接平台直播信号，属于持续型妆容话题，生命周期长于单一新品首发。",
+      "verification_needed_next": [
+        "若绑定商品再交R04/R05"
+      ]
+    },
+    {
+      "candidate_id": "HOT-05",
+      "direction": "秋冬护肤底妆 + 双十一前置选择：换季卡粉、肤质分流与‘先选再囤’",
+      "pillar": "美妆/护肤",
+      "candidate_type": "SEASONAL_DEMAND_PLUS_COMMERCE_WINDOW",
+      "freshness_status": "ACTIVE_AND_ESCALATING",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-27",
+          "evidence": "千瓜小红书直播榜显示‘秋冬护肤底妆专场！保价双十一！’直播，观看人数与商品数可见；同日还有多场双十一预热护肤直播。",
+          "source_url": "https://qian-gua.com/rank/live/1/1/20260927/1",
+          "source_type": "THIRD_PARTY_XHS_LIVE_INDEX"
+        }
+      ],
+      "related_products_or_topics": [
+        "秋冬底妆",
+        "换季卡粉/干卡与油崩分流",
+        "干皮/混干/油皮底妆选择",
+        "双十一前置功课"
+      ],
+      "fit_analysis": "同时踩中季节变化和大促前决策需求，非常适合收藏型选择卡；但商业气息重，需要把内容做成问题解决而不是导购清单。",
+      "controversy_or_comment_need": [
+        "直播热度部分受双十一促销驱动。",
+        "不能把‘保价’或促销利益当账号购买建议。",
+        "底妆适配高度依赖肤质、环境和上妆方法。"
+      ],
+      "usable_angles": [
+        "换季底妆先判断‘干卡还是油崩’，再决定妆前/粉底/定妆方向。",
+        "大促前不先列必买，而是做‘哪些情况值得换底妆’判断卡。",
+        "后续可由R04筛选1-2个真实热门底妆产品进入商品核验。"
+      ],
+      "not_recommended_angles": [
+        "做‘双十一必买榜’或绝对性榜单。",
+        "用达人直播销售额直接证明产品效果。",
+        "虚构本人全天持妆测试。"
+      ],
+      "timing_risk": "MEDIUM_HIGH",
+      "timing_note": "季节需求持续，双十一预热会继续升温，但促销话题容易商业化过重。",
+      "verification_needed_next": [
+        "若落到具体商品，R04/R05核验",
+        "R13注意广告化表达"
+      ]
+    },
+    {
+      "candidate_id": "HOT-06",
+      "direction": "国庆前美甲最后窗口：本甲预约 vs 穿戴甲现货、款式与踩雷问题",
+      "pillar": "美甲",
+      "candidate_type": "HOLIDAY_SEARCH_DEMAND",
+      "freshness_status": "ACTIVE_WITH_HARD_DEADLINE",
+      "signal_strength": "HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-27",
+          "evidence": "二次聚合页明确列出9月27日小红书多条国庆美甲预约/可约内容，并汇总穿戴甲避雷讨论，说明节前搜索需求已进入最后窗口。",
+          "source_url": "https://post.smzdm.com/p/awwzqr4k/",
+          "source_type": "SECONDARY_INDEX_OF_XHS_POSTS"
+        }
+      ],
+      "related_products_or_topics": [
+        "国庆美甲预约",
+        "穿戴甲",
+        "本甲 vs 穿戴甲",
+        "短甲/通勤款",
+        "节前现货与到货风险"
+      ],
+      "fit_analysis": "时间敏感度极高，收藏/搜索动机明确；适合美甲支柱，但若第二篇发布时间拖到节后，该方向应自动降级为STALE。",
+      "controversy_or_comment_need": [
+        "穿戴甲质量、尺寸、胶水、翘边与卖家图差异是常见反对点。",
+        "节前物流和店铺档期会快速变化。",
+        "健康安全话题不能凭用户吐槽下医学结论。"
+      ],
+      "usable_angles": [
+        "‘约不上店了怎么办’：本甲、穿戴甲的场景选择。",
+        "选款前看甲型、尺寸、长度、日常工作场景。",
+        "如果做产品，只核实具体商品和现货，不写泛化神店推荐。"
+      ],
+      "not_recommended_angles": [
+        "节后继续包装成‘国庆急救’热点。",
+        "未经医学证据写美甲灯/胶水伤害结论。",
+        "把二次聚合的样本量当平台官方统计。"
+      ],
+      "timing_risk": "VERY_HIGH",
+      "timing_note": "硬截止接近10月1日，未来数日最有价值；节后应判定热点过期。",
+      "verification_needed_next": [
+        "若选具体穿戴甲商品再交R04/R05",
+        "发布时间由R01判断是否仍赶得上窗口"
+      ]
+    },
+    {
+      "candidate_id": "HOT-07",
+      "direction": "国庆旅行护肤精简：旅行装/小样/次抛/分装与‘到底带什么’",
+      "pillar": "护肤",
+      "candidate_type": "HOLIDAY_SEARCH_DEMAND",
+      "freshness_status": "ACTIVE_WITH_HARD_DEADLINE",
+      "signal_strength": "MEDIUM_HIGH",
+      "recent_evidence": [
+        {
+          "published_or_observed_at": "2026-09-18至2026-09-21",
+          "evidence": "二次聚合页称按小红书最新排序检索‘旅行护肤’，前39条集中在9月18-21日，其中多条讨论小样、分装瓶、次抛、旅行装与100ml限制。",
+          "source_url": "https://post.smzdm.com/p/a5ro3388/",
+          "source_type": "SECONDARY_XHS_SEARCH_SAMPLE"
+        }
+      ],
+      "related_products_or_topics": [
+        "旅行护肤",
+        "旅行装/小样",
+        "次抛",
+        "分装瓶",
+        "精简护肤"
+      ],
+      "fit_analysis": "评论/搜索需求清晰，适合做非产品依赖的收藏卡；但不是美妆主支柱，且热点受国庆出行强约束。",
+      "controversy_or_comment_need": [
+        "分装卫生、标签和航空/铁路携带规则需要按实际出行方式确认。",
+        "‘精简’不能偷换成删掉必要防晒/清洁等个体必需步骤。",
+        "若涉及具体产品功效仍需核验。"
+      ],
+      "usable_angles": [
+        "按‘原包装/旅行装/次抛’做收纳决策，而不是推荐一堆产品。",
+        "用‘7天到底带几步’做需求删减清单。",
+        "与换季敏感问题结合时保持保守，不做治疗建议。"
+      ],
+      "not_recommended_angles": [
+        "把二次搜索样本写成全站趋势数据。",
+        "统一建议所有人更换护肤品或停用某步骤。",
+        "虚构人物旅行实拍或本人实际使用体验。"
+      ],
+      "timing_risk": "VERY_HIGH",
+      "timing_note": "国庆出发前有效，节后快速降级。",
+      "verification_needed_next": [
+        "如绑定具体产品再交R04/R05",
+        "涉及出行携带规则需按交通方式另核"
+      ]
+    }
+  ],
+  "r02_summary": {
+    "candidate_count": 7,
+    "beauty_or_beauty_adjacent_candidates": 5,
+    "nail_candidates": 1,
+    "skincare_travel_candidates": 1,
+    "current_high_signal_product_leads": [
+      "HOT-01",
+      "HOT-02",
+      "HOT-03"
+    ],
+    "current_high_signal_theme_leads": [
+      "HOT-04",
+      "HOT-05",
+      "HOT-06"
+    ],
+    "hard_deadline_candidates": [
+      "HOT-06",
+      "HOT-07"
+    ],
+    "commercial_signal_heavy_candidates": [
+      "HOT-03",
+      "HOT-05"
+    ],
+    "note": "R02不决定最终商品；R01应与R03独立交付合并后建立候选集，再由R04核验商品事实。"
+  },
+  "result": "PASS",
+  "blocked_items": [],
+  "failed_scope": [],
+  "completed_at": "2026-09-28T09:38:00+08:00"
+}
