@@ -1,0 +1,64 @@
+{
+  "schema": "XP1_R05_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|PRODUCT_LOCK|R05|V1|1|null|SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "formal_product_selection_path": "生产/产物/总监/CONTENT-002/PRODUCT_LOCK/V1/正式选品.json",
+    "formal_product_selection_blob_sha": "4e7b9fded8589f5faa01bca9b06a69495cc4a05a",
+    "selected_candidate_id": "CAND-05",
+    "selected_product_identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection",
+    "r04_research_path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "r04_research_blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+    "r04_delivery_blob_sha": "7df3b2963bc108c6e553538eb5fc55777d55a98e",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "runtime_mode": "LIVE",
+    "task_role_id": "R05"
+  },
+  "output_paths": [
+    "生产/产物/锁定草案/CONTENT-002/V1/PRODUCT-002-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/SKU-002-365-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/SKU-002-883-DRAFT.json",
+    "生产/产物/锁定草案/CONTENT-002/V1/交付.json"
+  ],
+  "output_blob_shas": {
+    "product_draft": "a7e7a7812372f31079681688d32a746129149546",
+    "sku_365_draft": "c47998f7c7759d79f922acaef8fb352ef360182f",
+    "sku_883_draft": "67d8ab3ecb2a15c316364e91107893060e98b974"
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "E08_DIOR_OFFICIAL_PRODUCT_US",
+    "E09_DIOR_OFFICIAL_FALL2026_COLLECTION",
+    "E10_DIOR_OFFICIAL_INTL_PRODUCT",
+    "https://www.dior.com/en_ca/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+    "https://www.dior.com/en_id/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+    "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+    "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+    "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+    "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+  ],
+  "identity_summary": {
+    "product": "VERIFIED_DRAFT",
+    "sku_365": "VERIFIED_DRAFT_365_CHARMED_GREEN",
+    "sku_883": "VERIFIED_DRAFT_883_LUCKY_ROSEWOOD",
+    "sibling_relationship": "VERIFIED_SAME_SEASON_SAME_PRODUCT_LINE_NOT_NEW_OLD",
+    "collection_theme_rule": "LUCKY_CLOVER_IS_FALL_2026_COLLECTION_THEME_NOT_365_SHADE_NAME",
+    "official_image_binding": "VERIFIED_DIFFERENT_FIRST_PARTY_DIOR_ASSETS_FOR_365_AND_883",
+    "china_mainland_official_cn_shade_name": "UNKNOWN",
+    "capacity_or_size": "UNKNOWN",
+    "regional_inventory": "REGION_SPECIFIC_ONLY"
+  },
+  "completed_at": "2026-09-28T10:22:00+08:00",
+  "delivery_fingerprint_or_commit": "draft_bundle_latest_commit:48fad11c5443e05e6ecbd25a2862e1c83c1d7243",
+  "next_role_suggestion": "R01"
+}
