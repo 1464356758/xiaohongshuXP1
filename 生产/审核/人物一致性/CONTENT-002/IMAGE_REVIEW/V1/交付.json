@@ -1,0 +1,43 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-REVIEW-R11-V1",
+  "role_id": "R11",
+  "review_mode": "CONTENT_PERSONA_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-002|IMAGE_REVIEW|R11|V1|1|null|MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json"
+  },
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1",
+      "result": "PASS"
+    }
+  ],
+  "output_paths": [
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "required_revision_pages": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json"
+  ],
+  "completed_at": "2026-09-28T16:09:00+08:00",
+  "delivery_fingerprint_or_commit": "b6291c839ea7a15c43caec7126c3d01a1b364001",
+  "next_role_suggestion": "R01"
+}
