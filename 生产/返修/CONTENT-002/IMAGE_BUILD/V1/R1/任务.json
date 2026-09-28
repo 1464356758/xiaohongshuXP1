@@ -1,0 +1,95 @@
+{
+  "schema": "SYS-003_PARTIAL_REVISION_V2",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-BUILD-R09-V2",
+  "task_version": "V2",
+  "input_revision": 2,
+  "parent_version": "V1",
+  "revision_round": "R1",
+  "task_lifecycle_status": "PREPARED_NOT_ACTIVE",
+  "state": "REVISION_REQUIRED",
+  "revision_path": "生产/返修/CONTENT-002/IMAGE_BUILD/V1/R1/",
+  "scope": [
+    "P1",
+    "P2",
+    "P4",
+    "P5"
+  ],
+  "frozen_pages": [
+    "P3"
+  ],
+  "issues": [
+    {
+      "page_id": "P1",
+      "severity": "P0",
+      "problem": "365 product/pouch imagery does not match locked Dior official reference.",
+      "required_fix": "Replace product and pouch regions using pixel-preserved official 365 source imagery; keep other composition only if compatible."
+    },
+    {
+      "page_id": "P2",
+      "severity": "P0",
+      "problem": "365 palette visual identity is not pixel-faithful to official source.",
+      "required_fix": "Rebuild product fact page around official 365 cutout/close-up; do not redraw compact, pans, embossing or pouch."
+    },
+    {
+      "page_id": "P4",
+      "severity": "P0",
+      "problem": "365/883 comparison uses non-faithful product/pouch imagery.",
+      "required_fix": "Use official pixel-preserved 365 and 883 product/pouch assets; keep 365 primary and 883 comparison-only."
+    },
+    {
+      "page_id": "P5",
+      "severity": "P0",
+      "problem": "365 product anchor is not faithful to locked official source.",
+      "required_fix": "Replace only product anchor with official pixel-preserved 365 asset; preserve copy/checklist semantics."
+    }
+  ],
+  "allowed_changes": [
+    "P1/P2/P4/P5 only",
+    "background/layout/lighting may be recreated around official cutouts",
+    "product/pouch regions must use official source pixels without generative redraw",
+    "P1 persona may be preserved or recomposited, but if any persona pixels change R11 must rerun"
+  ],
+  "forbidden_changes": [
+    "不得修改P3",
+    "不得修改active copy含义",
+    "不得修改PRODUCT/SKU/PERSONA locks",
+    "不得生成新的Dior产品外观替代官方素材",
+    "不得用AI重画或风格化compact、pan、embossing、logo、pouch",
+    "不得使用非官方经销商/搜索缩略图替代已锁定Dior官方源"
+  ],
+  "official_source_contract": {
+    "365_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+    "365_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+    "883_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+    "883_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg",
+    "mode": "PIXEL_PRESERVE_CUTOUT_AND_COMPOSITE",
+    "no_generative_redraw": true
+  },
+  "re_review_scope": [
+    "R10 P1/P2/P4/P5 exact product comparison vs official sources",
+    "R12 P1-P5 cross-page visual after revised manifest",
+    "R11 only if P1 persona pixels change",
+    "R13 compliance review and snapshot bindings after new manifest/image QA"
+  ],
+  "invalidation_plan": [
+    "old manifest becomes STALE after revised page identities are registered",
+    "old R10 becomes STALE",
+    "old R12 becomes STALE",
+    "old IMAGE-QA barrier becomes STALE",
+    "old COMPLIANCE-XHS-0002 content binding becomes STALE after manifest changes",
+    "current R13 compliance review task becomes STALE and must not be executed against old assets"
+  ],
+  "max_same_issue_revision_rounds": 3,
+  "on_same_issue_after_R3": "BLOCKED_CONFLICT",
+  "traceability": {
+    "required_fields_in_every_delivery": [
+      "task_version",
+      "input_revision",
+      "parent_version",
+      "revision_round"
+    ],
+    "must_not_overwrite_previous_v_or_r": true,
+    "must_not_use_legacy_root_revision_path": true
+  }
+}
