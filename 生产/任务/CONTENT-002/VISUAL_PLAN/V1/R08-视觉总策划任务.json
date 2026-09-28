@@ -1,0 +1,182 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-VISUAL-PLAN-R08-V1",
+  "stage": "VISUAL_PLAN",
+  "role_id": "R08",
+  "work_mode": "CONTENT_VISUAL_PLAN",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "VISUAL_PLAN",
+  "created_by": "R01",
+  "created_at": "2026-09-28T11:55:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "actual_publish_scope_fingerprint": null,
+    "active_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "active_copy_revision": 1,
+    "active_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "active_product_identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection",
+    "active_sku_identity": "365 Charmed Green",
+    "sibling_sku_identity": "883 Lucky Rosewood",
+    "active_sku_reference_images": [
+      {
+        "ref_id": "SKU-365-REF-FULL",
+        "transport": "URL",
+        "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+        "identity_scope": "365 Charmed Green palette + matching couture pouch only"
+      },
+      {
+        "ref_id": "SKU-365-REF-COLOR",
+        "transport": "URL",
+        "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+        "identity_scope": "365 Charmed Green five-pan color/embossing close-up only"
+      }
+    ],
+    "sibling_sku_reference_images": [
+      {
+        "ref_id": "SKU-883-REF-FULL",
+        "transport": "URL",
+        "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+        "identity_scope": "883 Lucky Rosewood palette + matching couture pouch only; P4 comparison use"
+      },
+      {
+        "ref_id": "SKU-883-REF-COLOR",
+        "transport": "URL",
+        "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg",
+        "identity_scope": "883 Lucky Rosewood five-pan color/embossing close-up only; P4 comparison use"
+      }
+    ],
+    "persona_required_anchor_paths": [
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png"
+    ],
+    "persona_auxiliary_anchor_paths": [
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+      "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+    ]
+  },
+  "input_paths": [
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/产物/文案/CONTENT-002/V1/交付.json",
+    "生产/产物/策划/CONTENT-002/V1/策划.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/03_face_front.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/05_face_45.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/01_reference_seated.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/02_fullbody.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/04_three_view.png",
+    "生产/产物/总监/PERSONA-001/USER-SOURCE-V1/06_detail_board.png"
+  ],
+  "scope": [
+    "严格把当前active copy的5页内容转成R09可逐页执行的视觉施工图，不改标题事实、页面结构、SKU角色或页面文字含义。",
+    "365 Charmed Green为唯一视觉主线；883 Lucky Rosewood仅允许在P4作为兄弟SKU对照，不得在P1/P2/P3/P5抢占主视觉。",
+    "必须实际读取365 Charmed Green官方reference images，并以其Dior黑色五色盘、中央菱形CD压纹、四叶草压纹、绿色和谐配色与对应ivory/ecru couture pouch作为商品身份锚点。",
+    "P4若展示883，必须实际读取883官方reference images并保持rosewood配色与pale pink couture pouch身份，不得与365互换图像、配色或配件。",
+    "人物页必须实际读取PERSONA-001必要锚点和身体比例辅助锚点，保持脸型、五官比例、右侧面颊小痣、年龄观感、基础发色范围和身体比例。",
+    "允许为本篇重新设计人物服装、发型、妆容、配饰、动作和场景；不得把锚点旧服装/旧发型机械复制成固定制服。",
+    "遵循R06/R07的混排逻辑：P1/P3可优先考虑人物参与，但人物不是必需；P2以365产品事实地图为核心；P4以365主位+883小型对照为核心；P5以收藏检查卡为核心。",
+    "整体视觉应服务Dior 365的限定去FOMO主题：真实拍摄感、克制编辑感、浅象牙/黑/鼠尾草绿/橄榄绿为主；不得做成硬广海报、奢侈品广告仿拍或五页同模板复制。",
+    "P2必须优先保证五色盘结构、中央菱形盘与五色色彩关系准确可读；色彩标签是编辑型可观察描述，不得伪造成Dior官方中文色名。",
+    "P3的3问必须做成用户自我筛选信息页，不得设计成真人亲测、试色前后对比、持妆测试或Dior官方教程。",
+    "P4必须明确365与883是两条配色路线，365视觉权重更高；不得暗示谁更高级、谁客观更日常或绝对肤色适配。",
+    "P5必须以收藏检查卡和评论互动为重点，库存表达只能是‘具体地区Dior官方渠道实时核对’，不得视觉化成全球售罄/抢购倒计时。",
+    "每页必须明确page_id、页面目的、页面类型、主体、persona_required、product_required、PERSONA/PRODUCT/SKU引用、人物造型与动作、景别机位、构图主体占比、背景场景、光线材质色温、产品位置与识别点、页面文字、字体层级、信息层级、留白安全区、reference refs、forbidden items、acceptance points及与前后页的视觉差异。",
+    "产出一份总体视觉策划和一份供R09直接执行的逐页图片任务包。"
+  ],
+  "frozen_scope": [
+    "active_copy_path=生产/产物/文案/CONTENT-002/V1/文案.json",
+    "active_copy_revision=1",
+    "active_copy_fingerprint=sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "PRODUCT-002 LOCK-V1",
+    "SKU-002-365 LOCK-V1 / 365 Charmed Green / active",
+    "SKU-002-883 LOCK-V1 / 883 Lucky Rosewood / P4 comparison only",
+    "PERSONA-001 LOCK-V1",
+    "5页结构：P1限定去FOMO、P2 365五色色彩关系、P3选365前3问、P4 365/883路线对照、P5收藏检查卡",
+    "Lucky Clover仅为Fall 2026系列主题",
+    "中国大陆官方中文色名/净含量/大陆实时库存=UNKNOWN",
+    "SYNTHETIC_VISUAL_PERSONA不得承载现实产品使用经历"
+  ],
+  "acceptance_criteria": [
+    "work_mode必须为CONTENT_VISUAL_PLAN。",
+    "5页任务必须一页不少且page_id固定P1-P5。",
+    "每页显示的公开文字必须来自active copy；允许视觉断行与层级拆分，但不得改事实、改SKU、改结论。",
+    "任何展示365商品的页面都必须显式绑定PRODUCT-002与SKU-002-365并引用365官方reference image。",
+    "P4若展示883必须显式绑定SKU-002-883并引用883官方reference image，且365视觉权重高于883。",
+    "任何persona_required=true页面都必须显式绑定PERSONA-001 LOCK及实际锚点。",
+    "人物造型不得机械复制锚点原服装/原发型；同一篇多个人物页之间动作、景别或构图至少两项明显变化。",
+    "P2必须明确五格盘面、中央菱形盘和五色色彩关系的准确性门禁。",
+    "P3不得表现为真人亲测/试色过程或官方教程。",
+    "P4不得把兄弟SKU写成新旧版本，也不得制造绝对适配结论。",
+    "P5优先信息可读性，不使用抢购倒计时、售罄红章等FOMO视觉。",
+    "所有页面必须包含forbidden_items与可独立审核的acceptance_points。",
+    "视觉计划必须提供整体色温、字体层级、留白、安全区和跨页差异规则，避免五页像同一模板复制。",
+    "逐页图片任务包必须足够让R09无需自行补设计即可执行。",
+    "写后回读视觉策划、逐页图片任务包和交付文件。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "生产/产物/视觉策划/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|VISUAL_PLAN|R08|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_persona_missing": "BLOCKED_PERSONA_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R08只提交视觉策划、R09逐页图片任务包与交付，不修改state/phase/active pointer。",
+    "R08不得改写final copy或任何LOCK。",
+    "R01验收R08 PASS后才创建R09正式IMAGE_BUILD任务。"
+  ]
+}
