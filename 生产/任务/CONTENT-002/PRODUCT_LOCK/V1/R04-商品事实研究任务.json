@@ -1,0 +1,110 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R04-V1",
+  "stage": "PRODUCT_LOCK",
+  "role_id": "R04",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "PRODUCT_LOCK",
+  "created_by": "R01",
+  "created_at": "2026-09-28T09:49:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "candidate_set_path": "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_id": "CONTENT-002-CANDIDATE-SET-V1",
+    "candidate_set_blob_sha": "91a9e722ab67ffdc70f9553c828e6b7efbf8fd59"
+  },
+  "input_paths": [
+    "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json"
+  ],
+  "scope": [
+    "只研究R01正式候选集中的CAND-01至CAND-05，不得自行新增商品。",
+    "逐候选核验品牌、正式商品名、系列、版本、容量/规格、色号/款式、包装、结构、上市/发售信息、官方渠道与当前在售状态。",
+    "优先品牌官方、官方商城、官方旗舰店等一手来源；媒体、电商、用户内容只能作为补充并标来源类别。",
+    "对SKU名称、色号、盘号、包装视觉建立一一对应关系；无法确认必须明确UNKNOWN或NOT_ELIGIBLE_FOR_SELECTION，不得猜。",
+    "商品事实分类为OFFICIAL_FACT / ECOMMERCE_LISTING / AGGREGATED_USER_FEEDBACK / PUBLIC_REVIEW / EDITORIAL_INFERENCE。",
+    "对质地、显色、持妆、卡粉、飞粉、卸妆力、肤质适配等结论严格拆分官方宣称、可观察特征、多人反馈与推断。",
+    "每个候选输出已确认字段、未确认字段、主要优点/槽点/分歧、SKU风险、可写边界和禁止声称内容。",
+    "特别核验CAND-01完美日记小鹿盘的正式名称/功能边界，CAND-02 INTO YOU小光环气垫的系列与版本，CAND-04 Mistine夜光2.0与紫贝限定关系，CAND-05 Dior 365正式产品线与365/883关系。",
+    "R04不决定最终产品，不建立PRODUCT/SKU LOCK。"
+  ],
+  "frozen_scope": [
+    "正式候选集及其5个candidate_id",
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "SYNTHETIC_VISUAL_PERSONA不得拥有现实产品使用经历"
+  ],
+  "acceptance_criteria": [
+    "CAND-01至CAND-05均有独立事实覆盖记录，不得漏项。",
+    "每个候选至少给出product_identity_status与sku_identity_status。",
+    "每个确认的正式商品名/SKU/色号/包装映射均有可追溯来源。",
+    "官方事实与用户反馈/编辑推断明确分层。",
+    "无法确认的候选必须明确NOT_ELIGIBLE_FOR_SELECTION或对应BLOCKED状态，禁止补猜。",
+    "至少输出一个可由R01继续正式选择的VERIFIED_ELIGIBLE候选；若一个都没有则返回BLOCKED_PRODUCT_UNCERTAIN。",
+    "不得把theme-only候选自动扩成商品研究对象。",
+    "正式交付写后回读验证并交回R01。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|PRODUCT_LOCK|R04|V1|1|null|CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R04只建立事实底座，不替R01选择最终商品。",
+    "候选线索身份不足时宁可排除，不得补写不存在的商品名、色号、价格或包装。",
+    "最终产品必须由R01从本轮R04已覆盖且可确认候选中选择。"
+  ]
+}
