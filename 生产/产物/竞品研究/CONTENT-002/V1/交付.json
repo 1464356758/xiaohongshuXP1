@@ -1,0 +1,63 @@
+{
+  "schema": "SYS-003_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R03-V1",
+  "role_id": "R03",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R03|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-002/DISCOVERY/V1/R03-市场竞品研究任务.json",
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "runtime_mode": "LIVE",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "r02_delivery_read": false
+  },
+  "output_paths": [
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+    "生产/产物/竞品研究/CONTENT-002/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+    "https://post.smzdm.com/p/avgx74g4/",
+    "https://post.smzdm.com/p/ak8x8g38/",
+    "https://post.smzdm.com/p/aggq8xxw/",
+    "https://post.smzdm.com/p/agg4mr0m/",
+    "https://post.smzdm.com/p/a70d7n7o/",
+    "https://post.smzdm.com/p/awwz8x92/",
+    "https://post.smzdm.com/p/arz695qq/",
+    "https://qian-gua.com/rank/live/"
+  ],
+  "completion_summary": {
+    "direction_count": 5,
+    "total_public_indexed_xhs_samples": 58,
+    "sample_counts": {
+      "D1": 10,
+      "D2": 12,
+      "D3": 12,
+      "D4": 12,
+      "D5": 12
+    },
+    "current_market_crosscheck_completed": true,
+    "observation_synthesis_separated": true,
+    "visual_access_limitation_recorded": true,
+    "final_product_selected": false,
+    "product_or_sku_lock_created": false,
+    "r02_delivery_read": false,
+    "parallel_barrier_crossed": false
+  },
+  "completed_at": "2026-09-28T09:44:00+08:00",
+  "delivery_fingerprint_or_commit": "BOUND_RESEARCH_COMMIT:60c4fe66e47769223d2e666bfb438869684b438c",
+  "next_role_suggestion": "R01"
+}
