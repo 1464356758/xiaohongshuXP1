@@ -1,0 +1,568 @@
+{
+  "schema": "XP1_R04_PRODUCT_FACT_RESEARCH_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R04-V1",
+  "role_id": "R04",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|PRODUCT_LOCK|R04|V1|1|null|CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "executed_under": {
+    "runtime_enabled": true,
+    "runtime_mode": "LIVE",
+    "state": "BUILDING",
+    "phase": "PRODUCT_LOCK",
+    "active_task_path": "生产/任务/CONTENT-002/PRODUCT_LOCK/V1/R04-商品事实研究任务.json",
+    "active_revision_path": null,
+    "candidate_set_path": "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_id": "CONTENT-002-CANDIDATE-SET-V1",
+    "candidate_set_blob_sha": "91a9e722ab67ffdc70f9553c828e6b7efbf8fd59",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "asset_identity_gate_blob_sha": "69806d9f5cfc673d04ea45fce85e2fd9806e4adf"
+  },
+  "research_rules_applied": [
+    "只研究正式候选集CAND-01至CAND-05，未扩展theme-only对象。",
+    "品牌官网、品牌官方社媒镜像、认证旗舰店优先；二次索引、电商与用户内容只作补充并明确层级。",
+    "商品名、版本、SKU、色号、包装或限定关系无法形成可靠一一对应时保留UNKNOWN或NOT_ELIGIBLE_FOR_SELECTION，不补猜。",
+    "用户体验和官方宣称严格分层；显色、飞粉、卡粉、持妆、卸妆力、肤质适配不因个别帖子升级为官方事实。",
+    "R04只建立事实底座，不建立PRODUCT/SKU LOCK；最终商品图和资产身份仍须R05/R10按ASSET_IDENTITY_GATE绑定。"
+  ],
+  "evidence_register": [
+    {
+      "evidence_id": "E01_PERFECTDIARY_CURRENT_SECONDARY_INDEX",
+      "claim_class": "EDITORIAL_INFERENCE",
+      "source_kind": "SECONDARY_INDEX_OF_XHS_AND_OFFICIAL_WEIBO",
+      "source_url": "https://post.smzdm.com/p/a70n3nkg/",
+      "supports": [
+        "2026国内‘小鹿眼影综合盘’上新线索",
+        "二次索引称9月25日品牌官方微博统一口径为04野棕绒鹿、05雾紫绒鹿",
+        "二次索引称国内综合盘覆盖眼影、腮红、高光、修容、眉粉、眼线六类功能位",
+        "二次索引显示日本限定眼影盘与国内升级综合盘不是同一对象",
+        "近期小红书正负反馈并存"
+      ],
+      "use_limit": "未取得本轮可直接打开的完美日记一手商品页或对应9月25日官方微博原帖全文，因此这些商品字段不能提升为直接OFFICIAL_FACT。"
+    },
+    {
+      "evidence_id": "E02_INTOYOU_OFFICIAL_WEIBO_MIRROR",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "OFFICIAL_BRAND_WEIBO_MIRROR",
+      "source_url": "https://www.sina.cn/media/7339405441",
+      "supports": [
+        "正式传播名称‘INTO YOU小光环气垫’",
+        "GS干皮款与MF油皮款两种肤质版本",
+        "2026-09-23章昊定制纽扣礼盒上线并包含小光环气垫与钻光精华口红",
+        "THE SECOND BUTTON/第二颗纽扣是本轮礼盒与传播主题语境",
+        "官方品牌宣称48H透光持妆、抗水汗防蹭、PDRN入妆等"
+      ],
+      "use_limit": "官方社媒当前可见文本没有给出完整底妆色号代码、净含量或所有包装SKU，不能自行补齐。"
+    },
+    {
+      "evidence_id": "E03_MAOGEPING_OFFICIAL_SITE",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://www.maogepingbeauty.com/",
+      "supports": [
+        "毛戈平MGP官方站与官方商城存在",
+        "护肤产品中存在‘净悦系列’",
+        "官网提示品牌部分产品存在新老包装交替出货，成分不变的总提示"
+      ],
+      "use_limit": "本轮官网可见索引未直接出现‘净悦润肌卸妆膏’商品详情，因此新品名称、120g规格和‘首款’不能仅凭此页面确认。"
+    },
+    {
+      "evidence_id": "E04_MAOGEPING_NEW_BALM_SECONDARY_INDEX",
+      "claim_class": "EDITORIAL_INFERENCE",
+      "source_kind": "SECONDARY_INDEX_OF_OFFICIAL_XHS_AND_PUBLIC_POSTS",
+      "source_url": "https://post.smzdm.com/p/awwzx5rm/",
+      "supports": [
+        "二次索引称毛戈平官方小红书于2026-09-17官宣品牌首款卸妆膏",
+        "品名线索‘净悦润肌卸妆膏’",
+        "活动资料出现120g正装与3g样品",
+        "首发阶段存在集中种草与强正向措辞"
+      ],
+      "use_limit": "未取得可直接打开的一手商品详情页；新品正式零售价、完整销售SKU、包装资产和完整官方配方宣称仍不得补猜。"
+    },
+    {
+      "evidence_id": "E05_MISTINE_VERIFIED_WECHAT_STORE",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "WECHAT_VERIFIED_BRAND_STORE",
+      "source_url": "https://detail.youzan.com/show/goods?alias=2xizmsf3isa1vew&from_source=gbox_seo",
+      "supports": [
+        "蜜丝婷MISTINE旗舰店微信认证",
+        "在售‘紫贝限定’MISTINE夜光气垫",
+        "商品标题明确一壳二芯/三芯",
+        "本轮抓取价格区间139.90至179.90元",
+        "存在独立紫贝限定商品图"
+      ],
+      "use_limit": "该认证店商品标题未在可见文本中直接写‘2.0’，也未披露与常规2.0是否同配方。"
+    },
+    {
+      "evidence_id": "E06_MISTINE_JD_LISTINGS",
+      "claim_class": "ECOMMERCE_LISTING",
+      "source_kind": "JD_BRAND_AND_PRODUCT_INDEX",
+      "source_url": "https://www.jd.com/hprm/6728c51038b3522c63b5.html?brand=Mistine&electedExtAttrSet=&extAttrValue=expand_name%2C&sort_type=sort_default",
+      "supports": [
+        "电商索引同时存在常规‘夜光气垫2.0’和‘夜光气垫2.0-紫贝限定’命名",
+        "紫贝限定可见LF100、LF110等色号线索",
+        "另有LF110S等后缀变体出现在不同夜光气垫商品中",
+        "部分替换装标12g"
+      ],
+      "use_limit": "SKU后缀、肤色中文名和配方关系在不同列表中存在不一致，不能跨商品自动合并。"
+    },
+    {
+      "evidence_id": "E07_MISTINE_R03_AGGREGATED_FEEDBACK",
+      "claim_class": "AGGREGATED_USER_FEEDBACK",
+      "source_kind": "PROJECT_FORMAL_R03_PUBLIC_INDEX_SAMPLE",
+      "source_path": "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+      "source_blob_sha": "d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+      "supports": [
+        "D2正式样本12条，正向、避雷、卡粉、厚重、12h持妆、色号和紫贝限定讨论同时存在",
+        "同一产品的用户评价存在明显分叉"
+      ],
+      "use_limit": "用户内容不是官方产品事实；不把12h、卡粉或好用/难用升级为确定性产品属性。"
+    },
+    {
+      "evidence_id": "E08_DIOR_OFFICIAL_PRODUCT_US",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html",
+      "supports": [
+        "正式产品名Diorshow 5 Couleurs - Limited Edition",
+        "眼影盘为5色结构并配Couture pouch",
+        "两款限定和谐配色为365 Charmed Green和883 Lucky Rosewood",
+        "每盘含matte/satin/pearly三种妆效",
+        "四叶草图案用于眼影压纹和配套手包",
+        "美国官网FAQ称该季限量版已不再在dior.com销售"
+      ]
+    },
+    {
+      "evidence_id": "E09_DIOR_OFFICIAL_FALL2026_COLLECTION",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://www.dior.com/en_int/beauty/dlp-makeup-lucky-clover-collection.html",
+      "supports": [
+        "Lucky Clover为Dior Fall 2026 Makeup Collection",
+        "365 Charmed Green属于Charmed Green look",
+        "产品为Limited-Edition Diorshow 5 Couleurs"
+      ]
+    },
+    {
+      "evidence_id": "E10_DIOR_OFFICIAL_INTL_PRODUCT",
+      "claim_class": "OFFICIAL_FACT",
+      "source_kind": "BRAND_OFFICIAL",
+      "source_url": "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+      "supports": [
+        "国际官网当前标New/Limited",
+        "365与883是同一产品线同一季限定的两款色号",
+        "两款各自配对应couture pouch"
+      ]
+    },
+    {
+      "evidence_id": "E11_DIOR_R03_AGGREGATED_FEEDBACK",
+      "claim_class": "AGGREGATED_USER_FEEDBACK",
+      "source_kind": "PROJECT_FORMAL_R03_PUBLIC_INDEX_SAMPLE",
+      "source_path": "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+      "source_blob_sha": "d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+      "supports": [
+        "D5正式样本12条中出现365/883谁更适合、绿色使用门槛、剧透图与实物色温差异、限定FOMO等讨论"
+      ],
+      "use_limit": "试色与购买焦虑属于公开反馈归纳，不替代官方色号与限定身份。"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND-01",
+      "working_name": "完美日记「小鹿」眼影综合盘",
+      "brand": "Perfect Diary / 完美日记",
+      "category": "美妆/眼影综合盘",
+      "product_identity_status": "PARTIALLY_VERIFIED_FROM_SECONDARY_INDEX_TO_OFFICIAL_POST",
+      "sku_identity_status": "PARTIALLY_VERIFIED_04_05_SECONDARY_INDEX_ONLY",
+      "selection_status": "NOT_ELIGIBLE_FOR_SELECTION",
+      "confirmed_fields": {
+        "current_domestic_name_lead": "小鹿眼影综合盘",
+        "current_domestic_variant_leads": [
+          {
+            "code": "04",
+            "name": "野棕绒鹿",
+            "tone": "森感褐色调"
+          },
+          {
+            "code": "05",
+            "name": "雾紫绒鹿",
+            "tone": "粉紫调"
+          }
+        ],
+        "functional_structure_lead": [
+          "眼影",
+          "腮红",
+          "高光",
+          "修容",
+          "眉粉",
+          "眼线"
+        ],
+        "domestic_timeline_lead": [
+          "二次索引称9月20-21日国内升级综合盘上线",
+          "9月22日KKV线下首发",
+          "9月24日THE COLORIST/三福等渠道跟进",
+          "9月25日品牌官方微博统一产品口径"
+        ],
+        "identity_separation": "二次索引明确将8月31日日本限定眼影盘与9月国内升级综合盘区分为不同商品对象。"
+      },
+      "unconfirmed_fields": [
+        "可直接回读的一手品牌商品详情页及完整正式商品名",
+        "每盘实际格数/盘面结构与每格功能映射",
+        "净含量/规格",
+        "官方零售价",
+        "04/05最终官方包装图片及商品图一一绑定",
+        "当前官方商城/旗舰店可购买状态",
+        "日本限定盘与国内综合盘的品牌内部正式代际/系列关系"
+      ],
+      "advantages_or_usable_points": [
+        "若后续一手证据补齐，‘一盘六功能’与两种色调具有清晰消费决策结构。",
+        "近期讨论热度与正反意见都存在，可做去噪型选择内容。"
+      ],
+      "drawbacks_or_disputes": [
+        "正式商品事实目前主要来自二次索引，不足以承担最终SKU锁。",
+        "公开反馈同时有‘神作’与‘不显色/飞粉’两极描述，不能定性。",
+        "历史完美日记‘小鹿盘’、日本限定眼影盘与当前国内综合盘容易在搜索和素材阶段串线。"
+      ],
+      "feedback_layer": {
+        "source_class": "AGGREGATED_USER_FEEDBACK",
+        "finding": "R02及二次索引记录近期同时存在强正向和‘不显色/飞粉’负面反馈。",
+        "limitation": "未把这些反馈写成产品客观属性。"
+      },
+      "sku_risk": "CRITICAL_GENERATION_AND_VERSION_COLLISION",
+      "image_mapping_status": "UNSAFE_UNTIL_DIRECT_FIRST_PARTY_PRODUCT_ASSETS_ARE_BOUND",
+      "writable_boundary": [
+        "后台可写为‘2026年9月国内小鹿眼影综合盘线索’，并说明04/05及六功能来自二次索引的品牌官方微博口径。",
+        "公开内容若要出现具体SKU/包装/盘面，必须先由R05取得可回读一手商品证据。"
+      ],
+      "forbidden_claims": [
+        "不得把旧探险家十二色小鹿盘、日本限定眼影盘与2026国内综合盘当作同一商品。",
+        "不得补写盘格数、容量、价格或具体包装。",
+        "不得把‘显色好/飞粉/不显色’任一用户评价写成官方事实或账号亲测。"
+      ],
+      "blocked_code": "BLOCKED_SKU_UNCERTAIN",
+      "evidence_refs": [
+        "E01_PERFECTDIARY_CURRENT_SECONDARY_INDEX",
+        "生产/产物/热点研究/CONTENT-002/V1/热点研究.json"
+      ]
+    },
+    {
+      "candidate_id": "CAND-02",
+      "working_name": "INTO YOU「第二颗纽扣」系列｜小光环气垫",
+      "brand": "INTO YOU / 心慕与你",
+      "category": "美妆/底妆",
+      "product_identity_status": "VERIFIED_FROM_OFFICIAL_BRAND_WEIBO",
+      "sku_identity_status": "PARTIALLY_VERIFIED_GS_MF_VERSION_LEVEL; SHADE_CODES_UNKNOWN",
+      "selection_status": "NOT_ELIGIBLE_FOR_SELECTION",
+      "confirmed_fields": {
+        "formal_product_name_in_official_posts": "INTO YOU小光环气垫",
+        "version_variants": [
+          {
+            "code": "GS",
+            "positioning": "干皮款",
+            "official_finish_wording": "通透柔光肌",
+            "official_fit_wording": "干皮、混干、追求光泽妆效"
+          },
+          {
+            "code": "MF",
+            "positioning": "油皮款",
+            "official_finish_wording": "油皮款",
+            "official_fit_wording": "油皮向分肤质版本"
+          }
+        ],
+        "campaign_relationship": "THE SECOND BUTTON/第二颗纽扣是章昊定制纽扣礼盒与传播主题；礼盒包含小光环气垫和钻光精华口红，不能自动当作气垫正式产品系列名。",
+        "launch_information": "官方微博显示章昊定制纽扣礼盒于2026-09-23 10:30上线；9月25日品牌继续独立发布小光环气垫分肤质选择内容。",
+        "official_claims": [
+          "品牌宣传‘48H透光持妆’、抗水汗强防蹭",
+          "品牌宣传PDRN成分入妆及多重护肤级精粹",
+          "GS干皮款官方宣传24H锁水保湿/长效舒缓"
+        ]
+      },
+      "unconfirmed_fields": [
+        "完整正式产品系列层级名称",
+        "净含量/规格",
+        "底妆色号代码及色号中文名",
+        "GS/MF各自完整色号范围",
+        "每个色号与外壳/替换芯/礼盒包装的一一对应",
+        "当前独立单品官方商城价格与实时在售状态"
+      ],
+      "advantages_or_usable_points": [
+        "产品名、GS/MF干油皮双版本和礼盒关系由品牌官方社媒直接确认。",
+        "新品窗口明确，产品本身可与礼盒/口红拆开讨论。"
+      ],
+      "drawbacks_or_disputes": [
+        "‘第二颗纽扣’容易被误写成气垫正式系列名，实际当前证据只确认其为礼盒/传播主题。",
+        "色号与容量尚未取得一手完整表，无法形成最终SKU身份。",
+        "48H、24H等均为品牌宣称，不是R04实测结论。"
+      ],
+      "feedback_layer": {
+        "source_class": "AGGREGATED_USER_FEEDBACK",
+        "finding": "本轮没有建立足够独立的公开用户体验样本用于显色、卡粉、持妆或肤质适配结论。",
+        "limitation": "当前仅保留官方分肤质定位，不外推真实使用结果。"
+      },
+      "sku_risk": "HIGH_SHADE_AND_CAMPAIGN_NAMING_RISK",
+      "image_mapping_status": "PRODUCT_AND_VERSION_NAMES_VERIFIED; SHADE_AND_EXACT_PACKAGE_MAPPING_UNKNOWN",
+      "writable_boundary": [
+        "可写‘INTO YOU小光环气垫’以及GS干皮款/MF油皮款。",
+        "可说明其出现在THE SECOND BUTTON章昊定制纽扣礼盒中，但不要把THE SECOND BUTTON直接写为气垫产品系列。",
+        "官方48H/24H等必须带‘品牌宣称’语义。"
+      ],
+      "forbidden_claims": [
+        "不得把钻光精华口红EL06的色号或卖点混进气垫SKU。",
+        "不得自行补写气垫色号、容量和包装对应。",
+        "不得把官方持妆/保湿时长写成账号亲测。"
+      ],
+      "blocked_code": "BLOCKED_SKU_UNCERTAIN",
+      "evidence_refs": [
+        "E02_INTOYOU_OFFICIAL_WEIBO_MIRROR",
+        "生产/产物/热点研究/CONTENT-002/V1/热点研究.json"
+      ]
+    },
+    {
+      "candidate_id": "CAND-03",
+      "working_name": "毛戈平「净悦润肌卸妆膏」",
+      "brand": "MAOGEPING / 毛戈平",
+      "category": "护肤/卸妆",
+      "product_identity_status": "VERIFIED_WITH_OFFICIAL_POST_SECONDARY_INDEX",
+      "sku_identity_status": "PARTIALLY_VERIFIED_120G_FULLSIZE_AND_3G_SAMPLE; RETAIL_PRICE_UNKNOWN",
+      "selection_status": "VERIFIED_ELIGIBLE",
+      "eligibility_conditions": [
+        "R01如选择本候选，R05在建立PRODUCT/SKU DRAFT前必须重新取得可回读的一手官方商品页/官方旗舰店销售页，并绑定120g正式销售SKU与官方产品图。",
+        "不得把旧款净悦清透卸妆油的价格、容量或包装移植到新品卸妆膏。"
+      ],
+      "confirmed_fields": {
+        "official_site_series_context": "毛戈平官网护肤分类存在净悦系列。",
+        "product_name_lead": "净悦润肌卸妆膏",
+        "first_product_claim_lead": "二次索引明确指向2026-09-17毛戈平官方小红书官宣，并称其为品牌首款卸妆膏。",
+        "size_leads": [
+          {
+            "size": "120g",
+            "role": "正装线索，出现在官方活动奖品信息的二次索引中"
+          },
+          {
+            "size": "3g",
+            "role": "样品/试用装线索"
+          }
+        ],
+        "launch_information": "2026-09-17官方小红书官宣线索；9月21-23日官方活动窗口的二次索引。",
+        "current_official_site_note": "本轮毛戈平官网可见净悦系列，但站内公开索引尚未出现该新品独立详情页。"
+      },
+      "unconfirmed_fields": [
+        "新品当前正式零售价",
+        "当前官方商城销售页与库存状态",
+        "120g正式销售SKU编码",
+        "完整配方表与逐项官方功效宣称原文",
+        "最终包装图片/新旧包装关系",
+        "3g是否长期独立售卖SKU还是仅试用装"
+      ],
+      "advantages_or_usable_points": [
+        "新品时间线新，正式品名和120g正装线索相对清楚。",
+        "‘品牌首款卸妆膏’具有明确内容入口，但必须保留来源限定。"
+      ],
+      "drawbacks_or_disputes": [
+        "品牌官网当前公开索引尚未直接展示新品详情页，部分关键信息仍依赖官方小红书的二次索引。",
+        "首发阶段存在集中种草和强烈正向话术，长期用户反馈不足。",
+        "真实卸妆力、残膜感、敏感肌适配等当前不能形成确定结论。"
+      ],
+      "feedback_layer": {
+        "source_class": "AGGREGATED_USER_FEEDBACK",
+        "finding": "R02和二次索引显示官宣前后集中出现收样/强正向新品内容。",
+        "limitation": "不能据此认定真实卸妆力、温和性、残膜或敏感肌适配。"
+      },
+      "sku_risk": "MEDIUM_HIGH_DIRECT_LISTING_MISSING",
+      "image_mapping_status": "NOT_READY_FOR_LOCK; R05_MUST_ACQUIRE_DIRECT_OFFICIAL_SALES_ASSET",
+      "writable_boundary": [
+        "可写‘净悦润肌卸妆膏’新品线索、2026-09-17官宣时间和120g正装线索，并注明来源层级。",
+        "‘首款’只能作为官方小红书官宣的二次索引口径，不扩大为行业第一。",
+        "价格未知就保持未知。"
+      ],
+      "forbidden_claims": [
+        "不得把毛戈平旧净悦卸妆油280元等旧品价格写给新品卸妆膏。",
+        "不得把首发种草中的‘最牛’等话术当效果事实。",
+        "不得写账号本人卸妆力、乳化速度、残膜、敏感肌使用体验。",
+        "不得在R05前自行生成/认定最终产品包装。"
+      ],
+      "evidence_refs": [
+        "E03_MAOGEPING_OFFICIAL_SITE",
+        "E04_MAOGEPING_NEW_BALM_SECONDARY_INDEX",
+        "生产/产物/热点研究/CONTENT-002/V1/热点研究.json"
+      ]
+    },
+    {
+      "candidate_id": "CAND-04",
+      "working_name": "Mistine「夜光气垫2.0」/紫贝限定",
+      "brand": "MISTINE / 蜜丝婷",
+      "category": "美妆/底妆",
+      "product_identity_status": "VERIFIED_PRODUCT_FAMILY_AND_PURPLE_LIMITED_OFFERING",
+      "sku_identity_status": "PARTIALLY_VERIFIED_LF100_LF110_ECOMMERCE; FORMULA_RELATION_UNKNOWN",
+      "selection_status": "NOT_ELIGIBLE_FOR_SELECTION",
+      "confirmed_fields": {
+        "verified_store_product": "微信认证‘蜜丝婷MISTINE旗舰店’当前存在‘紫贝限定 MISTINE夜光气垫’商品。",
+        "verified_store_packages": [
+          "一壳二芯",
+          "一壳三芯"
+        ],
+        "verified_store_price_at_research": "139.90至179.90元，随组合变化",
+        "ecommerce_2_0_relationship_lead": "京东索引同时出现‘夜光气垫2.0’和‘夜光气垫2.0-紫贝限定’，支持紫贝限定属于夜光2.0商品家族/销售组合的强线索。",
+        "ecommerce_shade_leads": [
+          "LF100",
+          "LF110"
+        ],
+        "replacement_weight_lead": "部分京东替换芯列表标12g"
+      },
+      "unconfirmed_fields": [
+        "品牌一手技术资料是否明确紫贝限定与常规夜光2.0完全同配方",
+        "紫贝限定是否仅换壳/礼盒，还是存在批次或配方差异",
+        "LF100/LF110与LF100S/LF110S后缀关系",
+        "所有色号的正式中文肤色名及完整SKU表",
+        "常规2.0与紫贝限定的替换芯是否官方确认完全互换",
+        "当前认证旗舰店商品详情中可直接读取的净含量"
+      ],
+      "advantages_or_usable_points": [
+        "紫贝限定作为真实在售限定包装/组合已被认证旗舰店直接确认。",
+        "常规2.0与紫贝限定在电商索引中可以拆成不同包装/组合讨论。"
+      ],
+      "drawbacks_or_disputes": [
+        "不能因为‘限定’就推断配方升级，也不能因为电商标题同带2.0就直接证明配方完全一致。",
+        "不同电商列表出现LF110与LF110S等后缀差异，SKU标准化风险高。",
+        "R03正式12条样本中正向、避雷、卡粉、厚重、持妆等体验明显分裂。"
+      ],
+      "feedback_layer": {
+        "source_class": "AGGREGATED_USER_FEEDBACK",
+        "finding": "R03 D2共12条公开索引样本，同时存在好评、卡粉/厚重避雷和长时持妆内容。",
+        "limitation": "这些体验高度受肤质、手法、色号与样本商业属性影响，不作为官方属性。"
+      },
+      "sku_risk": "CRITICAL_LIMITED_PACKAGE_FORMULA_AND_SUFFIX_COLLISION",
+      "image_mapping_status": "PURPLE_LIMITED_ASSET_EXISTS; EXACT_2_0_FORMULA_SKU_MAPPING_NOT_SAFE",
+      "writable_boundary": [
+        "可写‘紫贝限定’真实存在且为MISTINE夜光气垫限定销售组合。",
+        "可写电商索引把它标为夜光气垫2.0-紫贝限定，但配方是否与常规2.0完全一致必须保持UNKNOWN。",
+        "用户卡粉/厚重/持妆只能做归因反馈，不写成产品必然表现。"
+      ],
+      "forbidden_claims": [
+        "不得写‘紫贝限定=普通2.0完全同配方，只换壳’，当前无足够一手证据。",
+        "不得自行统一LF110与LF110S等不同后缀。",
+        "不得把一壳二芯/三芯/四芯不同促销组合当成不同配方版本。",
+        "不得把用户12h持妆、卡粉或好用评价写成官方事实。"
+      ],
+      "blocked_code": "BLOCKED_SKU_UNCERTAIN",
+      "evidence_refs": [
+        "E05_MISTINE_VERIFIED_WECHAT_STORE",
+        "E06_MISTINE_JD_LISTINGS",
+        "E07_MISTINE_R03_AGGREGATED_FEEDBACK"
+      ]
+    },
+    {
+      "candidate_id": "CAND-05",
+      "working_name": "Dior 2026秋季限定眼影｜365 幸运四叶草",
+      "brand": "Dior",
+      "category": "美妆/限定眼影",
+      "product_identity_status": "VERIFIED",
+      "sku_identity_status": "VERIFIED_365_AND_883_SAME_LIMITED_PRODUCT_LINE",
+      "selection_status": "VERIFIED_ELIGIBLE",
+      "confirmed_fields": {
+        "official_product_name": "Diorshow 5 Couleurs - Limited Edition",
+        "collection": "Lucky Clover Fall 2026 Makeup Collection",
+        "product_structure": "Eye palette - 5 eyeshadows - Couture pouch",
+        "limited_variants": [
+          {
+            "code": "365",
+            "official_name": "Charmed Green",
+            "color_family": "green harmony"
+          },
+          {
+            "code": "883",
+            "official_name": "Lucky Rosewood",
+            "color_family": "rosewood harmony"
+          }
+        ],
+        "finish_structure": [
+          "matte",
+          "satin",
+          "pearly"
+        ],
+        "package_identity": "四叶草图案出现在眼影压纹和配套couture pouch；365与883各自有对应同季限定手包。",
+        "variant_relationship": "365和883是同一Diorshow 5 Couleurs 2026秋季Lucky Clover限定产品下的两款和谐配色，不是新旧版本关系。",
+        "naming_correction": "‘Lucky Clover/幸运四叶草’是2026秋季系列主题；365的Dior官方英文色名是Charmed Green，不能把‘幸运四叶草’当作365唯一正式色名。",
+        "current_sale_status": "地区相关：美国官网FAQ称该季限量365/883已不再在dior.com销售；国际/法国/加拿大官网仍保留New/Limited商品页并出现下单或候补入口。"
+      },
+      "unconfirmed_fields": [
+        "中国大陆官网当前独立眼影商品页的正式中文色名",
+        "中国大陆当前实时库存/专柜可售情况",
+        "净含量/克数在本轮直接官方产品文本中未显示",
+        "后续生产使用的具体官方商品图文件身份仍需R05/R10绑定"
+      ],
+      "advantages_or_usable_points": [
+        "品牌一手证据完整，产品线、2026秋季限定身份、365/883关系、盘型和包装主题都能直接核验。",
+        "365绿色与883玫瑰木形成天然选择题，且不需要借助用户体验来证明SKU身份。"
+      ],
+      "drawbacks_or_disputes": [
+        "限定品库存强烈受地区与时间影响，不能写成全球都在售或全球都售罄。",
+        "公开试色讨论存在绿色驾驭门槛、色温和实物差异等分歧，只能作为用户反馈。",
+        "‘365 幸运四叶草’是平台俗称/主题化叫法，正式产品书写应保留Diorshow 5 Couleurs + 365 Charmed Green。"
+      ],
+      "feedback_layer": {
+        "source_class": "AGGREGATED_USER_FEEDBACK",
+        "finding": "R03 D5共12条限定彩妆公开索引样本，365/883存在‘绿色门槛 vs 玫瑰木更稳’、剧透图与实物色温差异、FOMO等讨论。",
+        "limitation": "这些讨论不替代官方配色身份，也不能写成普遍肤色适配结论。"
+      },
+      "sku_risk": "LOW_TO_MEDIUM_REGION_AVAILABILITY_AND_CN_LOCALIZATION",
+      "image_mapping_status": "TEXT_AND_COLLECTION_IDENTITY_VERIFIED; EXACT_ASSET_FILE_BINDING_REQUIRES_R05_R10",
+      "writable_boundary": [
+        "可直接写Diorshow 5 Couleurs - Limited Edition、Lucky Clover Fall 2026、365 Charmed Green、883 Lucky Rosewood、5色盘和三种妆效结构。",
+        "可写两款同属一季限定，不得写成365是新版、883是旧版。",
+        "当前在售状态必须注明地区差异。"
+      ],
+      "forbidden_claims": [
+        "不得把Lucky Clover直接当365的唯一正式色号名。",
+        "不得宣称全球售罄或全球仍有货。",
+        "不得把用户试色结论写成所有肤色都适合/不适合。",
+        "不得把官方longwearing宣传写成账号本人长时实测。"
+      ],
+      "evidence_refs": [
+        "E08_DIOR_OFFICIAL_PRODUCT_US",
+        "E09_DIOR_OFFICIAL_FALL2026_COLLECTION",
+        "E10_DIOR_OFFICIAL_INTL_PRODUCT",
+        "E11_DIOR_R03_AGGREGATED_FEEDBACK"
+      ]
+    }
+  ],
+  "summary": {
+    "result": "PASS",
+    "candidates_covered": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-03",
+      "CAND-04",
+      "CAND-05"
+    ],
+    "verified_eligible_candidates": [
+      "CAND-03",
+      "CAND-05"
+    ],
+    "not_eligible_candidates": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-04"
+    ],
+    "highest_identity_confidence": [
+      "CAND-05"
+    ],
+    "selection_notes": {
+      "CAND-01": "当前正式商品/04-05 SKU主要依赖二次索引，且历史小鹿盘、日本限定盘与国内综合盘存在混线风险，暂不可选。",
+      "CAND-02": "官方已确认小光环气垫、GS/MF版本和纽扣礼盒关系，但气垫色号/容量/包装SKU未闭环，暂不可选。",
+      "CAND-03": "商品身份与120g正装线索足以进入R01选择池，但R05必须先取得直接官方销售页并锁定120g SKU、价格和官方图；当前价格UNKNOWN。",
+      "CAND-04": "紫贝限定真实在售，但与普通2.0是否完全同配方、LF100/LF110/S后缀及包装映射未闭环，暂不可选。",
+      "CAND-05": "Dior官方一手证据闭环最完整；365 Charmed Green与883 Lucky Rosewood是同一2026秋季Lucky Clover限定产品的两个SKU，可进入R01选择池。"
+    },
+    "overall_blocked_reason": null,
+    "failed_scope": []
+  },
+  "completed_at": "2026-09-28T10:03:03+08:00"
+}
