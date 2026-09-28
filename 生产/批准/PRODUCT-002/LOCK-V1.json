@@ -1,0 +1,131 @@
+{
+  "schema": "XP1_R05_PRODUCT_DRAFT_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "lock_type": "PRODUCT_LOCK",
+  "lock_id": "PRODUCT-002-LOCK-V1",
+  "status": "LOCKED",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-002/PRODUCT_LOCK/V1/R05-PRODUCT-SKU草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+    "source_delivery_path": "生产/产物/锁定草案/CONTENT-002/V1/交付.json",
+    "supersedes": null,
+    "source_draft_path": "生产/产物/锁定草案/CONTENT-002/V1/PRODUCT-002-DRAFT.json",
+    "source_draft_blob_sha": "a7e7a7812372f31079681688d32a746129149546"
+  },
+  "brand": "Dior",
+  "formal_product_name": "Diorshow 5 Couleurs - Limited Edition",
+  "series": "Lucky Clover Fall 2026 Makeup Collection",
+  "model": "Diorshow 5 Couleurs limited-edition 5-eyeshadow palette",
+  "version": "Fall 2026 Lucky Clover limited edition",
+  "capacity_or_size": "UNKNOWN",
+  "package_description": "Black Dior five-pan compact with a central diamond-shaped pan carrying the CD monogram and four surrounding pans embossed with four-leaf clover motifs. Each of the two Fall 2026 harmonies is paired with its own quilted couture pouch bearing clover motifs; 365 uses an ivory/ecru pouch with muted green-gray clovers, while 883 uses a pale pink pouch with light clovers.",
+  "official_url": "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+  "ecommerce_urls": [
+    "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html",
+    "https://www.dior.com/en_ca/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+    "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html",
+    "https://www.dior.com/en_id/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+  ],
+  "reference_images": [
+    {
+      "ref_id": "PRODUCT-REF-365-FULL",
+      "transport": "URL",
+      "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+      "purpose": "Dior official first-party identity anchor for 365 Charmed Green palette + matching couture pouch"
+    },
+    {
+      "ref_id": "PRODUCT-REF-883-FULL",
+      "transport": "URL",
+      "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+      "purpose": "Dior official first-party identity anchor for 883 Lucky Rosewood palette + matching couture pouch"
+    },
+    {
+      "ref_id": "PRODUCT-REF-DUO",
+      "transport": "URL",
+      "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Library-Sites-DiorSharedLibrary/default/dwaf2755cf/images/beauty/02-MAKEUP/2026/FALL-LOOK/Y0000255/A26_LOOK_ERETAIL_M229_FALL_LOOK_P03K_DUO_PALETTE_5C_2400x3000_WIP_V1.jpg?sw=800",
+      "purpose": "Dior official first-party duo visual showing both sibling harmonies together"
+    }
+  ],
+  "known_sku_count_or_options": [
+    {
+      "shade_or_color_number": "365",
+      "official_english_name": "Charmed Green",
+      "cn_official_name": "UNKNOWN",
+      "relationship": "SIBLING_SKU_SAME_SEASON_SAME_PRODUCT_LINE",
+      "priority": "PRIMARY_TARGET"
+    },
+    {
+      "shade_or_color_number": "883",
+      "official_english_name": "Lucky Rosewood",
+      "cn_official_name": "UNKNOWN",
+      "relationship": "SIBLING_SKU_SAME_SEASON_SAME_PRODUCT_LINE",
+      "priority": "SIBLING_COMPARISON"
+    }
+  ],
+  "product_structure": "Eye palette - 5 eyeshadows - Couture pouch",
+  "finish_structure": [
+    "matte",
+    "satin",
+    "pearly"
+  ],
+  "collection_theme_identity": "Lucky Clover is the Fall 2026 collection theme inspired by the four-leaf clover; it is not the unique official shade name of 365.",
+  "regional_availability_boundary": {
+    "united_states": "Official US FAQ states the 365 Charmed Green and 883 Lucky Rosewood limited editions are no longer available on dior.com; the same page may still render purchase/waitlist UI, so do not generalize beyond the US site.",
+    "canada": "Official Canada product page remains active and displays order/waitlist UI; availability can differ by selected shade and time.",
+    "international": "Official international product page remains published; page existence is not proof of stock in any specific country.",
+    "china_mainland": "UNKNOWN; no Dior China first-party page was verified in this run for current stock or official Chinese shade naming.",
+    "global_rule": "Never convert one region's availability into a global sold-out/in-stock claim."
+  },
+  "sku_lock_required": true,
+  "do_not_confuse_with": [
+    "365 Charmed Green must not be renamed to Lucky Clover as its sole official shade name",
+    "883 Lucky Rosewood is a sibling SKU, not an older/newer version of 365",
+    "Lucky Clover Fall 2026 collection theme is distinct from the SKU shade names",
+    "regional Dior stock status is not global stock status",
+    "non-Dior search thumbnails, historical palette imagery, and similar green/rosewood palettes are not valid identity anchors"
+  ],
+  "identity_checks": [
+    "brand=Dior",
+    "formal_product_name=Diorshow 5 Couleurs - Limited Edition",
+    "series=Lucky Clover Fall 2026 Makeup Collection",
+    "structure=5 eyeshadows + couture pouch",
+    "finish family=matte/satin/pearly",
+    "365 and 883 are sibling harmonies within the same Fall 2026 limited product line",
+    "four-leaf clover embossing/pouch motif matches official assets"
+  ],
+  "source_paths": [
+    "生产/产物/总监/CONTENT-002/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-002/V1/交付.json"
+  ],
+  "external_evidence": [
+    {
+      "evidence_id": "E08_DIOR_OFFICIAL_PRODUCT_US",
+      "url": "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html"
+    },
+    {
+      "evidence_id": "E09_DIOR_OFFICIAL_FALL2026_COLLECTION",
+      "url": "https://www.dior.com/en_int/beauty/dlp-makeup-lucky-clover-collection.html"
+    },
+    {
+      "evidence_id": "E10_DIOR_OFFICIAL_INTL_PRODUCT",
+      "url": "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+    },
+    {
+      "evidence_id": "R05_DIOR_CA_SKU_IMAGE_BINDING",
+      "url": "https://www.dior.com/en_ca/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+    },
+    {
+      "evidence_id": "R05_DIOR_ID_ITEM_IDENTIFIER_CHECK",
+      "url": "https://www.dior.com/en_id/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+    }
+  ],
+  "approval_state": "APPROVED",
+  "approved_by": "R01",
+  "approved_at": "2026-09-28T10:29:00+08:00"
+}
