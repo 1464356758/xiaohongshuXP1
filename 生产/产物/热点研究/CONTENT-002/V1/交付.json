@@ -1,0 +1,48 @@
+{
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R02-V1",
+  "role_id": "R02",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R02|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-002/DISCOVERY/V1/R02-热点侦察任务.json",
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "account_strategy_lock": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json#a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock": "生产/批准/VOICE-001/LOCK-V1.json#0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock": "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "runtime_mode": "LIVE",
+    "research_platform": "小红书",
+    "freshness_window": "2026-09-14T00:00:00+08:00/2026-09-28T09:27:00+08:00"
+  },
+  "output_paths": [
+    "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+    "生产/产物/热点研究/CONTENT-002/V1/交付.json"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "https://post.smzdm.com/p/awwzx5rm/",
+    "https://post.smzdm.com/p/a70n3nkg/",
+    "https://www.sina.cn/media/7339405441",
+    "https://dzshyw.com/news/73639.html",
+    "https://qian-gua.com/rank/live/",
+    "https://qian-gua.com/rank/live/1/1/20260927/1",
+    "https://post.smzdm.com/p/awwzqr4k/",
+    "https://post.smzdm.com/p/a5ro3388/"
+  ],
+  "completed_at": "2026-09-28T09:38:00+08:00",
+  "primary_output_blob_sha": "67d8f88eeee101691c051d5beafc8ec513ea3405",
+  "primary_output_commit": "9b93ca343053efacfefd7d962b0d12d784fcd28e",
+  "delivery_fingerprint_or_commit": "9b93ca343053efacfefd7d962b0d12d784fcd28e",
+  "next_role_suggestion": "R01",
+  "notes": [
+    "形成7个候选方向，优先当前新品、争议产品、秋冬底妆与国庆即时搜索需求。",
+    "R02未决定最终商品，未建立PRODUCT/SKU LOCK。",
+    "R03草稿与交付均未读取，保持并行独立性。",
+    "商品级功效、色号、SKU、包装与官方图片均留给R04/R05正式核验。"
+  ]
+}
