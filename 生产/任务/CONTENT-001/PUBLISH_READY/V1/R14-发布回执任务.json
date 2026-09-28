@@ -1,0 +1,70 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-001",
+  "task_id": "CONTENT-001-PUBLISH-RECEIPT-R14-V1",
+  "stage": "PUBLISH_READY",
+  "role_id": "R14",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "READY",
+  "phase": "PUBLISH_READY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T09:27:00+08:00",
+  "input_paths": [
+    "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json",
+    "生产/批准/CONTENT-001/LOCK-V1.json",
+    "生产/发布包/CONTENT-001/V1/发布包.json"
+  ],
+  "required_context": {
+    "user_publication_report": "用户明确回复：下一篇，我发布了，不用确认",
+    "user_reported_at": "2026-09-28T09:27:00+08:00",
+    "exact_published_at_provided": false,
+    "publication_link_provided": false,
+    "screenshot_provided": false,
+    "verification_mode": "USER_EXPLICIT_ATTESTATION",
+    "content_lock_path": "生产/批准/CONTENT-001/LOCK-V1.json",
+    "publish_package_path": "生产/发布包/CONTENT-001/V1/发布包.json",
+    "gate_evidence_path": "生产/审核/CONTENT-001/V1/发布合规/PUBLISH_COMPLIANCE_GATE_EVIDENCE.json",
+    "pre_publish_actual_recheck_status": "NOT_CAPTURED_BEFORE_USER_PUBLISH_REPORT"
+  },
+  "scope": [
+    "仅把用户已明确发生的实际发布事实写成正式R14发布回执，不要求用户再次确认，不要求链接或截图。",
+    "不得伪造具体published_at；用户未提供精确发布时间时，published_at=null，并记录user_reported_at与precision=UNKNOWN_EXACT。",
+    "不得伪造平台内容ID、链接、截图或后台回执；未知字段写null/UNKNOWN。",
+    "必须明确记录pre_publish_actual_recheck_status=NOT_CAPTURED_BEFORE_USER_PUBLISH_REPORT，不能把事后核验伪装成发布前recheck。",
+    "绑定当前CONTENT LOCK、publish package和Gate evidence。",
+    "R14不得修改state/phase/pointer，不得创建PUBLISHED计数事件。"
+  ],
+  "frozen_scope": [
+    "CONTENT-001-LOCK-V1",
+    "R14 publish package",
+    "PUBLISH_COMPLIANCE_GATE evidence"
+  ],
+  "acceptance_criteria": [
+    "receipt只陈述用户已发布这一真实事实。",
+    "published_at若未知保持null。",
+    "publication_url/platform_content_id若未知保持null。",
+    "保留user_reported_at和USER_EXPLICIT_ATTESTATION证据类型。",
+    "明确记录发布前actual_publish_recheck未捕获，不伪造PASS。",
+    "写后回读正式发布回执与交付。"
+  ],
+  "expected_output_paths": [
+    "生产/发布包/CONTENT-001/V1/发布回执.json",
+    "生产/发布包/CONTENT-001/V1/发布回执交付.json"
+  ],
+  "dependency_revision": "GATE|6dd640943e87fde09707a37837e9c59309b43956|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|USER_REPORT|PUBLISHED|2026-09-28T09:27:00+08:00",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-001|PUBLISH_READY|R14|V1|1|null|GATE|6dd640943e87fde09707a37837e9c59309b43956|CONTENT_LOCK|d94a6bc44f94ad6fb2b10a596907000d71af3942|PACKAGE|3da59075eff56247e1160286e52b78c05e78fd21|USER_REPORT|PUBLISHED|2026-09-28T09:27:00+08:00",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
