@@ -1,0 +1,150 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COMPLIANCE-REVIEW-R13-V1",
+  "stage": "COMPLIANCE_REVIEW",
+  "role_id": "R13",
+  "review_mode": "CONTENT_TRUTH_COMPLIANCE_REVIEW",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVIEWING",
+  "phase": "COMPLIANCE_REVIEW",
+  "created_by": "R01",
+  "created_at": "2026-09-28T16:50:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "final_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "final_copy_revision": 1,
+    "final_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "active_r10_review_path": "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "active_r11_review_path": "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "active_r12_review_path": "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "compliance_snapshot_path": "生产/批准/COMPLIANCE-XHS-0002/V1/COMPLIANCE-SNAPSHOT.json",
+    "compliance_snapshot_id": "COMPLIANCE-XHS-0002",
+    "compliance_snapshot_revision": 1,
+    "required_compliance_scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "compliance_valid_until": "2026-10-05T16:45:00+08:00",
+    "image_binary_transport": "USER_FILE",
+    "actual_pixels_required": true
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/批准/COMPLIANCE-XHS-0002/V1/COMPLIANCE-SNAPSHOT.json"
+  ],
+  "required_user_files": [
+    {
+      "page_id": "P1",
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1"
+    },
+    {
+      "page_id": "P2",
+      "fingerprint": "sha256:554dc61f5fd0ee4de68c70741d455ecf1e830f32092b219a07b58a65737e582b"
+    },
+    {
+      "page_id": "P3",
+      "fingerprint": "sha256:7c501530a0b3e2e447af6c9b4b1e548ef739266ab17e60f78aa17b7cd70aac6f"
+    },
+    {
+      "page_id": "P4",
+      "fingerprint": "sha256:eb688650afe2bdce9ef2d402d04e4c8945faa73c05c626cab9dd525302bbf8e8"
+    },
+    {
+      "page_id": "P5",
+      "fingerprint": "sha256:533b39b0e6b6f80bcc02b4badea33e4770d0680d3b0509c2ba8b8ce9425fc889"
+    }
+  ],
+  "scope": [
+    "审核exact final copy + exact P1-P5实际像素 + exact manifest的内容真实性与平台合规。",
+    "逐条分类公开claim为官方事实、可观察事实、编辑判断、聚合反馈或个人体验；事实必须有合法来源或当前LOCK支持，编辑判断不得伪装官方结论。",
+    "核对Dior / Diorshow 5 Couleurs - Limited Edition / Lucky Clover Fall 2026 Makeup Collection、365 Charmed Green主线、883 Lucky Rosewood仅P4兄弟SKU对照与当前PRODUCT/SKU LOCK一致。",
+    "SYNTHETIC_VISUAL_PERSONA不得出现现实购买、收货、使用、试色、回购、空盘、持妆时长、实测效果等第一人称经历或等价暗示。",
+    "检查final copy和P1-P5公开文字是否存在医疗化、功效保证、绝对化、虚假性能结论、虚构体验、未经证实的库存/稀缺性/FOMO、把编辑建议冒充Dior官方教程等问题。",
+    "Limited Edition只可作为已核验属性；不得推导即将售罄、全球缺货、最后机会或必须立即购买。库存只允许当前地区/时间Dior官方渠道实时状态。",
+    "审核必须绑定当前R10/R11/R12 PASS证据和COMPLETE IMAGE-QA barrier。",
+    "审核必须消费active COMPLIANCE-XHS-0002 revision 1，确认status=VALID、当前时间未过valid_until且scope fingerprint精确匹配。",
+    "AI标识要求属于发布义务。当前P1-P5图片本身不因未写‘AI生成’而自动FAIL；若内容本体无其他硬伤，应记录AI_label_publish_requirement=REQUIRED_AT_PUBLISH，并交由R14/PUBLISH_COMPLIANCE_GATE在实际发布时执行平台AI标识/声明。",
+    "如果当前文案或图片本体存在必须修改的硬伤，FAIL并给最小返修范围；不得用发布阶段AI标识掩盖内容本身问题。",
+    "不修改图片、文案、LOCK、state/phase/pointer。"
+  ],
+  "frozen_scope": [
+    "final copy fingerprint sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "ASSET-CONTENT-002 revision 1 / manifest fingerprint sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "R10/R11/R12 current PASS evidence",
+    "COMPLIANCE-XHS-0002 revision 1 / scope fingerprint sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1",
+    "ACCOUNT_STRATEGY/VOICE/PERSONA/PRODUCT/SKU current locks",
+    "365 Charmed Green唯一active SKU；883 Lucky Rosewood仅P4 sibling comparison"
+  ],
+  "acceptance_criteria": [
+    "实际读取P1-P5当前USER_FILE像素，且五页identity与active manifest一致。",
+    "绑定exact final_copy fingerprint与exact manifest id/revision/fingerprint。",
+    "绑定R10/R11/R12 current evidence和COMPLETE IMAGE-QA barrier。",
+    "绑定status=VALID、时间有效、scope匹配的COMPLIANCE-XHS-0002 revision 1。",
+    "逐条检查final copy及图片公开文字的事实/编辑判断/个人体验边界。",
+    "不存在synthetic persona现实亲测/购买/回购/空盘/时长体验或等价暗示。",
+    "不存在未证实医疗/疗效/保证性/绝对化/虚假性能/虚假库存或FOMO claim。",
+    "不存在PRODUCT/SKU名称、色号、包装、365/883角色冲突。",
+    "若PASS，明确记录AI_label_publish_requirement=REQUIRED_AT_PUBLISH及commercial_disclosure_requirement=NOT_APPLICABLE_FOR_CURRENT_SCOPE，并交R14/PUBLISH_COMPLIANCE_GATE复核实际发布scope。",
+    "写后回读正式审核文件和交付。"
+  ],
+  "expected_output_paths": [
+    "生产/审核/内容合规/CONTENT-002/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核.json",
+    "生产/审核/内容合规/CONTENT-002/COMPLIANCE_REVIEW/V1/交付.json"
+  ],
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|SNAPSHOT|5e8ee7cf2754a90afdd08a90aab9686728c61626|COMPLIANCE-XHS-0002|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|COMPLIANCE_REVIEW|R13|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|SNAPSHOT|5e8ee7cf2754a90afdd08a90aab9686728c61626|COMPLIANCE-XHS-0002|1|sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_sku_uncertain": "BLOCKED_SKU_UNCERTAIN",
+    "on_asset_missing": "BLOCKED_ASSET_MISSING",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
