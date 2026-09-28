@@ -18,32 +18,32 @@
     {
       "role_id": "R10",
       "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
-      "delivery_path": null,
-      "result": "PENDING",
+      "delivery_path": "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/交付.json",
+      "result": "PASS",
       "task_version": "V1",
       "input_revision": 1,
       "revision_round": null,
       "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
-      "completed_at": null,
-      "delivery_fingerprint_or_commit": null,
+      "completed_at": "2026-09-28T16:09:53+08:00",
+      "delivery_fingerprint_or_commit": "git_blob:6212bcb871714244daa7dfa13b398f2cc9d2db5a",
       "asset_manifest_id": "ASSET-CONTENT-002",
       "manifest_revision": 1,
-      "evidence_valid": false
+      "evidence_valid": true
     },
     {
       "role_id": "R11",
       "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
-      "delivery_path": null,
-      "result": "PENDING",
+      "delivery_path": "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/交付.json",
+      "result": "PASS",
       "task_version": "V1",
       "input_revision": 1,
       "revision_round": null,
       "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
-      "completed_at": null,
-      "delivery_fingerprint_or_commit": null,
+      "completed_at": "2026-09-28T16:09:00+08:00",
+      "delivery_fingerprint_or_commit": "git_blob:ea4710e9eb3a53cb768b7e60852096f519a37bd3",
       "asset_manifest_id": "ASSET-CONTENT-002",
       "manifest_revision": 1,
-      "evidence_valid": false
+      "evidence_valid": true
     },
     {
       "role_id": "R12",
@@ -67,8 +67,8 @@
   "revision_rule": "任一in-scope资产/manifest/dependency变化必须新barrier_revision。",
   "completed_at": null,
   "completion_evidence": {
-    "R10": null,
-    "R11": null,
+    "R10": "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "R11": "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
     "R12": null
   }
 }
