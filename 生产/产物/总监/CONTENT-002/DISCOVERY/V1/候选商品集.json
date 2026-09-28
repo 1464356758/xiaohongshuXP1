@@ -1,0 +1,151 @@
+{
+  "schema": "XP1_R01_CANDIDATE_SET_V1",
+  "content_id": "CONTENT-002",
+  "candidate_set_id": "CONTENT-002-CANDIDATE-SET-V1",
+  "stage": "DISCOVERY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T09:48:00+08:00",
+  "source_barrier": {
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "status": "COMPLETE"
+  },
+  "source_evidence": [
+    {
+      "role_id": "R02",
+      "research_path": "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+      "research_blob_sha": "67d8f88eeee101691c051d5beafc8ec513ea3405",
+      "delivery_path": "生产/产物/热点研究/CONTENT-002/V1/交付.json",
+      "delivery_blob_sha": "4b5cc3754f7b77cb77d1a64cefb0c406c5d892ce",
+      "result": "PASS"
+    },
+    {
+      "role_id": "R03",
+      "research_path": "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+      "research_blob_sha": "d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+      "delivery_path": "生产/产物/竞品研究/CONTENT-002/V1/交付.json",
+      "delivery_blob_sha": "e589507bb483ff8339e961afd0de0054a91e7017",
+      "result": "PASS"
+    }
+  ],
+  "selection_rule": "仅从本轮R02/R03当前有效证据中建立R04事实核验池；此处不是最终选品，不建立PRODUCT/SKU LOCK。",
+  "candidates": [
+    {
+      "candidate_id": "CAND-01",
+      "working_name": "完美日记「小鹿」眼影综合盘",
+      "category": "美妆/眼影综合盘",
+      "source_refs": [
+        "R02:HOT-02"
+      ],
+      "evidence_reason": "R02标记ACTIVE_AND_RISING / HIGH，近期国内上新且存在‘神作’与‘不显色飞粉’正反反馈分歧，适合做事实与选择问题拆解。",
+      "identity_risk": "正式商品名、国内渠道时间、是否属于全脸盘/综合盘及具体SKU仍需R04核验。",
+      "r04_required_verification": [
+        "品牌官方正式商品名与系列",
+        "盘体功能边界与六/多色结构",
+        "国内上市/渠道信息",
+        "正式SKU/色号/包装映射",
+        "官方宣称与用户显色/飞粉反馈分层"
+      ]
+    },
+    {
+      "candidate_id": "CAND-02",
+      "working_name": "INTO YOU「第二颗纽扣」系列｜小光环气垫",
+      "category": "美妆/底妆",
+      "source_refs": [
+        "R02:HOT-03"
+      ],
+      "evidence_reason": "R02记录9月23日起新品传播，处ACTIVE_IN_WINDOW，底妆方向与秋冬/肤质选择需求可衔接。",
+      "identity_risk": "系列名、气垫正式商品名、版本、色号与同系列口红信息不可混用，需R04独立核验。",
+      "r04_required_verification": [
+        "品牌与系列正式名称",
+        "小光环气垫正式商品名/版本",
+        "色号与包装对应",
+        "上市/发售信息",
+        "干皮/油皮等适配只能区分官方宣称与用户反馈"
+      ]
+    },
+    {
+      "candidate_id": "CAND-03",
+      "working_name": "毛戈平「净悦润肌卸妆膏」",
+      "category": "护肤/卸妆",
+      "source_refs": [
+        "R02:HOT-01"
+      ],
+      "evidence_reason": "R02记录9月17日官宣首款卸妆膏，仍处新品早期讨论窗口，且集中种草与长期反馈不足形成明显讨论点。",
+      "identity_risk": "‘首款’、容量、价格、配方/功效、正式在售SKU与包装必须由官方一手来源核验。",
+      "r04_required_verification": [
+        "正式商品名与是否为品牌首款卸妆膏",
+        "容量/价格/在售状态",
+        "官方渠道与包装",
+        "官方功效宣称边界",
+        "首发种草与真实长期用户反馈分层"
+      ]
+    },
+    {
+      "candidate_id": "CAND-04",
+      "working_name": "Mistine「夜光气垫2.0」/紫贝限定",
+      "category": "美妆/底妆",
+      "source_refs": [
+        "R03:D2"
+      ],
+      "evidence_reason": "R03覆盖12条代表样本，近期正负反馈撕裂明显，包含2.0与紫贝限定内容，适合核验版本差异和适配争议。",
+      "identity_risk": "夜光气垫2.0与紫贝限定是否同配方/同版本、正式SKU与包装需严格拆分，不能合并猜测。",
+      "r04_required_verification": [
+        "夜光气垫2.0正式商品身份",
+        "紫贝限定与常规版关系",
+        "色号/SKU/包装映射",
+        "官方卖点与用户卡粉/厚重/持妆反馈分层",
+        "当前在售状态"
+      ]
+    },
+    {
+      "candidate_id": "CAND-05",
+      "working_name": "Dior 2026秋季限定眼影｜365 幸运四叶草",
+      "category": "美妆/限定眼影",
+      "source_refs": [
+        "R03:D5"
+      ],
+      "evidence_reason": "R03秋冬限定彩妆方向12条样本中Dior 365多次出现，具有明确限定/FOMO与试色选择需求。",
+      "identity_risk": "365正式产品线、盘型、地区限定、上市信息以及与883的关系必须由官方来源核验。",
+      "r04_required_verification": [
+        "Dior 365正式商品名/产品线",
+        "盘型/色号/包装",
+        "2026秋季限定身份与地区/渠道",
+        "365与883是否同系列及差异",
+        "官方信息与公开试色反馈分层"
+      ]
+    }
+  ],
+  "excluded_or_deferred": [
+    {
+      "source_ref": "R02:HOT-04",
+      "reason": "伪素颜属于主题型方向，不自动扩成R04商品对象。"
+    },
+    {
+      "source_ref": "R02:HOT-05",
+      "reason": "秋冬底妆/换季为需求型主题，先由具体产品候选承载，避免R04无限扩品。"
+    },
+    {
+      "source_ref": "R02:HOT-06",
+      "reason": "国庆美甲时效极高且偏主题/服务型，本轮优先推进可核商品。"
+    },
+    {
+      "source_ref": "R02:HOT-07",
+      "reason": "旅行护肤精简为主题型需求，不自动扩成商品研究对象。"
+    },
+    {
+      "source_ref": "R03:D1",
+      "reason": "花知晓雪花芭蕾已作为上一条CONTENT-001正式产品，不在下一篇候选池重复主推。"
+    },
+    {
+      "source_ref": "R03:D3",
+      "reason": "初秋美甲为主题型方向，本轮不作为R04商品候选。"
+    },
+    {
+      "source_ref": "R03:D4",
+      "reason": "玉泽/薇诺娜方向涉及多商品屏障修护对比，本轮为控制事实核验范围暂缓。"
+    }
+  ],
+  "final_product_selected": false,
+  "product_lock_created": false
+}
