@@ -1,0 +1,280 @@
+{
+  "schema": "XP1_COMPLIANCE_SNAPSHOT_DRAFT_V1",
+  "compliance_snapshot_id": "COMPLIANCE-XHS-0002",
+  "snapshot_revision": 1,
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COMPLIANCE-REFRESH-R13-V1",
+  "role_id": "R13",
+  "review_mode": "COMPLIANCE_SNAPSHOT_DRAFT_OR_REFRESH",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "idempotency_key": "CONTENT-002|COMPLIANCE_REFRESH|R13|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-002/COMPLIANCE_REFRESH/V1/R13-合规快照刷新任务.json",
+    "source_delivery_path": "生产/产物/合规快照草案/CONTENT-002/V1/交付.json",
+    "prior_snapshot_seed_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "prior_snapshot_seed_role": "REFERENCE_ONLY_NOT_ACTIVE_FOR_CONTENT_002",
+    "supersedes_snapshot_path": null
+  },
+  "platform": "小红书",
+  "jurisdiction": "中国大陆",
+  "checked_at": "2026-09-28T16:45:00+08:00",
+  "valid_until": "2026-10-05T16:45:00+08:00",
+  "status": "DRAFT",
+  "compliance_scope": {
+    "content_mode": "ORGANIC_SHARE",
+    "commercial_status": "NON_COMMERCIAL",
+    "product_category": "BEAUTY",
+    "AI_modalities": [
+      "TEXT",
+      "IMAGE"
+    ],
+    "claims_risk": "MEDIUM",
+    "account_type": "PERSONAL_CREATOR",
+    "canonical_scope_json": "{\"AI_modalities\":[\"TEXT\",\"IMAGE\"],\"account_type\":\"PERSONAL_CREATOR\",\"claims_risk\":\"MEDIUM\",\"commercial_status\":\"NON_COMMERCIAL\",\"content_mode\":\"ORGANIC_SHARE\",\"product_category\":\"BEAUTY\"}",
+    "scope_fingerprint": "sha256:1d221e6b463df3bc40498cebfbf2312f5ea54a3934e4b7430ae7fd83384c86e1"
+  },
+  "scope_bindings": {
+    "final_copy": {
+      "path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+      "blob_sha": "2b6cb650577e2dd0877a2c3a3d37dfc929497fe8",
+      "copy_revision": 1,
+      "fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7"
+    },
+    "asset_manifest": {
+      "path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+      "blob_sha": "91fb047cd21f22fcf5c94e2d3c331f27e1974a31",
+      "manifest_id": "ASSET-CONTENT-002",
+      "manifest_revision": 1,
+      "fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5"
+    },
+    "image_qa_barrier": {
+      "path": "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+      "blob_sha": "7f76ab33852eed6c5b7511af34603ec021607bd8",
+      "status": "COMPLETE"
+    },
+    "r10": {
+      "path": "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+      "blob_sha": "6212bcb871714244daa7dfa13b398f2cc9d2db5a",
+      "result": "PASS"
+    },
+    "r11": {
+      "path": "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+      "blob_sha": "ea4710e9eb3a53cb768b7e60852096f519a37bd3",
+      "result": "PASS"
+    },
+    "r12": {
+      "path": "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+      "blob_sha": "fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8",
+      "result": "PASS"
+    },
+    "product_lock": {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+      "identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection"
+    },
+    "active_sku_lock": {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+      "identity": "365 Charmed Green"
+    },
+    "sibling_sku_lock": {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1",
+      "identity": "883 Lucky Rosewood",
+      "allowed_scope": "P4 sibling comparison only"
+    },
+    "persona_lock": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  },
+  "rule_sources": [
+    {
+      "source_id": "LAW-AIGC-LABEL-2025",
+      "title": "人工智能生成合成内容标识办法",
+      "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-28T16:45:00+08:00",
+      "effective_date": "2025-09-01",
+      "supports": [
+        "人工智能生成合成内容包括文本、图片等信息",
+        "传播服务提供者应提供必要标识功能并提醒用户主动声明",
+        "用户发布生成合成内容应主动声明并使用服务提供者提供的标识功能",
+        "不得恶意删除、篡改、伪造、隐匿规定的生成合成内容标识"
+      ]
+    },
+    {
+      "source_id": "PLATFORM-XHS-COMMUNITY-COVENANT-2.0",
+      "title": "小红书社区公约2.0",
+      "url": "https://pgy.xiaohongshu.com/help/detail?id=1eda0a065dd894063c2e029a49e8f6a1&userType=4",
+      "source_type": "PLATFORM_OFFICIAL",
+      "checked_at": "2026-09-28T16:45:00+08:00",
+      "effective_date": "2026-07-31",
+      "supports": [
+        "AI辅助创作应主动标明",
+        "公开规则给出可执行的可见声明方式：内容开头或结尾标注AI生成，或在图片简介、视频片头等处注明",
+        "分享应保证素材与信息真实性",
+        "不得塑造虚假人设"
+      ]
+    },
+    {
+      "source_id": "LAW-INTERNET-ADS-2023",
+      "title": "互联网广告管理办法",
+      "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_d93a579afd45413e8576e4623fab348f.html",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-28T16:45:00+08:00",
+      "effective_date": "2023-05-01",
+      "supports": [
+        "适用于利用互联网媒介直接或间接推销商品或服务的商业广告活动",
+        "互联网广告应具有可识别性",
+        "知识介绍、体验分享、消费测评等形式推销商品或服务并附加购物链接等购买方式时应显著标明广告"
+      ]
+    },
+    {
+      "source_id": "LAW-COSMETICS-2021",
+      "title": "化妆品监督管理条例",
+      "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_9f8b70e79a2242df96c6c290a0ac425b.html",
+      "source_type": "LAW_OFFICIAL",
+      "checked_at": "2026-09-28T16:45:00+08:00",
+      "effective_date": "2021-01-01",
+      "supports": [
+        "化妆品广告内容应真实、合法",
+        "不得明示或暗示产品具有医疗作用",
+        "不得含有虚假或引人误解的内容，不得欺骗、误导消费者"
+      ]
+    },
+    {
+      "source_id": "PLATFORM-XHS-CONTENT-REVIEW-2026",
+      "title": "小红书蒲公英内容审核规范",
+      "url": "https://pgy.xiaohongshu.com/help/detail?id=6495c527d1eedeeb48fb18b1f875650e&userType=4",
+      "source_type": "PLATFORM_OFFICIAL",
+      "checked_at": "2026-09-28T16:45:00+08:00",
+      "effective_date": "2026-08-19",
+      "supports": [
+        "平台对商业合作内容设置内容审核规则",
+        "功效保证、医疗化、夸大功效、绝对化宣传属于高风险表达",
+        "美妆内容不得用无证据功效或保证性承诺误导用户"
+      ]
+    }
+  ],
+  "checks": {
+    "AI_label_requirement": {
+      "status": "VERIFIED",
+      "applicability": "APPLICABLE",
+      "requirement": "当前内容的AI_modalities为TEXT+IMAGE，且使用SYNTHETIC_VISUAL_PERSONA。实际发布时必须主动声明AI参与，并使用小红书届时提供的生成合成内容标识/声明功能；不得删除、篡改或隐藏已有生成合成标识。",
+      "platform_mechanism_evidence": "小红书官方《社区公约2.0》当前仍公开提供可执行的可见声明方式：可在内容开头或结尾标注“AI生成”，或在图片简介等位置注明。国家现行《人工智能生成合成内容标识办法》第六条要求传播平台提供必要标识功能，第十条要求用户主动声明并使用平台提供的标识功能。本快照不虚构某个具体客户端开关名称，真实发布前必须由PUBLISH_COMPLIANCE_GATE复核当时UI。",
+      "publish_gate_recheck_required": true,
+      "source_ids": [
+        "LAW-AIGC-LABEL-2025",
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ]
+    },
+    "commercial_disclosure_requirement": {
+      "status": "NOT_APPLICABLE",
+      "applicability_basis": "当前冻结scope为ORGANIC_SHARE + NON_COMMERCIAL；当前任务证据未声明商单、品牌付费、赠品合作、佣金/联盟、购物链接或其他商业关系，因此不把本轮内容作为互联网商业广告处理。",
+      "requirement": "当前scope不要求额外商业合作披露或“广告”标识。若后续增加商单、赠品、佣金/联盟、购物链接、品牌委托或其他直接/间接推销关系，本项立即发生scope mismatch，必须刷新合规快照并重新判断广告可识别性及平台商业披露义务。",
+      "source_ids": [
+        "LAW-INTERNET-ADS-2023",
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ]
+    },
+    "prohibited_or_high_risk_claims": {
+      "status": "VERIFIED",
+      "rules": [
+        "不得把眼影等化妆品描述为具有治疗、治愈、消炎、抗炎等医疗作用，或以医疗化语言暗示产品效果。",
+        "不得作虚假或引人误解的性能、功效、适用人群、使用结果、时长结果、排名、销量、权威背书或测量数据陈述。",
+        "不得使用100%有效、绝对不会踩雷、所有人都适合、完全不脱妆等保证性或绝对化承诺；若进入商业广告范围，还必须严格遵守广告可识别性及广告内容真实性要求。",
+        "显色、持妆、不飞粉、长时不脱妆等性能结论若作为事实陈述，必须有当前适用证据；没有证据时只能保持为明确的编辑判断、场景建议或删除。",
+        "Dior的“Limited Edition / 限定”只能作为已核验的产品/时间属性使用，不得自动推导为即将售罄、全球缺货、最后机会或必须立即购买。",
+        "库存、稀缺性和FOMO信息必须有当前地区、当前时间、Dior官方渠道的实时证据；不得把地区性库存或旧时间点状态泛化为全球库存事实。",
+        "365 Charmed Green为当前主SKU；883 Lucky Rosewood仅可作为同季兄弟SKU对照，不得偷换为主推SKU或制造虚假的高低配/更高级结论。",
+        "不得把编辑选择建议、色彩路线判断或使用场景框架写成Dior官方教程、官方适配结论或官方肤色保证。"
+      ],
+      "content_specific_note": "当前final copy已显式区分“限定是时间属性，不是适配证明”，库存只引导用户查看所在地区Dior官方渠道实时状态，并记录uses_fomo_purchase_pressure=false、generalizes_global_inventory=false。最终成品逐claim审核仍由后续CONTENT_TRUTH_COMPLIANCE_REVIEW执行。",
+      "source_ids": [
+        "LAW-COSMETICS-2021",
+        "PLATFORM-XHS-CONTENT-REVIEW-2026",
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ]
+    },
+    "authenticity_rules": {
+      "status": "VERIFIED",
+      "rules": [
+        "SYNTHETIC_VISUAL_PERSONA不得被写成现实中的购买、收货、亲测、试色、持续使用、回购、空瓶、持妆时长或功效结果主体。",
+        "禁止‘我买了/我收到了/我试了365/我上眼了/我回购了/我空盘了/我带妆X小时/我实测’及任何等价暗示。",
+        "不得把品牌资料、公开信息、聚合反馈、图片视觉、编辑判断或他人体验偷换成账号本人的现实经历。",
+        "可以表达不暗示真实使用的审美偏好、色彩路线选择和编辑判断，但不得让用户合理理解为虚拟人物发生了现实购买或试用。",
+        "产品名称、365/883 SKU、包装、色彩关系和限定属性必须继续绑定当前PRODUCT/SKU LOCK；未知官方中文色号名不得自行创造。",
+        "库存或稀缺性只能引用当前地区/时间的Dior官方渠道实时信息，不能用旧截图、第三方传闻或‘限定’二字制造虚假紧迫感。",
+        "小红书官方社区规则要求真实分享并反对虚假人设；系统PERSONA LOCK同时明确first_person_experience_eligible=false。"
+      ],
+      "persona_binding": {
+        "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+        "first_person_experience_eligible": false,
+        "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json"
+      },
+      "content_truth_seed": {
+        "uses_real_world_first_person_experience": false,
+        "claims_personal_purchase": false,
+        "claims_personal_wear_time": false,
+        "claims_personal_repurchase": false,
+        "claims_personal_swatches": false,
+        "generalizes_global_inventory": false,
+        "uses_fomo_purchase_pressure": false
+      },
+      "source_ids": [
+        "PLATFORM-XHS-COMMUNITY-COVENANT-2.0"
+      ],
+      "internal_evidence_refs": [
+        "生产/批准/PERSONA-001/LOCK-V1.json",
+        "生产/批准/VOICE-001/LOCK-V1.json",
+        "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+        "生产/产物/文案/CONTENT-002/V1/文案.json"
+      ]
+    }
+  },
+  "all_required_checks_satisfied": true,
+  "activation_eligibility": "ELIGIBLE_FOR_R01_REVIEW_ONLY",
+  "activation_note": "本文件仅为CONTENT-002的R13合规快照DRAFT。R01必须机械核验来源、时间、scope及检查状态后，方可建立/激活COMPLIANCE-XHS-0002；R13未修改active_compliance_snapshot_path。",
+  "prior_snapshot_comparison": {
+    "seed_snapshot": "COMPLIANCE-XHS-0001 / revision 1",
+    "seed_is_active_for_content_002": false,
+    "current_reverification_result": "NO_MATERIAL_RULE_CHANGE_FOUND_FOR_FIXED_SCOPE",
+    "note": "规则来源已于2026-09-28重新核验；相同scope产生相同scope_fingerprint不代表沿用旧快照。"
+  },
+  "refresh_triggers": [
+    "valid_until reached",
+    "小红书规则或发布UI/标识机制变化",
+    "法律、监管规则或强制性标准变化",
+    "commercial_status变化",
+    "content_mode变化",
+    "AI_modalities变化",
+    "account_type变化",
+    "claims_risk变化",
+    "新增购物链接/商单/赠品/佣金/联盟",
+    "库存或稀缺性表达需要引用新实时事实",
+    "R13发现冲突证据"
+  ],
+  "evidence_refs": [
+    "生产/当前进度.json",
+    "生产/任务/CONTENT-002/COMPLIANCE_REFRESH/V1/R13-合规快照刷新任务.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json"
+  ]
+}
