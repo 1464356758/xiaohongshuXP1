@@ -1,0 +1,41 @@
+{
+  "schema": "XP1_R01_PRODUCT_VISUAL_IDENTITY_CORRECTION_V1",
+  "content_id": "CONTENT-002",
+  "recorded_at": "2026-09-28T17:06:00+08:00",
+  "trigger": "USER_DETECTED_OFFICIAL_PRODUCT_VISUAL_MISMATCH",
+  "severity": "P0_PUBLISH_BLOCKER",
+  "finding": {
+    "summary": "Current generated P1/P2/P4/P5 product visuals do not faithfully match the official Dior Lucky Clover 2026 exact SKU packaging/palette identity.",
+    "affected_pages": [
+      "P1",
+      "P2",
+      "P4",
+      "P5"
+    ],
+    "frozen_page": "P3",
+    "observed_mismatches": [
+      "Generated 365 visuals used a black/cream Toile-de-Jouy-style pouch instead of the SKU-locked quilted ivory/ecru clover pouch.",
+      "Generated 883 comparison used a Toile-de-Jouy-style pink pouch instead of the SKU-locked quilted pale-pink clover pouch.",
+      "Generated five-pan color placement/tones drifted from official exact-SKU references."
+    ]
+  },
+  "authoritative_sources": [
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json",
+    "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+  ],
+  "invalidation": {
+    "asset_manifest": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "image_qa_barrier": "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "reviews": [
+      "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+      "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+      "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json"
+    ],
+    "compliance_snapshot": "生产/批准/COMPLIANCE-XHS-0002/V1/COMPLIANCE-SNAPSHOT.json",
+    "active_r13_task": "生产/任务/CONTENT-002/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核任务.json"
+  },
+  "correction_rule": "Do not generatively redraw exact SKU product objects. Rebuild only affected pages using verified first-party Dior product assets as locked layers; preserve P3 and all unaffected copy."
+}
