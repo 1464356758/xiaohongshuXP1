@@ -1,0 +1,108 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-BUILD-R09-V1-R1",
+  "stage": "IMAGE_BUILD",
+  "role_id": "R09",
+  "task_version": "V1",
+  "input_revision": 2,
+  "parent_version": "V1",
+  "revision_round": "R1",
+  "task_lifecycle_status": "ACTIVE",
+  "state": "REVISION_REQUIRED",
+  "phase": "IMAGE_BUILD",
+  "created_by": "R01",
+  "created_at": "2026-09-28T17:08:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "required_context": {
+    "active_revision_path": "生产/返修/CONTENT-002/V1/R1/返修.json",
+    "product_visual_source_policy_path": "生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "final_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "visual_plan_path": "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "page_task_path": "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "prior_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "prior_manifest_id": "ASSET-CONTENT-002",
+    "prior_manifest_revision": 1,
+    "new_manifest_id": "ASSET-CONTENT-002",
+    "new_manifest_revision": 2,
+    "asset_transport_mode": "USER_FILE",
+    "official_product_pixels_required": true,
+    "exact_sku_product_generation_forbidden": true
+  },
+  "input_paths": [
+    "生产/返修/CONTENT-002/V1/R1/返修.json",
+    "生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json",
+    "生产/产物/总监/CONTENT-002/CORRECTION/V1/商品视觉身份纠错.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json"
+  ],
+  "authoritative_product_sources": {
+    "source_priority": "DIOR_OFFICIAL_FIRST_PARTY_ONLY_FOR_THIS_REVISION",
+    "365_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+    "365_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg",
+    "883_full": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+    "883_color": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+  },
+  "scope": [
+    "Rebuild only P1/P2/P4/P5. P3 must be carried forward byte-for-byte unchanged.",
+    "P1: preserve PERSONA/page copy/function, but product and pouch must be exact 365 official Dior asset, composited as a locked layer. No generated/redrawn Dior product.",
+    "P2: use exact official 365 palette pixels as the central product. Build callouts/labels around it. Do not redraw/recolor/retexture/re-emboss any pan or logo.",
+    "P4: use exact official 365 and exact official 883 product/pouch assets. 365 remains dominant, 883 smaller sibling comparison. No SKU or pouch cross-mixing.",
+    "P5: use exact official 365 product/pouch asset as small product anchor. Preserve page copy/function.",
+    "Backgrounds, lighting ambience, flowers, tables, decorative objects and layout may be newly generated/original, but official product objects remain non-generative locked layers.",
+    "Do not use the user's uploaded comparison images as the source-of-truth unless needed as supplementary visual evidence. First-party Dior URLs above are authoritative.",
+    "If Dior official asset cannot be fetched/read clearly, return BLOCKED_INPUT_MISSING or BLOCKED_PRODUCT_UNCERTAIN; do not substitute a generated lookalike.",
+    "Create new USER_FILE final pages and new manifest revision 2. Changed pages P1/P2/P4/P5 asset_revision=2; unchanged P3 asset_revision=1 with exact prior fingerprint.",
+    "Do not modify final copy, page order, PRODUCT/SKU/PERSONA locks, P3, or any upstream text."
+  ],
+  "frozen_scope": [
+    "P3 exact bytes and fingerprint sha256:7c501530a0b3e2e447af6c9b4b1e548ef739266ab17e60f78aa17b7cd70aac6f",
+    "final copy revision 1 / fingerprint sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "PRODUCT-002 LOCK-V1",
+    "SKU-002-365 LOCK-V1",
+    "SKU-002-883 LOCK-V1",
+    "PERSONA-001 LOCK-V1"
+  ],
+  "acceptance_criteria": [
+    "P1/P2/P4/P5 actual product pixels visibly match official Dior exact-SKU references, including palette geometry, pan colors/placement, clover embossing, logo/CD center and SKU-specific quilted couture pouch.",
+    "No Toile-de-Jouy-style pouch is used for 365 or 883 in this revision.",
+    "No product object is generatively redrawn or recolored.",
+    "P3 exact prior fingerprint is preserved.",
+    "New manifest id remains ASSET-CONTENT-002 with manifest_revision=2; changed pages asset_revision=2 and P3 asset_revision=1.",
+    "Each changed page records product_source_ref_id and source_url/source_role=DIOR_OFFICIAL.",
+    "All five ACTIVE pages have machine-verifiable actual-byte fingerprints and non-empty manifest_fingerprint.",
+    "Write outputs then read them back before PASS."
+  ],
+  "expected_output_paths": [
+    "生产/资产清单/CONTENT-002/V1/R1/ASSET-MANIFEST.json",
+    "生产/产物/图片执行/CONTENT-002/V1/R1/交付.json"
+  ],
+  "dependency_revision": "REVISION|生产/返修/CONTENT-002/V1/R1/返修.json|POLICY|生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json|CORRECTION|生产/产物/总监/CONTENT-002/CORRECTION/V1/商品视觉身份纠错.json|OLD_MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU365|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU883|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|IMAGE_BUILD|R09|V1|2|R1|REVISION|生产/返修/CONTENT-002/V1/R1/返修.json|POLICY|生产/批准/PRODUCT-VISUAL-SOURCE-POLICY/V1.json|CORRECTION|生产/产物/总监/CONTENT-002/CORRECTION/V1/商品视觉身份纠错.json|OLD_MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU365|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU883|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_product_uncertain": "BLOCKED_PRODUCT_UNCERTAIN",
+    "on_asset_identity_unverifiable": "BLOCKED_ASSET_IDENTITY_UNVERIFIABLE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  }
+}
