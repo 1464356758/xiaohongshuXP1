@@ -1,0 +1,97 @@
+{
+  "schema": "XHS_XP1_R06_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PLANNING-R06-V1",
+  "role_id": "R06",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R02|67d8f88eeee101691c051d5beafc8ec513ea3405|R03|d619196b4b3c9d246d49246c18c3fcdcb980bb3d|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R05_DELIVERY|ae57185d2b8ce650a682e2b6df15d3b67a5e3479",
+  "idempotency_key": "CONTENT-002|PLANNING|R06|V1|1|null|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R02|67d8f88eeee101691c051d5beafc8ec513ea3405|R03|d619196b4b3c9d246d49246c18c3fcdcb980bb3d|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R05_DELIVERY|ae57185d2b8ce650a682e2b6df15d3b67a5e3479",
+  "result": "PASS",
+  "input_bindings": {
+    "runtime_mode": "LIVE",
+    "active_task_path": "生产/任务/CONTENT-002/PLANNING/V1/R06-选题策划任务.json",
+    "account_strategy_lock": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    "voice_lock": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    "persona_lock": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    },
+    "product_lock": {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+      "identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection"
+    },
+    "active_sku_lock": {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+      "identity": "365 Charmed Green"
+    },
+    "sibling_sku_lock": {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1",
+      "identity": "883 Lucky Rosewood",
+      "role": "SIBLING_COMPARISON_ONLY"
+    },
+    "r02_hot_research": {
+      "path": "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+      "blob_sha": "67d8f88eeee101691c051d5beafc8ec513ea3405"
+    },
+    "r03_competitor_research": {
+      "path": "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+      "blob_sha": "d619196b4b3c9d246d49246c18c3fcdcb980bb3d"
+    },
+    "r04_product_facts": {
+      "path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+      "blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+    },
+    "r05_delivery": {
+      "path": "生产/产物/锁定草案/CONTENT-002/V1/交付.json",
+      "blob_sha": "ae57185d2b8ce650a682e2b6df15d3b67a5e3479"
+    }
+  },
+  "output_paths": [
+    "生产/产物/策划/CONTENT-002/V1/策划.json",
+    "生产/产物/策划/CONTENT-002/V1/交付.json"
+  ],
+  "planning_summary": {
+    "unique_main_proposition": "限定去FOMO：先判断365 Charmed Green这盘绿色和谐是否真的符合自己的日常眼妆使用习惯，再决定要不要为限定属性买单。",
+    "recommended_page_count": 5,
+    "collection_point": "365五色色彩关系 + 选前3问 + 365/883配色路线对照 + 地区库存核对提醒",
+    "comment_point": "365绿色和谐 vs 883玫瑰木和谐，用户更愿意选哪条色彩路线，以及最担心绿色盘哪一点难用。",
+    "active_sku_preserved": true,
+    "active_sku": "365 Charmed Green",
+    "sibling_sku": "883 Lucky Rosewood",
+    "sibling_role": "COMPARISON_ONLY",
+    "unknowns_preserved": [
+      "中国大陆官方中文色名",
+      "中国大陆实时库存",
+      "净含量/克数"
+    ],
+    "first_person_real_experience_used": false
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "PRODUCT-002/LOCK-V1#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+    "SKU-002-365/LOCK-V1#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+    "SKU-002-883/LOCK-V1#08a388accc6add3b3d5f716936798cb15b5b7fe1",
+    "R02#67d8f88eeee101691c051d5beafc8ec513ea3405",
+    "R03#d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+    "R04#572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+    "R05_DELIVERY#ae57185d2b8ce650a682e2b6df15d3b67a5e3479",
+    "PLANNING_BLOB#eb46295d78a873b05dccf001c48bb474a8297563"
+  ],
+  "completed_at": "2026-09-28T10:57:00+08:00",
+  "delivery_fingerprint_or_commit": "0f913095193f6beeb32bc7e491174986e081183b",
+  "next_role_suggestion": "R01"
+}
