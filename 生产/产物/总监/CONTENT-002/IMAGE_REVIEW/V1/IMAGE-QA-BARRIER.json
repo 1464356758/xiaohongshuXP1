@@ -1,0 +1,74 @@
+{
+  "schema": "SYS-003_PARALLEL_BARRIER_V2",
+  "content_id": "CONTENT-002",
+  "stage": "IMAGE_REVIEW",
+  "parallel_group_id": "CONTENT-002-IMAGE-QA-G1",
+  "barrier_revision": 1,
+  "task_revision": 1,
+  "required_role_ids": [
+    "R10",
+    "R11",
+    "R12"
+  ],
+  "required_dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "required_asset_manifest_id": "ASSET-CONTENT-002",
+  "required_manifest_revision": 1,
+  "required_manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+  "role_results": [
+    {
+      "role_id": "R10",
+      "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-002",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    },
+    {
+      "role_id": "R11",
+      "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-002",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    },
+    {
+      "role_id": "R12",
+      "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+      "delivery_path": null,
+      "result": "PENDING",
+      "task_version": "V1",
+      "input_revision": 1,
+      "revision_round": null,
+      "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+      "completed_at": null,
+      "delivery_fingerprint_or_commit": null,
+      "asset_manifest_id": "ASSET-CONTENT-002",
+      "manifest_revision": 1,
+      "evidence_valid": false
+    }
+  ],
+  "barrier_status": "OPEN",
+  "complete_rule": "R10/R11/R12均有唯一当前有效交付且绑定exact active manifest，全部PASS后COMPLETE。",
+  "activation_rule": "R01已将该精确路径写入active_image_qa_barrier_path后生效。",
+  "revision_rule": "任一in-scope资产/manifest/dependency变化必须新barrier_revision。",
+  "completed_at": null,
+  "completion_evidence": {
+    "R10": null,
+    "R11": null,
+    "R12": null
+  }
+}
