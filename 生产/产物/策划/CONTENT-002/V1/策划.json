@@ -1,0 +1,257 @@
+{
+  "schema": "XHS_XP1_R06_PLANNING_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PLANNING-R06-V1",
+  "role_id": "R06",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R02|67d8f88eeee101691c051d5beafc8ec513ea3405|R03|d619196b4b3c9d246d49246c18c3fcdcb980bb3d|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R05_DELIVERY|ae57185d2b8ce650a682e2b6df15d3b67a5e3479",
+  "idempotency_key": "CONTENT-002|PLANNING|R06|V1|1|null|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R02|67d8f88eeee101691c051d5beafc8ec513ea3405|R03|d619196b4b3c9d246d49246c18c3fcdcb980bb3d|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R05_DELIVERY|ae57185d2b8ce650a682e2b6df15d3b67a5e3479",
+  "result": "PASS",
+  "locked_subject": {
+    "brand": "Dior",
+    "product": "Diorshow 5 Couleurs - Limited Edition",
+    "collection": "Lucky Clover Fall 2026 Makeup Collection",
+    "active_sku": "365 Charmed Green",
+    "active_sku_lock": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku": "883 Lucky Rosewood",
+    "sibling_sku_role": "SIBLING_COMPARISON_ONLY",
+    "hard_rules": [
+      "365 Charmed Green保持唯一主线，不切换active SKU。",
+      "Lucky Clover仅作为Fall 2026系列主题，不替代365官方英文色名。",
+      "883 Lucky Rosewood仅作为同季选择对照，不写成365的新旧版本关系。",
+      "中国大陆官方中文色名、净含量、中国大陆实时库存保持UNKNOWN。"
+    ]
+  },
+  "research_synthesis": {
+    "r02_note": "当前R02热点候选池未形成Dior 365专属近期热点条目，因此本策划不额外制造“正在爆”“全网抢”等热点事实；仅沿用账号冷启动的热点内容原则。",
+    "r03_signal": "D5显示秋冬限定彩妆讨论集中在限定、试色、绿色门槛、色温差异、FOMO与价格/补货等决策变量；其建议是先回答颜色与使用门槛，再谈限定。",
+    "r04_signal": "Dior产品、Fall 2026 Lucky Clover系列、365 Charmed Green与883 Lucky Rosewood同季兄弟SKU关系已核验；库存仅能地区化描述。",
+    "chosen_direction": "限定去FOMO + 绿色盘日常使用门槛判断"
+  },
+  "planning": {
+    "unique_main_proposition": "别先被“秋季限定”推着下单：先判断365 Charmed Green这盘绿色和谐配色，是否真的符合你的日常眼妆使用习惯；重点看你愿意让绿色承担多少存在感，而不是把限定属性当成适配证明。",
+    "content_goal": "把Dior Fall 2026限定讨论从“抢不抢/稀不稀缺”转成可执行的消费决策。让用户看完能根据自己的日常妆容、绿色接受度和使用场景，判断365 Charmed Green是否值得继续考虑，同时知道883 Lucky Rosewood只是同季另一条配色路线。",
+    "target_user_pain": [
+      "被限定包装和季节新品氛围吸引，但不确定绿色眼影是否会真正进入自己的日常妆。",
+      "看到365与883同时出现，不知道自己是在选“喜欢的限定感”还是“更常用的色彩路线”。",
+      "容易把“限量、难买、讨论多”误当成“更适合自己”。"
+    ],
+    "core_conclusion": "365 Charmed Green的关键不是“绿色能不能日常”这个二选一，而是你是否愿意把黄绿色、鼠尾草绿、橄榄/苔绿这类绿色关系放进自己的眼妆结构。若你的真实需求更偏玫瑰木色系，则883可以作为同季对照尺；但本篇不替用户做绝对肤色适配结论。",
+    "differentiation_angle": [
+      "不做限定款参数抄表，也不复刻“秒空/必抢/神盘”FOMO话术。",
+      "把365官方可见的五色结构拆成“绿色存在感”决策，而不是编造本人试色或持妆体验。",
+      "883只承担对照功能：帮助用户识别自己到底偏向绿色和谐还是玫瑰木和谐，不抢365主线。",
+      "把“限量属性”和“实际使用适配”拆开，建立收藏价值更高的购买前检查卡。"
+    ],
+    "title_directions": [
+      "Dior 365 Charmed Green｜先别被限定推着买",
+      "绿色眼影真能进日常吗？先看Dior 365这5色",
+      "365还是更偏玫瑰木路线？先判断你会不会真的用绿色",
+      "Dior秋季限定365｜喜欢绿色之前先问自己3件事"
+    ],
+    "recommended_page_count": 5,
+    "page_plan": [
+      {
+        "page": 1,
+        "role": "COVER_DECISION_HOOK",
+        "purpose": "先把用户从限定/FOMO拉回真实选择问题，并锁定365为唯一主角。",
+        "key_message": "Dior 365 Charmed Green｜先别被限定推着买，先看你会不会真的用绿色。",
+        "must_show": [
+          "Dior",
+          "Diorshow 5 Couleurs - Limited Edition",
+          "365 Charmed Green",
+          "Lucky Clover Fall 2026仅作为系列背景"
+        ],
+        "visual_direction": "产品为绝对主视觉，使用365官方锁定盘面/配套pouch身份。PERSONA可作为辅助识别，但不需要制造上眼实测感。",
+        "persona_role": "可选，建议半脸或眼部氛围，不暗示真实使用。",
+        "product_role": "PRIMARY",
+        "info_density": "LOW_MEDIUM"
+      },
+      {
+        "page": 2,
+        "role": "FACT_MAP",
+        "purpose": "建立准确的365视觉色彩地图，先把产品事实讲清楚。",
+        "key_message": "这不是一盘“只有绿色”的眼影，真正决定使用门槛的是五色之间的绿色、浅色与深色关系。",
+        "verified_visual_signature": [
+          "light yellow-green / chartreuse-gold",
+          "pale champagne-beige",
+          "muted sage green center",
+          "olive-gold / moss green",
+          "deep espresso-charcoal brown"
+        ],
+        "verified_structure": [
+          "5 eyeshadow pans",
+          "central diamond-shaped pan + four surrounding pans",
+          "finish structure includes matte, satin, pearly"
+        ],
+        "editorial_boundary": "只描述锁定官方资产中可见的颜色关系与结构，不把视觉观察升级成品牌官方色名、肤色适配或真人试色结论。",
+        "visual_direction": "365盘面大图+五区标注，避免加入883盘面，确保用户先建立365本体认知。",
+        "persona_role": "不需要",
+        "product_role": "PRIMARY",
+        "info_density": "HIGH"
+      },
+      {
+        "page": 3,
+        "role": "THREE_QUESTION_SELF_FILTER",
+        "purpose": "把“绿色难不难驾驭”变成三个用户可以自己回答的问题。",
+        "key_message": "选365前先问自己3件事。",
+        "decision_questions": [
+          "你的日常眼妆里，愿不愿意让绿色成为可见元素，而不只是收藏色？",
+          "你更常用的是偏中性/大地的结构，还是愿意加入黄绿、鼠尾草绿、橄榄/苔绿这类色彩变化？",
+          "你的使用场景允许多明显的限定感：日常低存在感、周末氛围感，还是更明确的色彩表达？"
+        ],
+        "editorial_guidance": [
+          "如果只想把绿色当极小点缀，重点看自己是否愿意长期为少量使用场景保留一盘限定。",
+          "如果本来就喜欢绿色系眼妆，365的决策价值更高，但仍不等于所有肤色/眼型都自动适合。"
+        ],
+        "boundary": "这是编辑型自我筛选框架，不是品牌官方用法，不写“黄皮必买/肿眼泡不能用”等绝对人群结论。",
+        "visual_direction": "信息卡为主，可用PERSONA-001做眼部/半脸色彩氛围示意，但不标注真实试色、使用前后或持妆结果。",
+        "persona_role": "建议出现",
+        "product_role": "SECONDARY",
+        "info_density": "HIGH"
+      },
+      {
+        "page": 4,
+        "role": "SIBLING_COMPARISON",
+        "purpose": "只用883作为同季选择尺，帮助用户识别自己真正偏好的色彩路线。",
+        "key_message": "365和883不是谁更高级，而是两条不同的配色选择。",
+        "comparison": [
+          {
+            "sku": "365 Charmed Green",
+            "verified_family": "green harmony",
+            "visible_direction": "黄绿/香槟浅色/鼠尾草绿/橄榄苔绿/深色结构",
+            "decision_role": "如果你明确想要绿色和谐配色，继续看365。"
+          },
+          {
+            "sku": "883 Lucky Rosewood",
+            "verified_family": "rosewood harmony",
+            "visible_direction": "dusty rose / rose-gold、pale blush-ivory pearl、muted rosewood-mauve、deep berry / burgundy、soft pale pink-lilac pearl",
+            "decision_role": "如果你真实偏好玫瑰木路线，把883当同季参照，而不是把365硬塞进日常。"
+          }
+        ],
+        "boundary": "不得把“更稳、更日常”写成已验证客观产品性能；只能作为用户色彩偏好与使用习惯的选择逻辑。不得把883升级为本篇主产品。",
+        "visual_direction": "365占版面主位，883缩小为对照卡；两个SKU必须使用各自独立官方身份资产，绝不互换。",
+        "persona_role": "不需要",
+        "product_role": "365 PRIMARY / 883 COMPARISON_ONLY",
+        "info_density": "MEDIUM_HIGH"
+      },
+      {
+        "page": 5,
+        "role": "SAVE_FOMO_CHECKLIST",
+        "purpose": "形成收藏价值，把限定冲动转换成购买前检查。",
+        "key_message": "限定不是适配证明。下单前检查：配色会不会用、场景够不够多、当地官方渠道状态是否确认。",
+        "save_point": [
+          "365五色色彩关系速查",
+          "选绿色盘前3问",
+          "365 vs 883配色路线对照",
+          "库存与可售状态只按具体地区/官方渠道核对，不用“全球售罄/全球有货”判断"
+        ],
+        "comment_prompt": "如果只能选一个方向，你会选365的绿色和谐，还是883的玫瑰木和谐？你最担心绿色盘哪一点难用？",
+        "visual_direction": "干净总结卡，365仍为主视觉；883只以小型对照标签出现。",
+        "persona_role": "可不出现",
+        "product_role": "365 PRIMARY",
+        "info_density": "MEDIUM"
+      }
+    ],
+    "page_mix": {
+      "rationale": "服从账号窗口策略，不机械强制单篇比例；本篇以产品决策信息为主。",
+      "persona_pages_recommended": [
+        1,
+        3
+      ],
+      "product_visible_pages_recommended": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "information_card_heavy_pages": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "collection_point": "一张“365限定去FOMO决策卡”：五色色彩关系 + 选前3问 + 365/883路线对照 + 地区库存核对提醒。",
+    "comment_interaction": "如果只能选一个方向，你会选365的绿色和谐，还是883的玫瑰木和谐？最担心绿色盘哪一点难用？",
+    "fact_boundaries": {
+      "allowed": [
+        "Dior",
+        "Diorshow 5 Couleurs - Limited Edition",
+        "Lucky Clover Fall 2026 Makeup Collection",
+        "365 Charmed Green",
+        "883 Lucky Rosewood",
+        "365与883为同季同产品线兄弟SKU，不是新旧版本",
+        "产品为5色眼影盘并配套couture pouch",
+        "finish structure包括matte、satin、pearly",
+        "365锁定官方资产中的可见色彩签名：light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green、olive-gold/moss green、deep espresso-charcoal brown",
+        "883锁定官方资产中的可见色彩签名仅可用于对照：dusty rose/rose-gold、pale blush-ivory pearl、muted rosewood-mauve、deep berry/burgundy、soft pale pink-lilac pearl",
+        "库存状态只能按具体地区和时间表达"
+      ],
+      "unknown_must_remain_unknown": [
+        "中国大陆官方中文色名",
+        "中国大陆实时库存",
+        "净含量/克数"
+      ],
+      "forbidden": [
+        "把Lucky Clover写成365唯一正式色名",
+        "把883写成365旧版/新版",
+        "写全球售罄或全球有货",
+        "写“我买了、我试了、我上眼、我实测、我回购、我用了几小时”等现实产品经历",
+        "把longwearing等品牌宣传改写成账号本人长时实测",
+        "把公开试色分歧写成所有肤色、眼型都适合或都不适合",
+        "把限定/难买/高讨论度等同于产品更适合用户",
+        "自行补写未锁定的官方中文色名、容量、价格或大陆库存"
+      ]
+    },
+    "risks": [
+      {
+        "risk": "FOMO话术压过使用价值",
+        "severity": "P1",
+        "mitigation": "标题和结论先谈配色适配与使用频率，限定只作为背景，不用“秒没/必抢/错过后悔”推动购买。"
+      },
+      {
+        "risk": "365与883视觉或身份混用",
+        "severity": "P0_POTENTIAL",
+        "mitigation": "R08/R09必须分别绑定SKU-002-365与SKU-002-883官方资产；365占主视觉，883仅对照。"
+      },
+      {
+        "risk": "Lucky Clover与Charmed Green命名混淆",
+        "severity": "P0_POTENTIAL",
+        "mitigation": "所有公开主标题/正文首次出现时保留365 Charmed Green；Lucky Clover只写Fall 2026 collection theme。"
+      },
+      {
+        "risk": "把色彩偏好写成肤色适配定论",
+        "severity": "P1",
+        "mitigation": "用“你是否愿意用绿色/你的日常配色路线”替代“黄皮/白皮/肿眼泡必适合”。"
+      },
+      {
+        "risk": "库存信息过期或泛化",
+        "severity": "P1",
+        "mitigation": "本篇不写具体中国大陆库存；如后续需要库存，只允许按地区、时间、官方渠道核对。"
+      }
+    ],
+    "downstream_briefs": {
+      "R07": "按5页结构写自然短句。主线是365限定去FOMO与绿色配色自我筛选；883仅做第4页选择对照。事实字段逐字对照LOCK，禁止补中文色名、容量、库存和第一人称实测。",
+      "R08": "视觉必须以365官方锁定资产为主。整体可用秋季奢华但克制的绿金/米色氛围，不得为了高级感改造真实盘色。P4若出现883，必须使用其独立锁定资产并明显弱化为对照。PERSONA仅建议P1/P3使用。"
+    }
+  },
+  "evidence_refs": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json#a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "生产/批准/VOICE-001/LOCK-V1.json#0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+    "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+    "生产/批准/SKU-002-883/LOCK-V1.json#08a388accc6add3b3d5f716936798cb15b5b7fe1",
+    "生产/产物/热点研究/CONTENT-002/V1/热点研究.json#67d8f88eeee101691c051d5beafc8ec513ea3405",
+    "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json#d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json#572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+    "生产/产物/锁定草案/CONTENT-002/V1/交付.json#ae57185d2b8ce650a682e2b6df15d3b67a5e3479"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "completed_at": "2026-09-28T10:57:00+08:00"
+}
