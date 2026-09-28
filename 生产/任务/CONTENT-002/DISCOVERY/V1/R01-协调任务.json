@@ -1,0 +1,101 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R01-V1",
+  "stage": "DISCOVERY",
+  "role_id": "R01",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "DISCOVERY",
+  "created_by": "R01",
+  "created_at": "2026-09-28T09:27:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": "CONTENT-002-DISCOVERY-G1",
+    "barrier_revision": 1,
+    "required_role_ids": [
+      "R02",
+      "R03"
+    ],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": null,
+    "sku_lock_path": null,
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": null,
+    "asset_manifest_id": null,
+    "manifest_revision": null,
+    "active_image_qa_barrier_path": null,
+    "latest_r15_analysis_path": null,
+    "publish_compliance_gate_path": null,
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "actual_publish_scope_fingerprint": null,
+    "prior_content_user_reported_published": true,
+    "prior_content_formal_postpublish_loop_deferred": true
+  },
+  "input_paths": [
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json"
+  ],
+  "scope": [
+    "等待R02与R03在同一DISCOVERY barrier下独立完成正式交付",
+    "机械验证两个角色的task/delivery/version/dependency一致性与证据有效性",
+    "barrier完整后汇总形成候选商品/主题集，供R04深度商品事实研究使用",
+    "候选集必须来自R02/R03当前证据，不得凭R01记忆补入未研究对象",
+    "R01不得代替R02/R03生成热点或竞品专业研究内容"
+  ],
+  "frozen_scope": [
+    "ACCOUNT_STRATEGY-001 LOCK-V1",
+    "VOICE-001 LOCK-V1",
+    "PERSONA-001 LOCK-V1",
+    "SYS-003 runtime三证"
+  ],
+  "acceptance_criteria": [
+    "parallel_group.required_role_ids精确为R02,R03且无重复",
+    "R02/R03各有唯一非空task_path且内部role_id一致",
+    "两角色task_version/input_revision/revision_round/dependency_revision与parallel_group一致",
+    "R02与R03各自正式交付均存在且证据有效后barrier才可COMPLETE",
+    "候选商品集仅在barrier COMPLETE后建立",
+    "候选集建立后才可创建R04正式任务"
+  ],
+  "expected_output_paths": [
+    "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "生产/产物/总监/CONTENT-002/DISCOVERY/V1/交付.json"
+  ],
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R01|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "routing": {
+    "on_success": [
+      "R04"
+    ],
+    "on_fail": [
+      "R02",
+      "R03"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_hot_stale": "BLOCKED_HOT_STALE",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R02/R03必须并行独立研究，任何一方未完成不得越过barrier。",
+    "R01只汇总候选，不在DISCOVERY阶段直接锁产品。"
+  ]
+}
