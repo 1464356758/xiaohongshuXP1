@@ -1,0 +1,70 @@
+{
+  "schema": "XP1_R04_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R04-V1",
+  "role_id": "R04",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|PRODUCT_LOCK|R04|V1|1|null|CANDIDATE_SET|CONTENT-002-CANDIDATE-SET-V1|91a9e722ab67ffdc70f9553c828e6b7efbf8fd59|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "result": "PASS",
+  "input_bindings": {
+    "active_task_path": "生产/任务/CONTENT-002/PRODUCT_LOCK/V1/R04-商品事实研究任务.json",
+    "candidate_set_path": "生产/产物/总监/CONTENT-002/DISCOVERY/V1/候选商品集.json",
+    "candidate_set_id": "CONTENT-002-CANDIDATE-SET-V1",
+    "candidate_set_blob_sha": "91a9e722ab67ffdc70f9553c828e6b7efbf8fd59",
+    "r02_research_path": "生产/产物/热点研究/CONTENT-002/V1/热点研究.json",
+    "r02_research_blob_sha": "67d8f88eeee101691c051d5beafc8ec513ea3405",
+    "r03_research_path": "生产/产物/竞品研究/CONTENT-002/V1/竞品研究.json",
+    "r03_research_blob_sha": "d619196b4b3c9d246d49246c18c3fcdcb980bb3d",
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "account_strategy_lock_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "voice_lock_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false
+  },
+  "output_paths": [
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-002/V1/交付.json"
+  ],
+  "result_summary": {
+    "candidates_covered": 5,
+    "verified_eligible": [
+      "CAND-03",
+      "CAND-05"
+    ],
+    "not_eligible": [
+      "CAND-01",
+      "CAND-02",
+      "CAND-04"
+    ],
+    "critical_findings": [
+      "CAND-01完美日记小鹿盘：2026国内综合盘与旧小鹿盘/日本限定盘存在串线风险；04野棕绒鹿、05雾紫绒鹿及六功能目前主要来自二次索引到品牌官方微博，缺直接一手商品页，暂不可选。",
+      "CAND-02 INTO YOU：品牌官方微博已确认‘小光环气垫’及GS干皮款/MF油皮款；THE SECOND BUTTON是定制纽扣礼盒/传播主题，不应自动写成气垫正式系列名；色号、容量、SKU包装仍未闭环，暂不可选。",
+      "CAND-03 毛戈平：净悦润肌卸妆膏、2026-09-17首款官宣及120g正装线索可追溯；新品零售价UNKNOWN，R05若接手必须先取得直接官方销售页并绑定120g SKU与官方图。",
+      "CAND-04 Mistine：认证旗舰店确认紫贝限定夜光气垫真实在售；电商索引支持‘夜光气垫2.0-紫贝限定’命名，但是否与普通2.0完全同配方、LF100/LF110/S后缀关系均未闭环，暂不可选。",
+      "CAND-05 Dior：官方确认Diorshow 5 Couleurs - Limited Edition属于Lucky Clover Fall 2026；365 Charmed Green与883 Lucky Rosewood是同一季限定两款SKU。‘Lucky Clover/幸运四叶草’是系列主题，不是365唯一正式色名。"
+    ]
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "https://post.smzdm.com/p/a70n3nkg/",
+    "https://www.sina.cn/media/7339405441",
+    "https://www.maogepingbeauty.com/",
+    "https://post.smzdm.com/p/awwzx5rm/",
+    "https://detail.youzan.com/show/goods?alias=2xizmsf3isa1vew&from_source=gbox_seo",
+    "https://www.jd.com/hprm/6728c51038b3522c63b5.html?brand=Mistine&electedExtAttrSet=&extAttrValue=expand_name%2C&sort_type=sort_default",
+    "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html",
+    "https://www.dior.com/en_int/beauty/dlp-makeup-lucky-clover-collection.html",
+    "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+  ],
+  "completed_at": "2026-09-28T10:03:03+08:00",
+  "delivery_fingerprint_or_commit": "report_commit:aa4f0d6fb5e1e256304114f72f4a600933c3da98",
+  "next_role_suggestion": "R01从CAND-03与CAND-05中做正式产品选择；如选择CAND-03，R05必须优先补齐直接官方销售页、120g正式SKU、价格与官方图；如选择CAND-05，R05直接按Diorshow 5 Couleurs 2026 Lucky Clover限定产品锁定365/883并绑定官方商品图。"
+}
