@@ -1,0 +1,40 @@
+{
+  "schema": "XP1_PRODUCT_VISUAL_SOURCE_POLICY_V1",
+  "policy_id": "PRODUCT-VISUAL-SOURCE-POLICY",
+  "version": "V1",
+  "status": "APPROVED",
+  "approved_by": "R01",
+  "approved_at": "2026-09-28T17:05:00+08:00",
+  "purpose": "Prevent exact-SKU product identity drift in generated social content.",
+  "source_priority": [
+    "BRAND_OFFICIAL_FIRST_PARTY_PRODUCT_IMAGE",
+    "BRAND_OFFICIAL_TMALL_OR_JD_FLAGSHIP_IMAGE_IF_VERIFIED_OFFICIAL",
+    "BRAND_OFFICIAL_PRESS_OR_MEDIA_ASSET",
+    "USER_PROVIDED_REAL_PRODUCT_PHOTO",
+    "OTHER_SOURCE_ONLY_WITH_R01_EXPLICIT_APPROVAL"
+  ],
+  "hard_rules": [
+    "For exact SKU/product pages, the product object itself must NOT be generatively redrawn, hallucinated, recolored, re-embossed, re-logoed, or restyled.",
+    "When a first-party brand image exists, R09 must use the verified official product pixels as a locked visual layer/reference anchor rather than synthesizing a lookalike product.",
+    "Allowed non-destructive operations on official product asset: crop, scale, background removal/masking, placement, and adding external shadow/background around the product. Do not alter product color layout, logo, pan geometry, pouch pattern, packaging hardware, embossing, or SKU-specific accessories.",
+    "If the official source cannot be fetched/read clearly enough to preserve identity, result must be BLOCKED_INPUT_MISSING or BLOCKED_PRODUCT_UNCERTAIN. Never substitute a generated lookalike.",
+    "Every product-bearing page must record source_role, source_url/ref_id, SKU lock id, and the exact official source used.",
+    "R10 must compare actual final pixels against the official first-party source, not only against text descriptions.",
+    "Official flagship store assets on Tmall/JD may be used only after verifying that the seller is the brand's official flagship and the listing matches the same SKU/season."
+  ],
+  "current_content_application": {
+    "content_id": "CONTENT-002",
+    "active_product": "Dior | Diorshow 5 Couleurs - Limited Edition",
+    "primary_sku": "365 Charmed Green",
+    "sibling_sku": "883 Lucky Rosewood",
+    "affected_pages": [
+      "P1",
+      "P2",
+      "P4",
+      "P5"
+    ],
+    "frozen_pages": [
+      "P3"
+    ]
+  }
+}
