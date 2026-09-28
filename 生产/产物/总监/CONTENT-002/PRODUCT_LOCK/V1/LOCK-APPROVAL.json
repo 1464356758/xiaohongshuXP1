@@ -1,0 +1,41 @@
+{
+  "schema": "XP1_R01_PRODUCT_LOCK_APPROVAL_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R05-V1",
+  "result": "PASS",
+  "approved_by": "R01",
+  "approved_at": "2026-09-28T10:29:00+08:00",
+  "selected_candidate_id": "CAND-05",
+  "product_lock": {
+    "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "lock_id": "PRODUCT-002-LOCK-V1",
+    "git_blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1"
+  },
+  "sku_locks": [
+    {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "lock_id": "SKU-002-365-LOCK-V1",
+      "git_blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+      "identity": "365 Charmed Green",
+      "active": true
+    },
+    {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "lock_id": "SKU-002-883-LOCK-V1",
+      "git_blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1",
+      "identity": "883 Lucky Rosewood",
+      "active": false,
+      "role": "SIBLING_COMPARISON"
+    }
+  ],
+  "mechanical_checks": [
+    "R05 delivery result=PASS and exact task/dependency/idempotency match",
+    "PRODUCT draft is DRAFT and matches selected Dior product identity",
+    "365 draft uniquely binds 365 Charmed Green / E000001849 / Dior official images",
+    "883 draft uniquely binds 883 Lucky Rosewood / E000001794 / Dior official images",
+    "365 and 883 are recorded as sibling SKUs, not old/new versions",
+    "Lucky Clover remains collection theme and does not replace 365 Charmed Green official English shade name",
+    "unknown CN shade names/capacity/CN live stock remain UNKNOWN"
+  ],
+  "decision": "APPROVE_PRODUCT_AND_BOTH_SKU_LOCKS; ACTIVE_SKU=365"
+}
