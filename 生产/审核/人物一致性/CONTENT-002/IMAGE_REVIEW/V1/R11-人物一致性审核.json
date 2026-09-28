@@ -1,0 +1,85 @@
+{
+  "schema": "XP1_R11_CONTENT_PERSONA_REVIEW_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-REVIEW-R11-V1",
+  "role_id": "R11",
+  "review_mode": "CONTENT_PERSONA_REVIEW",
+  "review_type": "PERSONA",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-002|IMAGE_REVIEW|R11|V1|1|null|MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "task_blob_sha": "b86c5e95ff5ff7b3be9e8bcc17d1fe121d7b800a",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_blob_sha": "91fb047cd21f22fcf5c94e2d3c331f27e1974a31",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "persona_lock_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+    "parallel_group_id": "CONTENT-002-IMAGE-QA-G1"
+  },
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-002-P1",
+      "asset_revision": 1,
+      "asset_transport": "USER_FILE",
+      "immutable_attachment_id": "file_000000002d5c81fda856c13c1aa071c2",
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1",
+      "persona_required": true,
+      "result": "PASS"
+    }
+  ],
+  "persona_reference": {
+    "persona_id": "PERSONA-001",
+    "lock_id": "PERSONA-001-LOCK-V1",
+    "lock_version": "LOCK-V1",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "anchor_identity_status": "VALID",
+    "anchors": {
+      "front": "git_blob_sha:3c4f926bfc046c1ec6197e2f94f63779c3c52f04|sha256:28a8d2f6e413c2d8fdb857a4b8f26ff342506de288a767d41875ebfb606d8b20",
+      "angle_45": "git_blob_sha:5a2b03bc6adc26c6690bc58a9303c1f33db3dc08|sha256:e6fca05287439d58415fb4a9e54f0ec9141938df49e081f09bff8403a4127b8d",
+      "halfbody": "git_blob_sha:ce0084c9923d4eaffd8fa23397e65b01001a1e95|sha256:71f7c53ce533a4f44eafa81090162c3f5aa42625b77f1a2d5f4a95cd2a1ff69b",
+      "detail": "git_blob_sha:e69e643707e9c808a21252bb0ba8ba184c039f17|sha256:5ee26e19a7a5cd1c1dce70839ac0aaef9d013c7861363603a1a990e398fc735e"
+    }
+  },
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "findings": [
+        "P1人物仍可确认属于PERSONA-001同一固定虚拟人物身份。",
+        "核心脸型、五官相对比例与锁定人物一致。",
+        "右侧面颊靠近颧骨的小痣可见，位置关系符合锁定识别点。",
+        "年轻成年女性年龄观感与深棕基础发色范围保持一致。",
+        "本篇服装、发型、妆容、配饰与场景变化均属于PERSONA LOCK允许变化范围。",
+        "未观察到换脸、明显身份漂移或可见身体比例异常。"
+      ]
+    }
+  },
+  "cross_page_findings": [
+    "本篇仅P1声明persona_required=true，因此人物一致性审核范围仅为P1。",
+    "P2-P5不做人设主判，不据此虚构人物一致性证据。"
+  ],
+  "failed_scope": [],
+  "required_revision_pages": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核任务.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "user_file://file_000000002d5c81fda856c13c1aa071c2"
+  ],
+  "output_paths": [
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "completed_at": "2026-09-28T16:09:00+08:00",
+  "delivery_fingerprint_or_commit": null,
+  "next_role_suggestion": "R01",
+  "execution_note": "本次仅将此前已完成的P1实际像素PASS审核正式落盘；未重新审图、未改结论、未修改图片、PERSONA LOCK、state、phase或pointer。"
+}
