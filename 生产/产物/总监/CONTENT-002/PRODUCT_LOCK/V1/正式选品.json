@@ -1,0 +1,49 @@
+{
+  "schema": "XP1_R01_FORMAL_PRODUCT_SELECTION_V1",
+  "content_id": "CONTENT-002",
+  "selection_id": "CONTENT-002-PRODUCT-SELECTION-V1",
+  "created_by": "R01",
+  "created_at": "2026-09-28T10:02:00+08:00",
+  "source_task_id": "CONTENT-002-PRODUCT-LOCK-R04-V1",
+  "source_fact_path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+  "source_fact_blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "source_delivery_path": "生产/产物/商品事实/CONTENT-002/V1/交付.json",
+  "source_delivery_blob_sha": "7df3b2963bc108c6e553538eb5fc55777d55a98e",
+  "selected_candidate_id": "CAND-05",
+  "selected_product_identity": {
+    "brand": "Dior",
+    "formal_product_name": "Diorshow 5 Couleurs - Limited Edition",
+    "collection": "Lucky Clover Fall 2026 Makeup Collection",
+    "category": "美妆/限定眼影",
+    "structure": "5 eyeshadows + couture pouch"
+  },
+  "selection_basis": [
+    "R04 product_identity_status=VERIFIED。",
+    "R04 sku_identity_status=VERIFIED_365_AND_883_SAME_LIMITED_PRODUCT_LINE。",
+    "产品线、2026秋季限定身份、365/883关系、五色盘结构及包装主题均有Dior官方一手证据。",
+    "365 Charmed Green 与 883 Lucky Rosewood 为同一季同一产品线两个SKU，不存在新旧版本混淆。",
+    "相比CAND-03，CAND-05无需等待新的直接官方销售页即可进入SKU身份草案阶段。"
+  ],
+  "sku_scope": [
+    {
+      "sku_key": "365",
+      "official_name": "Charmed Green",
+      "color_family": "green harmony",
+      "intended_priority": "PRIMARY_TARGET"
+    },
+    {
+      "sku_key": "883",
+      "official_name": "Lucky Rosewood",
+      "color_family": "rosewood harmony",
+      "intended_priority": "SIBLING_COMPARISON"
+    }
+  ],
+  "active_sku_not_yet_locked": true,
+  "r05_instruction": "先建立1份PRODUCT DRAFT及365/883两份独立SKU DRAFT；不得把Lucky Clover当作365唯一正式色名；不得把365/883写成新旧版本。R01在R05 PASS后机械审批并锁定唯一active SKU。",
+  "do_not_confuse_with": [
+    "365 Charmed Green != Lucky Clover 作为唯一正式色名",
+    "883 Lucky Rosewood 不是365旧版",
+    "地区库存状态不可泛化为全球库存状态"
+  ],
+  "status": "SELECTED_FOR_R05_DRAFT"
+}
