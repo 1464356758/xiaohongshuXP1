@@ -1,0 +1,26 @@
+{
+  "schema": "XP1_USER_DIRECTIVE_OVERRIDE_NOTE_V1",
+  "recorded_by": "R01",
+  "recorded_at": "2026-09-28T09:27:00+08:00",
+  "prior_content_id": "CONTENT-001",
+  "user_facts": {
+    "actual_publish_reported": true,
+    "user_statement": "下一篇，我发布了，不用确认",
+    "exact_published_at_known": false,
+    "publication_url_known": false,
+    "screenshot_known": false
+  },
+  "user_directive": {
+    "start_next_content_immediately": true,
+    "do_not_wait_for_post_publish_data_loop": true,
+    "do_not_require_additional_publish_confirmation": true
+  },
+  "unresolved_formal_items": {
+    "r14_publication_receipt_missing": true,
+    "pre_publish_actual_recheck_not_captured": true,
+    "formal_published_transition_not_completed": true,
+    "post_publish_data_loop_not_completed": true
+  },
+  "operational_decision": "Detach CONTENT-001 post-publish follow-up from the active production mainline and immediately start CONTENT-002 discovery. Do not fabricate missing receipt/recheck/data evidence.",
+  "architecture_note": "This user-directed mainline continuation is outside the normal SYS-003 post-publish state route and is recorded explicitly for audit rather than hidden."
+}
