@@ -1,0 +1,145 @@
+{
+  "schema": "SYS-003_IMAGE_REVIEW_EVIDENCE_V2",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-REVIEW-R10-V1",
+  "review_role_id": "R10",
+  "review_type": "PRODUCT_SKU",
+  "review_mode": "PRODUCT_IMAGE_REVIEW",
+  "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验任务.json",
+  "delivery_path": "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/交付.json",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-002|IMAGE_REVIEW|R10|V1|1|null|MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+  "asset_manifest_id": "ASSET-CONTENT-002",
+  "manifest_revision": 1,
+  "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+  "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+  "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json",
+  "asset_identity_gate_result": "PASS",
+  "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+  "active_sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+  "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+  "active_sku_identity": "365 Charmed Green",
+  "sibling_sku_identity": "883 Lucky Rosewood",
+  "sibling_permission": "P4_COMPARISON_ONLY",
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-002-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1",
+      "immutable_attachment_id": "file_000000002d5c81fda856c13c1aa071c2",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-002-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:554dc61f5fd0ee4de68c70741d455ecf1e830f32092b219a07b58a65737e582b",
+      "immutable_attachment_id": "file_00000000a03881fd9afd93c6aab5f278",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    },
+    {
+      "page_id": "P4",
+      "asset_id": "CONTENT-002-P4",
+      "asset_revision": 1,
+      "fingerprint": "sha256:eb688650afe2bdce9ef2d402d04e4c8945faa73c05c626cab9dd525302bbf8e8",
+      "immutable_attachment_id": "file_0000000071d08230ae4584e5ca72b428",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-002-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:533b39b0e6b6f80bcc02b4badea33e4770d0680d3b0509c2ba8b8ce9425fc889",
+      "immutable_attachment_id": "file_000000007c6481fd9a431e86bc07c207",
+      "dependency_scope": "IN_SCOPE",
+      "result": "PASS"
+    }
+  ],
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "product_identity": "365 Charmed Green",
+      "findings": [
+        "主商品保持Dior Diorshow 5 Couleurs - Limited Edition / 365 Charmed Green。",
+        "可见五格结构、中央菱形CD、四叶草压纹与365绿色和谐配色。",
+        "365对应象牙/米白pouch，未见883、其他Dior SKU或其他品牌混入。"
+      ]
+    },
+    "P2": {
+      "result": "PASS",
+      "product_identity": "365 Charmed Green",
+      "findings": [
+        "产品事实页主盘保持365 Charmed Green。",
+        "五格结构、中央菱形CD、四叶草压纹与绿/金/灰绿/深绿配色关系保持365身份。",
+        "未见883盘体、浅粉pouch或其他SKU串入。"
+      ]
+    },
+    "P4": {
+      "result": "PASS",
+      "product_identity": "365 Charmed Green primary + 883 Lucky Rosewood comparison only",
+      "findings": [
+        "365保持主位，883仅作为同季兄弟SKU小型对照。",
+        "365保持绿色和谐配色与象牙/米白pouch；883保持玫瑰木配色与浅粉pouch。",
+        "未发现365/883盘面或pouch互换，未把883表达为主线商品。"
+      ]
+    },
+    "P5": {
+      "result": "PASS",
+      "product_identity": "365 Charmed Green",
+      "findings": [
+        "收藏检查页主商品继续为365 Charmed Green。",
+        "五格结构、中央菱形CD、四叶草压纹及绿色和谐配色保持一致。",
+        "未见883、其他Dior SKU或其他品牌混入。"
+      ]
+    }
+  },
+  "identity_checks": {
+    "brand": "PASS",
+    "formal_product": "PASS",
+    "five_pan_structure": "PASS",
+    "central_diamond_cd": "PASS",
+    "clover_embossing": "PASS",
+    "sku_365_color_signature": "PASS",
+    "sku_365_pouch": "PASS",
+    "sku_883_comparison_scope_on_p4": "PASS",
+    "sku_883_color_signature_on_p4": "PASS",
+    "sku_883_pouch_on_p4": "PASS",
+    "cross_sku_mixup": "PASS",
+    "other_brand_or_other_dior_sku_contamination": "PASS"
+  },
+  "result": "PASS",
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_scope": [],
+  "required_revision_pages": [],
+  "input_bindings": {
+    "active_manifest": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "product_lock": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "active_sku_lock": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "asset_identity_gate_evidence": "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json"
+  },
+  "evidence_refs": [
+    "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json"
+  ],
+  "output_paths": [
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "review_execution_note": "固化本聊天此前已完成的CONTENT-002实际像素商品/SKU审核PASS；本次仅补写正式GitHub交付，不重新审图、不改变结论。",
+  "completed_at": "2026-09-28T16:09:53+08:00",
+  "delivery_fingerprint_or_commit": "PENDING_DELIVERY_WRITE",
+  "next_role_suggestion": "R01"
+}
