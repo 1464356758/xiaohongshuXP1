@@ -1,0 +1,84 @@
+{
+  "schema": "XP1_R01_PRODUCT_IMAGE_INCIDENT_V1",
+  "content_id": "CONTENT-002",
+  "incident_id": "CONTENT-002-PRODUCT-IMAGE-MISMATCH-001",
+  "severity": "P0_PRODUCT_IDENTITY",
+  "status": "CONFIRMED",
+  "detected_by": "USER",
+  "recorded_by": "R01",
+  "recorded_at": "2026-09-28T16:55:00+08:00",
+  "summary": "Current generated product imagery does not faithfully match the locked Dior official product imagery for 365 Charmed Green / 883 Lucky Rosewood. This is a hard product-identity failure, not a stylistic difference.",
+  "affected_pages": [
+    "P1",
+    "P2",
+    "P4",
+    "P5"
+  ],
+  "unaffected_pages": [
+    "P3"
+  ],
+  "authoritative_sources": [
+    {
+      "source": "SKU-002-365/LOCK-V1",
+      "official_full_image": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw45667c04/Y0000255/Y0000255_E000001849_E01_RHC.jpg?sw=800",
+      "official_color_image": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dwa8709015/Y0000255/Y0000255_E000001849_cs.jpg"
+    },
+    {
+      "source": "SKU-002-883/LOCK-V1",
+      "official_full_image": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+      "official_color_image": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+    }
+  ],
+  "user_evidence": [
+    {
+      "file": "1000157802.png",
+      "sha256": "c1b2415a9ba1e7babf0f8e493a80033b02b61c029e946fd6f8619ffca71f04be",
+      "role": "visual comparison only"
+    },
+    {
+      "file": "1000157803.png",
+      "sha256": "67cd0bfd731e27d5c24750945477dd2c688f64f3e19f524370fb08de9ff467de",
+      "role": "visual comparison only"
+    }
+  ],
+  "confirmed_mismatches": [
+    "Generated 365 pouch used black/white Dior Oblique-style textile instead of the locked ivory/ecru quilted couture pouch with muted green-gray four-leaf clover motifs.",
+    "Generated 883 pouch used non-matching patterned textile instead of the locked pale pink quilted couture pouch with light four-leaf clover motifs.",
+    "Generated palette pan colors/embossing/logo geometry were not pixel-faithful to the locked official references.",
+    "R10 PASS was therefore false-positive for exact SKU identity; R12 PASS cannot cure a product-identity mismatch."
+  ],
+  "invalidated_evidence": [
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/批准/COMPLIANCE-XHS-0002/V1/COMPLIANCE-SNAPSHOT.json",
+    "生产/任务/CONTENT-002/COMPLIANCE_REVIEW/V1/R13-内容真实性与平台合规审核任务.json"
+  ],
+  "corrective_rule": {
+    "product_rendering_mode": "PIXEL_PRESERVED_OFFICIAL_SOURCE_COMPOSITING",
+    "prohibited": "GENERATIVE_REDRAW_OF_PRODUCT_OR_PACKAGING",
+    "source_priority": [
+      "brand official first-party product image",
+      "brand verified official flagship-store image if first-party unavailable",
+      "authorized retailer only with explicit provenance"
+    ],
+    "creative_allowed_on": [
+      "background",
+      "lighting around product",
+      "layout",
+      "typography",
+      "non-product props",
+      "persona scene"
+    ],
+    "product_pixels_must_preserve": [
+      "compact geometry",
+      "pan geometry",
+      "pan colors",
+      "embossing",
+      "logos",
+      "pouch color/material/motif",
+      "included accessories"
+    ]
+  },
+  "next_action": "Prepare partial IMAGE_BUILD revision for P1/P2/P4/P5; preserve P3."
+}
