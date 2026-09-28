@@ -1,0 +1,119 @@
+{
+  "schema": "XP1_R05_SKU_DRAFT_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-PRODUCT-LOCK-R05-V1",
+  "role_id": "R05",
+  "lock_type": "SKU_LOCK",
+  "lock_id": "SKU-002-883-LOCK-V1",
+  "status": "DRAFT",
+  "provenance": {
+    "source_task_path": "生产/任务/CONTENT-002/PRODUCT_LOCK/V1/R05-PRODUCT-SKU草案任务.json",
+    "task_version": "V1",
+    "input_revision": 1,
+    "revision_round": null,
+    "dependency_revision": "SELECTION|CONTENT-002-PRODUCT-SELECTION-V1|4e7b9fded8589f5faa01bca9b06a69495cc4a05a|R04_FACTS|572a6788e71fe64da8772aa0b428d5bd87adc7ed|R04_DELIVERY|7df3b2963bc108c6e553538eb5fc55777d55a98e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8",
+    "source_delivery_path": "生产/产物/锁定草案/CONTENT-002/V1/交付.json",
+    "supersedes": null
+  },
+  "product_lock_id": "PRODUCT-002-LOCK-V1",
+  "product_lock_status_required": "R01_APPROVAL_PENDING",
+  "ecommerce_url": "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html",
+  "multi_sku_link": true,
+  "target_sku": {
+    "platform_sku_name": "883 Lucky Rosewood",
+    "sku_id_if_visible": "E000001794",
+    "sku_id_semantics": "Dior official site item identifier observed on first-party page/assets; master product identifier Y0000255",
+    "shade_or_color_number": "883",
+    "shade_or_color_name": "Lucky Rosewood",
+    "official_cn_shade_name": "UNKNOWN",
+    "model_or_variant": "Diorshow 5 Couleurs - Limited Edition | 883 Lucky Rosewood",
+    "capacity_or_size": "UNKNOWN",
+    "package_version": "Fall 2026 Lucky Clover limited edition; pale pink quilted couture pouch with light four-leaf clover motifs",
+    "palette_pan_count_or_structure": "5 eyeshadow pans: central diamond-shaped pan + four surrounding pans; four outer pans show clover embossing in official asset; applicator compartment visible at the side",
+    "finish_structure": [
+      "matte",
+      "satin",
+      "pearly"
+    ],
+    "visible_color_signature": [
+      "dusty rose / rose-gold",
+      "pale blush-ivory pearl",
+      "muted rosewood-mauve center",
+      "deep berry / burgundy",
+      "soft pale pink-lilac pearl"
+    ],
+    "logo_or_text_signature": [
+      "DIOR wordmark on black compact lid",
+      "CD monogram embossed on central diamond-shaped pan",
+      "four-leaf clover embossing on four surrounding pans",
+      "Dior branding visible on internal applicators in official product image",
+      "matching pale pink quilted couture pouch with light clover appliqué motifs and central CD detail"
+    ],
+    "included_accessories": [
+      "matching couture pouch"
+    ],
+    "accessory_note": "Two internal applicators are visible in Dior official imagery, but this draft does not elevate them to a separately verified listed accessory."
+  },
+  "reference_images": [
+    {
+      "ref_id": "SKU-883-REF-FULL",
+      "transport": "URL",
+      "location": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800",
+      "must_match": true,
+      "source_role": "DIOR_OFFICIAL",
+      "identity_scope": "883 Lucky Rosewood palette and its matching couture pouch only"
+    },
+    {
+      "ref_id": "SKU-883-REF-COLOR",
+      "transport": "URL",
+      "location": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg",
+      "must_match": true,
+      "source_role": "DIOR_OFFICIAL",
+      "identity_scope": "883 Lucky Rosewood official five-pan color/embossing close-up only"
+    }
+  ],
+  "sibling_skus_in_same_link": [
+    "365 Charmed Green"
+  ],
+  "relationship_to_sibling": "SAME_SEASON_SAME_PRODUCT_LINE_SIBLING_SKU; NOT_NEW_OLD_VERSION",
+  "do_not_confuse_with": [
+    "365 Charmed Green",
+    "Lucky Clover as a replacement shade name for 365 or 883",
+    "generic Dior rosewood five-pan palettes from other seasons",
+    "search-result thumbnails or unofficial reseller imagery"
+  ],
+  "disambiguation_notes": "Sibling comparison SKU. Official Dior product page labels this SKU 883 Lucky Rosewood and binds it to the E000001794 rosewood palette/pouch assets. It is a same-season sibling of 365, not an older or newer version. Chinese mainland official shade name remains UNKNOWN because no Dior China first-party page was verified.",
+  "regional_availability": {
+    "united_states": "US official FAQ says this seasonal limited edition is no longer available on dior.com.",
+    "canada": "Official Canada product page remains active; availability may differ by selected shade and time.",
+    "international": "Official product page remains published; stock for a specific market is not inferred.",
+    "china_mainland": "UNKNOWN"
+  },
+  "generation_gate": "status=LOCKED且字段足以唯一识别才允许生成含商品图片。",
+  "source_paths": [
+    "生产/产物/总监/CONTENT-002/PRODUCT_LOCK/V1/正式选品.json",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+    "生产/产物/商品事实/CONTENT-002/V1/交付.json"
+  ],
+  "external_evidence": [
+    {
+      "source_kind": "DIOR_OFFICIAL_US_PRODUCT_PAGE",
+      "url": "https://www.dior.com/en_us/beauty/products/diorshow-5-couleurs---limited-edition-E000001794.html"
+    },
+    {
+      "source_kind": "DIOR_OFFICIAL_INTL_PRODUCT_PAGE",
+      "url": "https://www.dior.com/en_int/beauty/products/diorshow-5-couleurs---limited-edition-Y0000255.html"
+    },
+    {
+      "source_kind": "DIOR_OFFICIAL_883_FULL_IMAGE",
+      "url": "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-master_dior/default/dw2817b0e0/Y0000255/Y0000255_E000001794_E01_RHC.jpg?sw=800"
+    },
+    {
+      "source_kind": "DIOR_OFFICIAL_883_COLOR_IMAGE",
+      "url": "https://www.dior.com/on/demandware.static/-/Sites-master_dior/default/dw32589452/Y0000255/Y0000255_E000001794_cs.jpg"
+    }
+  ],
+  "approval_state": "PENDING_R01",
+  "approved_by": null,
+  "approved_at": null
+}
