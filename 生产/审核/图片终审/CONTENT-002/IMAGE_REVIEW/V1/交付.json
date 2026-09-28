@@ -1,0 +1,106 @@
+{
+  "schema": "XP1_R12_IMAGE_REVIEW_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-IMAGE-REVIEW-R12-V1",
+  "role_id": "R12",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "idempotency_key": "CONTENT-002|IMAGE_REVIEW|R12|V1|1|null|MANIFEST|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|VISUAL|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|PAGE_TASK|e248a2d81c705f63268baea0a622ec0506f42931|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2",
+  "result": "PASS",
+  "input_bindings": {
+    "task_path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "asset_identity_gate_evidence_path": "生产/产物/总监/CONTENT-002/IMAGE_BUILD/V1/ASSET-IDENTITY-GATE.json"
+  },
+  "reviewed_assets": [
+    {
+      "page_id": "P1",
+      "asset_id": "CONTENT-002-P1",
+      "asset_revision": 1,
+      "fingerprint": "sha256:c1e4c4f70401bb9d4992bad717730a8b070dc56a2a68d8de26af141041d2b8b1"
+    },
+    {
+      "page_id": "P2",
+      "asset_id": "CONTENT-002-P2",
+      "asset_revision": 1,
+      "fingerprint": "sha256:554dc61f5fd0ee4de68c70741d455ecf1e830f32092b219a07b58a65737e582b"
+    },
+    {
+      "page_id": "P3",
+      "asset_id": "CONTENT-002-P3",
+      "asset_revision": 1,
+      "fingerprint": "sha256:7c501530a0b3e2e447af6c9b4b1e548ef739266ab17e60f78aa17b7cd70aac6f"
+    },
+    {
+      "page_id": "P4",
+      "asset_id": "CONTENT-002-P4",
+      "asset_revision": 1,
+      "fingerprint": "sha256:eb688650afe2bdce9ef2d402d04e4c8945faa73c05c626cab9dd525302bbf8e8"
+    },
+    {
+      "page_id": "P5",
+      "asset_id": "CONTENT-002-P5",
+      "asset_revision": 1,
+      "fingerprint": "sha256:533b39b0e6b6f80bcc02b4badea33e4770d0680d3b0509c2ba8b8ce9425fc889"
+    }
+  ],
+  "page_findings": {
+    "P1": {
+      "result": "PASS",
+      "finding": "人物封面页功能成立，人物+产品关系自然，标题层级清楚，无明显五官、透视或融合硬伤。"
+    },
+    "P2": {
+      "result": "PASS",
+      "finding": "产品事实页功能成立，五色结构说明清楚，信息密度可接受，无明显乱码、错字或结构异常。"
+    },
+    "P3": {
+      "result": "PASS",
+      "finding": "纯信息“选365前3问”成立，层级明确，阅读节奏正常，无明显排版异常。"
+    },
+    "P4": {
+      "result": "PASS",
+      "finding": "365主位 + 883兄弟SKU对照成立，主次清楚，对照逻辑正常，无明显商品融合问题。"
+    },
+    "P5": {
+      "result": "PASS",
+      "finding": "收藏检查卡成立，总结层级清楚，产品、文字、留白分配合理。"
+    }
+  },
+  "cross_page_findings": [
+    "页序正确：1/5 → 5/5。",
+    "P1人物封面、P2产品事实、P3纯信息、P4双SKU对照、P5收藏检查卡，跨页功能分工明确。",
+    "无明显机械重复，构图、景别与信息密度整体合理。",
+    "字体层级、留白、安全区和手机端可读性通过。",
+    "未见发布级乱码、重大错字、断句异常、肢体异常、五官异常、背景透视异常、商品融合异常或明显AI结构崩坏。"
+  ],
+  "failed_scope": [],
+  "blocked_reason": null,
+  "required_revision_pages": [],
+  "output_paths": [
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/交付.json"
+  ],
+  "evidence_refs": [
+    {
+      "path": "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+      "blob_sha": "fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8"
+    },
+    {
+      "path": "生产/任务/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审任务.json",
+      "blob_sha": "0a586e9ef0933e1cd0f48881e7ab4b3cd9e0ceb7"
+    },
+    {
+      "path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+      "blob_sha": "91fb047cd21f22fcf5c94e2d3c331f27e1974a31"
+    }
+  ],
+  "completed_at": "2026-09-28T16:22:00+08:00",
+  "delivery_fingerprint_or_commit": "git_blob:fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8",
+  "next_role_suggestion": "R01",
+  "state_phase_pointer_modified": false
+}
