@@ -1,0 +1,252 @@
+{
+  "schema": "XHS_XP1_R07_COPY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COPY-R07-V1",
+  "role_id": "R07",
+  "work_mode": "CONTENT_COPY",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key": "CONTENT-002|COPY|R07|V1|1|null|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "status": "DRAFT_FOR_R01_ACTIVATION",
+  "final_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+  "copy_revision": 1,
+  "bindings": {
+    "planning": {
+      "path": "生产/产物/策划/CONTENT-002/V1/策划.json",
+      "blob_sha": "eb46295d78a873b05dccf001c48bb474a8297563"
+    },
+    "planning_delivery": {
+      "path": "生产/产物/策划/CONTENT-002/V1/交付.json",
+      "blob_sha": "c9cc7ebe57c56502e48a9fd366ab189b4f599e7e"
+    },
+    "account_strategy": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    "voice": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false,
+      "first_person_opinion_eligible": true
+    },
+    "product": {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+      "identity": "Dior | Diorshow 5 Couleurs - Limited Edition | Lucky Clover Fall 2026 Makeup Collection"
+    },
+    "active_sku": {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+      "identity": "365 Charmed Green"
+    },
+    "sibling_sku": {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1",
+      "identity": "883 Lucky Rosewood",
+      "role": "SIBLING_COMPARISON_ONLY"
+    },
+    "r04": {
+      "path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+      "blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+    }
+  },
+  "public_copy": {
+    "recommended_title": "Dior 365 Charmed Green｜先别被限定推着买",
+    "alternative_titles": [
+      "绿色眼影会真的用吗？先看Dior 365这5色",
+      "Dior秋季限定365｜喜欢绿色之前先问自己3件事",
+      "365还是玫瑰木路线？先判断你会不会真的用绿色"
+    ],
+    "body": [
+      "限定最容易让人先想“现在不买会不会错过”，但对365 Charmed Green来说，更值得先想的是：这组绿色，真的会进入你的日常眼妆吗？",
+      "365是Dior Diorshow 5 Couleurs - Limited Edition里，Lucky Clover Fall 2026系列主题下的绿色和谐配色。盘面能看到light yellow-green / chartreuse-gold、pale champagne-beige、muted sage green、olive-gold / moss green，以及deep espresso-charcoal brown。",
+      "选它之前，不用先问“绿色难不难”。更实用的是问自己：平时会不会真的用绿色？愿意让绿色出现到什么程度？这样的眼妆场景，一周里到底多不多？",
+      "同季还有883 Lucky Rosewood。它不是365的高低配，也不是谁更高级。两盘更像两条色彩路线：一边是green harmony，一边是rosewood harmony。最后选哪边，取决于你真正会用哪种配色。",
+      "限定只是时间属性，不是适配证明。真要下单，先看配色会不会用、场景够不够多、自己到底偏绿色还是玫瑰木路线。库存则只看你所在地区的Dior官方渠道实时状态。"
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "role": "COVER_DECISION_HOOK",
+        "headline": "Dior 365 Charmed Green",
+        "subheadline": "先别被限定推着买",
+        "body": "先问一个更实际的问题：这组绿色，真的会进入你的日常眼妆吗？",
+        "collection_context": "Lucky Clover｜Fall 2026"
+      },
+      {
+        "page": 2,
+        "role": "FACT_MAP",
+        "headline": "先看365的五色色彩关系",
+        "intro": "它不是一盘“只有绿色”的眼影。真正影响使用门槛的，是浅色、绿色和深色怎么一起出现。",
+        "visible_color_map": [
+          "light yellow-green / chartreuse-gold",
+          "pale champagne-beige",
+          "muted sage green center",
+          "olive-gold / moss green",
+          "deep espresso-charcoal brown"
+        ],
+        "structure_note": "5 pans｜central diamond-shaped pan + four surrounding pans",
+        "finish_note": "matte / satin / pearly",
+        "footer": "这些是锁定官方盘面里可观察到的色彩关系，不把它们改写成Dior官方中文色名。"
+      },
+      {
+        "page": 3,
+        "role": "THREE_QUESTION_SELF_FILTER",
+        "headline": "选365前，先问自己3件事",
+        "questions": [
+          "① 绿色会真的进入你的日常眼妆，还是只停在“看起来很特别”？",
+          "② 你愿意让绿色承担多少存在感：很轻、能看见，还是直接成为重点？",
+          "③ 你的真实使用场景够不够：通勤、周末、聚会里，能想到多少次会主动选它？"
+        ],
+        "guidance": "如果绿色只会偶尔做一点点缀，就把“限定”先放一边，看看这点使用频率值不值得为一整盘买单。喜欢绿色路线，也不等于自动适合所有肤色和眼型。"
+      },
+      {
+        "page": 4,
+        "role": "SIBLING_COMPARISON",
+        "headline": "365 vs 883｜其实是在选两条色彩路线",
+        "comparisons": [
+          {
+            "sku": "365 Charmed Green",
+            "family": "green harmony",
+            "visible_direction": "light yellow-green / champagne-beige / muted sage / olive-moss green / deep espresso-charcoal",
+            "decision_copy": "如果你明确想把绿色放进眼妆结构，365继续看。"
+          },
+          {
+            "sku": "883 Lucky Rosewood",
+            "family": "rosewood harmony",
+            "visible_direction": "dusty rose / rose-gold / blush-ivory pearl / rosewood-mauve / berry-burgundy / pale pink-lilac pearl",
+            "decision_copy": "如果你真正偏爱玫瑰木路线，就把883当同季参照，不用为了限定感硬选365。"
+          }
+        ],
+        "footer": "不是谁更高级，也不是谁一定更日常。看你真正会用哪条色彩路线。"
+      },
+      {
+        "page": 5,
+        "role": "SAVE_FOMO_CHECKLIST",
+        "headline": "收藏这张｜限定不是适配证明",
+        "checklist": [
+          "配色会不会真的用？",
+          "使用场景够不够多？",
+          "自己真正偏绿色，还是玫瑰木路线？",
+          "库存只看具体地区的Dior官方渠道实时状态。"
+        ],
+        "summary": "365的购买理由，应该是你真的想用这组绿色和谐，而不是只因为它写着限定。",
+        "comment_prompt": "如果只能选一个方向，你会选365的绿色和谐，还是883的玫瑰木和谐？"
+      }
+    ],
+    "cta": "先把这张检查卡存下来。等真的准备下单时，再看自己买的是“会用的配色”，还是“限定带来的紧迫感”。",
+    "comment_prompt": "如果只能选一个方向，你会选365的绿色和谐，还是883的玫瑰木和谐？你最担心绿色盘哪一点难用？",
+    "tags": [
+      "#Dior",
+      "#Diorshow5Couleurs",
+      "#CharmedGreen",
+      "#LuckyClover",
+      "#秋季眼影",
+      "#绿色眼影",
+      "#眼影盘怎么选"
+    ]
+  },
+  "fact_evidence_map": [
+    {
+      "claim": "产品为Dior Diorshow 5 Couleurs - Limited Edition，属于Lucky Clover Fall 2026 Makeup Collection",
+      "claim_type": "VERIFIED_PRODUCT_FACT",
+      "evidence": [
+        "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+        "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json#572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+      ]
+    },
+    {
+      "claim": "当前唯一active SKU为365 Charmed Green",
+      "claim_type": "VERIFIED_ACTIVE_SKU_FACT",
+      "evidence": [
+        "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3"
+      ]
+    },
+    {
+      "claim": "365可观察色彩关系为light yellow-green/chartreuse-gold、pale champagne-beige、muted sage green center、olive-gold/moss green、deep espresso-charcoal brown",
+      "claim_type": "VERIFIED_VISIBLE_COLOR_SIGNATURE_NOT_OFFICIAL_SHADE_NAMES",
+      "evidence": [
+        "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3"
+      ]
+    },
+    {
+      "claim": "365为5-pan结构，finish structure含matte、satin、pearly",
+      "claim_type": "VERIFIED_STRUCTURE_FACT",
+      "evidence": [
+        "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+        "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3"
+      ]
+    },
+    {
+      "claim": "883 Lucky Rosewood是365同季同产品线兄弟SKU，仅作为P4选择对照",
+      "claim_type": "VERIFIED_SIBLING_RELATIONSHIP",
+      "evidence": [
+        "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+        "生产/批准/SKU-002-883/LOCK-V1.json#08a388accc6add3b3d5f716936798cb15b5b7fe1"
+      ]
+    },
+    {
+      "claim": "883可观察色彩方向为dusty rose/rose-gold、pale blush-ivory pearl、muted rosewood-mauve、deep berry/burgundy、soft pale pink-lilac pearl",
+      "claim_type": "VERIFIED_SIBLING_VISIBLE_COLOR_SIGNATURE",
+      "evidence": [
+        "生产/批准/SKU-002-883/LOCK-V1.json#08a388accc6add3b3d5f716936798cb15b5b7fe1"
+      ]
+    },
+    {
+      "claim": "选365前3问、365/883路线选择和限定去FOMO检查卡",
+      "claim_type": "EDITORIAL_DECISION_FRAMEWORK_NOT_DIOR_OFFICIAL_TUTORIAL",
+      "evidence": [
+        "生产/产物/策划/CONTENT-002/V1/策划.json#eb46295d78a873b05dccf001c48bb474a8297563"
+      ]
+    },
+    {
+      "claim": "中国大陆官方中文色名、净含量、中国大陆实时库存保持UNKNOWN；库存需按具体地区官方渠道实时核对",
+      "claim_type": "VERIFIED_UNKNOWN_AND_REGIONAL_AVAILABILITY_BOUNDARY",
+      "evidence": [
+        "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+        "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+        "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json#572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+      ]
+    }
+  ],
+  "unknown_fields_preserved": {
+    "china_mainland_official_cn_shade_name": "UNKNOWN",
+    "capacity_or_size": "UNKNOWN",
+    "china_mainland_realtime_stock": "UNKNOWN"
+  },
+  "truthfulness_checks": {
+    "uses_real_world_first_person_experience": false,
+    "claims_personal_purchase": false,
+    "claims_personal_wear_time": false,
+    "claims_personal_repurchase": false,
+    "claims_personal_swatches": false,
+    "invents_cn_official_shade_names": false,
+    "invents_capacity": false,
+    "generalizes_global_inventory": false,
+    "treats_editorial_guidance_as_dior_official": false,
+    "makes_883_primary": false,
+    "claims_absolute_skin_tone_fit": false,
+    "uses_fomo_purchase_pressure": false
+  },
+  "frozen_structure_check": {
+    "page_count": 5,
+    "p1": "限定去FOMO钩子",
+    "p2": "365五色色彩关系",
+    "p3": "选365前3问",
+    "p4": "365/883路线对照",
+    "p5": "收藏检查卡",
+    "active_sku": "365 Charmed Green",
+    "sibling_sku_role": "883 Lucky Rosewood / P4 COMPARISON_ONLY",
+    "matches_r06": true
+  },
+  "generated_at": "2026-09-28T11:34:00+08:00",
+  "final_copy_fingerprint_algorithm": "SHA256_CANONICAL_JSON_EXCLUDING_final_copy_fingerprint",
+  "final_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7"
+}

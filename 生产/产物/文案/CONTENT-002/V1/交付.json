@@ -1,0 +1,91 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COPY-R07-V1",
+  "role_id": "R07",
+  "work_mode": "CONTENT_COPY",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key": "CONTENT-002|COPY|R07|V1|1|null|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|PLANNING_DELIVERY|c9cc7ebe57c56502e48a9fd366ab189b4f599e7e|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-002/COPY/V1/R07-文案任务.json",
+      "binding": "FORMAL_TASK",
+      "blob_sha": "807a4f581b67230216531932da660fa876b76140"
+    },
+    {
+      "path": "生产/产物/策划/CONTENT-002/V1/策划.json",
+      "binding": "R06_PLANNING",
+      "blob_sha": "eb46295d78a873b05dccf001c48bb474a8297563"
+    },
+    {
+      "path": "生产/产物/策划/CONTENT-002/V1/交付.json",
+      "binding": "R06_PLANNING_DELIVERY",
+      "blob_sha": "c9cc7ebe57c56502e48a9fd366ab189b4f599e7e"
+    },
+    {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "binding": "ACTIVE_ACCOUNT_STRATEGY_LOCK",
+      "blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "binding": "ACTIVE_VOICE_LOCK",
+      "blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "binding": "ACTIVE_PERSONA_LOCK",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8"
+    },
+    {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "binding": "ACTIVE_PRODUCT_LOCK",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1"
+    },
+    {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "binding": "ACTIVE_SKU_LOCK",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3"
+    },
+    {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "binding": "SIBLING_SKU_LOCK_COMPARISON_ONLY",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1"
+    },
+    {
+      "path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+      "binding": "R04_PRODUCT_FACTS",
+      "blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+    }
+  ],
+  "output_paths": [
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/产物/文案/CONTENT-002/V1/交付.json"
+  ],
+  "final_copy_path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+  "copy_revision": 1,
+  "final_copy_fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+  "active_sku_identity": "365 Charmed Green",
+  "sibling_sku_identity": "883 Lucky Rosewood",
+  "sibling_sku_role": "P4_COMPARISON_ONLY",
+  "first_person_experience_eligible": false,
+  "five_page_structure_preserved": true,
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/策划/CONTENT-002/V1/策划.json#eb46295d78a873b05dccf001c48bb474a8297563",
+    "生产/批准/VOICE-001/LOCK-V1.json#0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72",
+    "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+    "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+    "生产/批准/SKU-002-883/LOCK-V1.json#08a388accc6add3b3d5f716936798cb15b5b7fe1",
+    "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json#572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+  ],
+  "completed_at": "2026-09-28T11:34:00+08:00",
+  "next_role_suggestion": "R01验收并机械激活active_copy_path / active_copy_revision / active_copy_fingerprint后进入VISUAL_PLAN。",
+  "delivery_fingerprint_or_commit": "sha256:0e94f5595dae425d0038299b61b907ca877651191cd83e3d8b52ff55997bfe8f"
+}
