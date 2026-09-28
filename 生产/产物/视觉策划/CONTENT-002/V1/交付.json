@@ -1,0 +1,143 @@
+{
+  "schema": "XP1_ROLE_DELIVERY_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-VISUAL-PLAN-R08-V1",
+  "role_id": "R08",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "idempotency_key": "CONTENT-002|VISUAL_PLAN|R08|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|COPY_REV|1|COPY_FP|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|PLANNING|eb46295d78a873b05dccf001c48bb474a8297563|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1|R04|572a6788e71fe64da8772aa0b428d5bd87adc7ed",
+  "result": "PASS",
+  "input_bindings": [
+    {
+      "path": "生产/任务/CONTENT-002/VISUAL_PLAN/V1/R08-视觉总策划任务.json",
+      "binding": "FORMAL_TASK",
+      "blob_sha": "1f60cc7daf44cc450f5627fdcbbfabc50993ded1"
+    },
+    {
+      "path": "生产/产物/文案/CONTENT-002/V1/文案.json",
+      "binding": "ACTIVE_COPY",
+      "blob_sha": "2b6cb650577e2dd0877a2c3a3d37dfc929497fe8",
+      "copy_revision": 1,
+      "fingerprint": "sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7"
+    },
+    {
+      "path": "生产/产物/策划/CONTENT-002/V1/策划.json",
+      "binding": "R06_PLANNING",
+      "blob_sha": "eb46295d78a873b05dccf001c48bb474a8297563"
+    },
+    {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "binding": "ACTIVE_PERSONA_LOCK",
+      "blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8"
+    },
+    {
+      "path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+      "binding": "ACTIVE_PRODUCT_LOCK",
+      "blob_sha": "dec3e664fdf404081b4df3b1eeab35ead1fafea1"
+    },
+    {
+      "path": "生产/批准/SKU-002-365/LOCK-V1.json",
+      "binding": "ACTIVE_SKU_LOCK",
+      "blob_sha": "5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3"
+    },
+    {
+      "path": "生产/批准/SKU-002-883/LOCK-V1.json",
+      "binding": "SIBLING_SKU_P4_ONLY",
+      "blob_sha": "08a388accc6add3b3d5f716936798cb15b5b7fe1"
+    },
+    {
+      "path": "生产/产物/商品事实/CONTENT-002/V1/商品事实研究.json",
+      "binding": "R04_PRODUCT_FACTS",
+      "blob_sha": "572a6788e71fe64da8772aa0b428d5bd87adc7ed"
+    }
+  ],
+  "output_paths": [
+    "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+    "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+    "生产/产物/视觉策划/CONTENT-002/V1/交付.json"
+  ],
+  "output_bindings": {
+    "visual_plan": {
+      "path": "生产/产物/视觉策划/CONTENT-002/V1/视觉策划.json",
+      "blob_sha": "e24b04d89f9fe757f3ed2a9334932bb376fafa6a"
+    },
+    "r09_page_build_spec": {
+      "path": "生产/产物/图片任务/CONTENT-002/V1/R09-逐页图片任务.json",
+      "blob_sha": "e248a2d81c705f63268baea0a622ec0506f42931"
+    }
+  },
+  "page_count": 5,
+  "page_ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5"
+  ],
+  "persona_pages": [
+    "P1"
+  ],
+  "active_sku_pages": [
+    "P1",
+    "P2",
+    "P4",
+    "P5"
+  ],
+  "sibling_sku_pages": [
+    "P4"
+  ],
+  "official_reference_actual_read": {
+    "sku_365_full": true,
+    "sku_365_color": true,
+    "sku_883_full": true,
+    "sku_883_color": true,
+    "visual_identity_summary": "365=象牙/米白绗缝手包+绿色和谐五色盘；883=浅粉绗缝手包+玫瑰木和谐五色盘。两者均为Dior黑色五色盘、中央菱形CD、四周四叶草压纹。"
+  },
+  "persona_anchor_actual_read": {
+    "actual_pixels_read_6_of_6": true,
+    "required_anchor_blob_shas": [
+      "3c4f926bfc046c1ec6197e2f94f63779c3c52f04",
+      "5a2b03bc6adc26c6690bc58a9303c1f33db3dc08",
+      "ce0084c9923d4eaffd8fa23397e65b01001a1e95"
+    ],
+    "auxiliary_anchor_blob_shas": [
+      "c47d2970b552a9a27f036f8360ca3b577f2c28cc",
+      "d2db38ac82de24637c1d56cac642e61b8380d8b6",
+      "e69e643707e9c808a21252bb0ba8ba184c039f17"
+    ]
+  },
+  "acceptance_summary": {
+    "work_mode_content_visual_plan": true,
+    "five_pages_complete": true,
+    "active_copy_preserved": true,
+    "p1_persona_bound_to_persona_lock": true,
+    "p2_365_five_pan_accuracy_gate_defined": true,
+    "p3_self_filter_not_trial_or_tutorial": true,
+    "p4_365_primary_883_secondary": true,
+    "p4_no_ranking_or_absolute_fit": true,
+    "p5_no_fomo_visual": true,
+    "product_reference_binding_complete": true,
+    "forbidden_items_all_pages": true,
+    "acceptance_points_all_pages": true,
+    "r09_executable_without_design_gap": true
+  },
+  "failed_scope": [],
+  "blocked_reason": null,
+  "evidence_refs": [
+    "生产/产物/文案/CONTENT-002/V1/文案.json#2b6cb650577e2dd0877a2c3a3d37dfc929497fe8",
+    "生产/产物/策划/CONTENT-002/V1/策划.json#eb46295d78a873b05dccf001c48bb474a8297563",
+    "生产/批准/PERSONA-001/LOCK-V1.json#c906c1d091bee865fa2379faf8b67080a10141b8",
+    "生产/批准/PRODUCT-002/LOCK-V1.json#dec3e664fdf404081b4df3b1eeab35ead1fafea1",
+    "生产/批准/SKU-002-365/LOCK-V1.json#5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3",
+    "生产/批准/SKU-002-883/LOCK-V1.json#08a388accc6add3b3d5f716936798cb15b5b7fe1",
+    "SKU-365-REF-FULL",
+    "SKU-365-REF-COLOR",
+    "SKU-883-REF-FULL",
+    "SKU-883-REF-COLOR"
+  ],
+  "completed_at": "2026-09-28T12:50:00+08:00",
+  "delivery_fingerprint_or_commit": "OUTPUT_BLOBS|e24b04d89f9fe757f3ed2a9334932bb376fafa6a|e248a2d81c705f63268baea0a622ec0506f42931",
+  "next_role_suggestion": "R01机械验收三份R08输出；PASS后创建R09正式IMAGE_BUILD任务并绑定本视觉策划与逐页图片任务包。"
+}
