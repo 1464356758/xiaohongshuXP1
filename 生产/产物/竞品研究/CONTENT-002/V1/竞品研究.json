@@ -1,0 +1,785 @@
+{
+  "schema": "XHS_XP1_R03_COMPETITOR_RESEARCH_V1",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-DISCOVERY-R03-V1",
+  "role_id": "R03",
+  "task_version": "V1",
+  "input_revision": 1,
+  "revision_round": null,
+  "dependency_revision": "ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "idempotency_key": "CONTENT-002|DISCOVERY|R03|V1|1|null|ACCOUNT-STRATEGY-001|LOCK-V1|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE-001|LOCK-V1|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA-001|LOCK-V1|c906c1d091bee865fa2379faf8b67080a10141b8",
+  "research_platform": "小红书",
+  "sample_window_end": "2026-09-28T09:27:00+08:00",
+  "account_growth_stage": "EARLY_COLD_START_USER_REPORTED_1_PUBLISHED",
+  "result": "PASS",
+  "research_mode": "INDEPENDENT_FROM_R02",
+  "methodology": {
+    "objective": "研究当前女性美妆/美甲/护肤代表内容中，用户为什么停留、收藏、评论，以及热门/新品/争议商品如何形成真实决策问题。",
+    "sampling_rule": "每方向8-12条公开可验证的小红书来源索引；以近期样本优先，必要时用较早样本作为结构基线，不把单条爆款当稳定规律。",
+    "fact_synthesis_separation": "observed_facts只写公开来源能核验内容；r03_synthesis为结构归纳，不冒充样本事实。",
+    "visual_access_limit": "外部公开网页无法稳定打开全部小红书原笔记并逐页检查实际像素，因此具体封面、页数、人物/产品比例、逐页构图与视觉节奏只在公开页面明确展示时记录；其余统一标NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL，不做猜测。",
+    "r02_delivery_read": false
+  },
+  "input_bindings": {
+    "account_strategy": {
+      "path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+      "git_blob_sha": "a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2"
+    },
+    "voice": {
+      "path": "生产/批准/VOICE-001/LOCK-V1.json",
+      "git_blob_sha": "0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72"
+    },
+    "persona": {
+      "path": "生产/批准/PERSONA-001/LOCK-V1.json",
+      "git_blob_sha": "c906c1d091bee865fa2379faf8b67080a10141b8",
+      "subject_type": "SYNTHETIC_VISUAL_PERSONA",
+      "first_person_experience_eligible": false
+    }
+  },
+  "public_sources": [
+    {
+      "id": "SRC-FLOWER-01",
+      "url": "https://post.smzdm.com/p/avgx74g4/",
+      "use": "雪花芭蕾开售前后争议、价格/开箱/攻略与10条小红书样本索引"
+    },
+    {
+      "id": "SRC-FLOWER-02",
+      "url": "https://post.smzdm.com/p/a70n9335/",
+      "use": "雪花芭蕾路透、备案、实物争议与评论结构"
+    },
+    {
+      "id": "SRC-MISTINE-01",
+      "url": "https://post.smzdm.com/p/ak8x8g38/",
+      "use": "夜光气垫2.0正反口碑、色号/用法/商业投放结构与小红书样本索引"
+    },
+    {
+      "id": "SRC-NAIL-01",
+      "url": "https://post.smzdm.com/p/aggq8xxw/",
+      "use": "9月秋季美甲翻车、复刻与评论需求"
+    },
+    {
+      "id": "SRC-NAIL-02",
+      "url": "https://post.smzdm.com/p/agg4mr0m/",
+      "use": "2026初秋美甲趋势与小红书样本索引"
+    },
+    {
+      "id": "SRC-NAIL-03",
+      "url": "https://post.smzdm.com/p/axkl9x8w/",
+      "use": "棕调/琥珀/绸缎猫眼、价格与甲型问题"
+    },
+    {
+      "id": "SRC-SKIN-01",
+      "url": "https://post.smzdm.com/p/a70d7n7o/",
+      "use": "玉泽/薇诺娜修护面霜广告噪音、正反评论与价格问题"
+    },
+    {
+      "id": "SRC-SKIN-02",
+      "url": "https://post.smzdm.com/p/awwz8x92/",
+      "use": "9月换季修护近期样本索引"
+    },
+    {
+      "id": "SRC-LIMITED-01",
+      "url": "https://post.smzdm.com/p/arz695qq/",
+      "use": "Dior/TF/Chanel等秋冬限定彩妆的试色、断货、色温和渠道争议"
+    },
+    {
+      "id": "SRC-LIVE-01",
+      "url": "https://qian-gua.com/rank/live/",
+      "use": "2026-09-28更新的小红书直播榜，用于校验秋冬护肤底妆与品牌直播仍有当前交易热度"
+    },
+    {
+      "id": "SRC-LIVE-02",
+      "url": "https://www.qian-gua.com/rank/live/1/",
+      "use": "花知晓雪花芭蕾新品上新、毛戈平5s伪素颜等近期直播信号"
+    }
+  ],
+  "directions": [
+    {
+      "direction_id": "D1",
+      "name": "花知晓「雪花芭蕾」：新品审美争议→实物反转→单品选择",
+      "category": "美妆/新品/争议产品",
+      "sample_count": 10,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "samples": [
+        {
+          "sample_no": 1,
+          "platform": "小红书",
+          "published_at": "2026-09-14",
+          "title": "这次真被花知晓背刺了！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 2,
+          "platform": "小红书",
+          "published_at": "2026-09-06",
+          "title": "彩妆届的理财产品！花知晓的白月光限定返场！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 3,
+          "platform": "小红书",
+          "published_at": "2026-09-11",
+          "title": "花知晓冰冻了我的心",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 4,
+          "platform": "小红书",
+          "published_at": "2026-09-14",
+          "title": "我信任的，交流的，交心的花知晓",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 5,
+          "platform": "小红书",
+          "published_at": "2026-09-14",
+          "title": "天鹅湖下雪了！❄️完全美到我心里了！！！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 6,
+          "platform": "小红书",
+          "published_at": "2026-09-17",
+          "title": "花知晓雪花芭蕾香水测评",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 7,
+          "platform": "小红书",
+          "published_at": "2026-09-16",
+          "title": "花知晓新品雪花芭蕾系列🛒完整攻略来啦！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 8,
+          "platform": "小红书",
+          "published_at": "2026-09-17",
+          "title": "❄花知晓新品低价到手攻略（图文版）",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 9,
+          "platform": "小红书",
+          "published_at": "2026-09-14",
+          "title": "花知晓新品拼拼拼！！！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        },
+        {
+          "sample_no": 10,
+          "platform": "小红书",
+          "published_at": "2026-09-15",
+          "title": "买花知晓新品还是小集邮礼盒呢",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/avgx74g4/"
+        }
+      ],
+      "observed_facts": [
+        "9月14日前后，同一系列同时出现高互动负向审美帖、正向实物开箱、价格攻略、拼单和单品选择内容，讨论不是单一赞美或单一差评。",
+        "公开索引显示争议从路透/包装工艺/天鹅题材，逐步转向实物、具体单品、价格与赠品机制；眼影等具体品类讨论与外壳争议可以被拆开。",
+        "9月19日首发至9月27日窗口与近期小红书直播上新同时存在，具有明确的近期性和商业化环境。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED：背刺、冰冻了我的心、完整攻略、低价攻略、拼拼拼、买新品还是礼盒，分别对应情绪冲突/攻略/价格/选择。",
+        "cover": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL；不能把聚合页配图当原笔记首图。",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "composition": "仅能确认内容类型包含路透、实物开箱、攻略与商品展示；原笔记构图不补猜。",
+        "scene": "新品首发、开箱、拼单、收藏礼盒与具体单品选择。",
+        "visual_rhythm": "R03_SYNTHESIS：适合按路透争议→实物→单品→价格/适合谁组织，但这不是对原笔记页序的事实描述。",
+        "information_density": "高，用户同时需要外观、SKU、单品优先级、价格/赠品与实物差异。",
+        "save_points": "开售时间、单品差异、到手价、赠品门槛、实物与路透差异。",
+        "comment_questions": "包装是否退步、实物是否比图透好、该买单品还是礼盒、是否等返场/双11。",
+        "objections": "审美疲劳、工艺质感、路透与实物差异、收藏价值与彩妆使用价值混在一起。",
+        "commercial_traces": "官方首发、直播、达人剧透、拼团/凑单、赠品机制和限时价格明显。"
+      },
+      "r03_synthesis": [
+        "可借鉴的是“争议拆层”而非复述骂战：外壳审美、产品本身、价格机制分别回答。",
+        "如果后续进入该方向，必须由R04/R05重新核验正式商品名、色号、包装和SKU，不能沿用讨论帖里任何未经核验叫法。",
+        "差异化重点应是让用户快速判断‘我是在买彩妆还是买收藏包装’，而不是再做一篇纯开箱。"
+      ]
+    },
+    {
+      "direction_id": "D2",
+      "name": "Mistine夜光气垫2.0/紫贝限定：风很大但口碑撕裂",
+      "category": "美妆/底妆/争议产品",
+      "sample_count": 12,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "samples": [
+        {
+          "sample_no": 1,
+          "platform": "小红书",
+          "published_at": "2026-04-13",
+          "title": "最近蜜丝婷的夜光气垫2.0版的到底好不好用啊～",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 2,
+          "platform": "小红书",
+          "published_at": "2026-08-28",
+          "title": "蜜丝婷气垫你不用真的亏大了！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 3,
+          "platform": "小红书",
+          "published_at": "2026-08-28",
+          "title": "蜜丝婷气垫真实测评，我的妈呀效果好明显！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 4,
+          "platform": "小红书",
+          "published_at": "2026-03-04",
+          "title": "好南yong啊，夜光气垫！真实无广测评",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 5,
+          "platform": "小红书",
+          "published_at": "2026-08-28",
+          "title": "这个mistine夜光2.0有点东西",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 6,
+          "platform": "小红书",
+          "published_at": "2026-07-30",
+          "title": "Mistine气垫!! 好难用🫢⁉️放过我吧…",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 7,
+          "platform": "小红书",
+          "published_at": "2026-06-05",
+          "title": "蜜丝婷夜光气垫客观测评｜卡粉情况真实分享",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 8,
+          "platform": "小红书",
+          "published_at": "2026-07-25",
+          "title": "避雷❌",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 9,
+          "platform": "小红书",
+          "published_at": "2026-05-07",
+          "title": "mistine 夜光气垫持妆12h测评",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 10,
+          "platform": "小红书",
+          "published_at": "2026-08-28",
+          "title": "避雷夜光气垫又厚又粗糙还打不匀",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 11,
+          "platform": "小红书",
+          "published_at": "2026-08-18",
+          "title": "mistine蜜丝婷夜光气垫 粉扑替换",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        },
+        {
+          "sample_no": 12,
+          "platform": "小红书",
+          "published_at": "2026-08-12",
+          "title": "mistine紫贝限定夜光2.0气垫",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/ak8x8g38/"
+        }
+      ],
+      "observed_facts": [
+        "公开样本同时有强正向、明确避雷、卡粉/厚重、12小时持妆、色号、粉扑替换和限定包装讨论，口碑存在明确分叉。",
+        "聚合核验指出同一产品的差评至少可拆成妆效预期、持妆翻车与使用方法三类，不能压成一个‘好用/不好用’结论。",
+        "一条气垫激活教程公开互动中收藏量接近点赞量七成，说明‘怎么用’本身具有强收藏属性；同时外部平台存在批量直播专享模板内容，商业噪音需要剥离。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED：好不好用、真实测评、好难用、卡粉、12h、粉扑替换、限定款，标题直接对应决策问题。",
+        "cover": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL；底妆方向理论上可用脸部局部+产品，但不当作样本事实。",
+        "composition": "原笔记实际构图不可稳定核验；可核验内容类型覆盖上脸测评、色号、产品包装和用法。",
+        "scene": "通勤底妆、油皮/混干皮、色号选择、长时间带妆、限定包装。",
+        "visual_rhythm": "R03_SYNTHESIS：肤质/需求→薄透或遮瑕预期→色号/手法→翻车点，比单纯前后对比更有决策价值。",
+        "information_density": "高，核心变量包括肤质、遮瑕预期、妆效、色号冷暖、激活/粉扑和渠道。",
+        "save_points": "色号对照、正确激活、薄涂手法、不同肤质的风险项。",
+        "comment_questions": "为什么有人扒脸有人卡粉、100/110怎么选、是否需要激活、粉扑能否替换。",
+        "objections": "‘适合油皮’并非一致共识；高赞好评不能覆盖卡粉、暗沉或遮瑕不足的反例。",
+        "commercial_traces": "限定外壳、直播返场、赠品、低价替换芯、模板化直播专享内容明显。"
+      },
+      "r03_synthesis": [
+        "这个方向真正有价值的是‘先判断你要的是薄透光泽还是高遮瑕’，再解释为什么同一产品能得到相反评价。",
+        "若做内容，不应把合成PERSONA写成实测12小时的人；可以用编辑型选择卡和经核验的第三方反馈归纳。",
+        "视觉差异化可把色号/肤质/手法变量放在前面，不复制大量‘半脸前后对比’的通用套路。"
+      ]
+    },
+    {
+      "direction_id": "D3",
+      "name": "2026初秋美甲：短甲/绸缎猫眼/棕紫调与复刻翻车",
+      "category": "美甲/季节趋势/高收藏",
+      "sample_count": 12,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "samples": [
+        {
+          "sample_no": 1,
+          "platform": "小红书",
+          "published_at": "2026-09-17",
+          "title": "秋天简约美甲🍂低调温柔",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 2,
+          "platform": "小红书",
+          "published_at": "2026-08-05",
+          "title": "立秋氛围感🍂棕色系美甲才是高级天花板",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 3,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "初秋清冷感✨高级蓝灰猫眼美甲太显白",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 4,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "早秋的紫紫色美甲💜",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 5,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "2026初秋新款碎闪美甲 日常也可以blingblin",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 6,
+          "platform": "小红书",
+          "published_at": "2026-06-25",
+          "title": "黄黑皮本命美甲｜海莉甲第①期",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 7,
+          "platform": "小红书",
+          "published_at": "2026-08-07",
+          "title": "短甲逆袭！敲键盘都好看的韩系ins风！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 8,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "🍂初秋本命短甲！✨通勤本甲真的太耐看了",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 9,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "初秋的第一款美甲💅🏻细狗尖！绝绝子！！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 10,
+          "platform": "小红书",
+          "published_at": "2026-07-13",
+          "title": "clean nail🩰🦢醋酸海莉质感至上",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 11,
+          "platform": "小红书",
+          "published_at": "2026-08-18",
+          "title": "240做的丑死了全程没有任何一句沟通色差大",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        },
+        {
+          "sample_no": 12,
+          "platform": "小红书",
+          "published_at": "2026-08-19",
+          "title": "OMG你的态度吓到我了！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/agg4mr0m/"
+        }
+      ],
+      "observed_facts": [
+        "8月至9月样本持续集中在棕调、蓝灰/紫调猫眼、短甲、通勤与初秋关键词，季节需求仍在延续。",
+        "公开研究中，评论需求不只问‘好看吗’，还高频问甲型、黄皮能否做、价格与复刻效果；近期翻车帖又把色差、沟通和猫眼效果推到讨论前台。",
+        "短甲/通勤内容与高复杂款并存，说明用户既要审美灵感，也要‘能不能在自己手上复刻’的现实判断。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED：初秋、猫眼、短甲、黄黑皮、通勤、翻车/色差是反复出现的标题入口。",
+        "cover": "PARTIAL_PUBLIC_PREVIEW_ONLY；具体12条原笔记封面不逐一声称。",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "美甲内容天然以手部/甲面为主体，但具体样本比例不可逐条核验。",
+        "composition": "公开方向页可见手部近景/甲面细节是主要信息载体；具体单帖构图不补猜。",
+        "scene": "换季换甲、办公室通勤、短甲、肤色适配、到店复刻与价格咨询。",
+        "visual_rhythm": "R03_SYNTHESIS：主款细节→不同光线/甲型→肤色/长度适配→复刻变量/预算。",
+        "information_density": "中高；图片负责审美，甲型/肤色/底色/磁粉/价格/沟通清单负责收藏。",
+        "save_points": "短甲参考、显白色系、复刻参数、到店沟通清单、预算。",
+        "comment_questions": "什么甲型、黄皮能不能做、多少钱、为什么复刻不一样。",
+        "objections": "精修图显白不等于本人显白；底色、灯光、磁粉、甲长和美甲师执行都会改变结果。",
+        "commercial_traces": "美甲店客片、团购/穿戴甲推广与‘闭眼冲显白’式标题容易弱化复刻变量。"
+      },
+      "r03_synthesis": [
+        "可借鉴‘审美图+复刻条件’双层结构，让内容从图库升级为决策卡。",
+        "PERSONA无需强制露脸，手部局部/纯甲片即可完成内容，与账户不机械露脸规则一致。",
+        "后续若落到具体胶色/穿戴甲商品，仍必须进入R04/R05事实和SKU核验。"
+      ]
+    },
+    {
+      "direction_id": "D4",
+      "name": "换季屏障修护：玉泽/薇诺娜等广告噪音与正反口碑",
+      "category": "护肤/换季/争议需求",
+      "sample_count": 12,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "samples": [
+        {
+          "sample_no": 1,
+          "platform": "小红书",
+          "published_at": "2026-09-22",
+          "title": "玉泽，你这修护能力属实吓到我了。。。。",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 2,
+          "platform": "小红书",
+          "published_at": "2026-09-19",
+          "title": "致痘？",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 3,
+          "platform": "小红书",
+          "published_at": "2026-09-05",
+          "title": "别神化玉泽油敏霜！（避雷）",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 4,
+          "platform": "小红书",
+          "published_at": "2026-09-04",
+          "title": "「屏障修护」四个字，已经不构成一个概念了",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 5,
+          "platform": "小红书",
+          "published_at": "2026-09-06",
+          "title": "个人记录：这几年的主要空瓶（已扔",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 6,
+          "platform": "小红书",
+          "published_at": "2026-08-03",
+          "title": "玉泽我恨你！好难用！💰打水漂日记",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 7,
+          "platform": "小红书",
+          "published_at": "2026-08-27",
+          "title": "敏感肌超好用次抛（玉泽青蒿与薇诺娜311）",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 8,
+          "platform": "小红书",
+          "published_at": "2026-08-16",
+          "title": "天塌了，玉泽面霜153买贵了吗",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 9,
+          "platform": "小红书",
+          "published_at": "2026-05-31",
+          "title": "玉泽算好价吗？",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 10,
+          "platform": "小红书",
+          "published_at": "2026-04-15",
+          "title": "避雷 #玉泽水乳 用完脸又红又烫",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 11,
+          "platform": "小红书",
+          "published_at": "2026-06-03",
+          "title": "玉泽油敏霜：修护是真的牛，但控油……",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        },
+        {
+          "sample_no": 12,
+          "platform": "小红书",
+          "published_at": "2026-02-21",
+          "title": "好用，但不适合沙漠干皮",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/a70d7n7o/"
+        }
+      ],
+      "observed_facts": [
+        "9月换季内容同时出现强正向修护叙事、‘别神化’避雷、致痘/刺痛疑问、跨品牌比较与价格问题，没有单一共识。",
+        "公开研究对高收藏搜索结果抽样时发现明显模板化种草/挂车比例，真实分歧更多出现在低互动避雷、跨品牌比较与评论区。",
+        "用户问题会把肤质、季节、版本/规格、价格和不适反应混在一起；涉及皮炎/玫瑰痤疮等医学状态的讨论不能被普通护肤内容偷换成治疗承诺。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED：修护、别神化、致痘、买贵了吗、好价、敏感肌比较构成真实决策标题。",
+        "cover": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL；本账号合成PERSONA不得承担真实使用/功效结果。",
+        "composition": "可核验内容类型包含产品/空瓶/跨品牌比较/避雷；实际单帖画面不补猜。",
+        "scene": "秋季换季、干敏/油敏、版本选择、价格与不适反馈。",
+        "visual_rhythm": "R03_SYNTHESIS：先分肤质/状态→再分产品版本→正反反馈→使用边界/价格，比单产品吹捧更可靠。",
+        "information_density": "高；版本、肤质、季节、正反反馈、价格和安全边界均影响决策。",
+        "save_points": "肤质/版本矩阵、价格判断、正反反馈、何时不应继续自行试护肤品。",
+        "comment_questions": "为什么同一产品有人油有人干、会不会致痘/刺痛、版本怎么选、多少钱算正常。",
+        "objections": "高热正向帖可能夹杂商业投放；单个用户不适也不能外推成所有人都会不适。",
+        "commercial_traces": "明星代言、惊悚式烂脸开头、剧情/ASMR/挂车、套餐与周边机制较明显。"
+      },
+      "r03_synthesis": [
+        "最可借鉴的是‘先分状态再看产品’，最不能借鉴的是把敏感/炎症问题包装成某瓶面霜的疗效故事。",
+        "如果R01后续选择护肤方向，R04需优先核版本/规格/官方允许功效表述，R13再独立做真实性与平台合规。",
+        "前台可以做选择教育，但不得让PERSONA说‘我用了以后退红/修好了’。"
+      ]
+    },
+    {
+      "direction_id": "D5",
+      "name": "秋冬限定彩妆：Dior365/883、TF28、Chanel587的试色与FOMO",
+      "category": "美妆/限定新品/选择焦虑",
+      "sample_count": 12,
+      "sample_status": "SUFFICIENT_PUBLIC_INDEX",
+      "samples": [
+        {
+          "sample_no": 1,
+          "platform": "小红书",
+          "published_at": "2026-08-16",
+          "title": "🇯🇵Dior26秋季限定🍀眼影腮红抢到爆秒没",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 2,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "刷到泡椒26年圣诞限定的试色🎄",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 3,
+          "platform": "小红书",
+          "published_at": "2026-08-14",
+          "title": "Dior秋季限定眼影 365 幸运四叶草",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 4,
+          "platform": "小红书",
+          "published_at": "2026-08-19",
+          "title": "🍀世界上坠好看的绿色眼影之一Dior365",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 5,
+          "platform": "小红书",
+          "published_at": "2026-08-10",
+          "title": "Dior限定眼影365-883谁最美？",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 6,
+          "platform": "小红书",
+          "published_at": "2026-08-18",
+          "title": "迪奥秋季限定~深秋的木漏日",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 7,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "限定新色✨⛓️🥂TF的28定律是必出神盘！！！",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 8,
+          "platform": "小红书",
+          "published_at": "2026-08-16",
+          "title": "TF秋季新色剧透🍁保证让你一条看清盘面颜色",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 9,
+          "platform": "小红书",
+          "published_at": "2026-08-14",
+          "title": "四叶草限定默默上新",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 10,
+          "platform": "小红书",
+          "published_at": "2026-08-15",
+          "title": "所有女生📣TF四色眼影524今天拿下",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 11,
+          "platform": "小红书",
+          "published_at": "2026-08-20",
+          "title": "什么情什么爱 我的眼影一千块#香奈儿九色眼影 #香奈儿587",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        },
+        {
+          "sample_no": 12,
+          "platform": "小红书",
+          "published_at": "2026-08-21",
+          "title": "chanel九色眼影盘！587！✅",
+          "verification": "PUBLIC_INDEX_VERIFIED",
+          "evidence_page": "https://post.smzdm.com/p/arz695qq/"
+        }
+      ],
+      "observed_facts": [
+        "8月中下旬的小红书样本集中讨论Dior秋季限定、TF秋季新色、Chanel九色盘与圣诞限定预告，标题高频包含限定、试色、谁最美、秒没、剧透与价格。",
+        "公开讨论显示剧透图与专柜/真人试色可能造成色温认知差异；Dior365/883出现‘绿色门槛 vs 更稳玫瑰木’式选择，TF28也出现对实际偏红/偏棕的争论。",
+        "限定内容同时包含断货/FOMO、渠道价差和‘换壳不换芯’等商业变量，用户并非只关心颜色。"
+      ],
+      "field_coverage": {
+        "title": "VERIFIED：限定、试色、谁最美、秒没、剧透、价格是主要入口。",
+        "cover": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "page_count": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL",
+        "persona_product_ratio": "NOT_PUBLICLY_VERIFIABLE_NOTE_LEVEL；该方向更适合产品/试色信息为主，人物是否出现取决于后续视觉任务。",
+        "composition": "可核验内容类型含盘面、试色、色号对比和新品开箱；单帖实际构图不补猜。",
+        "scene": "秋冬换季、限定上新、专柜试色、抢购/补货与节日彩妆。",
+        "visual_rhythm": "R03_SYNTHESIS：官方/剧透颜色→实物试色→肤色/场景→渠道/是否值得为限定溢价。",
+        "information_density": "中高；色温、肤色适配、限定属性、补货/价格与是否仅换壳都影响选择。",
+        "save_points": "同系列色号对比、真人试色差异、限定/常规版差异、渠道和补货检查项。",
+        "comment_questions": "哪个色更适合、实物是不是偏红/偏灰、绿色是否难驾驭、是否值得抢/加价。",
+        "objections": "‘秒空’不等于适合多数人；剧透图不等于实物；限定包装不等于配方升级。",
+        "commercial_traces": "限量/秒空/抢购、专柜与线上价差、节日提前预热、包装限定都在制造FOMO。"
+      },
+      "r03_synthesis": [
+        "可借鉴‘限定去FOMO’结构：先回答颜色和使用门槛，再回答限量/包装，最后才谈买不买。",
+        "差异化应把试色条件、色温和肤色/场景讲清楚，而不是复制‘抢到爆、必入神盘’标题。",
+        "若进入具体限定产品，产品名称/版本/发售地区与SKU必须由R04/R05重新核验。"
+      ]
+    }
+  ],
+  "current_market_crosscheck": {
+    "checked_at": "2026-09-28",
+    "observed": [
+      "千瓜小红书直播榜在2026-09-28 08:00更新，9月27日仍可见秋冬护肤底妆专场、毛戈平‘5s速成妈生伪素颜’等彩妆/护肤直播，说明换季底妆与伪素颜需求仍有当前交易热度。",
+      "近期榜单亦出现花知晓雪花芭蕾新品上新直播，和小红书社区的新品争议/开箱样本形成相互印证。"
+    ],
+    "use_rule": "仅用于确认近期性和商业热度，不作为内容质量或最终产品选择依据。"
+  },
+  "cross_direction_findings": {
+    "observed": [
+      "五个方向都不是‘产品本身越热越好’，真正反复出现的是选择冲突：路透vs实物、薄透vs遮瑕、好看vs可复刻、修护宣传vs肤质差异、限定FOMO vs 实际适配。",
+      "收藏价值更稳定地来自对比表、分型、用法、复刻参数、价格/版本检查，而不是单纯情绪夸赞。",
+      "真实评论问题往往来自反对点和失败变量；只给单边好评的内容更容易带出商业感。",
+      "人物不是所有方向的必要条件；产品、局部、手部与信息卡可以承载大部分决策信息。"
+    ],
+    "synthesis": [
+      "CONTENT-002适合继续沿‘具体商品/趋势 + 一个真实选择难题’展开，而不是重复CONTENT-001式纯产品介绍。",
+      "首图机制应优先呈现一个可立即理解的冲突或选择题，正文再给可保存的对比规则。",
+      "至少保留一个限制/反对点，能明显降低广告说明书感；但限制必须有证据，不能为了‘真实’故意制造负面。",
+      "R03不决定最终商品；R01应与R02热点结果汇总后建立候选池，再由R04做商品事实核验。"
+    ]
+  },
+  "reusable_mechanisms": [
+    "争议拆层：审美/产品事实/价格机制分开讲。",
+    "口碑分叉：先识别不同用户目标，再解释为什么同一产品评价相反。",
+    "收藏卡：色号/肤质/甲型/版本/预算/使用方法做成可执行选择规则。",
+    "正反证据同框：亮点旁保留真实限制或翻车变量。",
+    "去FOMO：限定/秒空/赠品放在产品适配之后。",
+    "产品事实优先：名称、版本、SKU、包装、色号未锁定前，不让视觉先行制造事实。"
+  ],
+  "must_differentiate": [
+    "不复刻同行具体文案、首图、版式、照片或固定镜头。",
+    "不让SYNTHETIC_VISUAL_PERSONA伪造购买、亲测、回购、持妆时长、修护结果等现实经历。",
+    "不把单条高赞、秒空或直播销量直接写成稳定策略规律。",
+    "不把聚合页的配图误当小红书原笔记首图；不可核验的页面/构图字段明确留空或标不可核验。",
+    "不使用‘闭眼入、天花板、绝对不踩雷’等高商业感绝对化表达作为账号默认语言。"
+  ],
+  "acceptance_check": {
+    "directions_at_least_5": true,
+    "direction_count": 5,
+    "sample_counts": {
+      "D1": 10,
+      "D2": 12,
+      "D3": 12,
+      "D4": 12,
+      "D5": 12
+    },
+    "total_public_indexed_xhs_samples": 58,
+    "each_direction_8_to_12": true,
+    "source_and_time_recorded": true,
+    "facts_and_synthesis_separated": true,
+    "requested_fields_addressed": true,
+    "visual_access_limits_explicit": true,
+    "r02_independence_preserved": true,
+    "no_final_product_decision": true,
+    "no_competitor_copying": true
+  },
+  "completed_at": "2026-09-28T09:44:00+08:00"
+}
