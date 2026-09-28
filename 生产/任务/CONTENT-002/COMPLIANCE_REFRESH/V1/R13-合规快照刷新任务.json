@@ -1,0 +1,148 @@
+{
+  "schema": "SYS-003_PRODUCTION_TASK_V5",
+  "content_id": "CONTENT-002",
+  "task_id": "CONTENT-002-COMPLIANCE-REFRESH-R13-V1",
+  "stage": "COMPLIANCE_REFRESH",
+  "role_id": "R13",
+  "review_mode": "COMPLIANCE_SNAPSHOT_DRAFT_OR_REFRESH",
+  "task_version": "V1",
+  "input_revision": 1,
+  "parent_version": null,
+  "revision_round": null,
+  "task_lifecycle_status": "ACTIVE",
+  "state": "BUILDING",
+  "phase": "COMPLIANCE_REFRESH",
+  "created_by": "R01",
+  "created_at": "2026-09-28T16:31:00+08:00",
+  "runtime_requirement": {
+    "required_mode": "LIVE",
+    "on_disabled": "BLOCKED_RUNTIME_DISABLED"
+  },
+  "parallel": {
+    "parallel_group_id": null,
+    "barrier_revision": null,
+    "required_role_ids": [],
+    "role_execution_identity_unique": true
+  },
+  "required_context": {
+    "account_strategy_lock_path": "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "voice_lock_path": "生产/批准/VOICE-001/LOCK-V1.json",
+    "product_lock_path": "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "sku_lock_path": "生产/批准/SKU-002-365/LOCK-V1.json",
+    "sibling_sku_lock_path": "生产/批准/SKU-002-883/LOCK-V1.json",
+    "persona_lock_path": "生产/批准/PERSONA-001/LOCK-V1.json",
+    "content_lock_path": null,
+    "compliance_snapshot_path": null,
+    "required_compliance_scope_fingerprint": null,
+    "asset_identity_gate_path": "系统/生产架构/SYS-003/ASSET_IDENTITY_GATE.json",
+    "asset_manifest_path": "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "asset_manifest_id": "ASSET-CONTENT-002",
+    "manifest_revision": 1,
+    "manifest_fingerprint": "sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "active_image_qa_barrier_path": "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "persona_subject_type": "SYNTHETIC_VISUAL_PERSONA",
+    "first_person_experience_eligible": false,
+    "target_platform": "小红书",
+    "target_jurisdiction": "中国大陆",
+    "target_snapshot_id": "COMPLIANCE-XHS-0002",
+    "target_snapshot_revision": 1,
+    "target_compliance_scope": {
+      "content_mode": "ORGANIC_SHARE",
+      "commercial_status": "NON_COMMERCIAL",
+      "product_category": "BEAUTY",
+      "AI_modalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "claims_risk": "MEDIUM",
+      "account_type": "PERSONAL_CREATOR"
+    },
+    "prior_snapshot_seed_path": "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json",
+    "prior_snapshot_seed_role": "REFERENCE_ONLY_NOT_ACTIVE_FOR_CONTENT_002"
+  },
+  "input_paths": [
+    "系统/生产架构/SYS-003/COMPLIANCE_LIFECYCLE.json",
+    "模板/生产/COMPLIANCE_SNAPSHOT_TEMPLATE.json",
+    "生产/批准/ACCOUNT-STRATEGY-001/LOCK-V1.json",
+    "生产/批准/VOICE-001/LOCK-V1.json",
+    "生产/批准/PERSONA-001/LOCK-V1.json",
+    "生产/批准/PRODUCT-002/LOCK-V1.json",
+    "生产/批准/SKU-002-365/LOCK-V1.json",
+    "生产/批准/SKU-002-883/LOCK-V1.json",
+    "生产/产物/文案/CONTENT-002/V1/文案.json",
+    "生产/资产清单/CONTENT-002/V1/ASSET-MANIFEST.json",
+    "生产/产物/总监/CONTENT-002/IMAGE_REVIEW/V1/IMAGE-QA-BARRIER.json",
+    "生产/审核/商品核验/CONTENT-002/IMAGE_REVIEW/V1/R10-商品图片核验.json",
+    "生产/审核/人物一致性/CONTENT-002/IMAGE_REVIEW/V1/R11-人物一致性审核.json",
+    "生产/审核/图片终审/CONTENT-002/IMAGE_REVIEW/V1/R12-图片终审.json",
+    "生产/批准/COMPLIANCE-XHS-0001/V1/COMPLIANCE-SNAPSHOT.json"
+  ],
+  "scope": [
+    "为CONTENT-002建立当前小红书/中国大陆范围的合规快照DRAFT；当前active compliance snapshot为空，因此本任务属于INIT/REFRESH。",
+    "当前IMAGE-QA barrier已COMPLETE，R10/R11/R12均PASS且绑定ASSET-CONTENT-002 revision 1。",
+    "当前内容为Dior 365 Charmed Green主线、883 Lucky Rosewood仅P4对照的有机非商业美妆图文。",
+    "必须核验当前有效法律/监管要求与小红书当前平台规则/机制，优先官方法律、监管机关、小红书官方规则或当前UI证据。",
+    "可把COMPLIANCE-XHS-0001作为昨日已核验的参考种子以减少重复，但它不是CONTENT-002的active snapshot；必须重新检查时间有效性、规则变化和当前内容绑定后生成CONTENT-002自己的DRAFT。",
+    "快照范围固定为ORGANIC_SHARE / NON_COMMERCIAL / BEAUTY / AI modalities TEXT+IMAGE / PERSONAL_CREATOR / claims_risk MEDIUM。",
+    "核验AI生成合成内容标识要求及小红书当前可执行标识机制；不得因为最终图片不写AI字样就绕过依法/平台要求的标识。",
+    "核验商业披露要求；当前NON_COMMERCIAL，如NOT_APPLICABLE必须写明依据和scope变化触发条件。",
+    "核验美妆内容的禁止/高风险claim边界，包括疗效、功效保证、绝对化、虚构亲测、虚构购买/回购/时长、库存/FOMO等真实性风险。",
+    "PERSONA为SYNTHETIC_VISUAL_PERSONA且first_person_experience_eligible=false，现实产品亲测/购买/回购/空瓶/持妆时长经历必须明确禁止。",
+    "生成checked_at、valid_until、status、rule_sources、checks、compliance_scope、canonical_scope_json与非空scope_fingerprint。",
+    "若必要检查无法达到VERIFIED或NOT_APPLICABLE，返回BLOCKED_COMPLIANCE_UNVERIFIED，不得猜测补齐。",
+    "R13只产出DRAFT/刷新交付，不自行激活active_compliance_snapshot_path，不修改图片/文案/LOCK/state/phase/pointer。"
+  ],
+  "frozen_scope": [
+    "final copy path=生产/产物/文案/CONTENT-002/V1/文案.json",
+    "final copy revision=1",
+    "final copy fingerprint=sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7",
+    "ASSET-CONTENT-002 revision 1 / fingerprint sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5",
+    "R10/R11/R12 current PASS evidence and COMPLETE IMAGE-QA barrier",
+    "ACCOUNT_STRATEGY/VOICE/PERSONA/PRODUCT/SKU current locks",
+    "commercial_status=NON_COMMERCIAL",
+    "content_mode=ORGANIC_SHARE",
+    "product_category=BEAUTY",
+    "AI_modalities=TEXT+IMAGE",
+    "claims_risk=MEDIUM"
+  ],
+  "acceptance_criteria": [
+    "review_mode=COMPLIANCE_SNAPSHOT_DRAFT_OR_REFRESH。",
+    "快照compliance_snapshot_id=COMPLIANCE-XHS-0002且snapshot_revision=1。",
+    "platform=小红书、jurisdiction=中国大陆。",
+    "checked_at与valid_until存在且valid_until晚于checked_at。",
+    "compliance_scope字段全部具体，scope_fingerprint非空且由canonical scope JSON机器生成。",
+    "AI_label_requirement状态必须VERIFIED或NOT_APPLICABLE，并有规则/机制证据。",
+    "commercial_disclosure_requirement状态必须VERIFIED或NOT_APPLICABLE。",
+    "prohibited_or_high_risk_claims与authenticity_rules必须VERIFIED。",
+    "rule_sources必须含足以支持本轮关键结论的官方来源。",
+    "DRAFT必须明确绑定CONTENT-002 final copy、manifest、COMPLETE IMAGE-QA barrier、R10/R11/R12证据和PERSONA边界。",
+    "快照保持DRAFT等待R01激活，不得自行修改当前进度。",
+    "写后回读快照草案与交付。"
+  ],
+  "expected_output_paths": [
+    "生产/产物/合规快照草案/CONTENT-002/V1/COMPLIANCE-SNAPSHOT-DRAFT.json",
+    "生产/产物/合规快照草案/CONTENT-002/V1/交付.json"
+  ],
+  "dependency_revision": "COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "idempotency_key_formula": "content_id|stage|role_id|task_version|input_revision|revision_round|dependency_revision",
+  "idempotency_key": "CONTENT-002|COMPLIANCE_REFRESH|R13|V1|1|null|COPY|2b6cb650577e2dd0877a2c3a3d37dfc929497fe8|sha256:4f1a6374f3964ef64be48e2f0d31f13b8d724ac449275538b8423eb43e4ea8b7|MANIFEST|91fb047cd21f22fcf5c94e2d3c331f27e1974a31|ASSET-CONTENT-002|1|sha256:9d6a5fe0dcafb7c5a801b195f98685d87482b49b380d9d8feb47e3eaf481fec5|IMAGE_QA|7f76ab33852eed6c5b7511af34603ec021607bd8|R10|6212bcb871714244daa7dfa13b398f2cc9d2db5a|R11|ea4710e9eb3a53cb768b7e60852096f519a37bd3|R12|fd952c4cdd27942eaca3bfbc5a683fc45b07e4d8|ACCOUNT|a34c9f212cfe4dd4b0cb863473ae9ab8fc9f53b2|VOICE|0af2fc77e26f13cc87fbf08f8ed40e9eccb94d72|PERSONA|c906c1d091bee865fa2379faf8b67080a10141b8|PRODUCT|dec3e664fdf404081b4df3b1eeab35ead1fafea1|SKU_ACTIVE|5ffccb1fd22b86d83258b3f87c1a9bfe1655d3e3|SKU_SIBLING|08a388accc6add3b3d5f716936798cb15b5b7fe1",
+  "routing": {
+    "on_success": [
+      "R01"
+    ],
+    "on_fail": [
+      "R01"
+    ],
+    "on_runtime_disabled": "BLOCKED_RUNTIME_DISABLED",
+    "on_missing_input": "BLOCKED_INPUT_MISSING",
+    "on_compliance_stale": "BLOCKED_COMPLIANCE_STALE",
+    "on_compliance_unverified": "BLOCKED_COMPLIANCE_UNVERIFIED",
+    "on_compliance_scope_mismatch": "BLOCKED_COMPLIANCE_SCOPE_MISMATCH",
+    "on_conflict": "BLOCKED_CONFLICT"
+  },
+  "rules": [
+    "R13 refresh task only drafts/refreshes compliance evidence; R01 alone activates snapshot.",
+    "Do not modify final copy, images, locks, state, phase or pointers.",
+    "No actual image upload is required for this refresh task; actual pixels are required later if CONTENT_TRUTH_COMPLIANCE_REVIEW task explicitly asks for them."
+  ]
+}
